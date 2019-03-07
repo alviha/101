@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Project 8</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password </string>
+    <string name="action_sign_in">Sign in </string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="name">Name</string>
+    <string name="passwordhint">8 characters long</string>
+    <string name="ForgotEmail">Forgot Email</string>
+    <string name="forgotpassword">Forgot Password</string>
+    <string name="Profile">Profile</string>
+    <string name="info">info</string>
+    <string name="additionalresources">Additional Resources</string>
+    <string name="forgotpassword">Forgot Password</string>
+    <string name="confirm">Confirm</string>
+    <string name="title_activity_signup">Sign Up</string>
+    <string name="username">Username</string>
+    <string name="ConfirmPassword">Confirm Password</string>
+    <string name="alreadyhaveanaccount">Already Have an Account</string>
+    <string name="forgotUsername">Forgot Username</string>
+    <string name="username">Username</string>
+    <string name="needanaccount">Need to Create An Account</string>
+</resources>
