@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Homepage"
+    tools:context=".HomePage"
+    tools:layout_editor_absoluteY="50dp">
+
+    <Button
+        android:id="@+id/el1"
+        android:layout_width="125"
+        android:layout_height="53"
+        android:background="@color/ButtonBackground"
+        android:text="Lesson 1"
+        app:layout_constraintBottom_toTopOf="@+id/el2"
+        app:layout_constraintEnd_toStartOf="@+id/el2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ElemProg" />
+
+    <Button
+        android:id="@+id/sl1"
+        android:layout_width="125"
+        android:layout_height="52"
+        android:layout_marginStart="5dp"
+        android:background="@color/ButtonBackground"
+        android:text="Lesson 1"
+        app:layout_constraintBottom_toTopOf="@+id/sl2"
+        app:layout_constraintEnd_toStartOf="@+id/sl2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selection" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="203dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="17dp"
+        android:progressTint="@color/ProgressBar"
+        app:layout_constraintBottom_toTopOf="@+id/ElemProg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progress" />
+
+    <Button
+        android:id="@+id/el2"
+        android:layout_width="125"
+        android:layout_height="53"
+        android:layout_marginBottom="19dp"
+        android:background="@color/ButtonBackground"
+        android:text="Lesson 2"
+        app:layout_constraintBottom_toTopOf="@+id/selection"
+        app:layout_constraintEnd_toStartOf="@+id/el3"
+        app:layout_constraintStart_toEndOf="@+id/el1"
+        app:layout_constraintTop_toBottomOf="@+id/el1" />
+
+    <TextView
+        android:id="@+id/selection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:text="Selection"
+        android:textSize="32dp"
+        android:textColor="@color/Black"
+        app:layout_constraintBottom_toTopOf="@+id/sl1"
+        app:layout_constraintEnd_toStartOf="@+id/sl3"
+        app:layout_constraintTop_toBottomOf="@+id/el2" />
+
+    <TextView
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="16dp"
+        android:text="Progress"
+        android:textColor="@color/Black"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintStart_toStartOf="@+id/HomepageTitle"
+        app:layout_constraintTop_toBottomOf="@+id/HomepageTitle" />
+
+    <TextView
+        android:id="@+id/ElemProg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="27dp"
+        android:text="Elementary Programming"
+        android:textSize="32dp"
+        android:textColor="@color/Black"
+        app:layout_constraintBottom_toTopOf="@+id/el1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <TextView
+        android:id="@+id/HomepageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="102dp"
+        android:layout_marginBottom="33dp"
+        android:text="Homepage"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="32dp"
+        android:textColor="@color/Black"
+        app:layout_constraintBottom_toTopOf="@+id/progress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.55" />
+
+    <Button
+        android:id="@+id/el3"
+        android:layout_width="0dp"
+        android:layout_height="53"
+        android:layout_marginEnd="4dp"
+        android:background="@color/ButtonBackground"
+        android:text="Lesson 3"
+        app:layout_constraintBaseline_toBaselineOf="@+id/el2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/el2" />
+
+    <Button
+        android:id="@+id/sl2"
+        android:layout_width="125"
+        android:layout_height="53"
+        android:layout_marginBottom="16dp"
+        android:background="@color/ButtonBackground"
+        android:text="Lesson 2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sl3"
+        app:layout_constraintStart_toEndOf="@+id/sl1"
+        app:layout_constraintTop_toBottomOf="@+id/sl1" />
+
+    <Button
+        android:id="@+id/sl3"
+        android:layout_width="125"
+        android:layout_height="53"
+        android:layout_marginEnd="4dp"
+        android:background="@color/ButtonBackground"
+        android:text="Lesson 3"
+        app:layout_constraintBaseline_toBaselineOf="@+id/sl2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sl2" />
+
+</android.support.constraint.ConstraintLayout>
