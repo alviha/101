@@ -1,0 +1,71 @@
+From: https://developer.android.com/guide/components/intents-common.html#java
+
+Email
+Compose an email with optional attachments
+To compose an email, use one of the below actions based on whether you'll include attachments, and include email details such as the recipient and subject using the extra keys listed below.
+
+Action
+ACTION_SENDTO (for no attachment) or
+ACTION_SEND (for one attachment) or
+ACTION_SEND_MULTIPLE (for multiple attachments)
+Data URI Scheme
+None
+MIME Type
+"text/plain"
+"*/*"
+Extras
+Intent.EXTRA_EMAIL
+A string array of all "To" recipient email addresses.
+Intent.EXTRA_CC
+A string array of all "CC" recipient email addresses.
+Intent.EXTRA_BCC
+A string array of all "BCC" recipient email addresses.
+Intent.EXTRA_SUBJECT
+A string with the email subject.
+Intent.EXTRA_TEXT
+A string with the body of the email.
+Intent.EXTRA_STREAM
+A Uri pointing to the attachment. If using the ACTION_SEND_MULTIPLE action, this should instead be an ArrayList containing multiple Uri objects.
+Example intent:
+
+KOTLIN
+JAVA
+public void composeEmail(String[] addresses, String subject, Uri attachment) {
+    Intent intent = new Intent(Intent.ACTION_SEND);
+    intent.setType("*/*");
+    intent.putExtra(Intent.EXTRA_EMAIL, addresses);
+    intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+    intent.putExtra(Intent.EXTRA_STREAM, attachment);
+    if (intent.resolveActivity(getPackageManager()) != null) {
+        startActivity(intent);
+    }
+}
+
+If you want to ensure that your intent is handled only by an email app (and not other text messaging or social apps), then use the ACTION_SENDTO action and include the "mailto:" data scheme. For example:
+
+KOTLIN
+JAVA
+public void composeEmail(String[] addresses, String subject) {
+    Intent intent = new Intent(Intent.ACTION_SENDTO);
+    intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+    intent.putExtra(Intent.EXTRA_EMAIL, addresses);
+    intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+    if (intent.resolveActivity(getPackageManager()) != null) {
+        startActivity(intent);
+    }
+}
+
+Example intent filter:
+
+<activity ...>
+    <intent-filter>
+        <action android:name="android.intent.action.SEND" />
+        <data android:type="*/*" />
+        <category android:name="android.intent.category.DEFAULT" />
+    </intent-filter>
+    <intent-filter>
+        <action android:name="android.intent.action.SENDTO" />
+        <data android:scheme="mailto" />
+        <category android:name="android.intent.category.DEFAULT" />
+    </intent-filter>
+</activity>
