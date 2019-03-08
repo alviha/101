@@ -1,0 +1,26 @@
+IDs
+activity_signup.xml
+    layout-signuplayout
+	Sign Up Header- signuplabel
+	Form/Scrollbar- login_form
+	Box containing all fields- email_login_form
+	Name box-name
+	Username box-username
+	email box-email
+	password box-password
+	Confirm Password box- confirmPassword
+	Sign Up Button- email_sign_in_button
+	Already Have an Account Button - alreadyhaveanaccount
+	
+activity_login.xml
+    layout- linerLayout2
+    Sign In Header- signin
+    Scrollbar-login-form
+	Box containing all fields-email_login_form
+	username box- username
+	Forgot Username Button- forgotusernamebutton
+	email box- email
+	Forgot email button- button
+	Forgot password button- button2
+	Sign in Button- email_sign_in_button
+	Create an account Button- needanaccount
