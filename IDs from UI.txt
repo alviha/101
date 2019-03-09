@@ -24,3 +24,16 @@ activity_login.xml
 	Forgot password button- button2
 	Sign in Button- email_sign_in_button
 	Create an account Button- needanaccount
+
+activity_home_page.xml
+	Homepage title - text_homepage
+	Progress title - text_progress
+	Progress bar - widget_progressBar
+	elementary programming title - text_elementaryProg
+	elementary programming lesson 1 button - button_ePLesson1
+	elementary programming lesson 2 button - button_ePLesson2
+	elementary programming lesson 3 button - button_ePLesson3
+	selection title - text_selection
+	selection lesson 1 - button_sLesson1
+	selection lesson 2 - button_sLesson2
+	selection lesson 3 - button_sLesson3

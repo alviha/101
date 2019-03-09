@@ -1,0 +1,25 @@
+Naming Convention for UI Ids
+
+for Edit Text boxes
+      input_nameOfField
+      ex. input_password
+
+for static text
+       text_nameofField
+       ex. text_signUp
+
+for buttons
+       button_nameofButton
+       ex. button_forgotPassword
+
+for layouts
+       layout_whatLayoutisFor
+       ex. layout_loginForm
+
+for scrolls
+        scroll_whatTheContainerIs
+        ex. scroll_loginForm
+
+for fragments
+         fragment_whatFragementis
+         ex. fragment_menu
