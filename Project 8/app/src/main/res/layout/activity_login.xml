@@ -16,7 +16,7 @@
     <!-- Login progress -->
 
     <TextView
-        android:id="@+id/signin"
+        android:id="@+id/text_signIn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/action_sign_in_short"
@@ -53,18 +53,18 @@
                     android:layout_height="match_parent">
 
                     <EditText
-                        android:id="@+id/username"
+                        android:id="@+id/input_username"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:autofillHints="@string/username"
                         android:ems="10"
                         android:hint="@string/name"
                         android:inputType="textPersonName"
-                        android:labelFor="@+id/signin"
+                        android:labelFor="@+id/text_signIn"
                         android:text="@string/username" />
 
                     <Button
-                        android:id="@+id/forgotusernamebutton"
+                        android:id="@+id/button_forgotUsername"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -77,7 +77,7 @@
                     android:layout_height="wrap_content">
 
                     <AutoCompleteTextView
-                        android:id="@+id/email"
+                        android:id="@+id/input_email"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/prompt_email"
@@ -87,7 +87,7 @@
                         android:singleLine="true" />
 
                     <Button
-                        android:id="@+id/button"
+                        android:id="@+id/button_forgotEmail"
                         style="@android:style/TextAppearance.Small"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -104,7 +104,7 @@
                     android:layout_height="wrap_content">
 
                     <EditText
-                        android:id="@+id/password"
+                        android:id="@+id/input_password"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:autofillHints="@string/passwordhint"
@@ -119,7 +119,7 @@
                 </android.support.design.widget.TextInputLayout>
 
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@+id/button_forgotPassword"
                     style="@android:style/TextAppearance.DeviceDefault.Widget.Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -127,7 +127,7 @@
                     android:text="@string/forgotpassword" />
 
                 <Button
-                    android:id="@+id/email_sign_in_button"
+                    android:id="@+id/button_signIn"
                     style="?android:textAppearanceSmall"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -142,7 +142,7 @@
         </ScrollView>
 
         <Button
-            android:id="@+id/needanaccount"
+            android:id="@+id/button_createNewAccount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
