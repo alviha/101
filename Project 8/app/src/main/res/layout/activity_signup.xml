@@ -16,7 +16,7 @@
     <!-- Login progress -->
 
     <TextView
-        android:id="@+id/signuplabel"
+        android:id="@+id/text_signUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fadingEdge="horizontal|vertical"
@@ -46,7 +46,7 @@
                 android:layout_weight="1">
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/name"
+                    android:id="@+id/input_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/name" />
@@ -57,7 +57,7 @@
                 android:layout_height="match_parent">
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/username"
+                    android:id="@+id/input_username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/username" />
@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content">
 
                 <AutoCompleteTextView
-                    android:id="@+id/email"
+                    android:id="@+id/input_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/prompt_email"
@@ -83,7 +83,7 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/password"
+                    android:id="@+id/input_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:autofillHints="@string/prompt_password"
@@ -102,13 +102,14 @@
                 android:layout_height="match_parent">
 
                 <android.support.design.widget.TextInputEditText
+                    android:id="@+id/input_confirmPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/ConfirmPassword" />
             </android.support.design.widget.TextInputLayout>
 
             <Button
-                android:id="@+id/email_sign_in_button"
+                android:id="@+id/button_signUp"
                 style="?android:textAppearanceSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -122,7 +123,7 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/alreadyhaveanaccount"
+        android:id="@+id/input_alreadyHaveAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/Black"
