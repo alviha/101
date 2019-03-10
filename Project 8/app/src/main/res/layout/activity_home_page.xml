@@ -11,171 +11,249 @@
     tools:layout_editor_absoluteY="81dp">
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:id="@+id/scroll_homepage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
+            android:id="@+id/layout_homepage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal|center">
+
+            <TextView
+                android:id="@+id/text_homepage"
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:text="@string/homepageTitle"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/Black"
+                android:textSize="32sp"
+                tools:layout_editor_absoluteX="92dp"
+                tools:layout_editor_absoluteY="22dp" />
+
+            <TextView
+                android:id="@+id/text_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/progress"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="165dp"
+                tools:layout_editor_absoluteY="93dp" />
+
+            <ProgressBar
+                android:id="@+id/widget_progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="203dp"
+                android:layout_height="32dp"
+                android:progressTint="@color/ProgressBar"
+                tools:layout_editor_absoluteX="91dp"
+                tools:layout_editor_absoluteY="128dp" />
+
+            <TextView
+                android:id="@+id/text_elementaryProg"
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:text="@string/elementaryProgramming"
+                android:textColor="@color/Black"
+                android:textSize="32sp"
+                tools:layout_editor_absoluteX="12dp"
+                tools:layout_editor_absoluteY="176dp" />
+
+            <Button
+                android:id="@+id/button_ePLesson1"
+                android:layout_width="125dp"
+                android:layout_height="53dp"
+                android:background="@color/main"
+                android:text="@string/lesson1"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="266dp" />
+
+            <Button
+                android:id="@+id/button_ePLesson2"
+                android:layout_width="125dp"
+                android:layout_height="53dp"
+                android:background="@color/main"
+                android:text="@string/lesson2"
+                tools:layout_editor_absoluteX="132dp"
+                tools:layout_editor_absoluteY="266dp" />
+
+            <Button
+                android:id="@+id/button_ePLesson3"
+                android:layout_width="125dp"
+                android:layout_height="53dp"
+                android:background="@color/main"
+                android:text="@string/lesson3"
+                tools:layout_editor_absoluteX="254dp"
+                tools:layout_editor_absoluteY="266dp" />
+
+            <TextView
+                android:id="@+id/text_selection"
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:text="@string/selection"
+                android:textColor="@color/Black"
+                android:textSize="32sp"
+                tools:layout_editor_absoluteX="126dp"
+                tools:layout_editor_absoluteY="332dp" />
+
+            <Button
+                android:id="@+id/button_sLesson1"
+                android:layout_width="125dp"
+                android:layout_height="52dp"
+                android:background="@color/main"
+                android:text="@string/lesson1"
+                tools:layout_editor_absoluteX="4dp"
+                tools:layout_editor_absoluteY="404dp" />
+
+            <Button
+                android:id="@+id/button_sLesson2"
+                android:layout_width="125dp"
+                android:layout_height="53dp"
+                android:background="@color/main"
+                android:text="@string/lesson2"
+                tools:layout_editor_absoluteX="128dp"
+                tools:layout_editor_absoluteY="404dp" />
+
+            <Button
+                android:id="@+id/button_sLesson3"
+                android:layout_width="125dp"
+                android:layout_height="53dp"
+                android:background="@color/main"
+                android:text="@string/lesson3"
+                tools:layout_editor_absoluteX="251dp"
+                tools:layout_editor_absoluteY="404dp" />
+
+            <TextView
+                android:id="@+id/text_functions_char_string"
+                android:layout_width="wrap_content"
+                android:layout_height="100sp"
+                android:text="@string/functions"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/Black"
+                android:textSize="32sp" />
+
+            <Button
+                android:id="@+id/button_fCSLesson1"
+                android:layout_width="125dp"
+                android:layout_height="53dp"
+                android:background="@color/main"
+                android:text="@string/lesson1"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="266dp" />
+
+            <Button
+                android:id="@+id/button_fCSLesson2"
+                android:layout_width="125dp"
+                android:layout_height="53dp"
+                android:background="@color/main"
+                android:text="@string/lesson2"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="266dp" />
+
+
+            <Button
+                android:id="@+id/button_fCSLesson3"
+                android:layout_width="125dp"
+                android:layout_height="53dp"
+                android:background="@color/main"
+                android:text="@string/lesson3"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="266dp" />
+
+            <Button
+                android:id="@+id/button_fCSLesson4"
+                android:layout_width="125dp"
+                android:layout_height="53dp"
+                android:background="@color/main"
+                android:text="@string/lesson4"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="266dp" />
+
+            <TextView
+                android:id="@+id/text_loops"
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:text="@string/loops"
+                android:textColor="@color/Black"
+                android:textSize="32sp" />
+
+            <Button
+                android:id="@+id/button_while"
+                android:layout_width="125dp"
+                android:layout_height="53dp"
+                android:background="@color/main"
+                android:text="@string/loops1" />
+
+            <Button
+                android:id="@+id/button_for"
+                android:layout_width="125dp"
+                android:layout_height="53dp"
+                android:background="@color/main"
+                android:text="@string/loops2" />
+
+            <Button
+                android:id="@+id/button_do"
+                android:layout_width="125dp"
+                android:layout_height="53dp"
+                android:background="@color/main"
+                android:text="@string/loops3" />
+
+            <TextView
+                android:id="@+id/text_methods"
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:text="@string/method"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/Black"
+                android:textSize="32sp" />
+
+            <Button
+                android:id="@+id/button_mlesson1"
+                android:layout_width="125dp"
+                android:layout_height="53dp"
+                android:background="@color/main"
+                android:text="@string/lesson1" />
+
+            <Button
+                android:id="@+id/button_mLesson2"
+                android:layout_width="125dp"
+                android:layout_height="53dp"
+                android:background="@color/main"
+                android:text="@string/lesson2" />
+
+            <TextView
+                android:id="@+id/text_arrays"
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:text="@string/arrays"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/Black"
+                android:textSize="32sp" />
+
+            <Button
+                android:id="@+id/button_aLesson1"
+                android:layout_width="125dp"
+                android:layout_height="53dp"
+                android:background="@color/main"
+                android:text="@string/lesson1" />
+
+            <Button
+                android:id="@+id/button_aLesson2"
+                android:layout_width="125dp"
+                android:layout_height="53dp"
+                android:background="@color/main"
+                android:text="@string/lesson2" />
+
+        </LinearLayout>
     </ScrollView>
-
-    <Button
-        android:id="@+id/button_ePLesson1"
-        android:layout_width="125dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/main"
-        android:text="@string/lesson1"
-        app:layout_constraintBottom_toTopOf="@+id/text_selection"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_elementaryProg" />
-
-    <Button
-        android:id="@+id/button_sLesson1"
-        android:layout_width="125dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="8dp"
-        android:background="@color/main"
-        android:text="@string/lesson1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_selection" />
-
-    <ProgressBar
-        android:id="@+id/widget_progressBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="203dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:progressTint="@color/ProgressBar"
-        app:layout_constraintBottom_toTopOf="@+id/text_elementaryProg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button_ePLesson2"
-        android:layout_width="125dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/main"
-        android:text="@string/lesson2"
-        app:layout_constraintBottom_toTopOf="@+id/text_selection"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/button_ePLesson1"
-        app:layout_constraintTop_toBottomOf="@+id/text_elementaryProg" />
-
-    <TextView
-        android:id="@+id/text_selection"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="332dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/selection"
-        android:textColor="@color/Black"
-        android:textSize="32sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/text_progress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/progress"
-        android:textColor="@color/Black"
-        app:layout_constraintBottom_toTopOf="@+id/widget_progressBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/text_elementaryProg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="176dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/elementaryProgramming"
-        android:textColor="@color/Black"
-        android:textSize="32sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/text_homepage"
-        android:layout_width="200sp"
-        android:layout_height="50sp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/homepageTitle"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@color/Black"
-        android:textSize="32sp"
-        app:layout_constraintBottom_toTopOf="@+id/text_progress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button_ePLesson3"
-        android:layout_width="130dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/main"
-        android:text="@string/lesson3"
-        app:layout_constraintBottom_toTopOf="@+id/text_selection"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_elementaryProg" />
-
-    <Button
-        android:id="@+id/button_sLesson2"
-        android:layout_width="125dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="8dp"
-        android:background="@color/main"
-        android:text="@string/lesson2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_selection" />
-
-    <Button
-        android:id="@+id/button_sLesson3"
-        android:layout_width="125dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="8dp"
-        android:background="@color/main"
-        android:text="@string/lesson3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_selection" />
 
 </android.support.constraint.ConstraintLayout>

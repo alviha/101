@@ -30,8 +30,16 @@
     <string name="lesson1">Lesson 1</string>
     <string name="lesson2">Lesson 2</string>
     <string name="lesson3">Lesson 3</string>
+    <string name="lesson4">Lesson 4</string>
     <string name="selection">Selection</string>
     <string name="progress">Progress</string>
     <string name="elementaryProgramming">Elementary Programming</string>
     <string name="homepageTitle">Homepage</string>
+    <string name="functions">Mathematical functions, characters, and strings</string>
+    <string name="loops">Loops</string>
+    <string name="loops1">while</string>
+    <string name="loops2">for</string>
+    <string name="loops3">do</string>
+    <string name="method">Methods</string>
+    <string name="arrays">Single Dimensional Arrays</string>
 </resources>
