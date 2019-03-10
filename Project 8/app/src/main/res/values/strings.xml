@@ -26,4 +26,12 @@
     <string name="forgotUsername">Forgot Username</string>
     <string name="needanaccount">Need to Create An Account</string>
     <string name="username">Username</string>
+    <!--Strings related to homepage-->
+    <string name="lesson1">Lesson 1</string>
+    <string name="lesson2">Lesson 2</string>
+    <string name="lesson3">Lesson 3</string>
+    <string name="selection">Selection</string>
+    <string name="progress">Progress</string>
+    <string name="elementaryProgramming">Elementary Programming</string>
+    <string name="homepageTitle">Homepage</string>
 </resources>
