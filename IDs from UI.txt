@@ -25,6 +25,12 @@ activity_login.xml
 	Sign in Button- email_sign_in_button
 	Create an account Button- needanaccount
 
+activity_forgot_username.xml
+	Forgot Username Title - text_ForgotUsername
+	Prompt Box - text_EmailPrompt
+	Email Box - input_Email
+	Send Email Button - button_SendEmail
+
 activity_home_page.xml
 	homepage scroll - scroll_homepage
 	homepage layout - layout_homepage
