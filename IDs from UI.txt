@@ -25,6 +25,12 @@ activity_login.xml
 	Sign in Button- email_sign_in_button
 	Create an account Button- needanaccount
 
+activity_forgot_username.xml
+	Forgot Username Title - text_ForgotUsername
+	Prompt Box - text_EmailPrompt
+	Email Box - input_Email
+	Send Email Button - button_SendEmail
+
 activity_home_page.xml
 	homepage scroll - scroll_homepage
 	homepage layout - layout_homepage
@@ -55,5 +61,5 @@ activity_home_page.xml
 	single dimensional arrarys lesson 1 - button_aLesson1
 	single dimensional arrarys lesson 2 - button_aLesson2
 
-activity_startup.xml
+ activity_startup.xml
 	logo - image_logo
