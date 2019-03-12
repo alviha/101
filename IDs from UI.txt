@@ -56,4 +56,4 @@ activity_home_page.xml
 	single dimensional arrarys lesson 2 - button_aLesson2
 
 activity_startup.xml
-	
+	logo - image_logo
