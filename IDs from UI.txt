@@ -60,3 +60,6 @@ activity_home_page.xml
 	single dimensional arrarys title - text_arrays
 	single dimensional arrarys lesson 1 - button_aLesson1
 	single dimensional arrarys lesson 2 - button_aLesson2
+
+ activity_startup.xml
+	logo - image_logo
