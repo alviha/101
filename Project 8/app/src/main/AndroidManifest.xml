@@ -33,6 +33,11 @@
             android:name=".LoginActivity"
             android:label="@string/app_name">
         </activity>
+      
+        <activity
+            android:name=".Homepage"
+            android:label="@string/homepageTitle">
+        </activity>
     </application>
 
 </manifest>
