@@ -29,6 +29,15 @@
             android:label="Project 8">
 
         </activity>
+        <activity
+            android:name=".Homepage"
+            android:label="@string/homepageTitle">
+        <intent-filter>
+            <action android:name="android.intent.action.HOMEPAGE" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
     </application>
 
 </manifest>
