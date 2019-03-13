@@ -30,6 +30,13 @@ activity_forgot_username.xml
 	Prompt Box - text_EmailPrompt
 	Email Box - input_Email
 	Send Email Button - button_SendEmail
+	Confirmation Box - text_ConfirmEmail
+
+activity_forgot_password.xml
+	Forgot password title - text_ForgotPassword
+	Prompt Box - text_EmailPrompt2
+	Email Box - input_Email2
+	Send Email Button - button_SendEmail2
 
 activity_home_page.xml
 	homepage scroll - scroll_homepage
