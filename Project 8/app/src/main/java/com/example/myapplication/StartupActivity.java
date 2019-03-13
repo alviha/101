@@ -24,7 +24,7 @@ public class StartupActivity extends AppCompatActivity {
 
     private void splashScreen() {
 
-        long timeDelay = 3000; // 3 second delay
+        long timeDelay = 1000; // 1 second delay
         new Handler().postDelayed(new Runnable() {
 
             @Override
