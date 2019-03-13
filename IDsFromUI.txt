@@ -1,0 +1,62 @@
+IDs
+activity_signup.xml
+    layout-signuplayout
+	Sign Up Header- signuplabel
+	Form/Scrollbar- login_form
+	Box containing all fields- email_login_form
+	Name box-name
+	Username box-username
+	email box-email
+	password box-password
+	Confirm Password box- confirmPassword
+	Sign Up Button- email_sign_in_button
+	Already Have an Account Button - alreadyhaveanaccount
+	
+activity_login.xml
+    layout- linerLayout2
+    Sign In Header- signin
+    Scrollbar-login-form
+	Box containing all fields-email_login_form
+	username box- username
+	Forgot Username Button- forgotusernamebutton
+	email box- email
+	Forgot email button- button
+	Forgot password button- button2
+	Sign in Button- email_sign_in_button
+	Create an account Button- needanaccount
+
+activity_forgot_username.xml
+	Forgot Username Title - text_ForgotUsername
+	Prompt Box - text_EmailPrompt
+	Email Box - input_Email
+	Send Email Button - button_SendEmail
+
+activity_home_page.xml
+	homepage scroll - scroll_homepage
+	homepage layout - layout_homepage
+	Homepage title - text_homepage
+	Progress title - text_progress
+	Progress bar - widget_progressBar
+	elementary programming title - text_elementaryProg
+	elementary programming lesson 1 button - button_ePLesson1
+	elementary programming lesson 2 button - button_ePLesson2
+	elementary programming lesson 3 button - button_ePLesson3
+	selection title - text_selection
+	selection lesson 1 - button_sLesson1
+	selection lesson 2 - button_sLesson2
+	selection lesson 3 - button_sLesson3
+	functions characters and strings title - text_functions_char_string
+	functions characters and strings lesson 1 button - button_fCSLesson1
+	functions characters and strings lesson 2 button - button_fCSLesson2
+	functions characters and strings lesson 3 button - button_fCSLesson3
+	functions characters and strings lesson 4 button - button_fCSLesson4
+	loops title - text_loops
+	loops while button - button_while
+	loops for button - button_for
+	loops do button - button_do
+	methods title - text_methods
+	methods lesson 1 - button_mlesson1
+	methods lesson 2 - button_mLesson2
+	single dimensional arrarys title - text_arrays
+	single dimensional arrarys lesson 1 - button_aLesson1
+	single dimensional arrarys lesson 2 - button_aLesson2
