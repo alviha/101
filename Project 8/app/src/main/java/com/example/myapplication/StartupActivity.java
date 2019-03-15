@@ -49,7 +49,7 @@ public class StartupActivity extends AppCompatActivity {
                 else {
 
                     // TODO: change SignUpActivity to the sign in activity once that activity is created
-                    i = new Intent(StartupActivity.this, SignUpActivity.class);
+                    i = new Intent(StartupActivity.this, LoginActivity.class);
                 }
 
                 startActivity(i);
