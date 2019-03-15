@@ -3,6 +3,7 @@ package com.example.myapplication;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -28,6 +29,13 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,32 +47,87 @@ import static android.Manifest.permission.READ_CONTACTS;
  */
 public class LoginActivity extends AppCompatActivity implements OnClickListener {
 
-    private Button forgotPassword;
-    private Button forgotEmail;
-    private Button signIn;
-    private Button createAccount;
-    private EditText email;
-    private EditText password;
+    private Button button_forgotPassword;
+    private Button button_forgotEmail;
+    private Button button_signIn;
+    private Button button_createAccount;
+
+    private EditText input_email;
+    private EditText input_password;
+
+    private FirebaseAuth mAuth;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        forgotPassword = (Button) findViewById(R.id.button_forgotPassword);
-        forgotEmail = findViewById(R.id.button_forgotEmail);
-        signIn = findViewById(R.id.button_signIn);
-        createAccount = findViewById(R.id.button_createNewAccount);
-        email = findViewById(R.id.input_email);
-        password = findViewById(R.id.input_password);
+        FirebaseApp.initializeApp(this);
+        mAuth = FirebaseAuth.getInstance();
+
+        //Buttons
+        button_forgotPassword = findViewById(R.id.button_forgotPassword);
+        button_forgotEmail = findViewById(R.id.button_forgotEmail);
+        button_signIn = findViewById(R.id.button_signIn);
+        button_createAccount = findViewById(R.id.button_createNewAccount);
+
+        //User inputs
+        input_email = findViewById(R.id.input_email);
+        input_password = findViewById(R.id.input_password);
+
+        //Set onClick for buttons
+        button_forgotPassword.setOnClickListener(this);
+        button_forgotEmail.setOnClickListener(this);
+        button_signIn.setOnClickListener(this);
+        button_createAccount.setOnClickListener(this);
+
+
 
     }
 
     @Override
     public void onClick(View v) {
 
-        switch(v.getId()){
-
+        if(v == button_forgotEmail){
+            startActivity(new Intent(LoginActivity.this, ForgotEmailActivity.class));
         }
 
+        if (v == button_forgotPassword){
+            startActivity(new Intent(LoginActivity.this, ForgotPasswordActivity.class));
+        }
+
+        if (v == button_createAccount){
+            startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
+        }
+
+        if (v == button_signIn){
+
+            String email = input_email.getText().toString();
+
+            if(TextUtils.isEmpty(email)){
+                input_email.setError("Email Required");
+                input_email.requestFocus();
+                return;
+            }
+
+            String password = input_password.getText().toString();
+
+            if (TextUtils.isEmpty(password)){
+                input_password.setError("Password Required");
+                input_password.requestFocus();
+                return;
+            }
+            mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+
+                    if(task.isSuccessful()){
+                        startActivity(new Intent(LoginActivity.this, Homepage.class));
+                    }else{
+                        Toast.makeText(LoginActivity.this,"Account not yet created.", Toast.LENGTH_SHORT).show();
+                    }
+
+                }
+            });
+        }
     }
 }

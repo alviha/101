@@ -46,4 +46,5 @@
     <string name="EmailExample">example123@example.com</string>
     <string name="EmailSend">Send Email</string>
     <string name="EmailConfirm">Email Sent</string>
+    <string name="ConfirmEmail" />
 </resources>
