@@ -42,4 +42,8 @@
     <string name="loops3">do</string>
     <string name="method">Methods</string>
     <string name="arrays">Single Dimensional Arrays</string>
+    <string name="EmailPrompt">Please enter an email.</string>
+    <string name="EmailExample">example123@example.com</string>
+    <string name="EmailSend">Send Email</string>
+    <string name="EmailConfirm">Email Sent</string>
 </resources>

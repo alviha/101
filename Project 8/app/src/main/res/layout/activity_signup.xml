@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".signup"
+    tools:context=".SignUpActivity"
     tools:elevation="90dp">
 
     <!-- Login progress -->
@@ -123,7 +123,7 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/input_alreadyHaveAccount"
+        android:id="@+id/button_alreadyHaveAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/Black"
