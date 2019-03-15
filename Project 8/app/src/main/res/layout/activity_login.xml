@@ -50,27 +50,7 @@
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <EditText
-                        android:id="@+id/input_username"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:autofillHints="@string/username"
-                        android:ems="10"
-                        android:hint="@string/name"
-                        android:inputType="textPersonName"
-                        android:labelFor="@+id/text_signIn"
-                        android:text="@string/username" />
-
-                    <Button
-                        android:id="@+id/button_forgotUsername"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@color/main"
-                        android:text="@string/forgotUsername" />
-                </android.support.design.widget.TextInputLayout>
+                    android:layout_height="match_parent"/>
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
