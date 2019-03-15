@@ -8,129 +8,126 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-import org.w3c.dom.Text;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView title;
-
-    private EditText input_password;
+    /** instance data members */
+    private EditText input_name;
+    private EditText input_username;
     private EditText input_email;
-    private EditText input_usernameAttemptbox;
-    private EditText input_personName;
+    private EditText input_password;
     private EditText input_confirmPassword;
 
-    private Button submit;
-    private Button alreadyHaveAccount;
+    private Button button_signUp;
+    private Button button_alreadyHaveAccount;
 
     private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_signup);
 
-        title = findViewById(R.id.text_signUp);
+        FirebaseApp.initializeApp(this);
 
-        input_password = findViewById(R.id.input_password);
-        input_email = findViewById(R.id.input_email);
-        input_usernameAttemptbox = findViewById(R.id.input_username);
-        input_personName = findViewById(R.id.input_name);
-        input_confirmPassword= findViewById(R.id.input_confirmPassword);
-
-        submit = findViewById(R.id.button_signUp);
-        alreadyHaveAccount = findViewById(R.id.button_alreadyHaveAccount);
-
-        submit.setOnClickListener(this);
-        alreadyHaveAccount.setOnClickListener(this);
-
+        /* initialize data members */
         mAuth = FirebaseAuth.getInstance();
 
+        input_name = findViewById(R.id.input_name);
+        input_username = findViewById(R.id.input_username);
+        input_email = findViewById(R.id.input_email);
+        input_password = findViewById(R.id.input_password);
+        input_confirmPassword = findViewById(R.id.input_confirmPassword);
 
+        button_signUp = findViewById(R.id.button_signUp);
+        button_alreadyHaveAccount = findViewById(R.id.button_alreadyHaveAccount);
+
+        button_signUp.setOnClickListener(this);
+        button_alreadyHaveAccount.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
 
-        switch(v.getId()){
+        /* sign up button clicked */
+        if(v == button_signUp){
 
-            case R.id.button_signUp:
-                if(!validate()){
-                    return;
-                }
-                else{
-                    String email = input_email.getText().toString();
-                    String password = input_password.getText().toString();
-                    mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            String name = input_name.getText().toString();
+            String username = input_username.getText().toString();
+            String email = input_email.getText().toString();
+            String password = input_password.getText().toString();
+            String confirmPassword = input_confirmPassword.getText().toString();
+
+            /* validation */
+            if(TextUtils.isEmpty(name)){
+                input_name.setError("Name is required");
+                input_name.requestFocus();
+                return;
+            }
+
+            if(username.length() < 6){
+                input_username.setError("Username must be 6 characters or longer");
+                input_username.requestFocus();
+                return;
+            }
+
+            if(TextUtils.isEmpty(email)){
+                input_email.setError("Email Required");
+                input_email.requestFocus();
+                return;
+            }
+
+            if(!email.contains("@")){
+                input_email.setError("Invalid email");
+                input_email.requestFocus();
+                return;
+            }
+
+            if(password.length() < 8){
+                input_password.setError("Password must be at least 8 characters long");
+                input_password.requestFocus();
+                return;
+            }
+
+            if(!confirmPassword.equals(password)){
+                input_confirmPassword.setError("Confirmed Password and Password do not match");
+                input_confirmPassword.requestFocus();
+                return;
+            }
+
+            /* validation passed, create user through firebase using email and password */
+            mAuth.createUserWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
+
                             if(task.isSuccessful()){
-                                Toast.makeText(getApplicationContext(), "Registration Successful", Toast.LENGTH_SHORT);
+                                Toast.makeText(SignUpActivity.this, "Registration successful", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(SignUpActivity.this, Homepage.class));
                                 finish();
                             }
                             else{
-                                Toast.makeText(getApplicationContext(), "Error ocurred. Please try again.", Toast.LENGTH_LONG);
+                                Toast.makeText(SignUpActivity.this, "Registration failed. Please try again",
+                                        Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
-                }
-            case R.id.button_alreadyHaveAccount:
-                startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
-        }
-    }
-
-    public boolean validate(){
-
-        String username = input_usernameAttemptbox.getText().toString();
-        if(username.length() < 6){
-            input_usernameAttemptbox.setError("Username needs to be 6 letters or longer");
-            input_usernameAttemptbox.requestFocus();
-            return false;
         }
 
-        String password = input_password.getText().toString();
-        if(password.length() < 8){
-            input_password.setError("Password needs to be 8 letters long");
-            input_password.requestFocus();
-            return false;
-        }
+        /* already have an account clicked */
+        if(v == button_alreadyHaveAccount){
 
-        String email = input_email.getText().toString();
-        if(TextUtils.isEmpty(email)){
-            input_email.setError("Email is required");
-            input_email.requestFocus();
-            return false;
+            startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
+            finish();
         }
-        if(!email.contains("@")){
-            input_email.setError("Invalid email");
-            input_email.requestFocus();
-            return false;
-        }
-
-        String confirmPassword = input_confirmPassword.getText().toString();
-        if(!confirmPassword.equals(password)){
-            input_confirmPassword.setError("Confirmed Password and Password do not match");
-            input_confirmPassword.requestFocus();
-            return false;
-        }
-
-        String personName = input_personName.getText().toString();
-        if(TextUtils.isEmpty(personName)){
-            input_personName.setError("Name is required");
-            input_personName.requestFocus();
-            return false;
-        }
-
-        return true;
-
     }
 }
