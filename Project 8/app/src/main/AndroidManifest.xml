@@ -13,31 +13,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".StartupActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".ForgotPasswordActivity"></activity>
+        <activity
+            android:name=".StartupActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-
         <activity
             android:name=".SignUpActivity"
-            android:label="@string/title_activity_signup">
-        </activity>
-
+            android:label="@string/title_activity_signup"></activity>
         <activity android:name=".MainActivity" />
-
         <activity
             android:name=".LoginActivity"
-            android:label="@string/app_name">
-        </activity>
-      
+            android:label="@string/app_name"></activity>
         <activity
             android:name=".Homepage"
-            android:label="@string/homepageTitle">
-        </activity>
+            android:label="@string/homepageTitle"></activity>
+        <activity
+            android:name=".ForgotEmailActivity"
+            android:label="ForgotEmail"></activity>
     </application>
 
 </manifest>

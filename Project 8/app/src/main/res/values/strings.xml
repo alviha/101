@@ -46,4 +46,8 @@
     <string name="EmailExample">example123@example.com</string>
     <string name="EmailSend">Send Email</string>
     <string name="EmailConfirm">Email Sent</string>
+    <string name="ConfirmEmail" />
+    <string name="SecondaryEmail">Please enter a secondary email.</string>
+    <string name="EnterUsername">Please enter your username.</string>
+    <string name="UsernameHint">Username</string>
 </resources>
