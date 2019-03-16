@@ -85,7 +85,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
             /* email text field is empty */
             if(TextUtils.isEmpty(email)){
-                input_email.setError("Email Required");
+                input_email.setError("Email required");
                 input_email.requestFocus();
                 return;
             }
