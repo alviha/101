@@ -59,8 +59,8 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-
+        setContentView(R.layout.activity_login); // view login page
+        //connecting to firebase
         FirebaseApp.initializeApp(this);
         mAuth = FirebaseAuth.getInstance();
 
@@ -86,40 +86,41 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
 
     @Override
     public void onClick(View v) {
-
+            //if forgot email was pressed then redirect to forgot email page
         if(v == button_forgotEmail){
             startActivity(new Intent(LoginActivity.this, ForgotEmailActivity.class));
         }
-
+            //if forgot password was pressed then redirect to forgot password page
         if (v == button_forgotPassword){
             startActivity(new Intent(LoginActivity.this, ForgotPasswordActivity.class));
         }
-
+            //if create account was pressed then redirect to create account page
         if (v == button_createAccount){
             startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
         }
-
+            //if sign in was pressed
         if (v == button_signIn){
-
+            //get input from email text box
             String email = input_email.getText().toString();
-
+            //check to see if input is empty
             if(TextUtils.isEmpty(email)){
                 input_email.setError("Email Required");
                 input_email.requestFocus();
                 return;
             }
-
+            //get input from password text box
             String password = input_password.getText().toString();
-
+            //check to see if input is empty
             if (TextUtils.isEmpty(password)){
                 input_password.setError("Password Required");
                 input_password.requestFocus();
                 return;
             }
+            //check with firebase to see if email and password match records
             mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
-
+                    //if email and password are correct then go to homepage otherwise alert user
                     if(task.isSuccessful()){
                         startActivity(new Intent(LoginActivity.this, Homepage.class));
                     }else{

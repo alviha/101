@@ -24,22 +24,22 @@ public class ForgotPasswordActivity extends AppCompatActivity implements View.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_forgot_password);
-
+        setContentView(R.layout.activity_forgot_password); // view forgot password page
+            //connecting to firebase
         FirebaseApp.initializeApp(this);
         mAuth = FirebaseAuth.getInstance();
-
+            //assign email
         input_Email = findViewById(R.id.input_Email);
-
+            //assign button
         button_SendEmail = findViewById(R.id.button_SendEmail);
         button_SendEmail.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-
+            //if button is pressed
         if (v == button_SendEmail){
-
+            //send email and inform user the email was sent
             String email = input_Email.getText().toString();
             mAuth.sendPasswordResetEmail(email);
             Toast.makeText(ForgotPasswordActivity.this, "Email Sent", Toast.LENGTH_SHORT).show();
