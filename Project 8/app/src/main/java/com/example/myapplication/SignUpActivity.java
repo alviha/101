@@ -67,44 +67,51 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             String password = input_password.getText().toString();
             String confirmPassword = input_confirmPassword.getText().toString();
 
-            /* validation */
+            /* next few if statements are for checking validation */
+
+            /* name text field is empty */
             if(TextUtils.isEmpty(name)){
                 input_name.setError("Name is required");
                 input_name.requestFocus();
                 return;
             }
 
+            /* username entered is less than 6 characters */
             if(username.length() < 6){
                 input_username.setError("Username must be 6 characters or longer");
                 input_username.requestFocus();
                 return;
             }
 
+            /* email text field is empty */
             if(TextUtils.isEmpty(email)){
-                input_email.setError("Email Required");
+                input_email.setError("Email required");
                 input_email.requestFocus();
                 return;
             }
 
+            /* email entered does not contain '@' symbol */
             if(!email.contains("@")){
                 input_email.setError("Invalid email");
                 input_email.requestFocus();
                 return;
             }
 
+            /* password entered is less than 8 characters */
             if(password.length() < 8){
                 input_password.setError("Password must be at least 8 characters long");
                 input_password.requestFocus();
                 return;
             }
 
+            /* Confirm password entered does not match the entered password */
             if(!confirmPassword.equals(password)){
                 input_confirmPassword.setError("Confirmed Password and Password do not match");
                 input_confirmPassword.requestFocus();
                 return;
             }
 
-            /* validation passed, create user through firebase using email and password */
+            /* all validations passed, create user through firebase using email and password */
             mAuth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                         @Override
