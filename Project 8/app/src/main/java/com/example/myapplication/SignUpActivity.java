@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
@@ -62,7 +63,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         if(v == button_signUp){
 
             String name = input_name.getText().toString();
-            String username = input_username.getText().toString();
+            final String username = input_username.getText().toString();
             String email = input_email.getText().toString();
             String password = input_password.getText().toString();
             String confirmPassword = input_confirmPassword.getText().toString();
