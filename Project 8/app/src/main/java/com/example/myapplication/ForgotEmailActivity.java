@@ -57,6 +57,7 @@ public class ForgotEmailActivity extends AppCompatActivity implements View.OnCli
                 secondaryEmail.requestFocus();
                 return;
             }
+
             //send email
             Intent anIntent = new Intent(Intent.ACTION_SEND);
             //email format
@@ -64,10 +65,9 @@ public class ForgotEmailActivity extends AppCompatActivity implements View.OnCli
             anIntent.putExtra(Intent.EXTRA_SUBJECT, "Forgotten Email");
             anIntent.putExtra(anIntent.EXTRA_EMAIL, new String[]{secondaryEmail.getText().toString()});
             anIntent.putExtra(anIntent.EXTRA_TEXT, "hi");
+            startActivity(anIntent);
             //tell user email was sent
             Toast.makeText(ForgotEmailActivity.this, "Email Sent", Toast.LENGTH_SHORT).show();
-            
-
         }
 
     }
