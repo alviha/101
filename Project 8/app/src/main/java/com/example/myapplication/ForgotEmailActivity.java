@@ -58,15 +58,16 @@ public class ForgotEmailActivity extends AppCompatActivity implements View.OnCli
                 return;
             }
 
-            Intent anIntent = new Intent(Intent.ACTION_SEND);
+            //Intent anIntent = new Intent(Intent.ACTION_SEND);
 
-            anIntent.setType("text/plain");
-            anIntent.putExtra(Intent.EXTRA_SUBJECT, "Forgotten Email");
-            anIntent.putExtra(anIntent.EXTRA_EMAIL, new String[]{secondaryEmail.getText().toString()});
-            anIntent.putExtra(anIntent.EXTRA_TEXT, "hi");
+           // anIntent.setType("text/plain");
+           // anIntent.putExtra(Intent.EXTRA_SUBJECT, "Forgotten Email");
+           // anIntent.putExtra(anIntent.EXTRA_EMAIL, new String[]{secondaryEmail.getText().toString()});
+           // anIntent.putExtra(anIntent.EXTRA_TEXT, "hi");
+            //startActivity(anIntent);
 
-            Toast.makeText(ForgotEmailActivity.this, "Email Sent", Toast.LENGTH_SHORT).show();
-            
+            Toast.makeText(ForgotEmailActivity.this, "Sending Email", Toast.LENGTH_SHORT).show();
+
 
         }
 
