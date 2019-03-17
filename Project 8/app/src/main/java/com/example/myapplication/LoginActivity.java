@@ -57,6 +57,8 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
 
     private FirebaseAuth mAuth;
 
+    private int attemptCounter;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login); // view login page
@@ -80,7 +82,8 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
         button_signIn.setOnClickListener(this);
         button_createAccount.setOnClickListener(this);
 
-
+        //counter for incorrect password input attempts
+        attemptCounter = 0;
 
     }
 
@@ -114,6 +117,7 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
             if (TextUtils.isEmpty(password)){
                 input_password.setError("Password Required");
                 input_password.requestFocus();
+
                 return;
             }
             //check with firebase to see if email and password match records
@@ -123,8 +127,19 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
                     //if email and password are correct then go to homepage otherwise alert user
                     if(task.isSuccessful()){
                         startActivity(new Intent(LoginActivity.this, Homepage.class));
+                        finish();
                     }else{
                         Toast.makeText(LoginActivity.this,"Account not yet created.", Toast.LENGTH_SHORT).show();
+
+                        attemptCounter++;
+
+                        if(attemptCounter >= 3){
+                            startActivity(new Intent(LoginActivity.this, ForgotPasswordActivity.class));
+                            input_email.setText("");
+                            input_password.setText("");
+                            input_email.requestFocus();
+                            attemptCounter = 0;
+                        }
                     }
 
                 }
