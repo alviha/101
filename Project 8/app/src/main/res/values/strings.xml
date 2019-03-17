@@ -50,4 +50,10 @@
     <string name="SecondaryEmail">Please enter a secondary email.</string>
     <string name="EnterUsername">Please enter your username.</string>
     <string name="UsernameHint">Username</string>
+
+    <!-- Strings for error messages -->
+    <string name="error_email">Email required</string>
+
+    <!-- Strings for toast messages -->
+    <string name="toast_emailSent">Email sent</string>
 </resources>
