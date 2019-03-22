@@ -56,4 +56,7 @@
 
     <!-- Strings for toast messages -->
     <string name="toast_emailSent">Email sent</string>
+    <string name="Sample">Sample Question</string>
+    <string name="Submit">Submit Answer</string>
+    <string name="ShowHint">Show Hint</string>
 </resources>
