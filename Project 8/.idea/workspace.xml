@@ -16,7 +16,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7feb8b7d-0c6f-4f3f-b5be-0417661d5631" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/QuestionLibrary.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +61,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gradle" value="3" />
-          <entry key="java" value="17" />
+          <entry key="java" value="20" />
           <entry key="json" value="1" />
           <entry key="xml" value="16" />
         </counts>
@@ -68,7 +69,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Groovy" value="3" />
-          <entry key="JAVA" value="17" />
+          <entry key="JAVA" value="20" />
           <entry key="JSON" value="1" />
           <entry key="XML" value="16" />
         </counts>
@@ -76,7 +77,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gradle" value="90" />
-          <entry key="java" value="4906" />
+          <entry key="java" value="6139" />
           <entry key="txt" value="199" />
           <entry key="xml" value="706" />
         </counts>
@@ -84,7 +85,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="90" />
-          <entry key="JAVA" value="4906" />
+          <entry key="JAVA" value="6139" />
           <entry key="PLAIN_TEXT" value="199" />
           <entry key="XML" value="706" />
         </counts>
@@ -125,14 +126,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+            <state relative-caret-position="510">
+              <caret line="30" column="49" lean-forward="true" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
             </state>
           </provider>
           <provider editor-type-id="android-manifest" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/myapplication/Library.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="1043" lean-forward="true" selection-start-line="1043" selection-end-line="1043" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -2318,6 +2328,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/LessonActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_question.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/QuestionActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/AnswerChoiceLibrary.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/QuestionLibrary.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/myapplication/Library.java" />
       </list>
@@ -2572,7 +2583,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17248322" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -2839,28 +2849,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/myapplication/Library.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/myapplication/AnswerChoiceLibrary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="272">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/myapplication/QuestionLibrary.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/myapplication/Library.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+        <state relative-caret-position="510">
+          <caret line="30" column="49" lean-forward="true" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
         </state>
       </provider>
       <provider editor-type-id="android-manifest" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/myapplication/Library.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="1043" lean-forward="true" selection-start-line="1043" selection-end-line="1043" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
