@@ -121,11 +121,13 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
 
     private boolean answerIsCorrect() {
 
-        for(int i = 0; i < answerChoiceSet[questionNumber].length; i++) {
-            CharSequence selectedAnswer = ((RadioButton)answerChoicesGroup.getChildAt(i)).getText();
-            if(TextUtils.equals(selectedAnswer, correctAnswer)) {
-                return true;
-            }
+        int idOfCheckedButton = answerChoicesGroup.getCheckedRadioButtonId();
+        View checkedButton = answerChoicesGroup.findViewById(idOfCheckedButton);
+        int indexOfCheckedButton = answerChoicesGroup.indexOfChild(checkedButton);
+        CharSequence selectedAnswer = ((RadioButton)answerChoicesGroup.getChildAt(indexOfCheckedButton)).getText();
+
+        if(TextUtils.equals(selectedAnswer, correctAnswer)) {
+            return true;
         }
 
         return false;
