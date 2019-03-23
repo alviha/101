@@ -10,16 +10,18 @@
         android:id="@+id/text_question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="127dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="47dp" />
 
     <RadioGroup
         android:id="@+id/radioGroup_answerChoices"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="61dp"
-        tools:layout_editor_absoluteY="230dp">
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/text_question"
+        tools:layout_editor_absoluteX="61dp">
 
         <RadioButton
             android:id="@+id/radioButton_choice1"
@@ -54,7 +56,8 @@
         android:id="@+id/button_submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Submit Answer"
-        tools:layout_editor_absoluteX="127dp"
-        tools:layout_editor_absoluteY="474dp" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_answerChoices"
+        tools:layout_editor_absoluteX="127dp" />
 </android.support.constraint.ConstraintLayout>
