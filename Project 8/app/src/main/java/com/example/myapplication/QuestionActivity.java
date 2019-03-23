@@ -51,8 +51,11 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         submitAnswer.setOnClickListener(this);
 
         // retrieve level and lesson data from previous activity
-        level = Library.Levels.ELEMENTARY_PROGRAMMING; // dummy data assigned for testing, TODO: change to data passed from previous activity
-        lesson = 0; // dummy data assigned for testing, TODO: change to data passed from previous activity
+        //level = Library.Levels.ELEMENTARY_PROGRAMMING; // dummy data assigned for testing, TODO: change to data passed from previous activity
+        //lesson = 0; // dummy data assigned for testing, TODO: change to data passed from previous activity
+
+        level = (Library.Levels) getIntent().getSerializableExtra("LEVEL");
+        lesson = getIntent().getIntExtra("LESSON", 0);
 
         // retrieve question and answer set from Library class
         questionSet = Library.getQuestions(level, lesson);

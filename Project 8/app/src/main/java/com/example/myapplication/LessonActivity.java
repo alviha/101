@@ -10,6 +10,9 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
 
     Button button_next;
 
+    private Library.Levels level;
+    private int lesson;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -17,15 +20,20 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_lesson);
 
         button_next = findViewById(R.id.button_next);
-
         button_next.setOnClickListener(this);
+
+        level = (Library.Levels) getIntent().getSerializableExtra("LEVEL");
+        lesson = getIntent().getIntExtra("LESSON", 0);
     }
 
     @Override
     public void onClick(View v) {
 
         if(v == button_next){
-            startActivity(new Intent(LessonActivity.this, QuestionActivity.class));
+            Intent intent = new Intent(LessonActivity.this, QuestionActivity.class);
+            intent.putExtra("LEVEL", level);
+            intent.putExtra("LESSON", lesson);
+            startActivity(intent);
         }
     }
 }

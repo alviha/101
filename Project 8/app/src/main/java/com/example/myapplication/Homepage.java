@@ -25,7 +25,11 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
     public void onClick(View v) {
 
         if ( v == sample){
-            startActivity(new Intent(Homepage.this, LessonActivity.class));
+
+            Intent intent = new Intent(Homepage.this, LessonActivity.class);
+            intent.putExtra("LEVEL", Library.Levels.ELEMENTARY_PROGRAMMING);
+            intent.putExtra("LESSON", 0);
+            startActivity(intent);
         }
 
     }
