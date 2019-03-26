@@ -11,11 +11,11 @@ public final class AnswerChoice {
     }
 
     public void setContent(String content) {
-
+        this.content = content;
     }
 
     public void setCorrect(boolean value) {
-
+        this.isCorrect = value;
     }
 
     public String getContent() {
