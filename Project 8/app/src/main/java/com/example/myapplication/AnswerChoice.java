@@ -11,7 +11,11 @@ public final class AnswerChoice {
 
     public void setCorrect(boolean value);
 
-    public String getContent();
+    public String getContent() {
+        return this.content;
+    }
 
-    public boolean isCorrect();
+    public boolean isCorrect() {
+        return this.isCorrect;
+    }
 }
