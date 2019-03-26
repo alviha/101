@@ -109,7 +109,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         // Set the text of the radio buttons to the answer choices
         int i = 0;
         while(!answers.isEmpty()) {
-            ((RadioButton)answerChoicesGroup.getChildAt(i)).setText(answers.remove(0));
+            ((RadioButton)answerChoicesGroup.getChildAt(i)).setText(answers.remove(0).getContent());
             i++;
         }
 
