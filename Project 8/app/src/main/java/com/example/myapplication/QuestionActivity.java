@@ -101,7 +101,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         question.setText(questionSet[questionNumber]);
 
         // create ArrayList with answerChoiceSet
-        List<String> answers = new ArrayList<String>(Arrays.asList(answerChoiceSet[questionNumber]));
+        List<AnswerChoice> answers = new ArrayList<>(Arrays.asList(answerChoiceSet[questionNumber]));
 
         // shuffle answer choices
         Collections.shuffle(answers);
