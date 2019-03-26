@@ -35,7 +35,6 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
     private AnswerChoice[][] answerChoiceSet;
     private int score;
     private int questionNumber;
-    private String correctAnswer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,9 +50,6 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         submitAnswer.setOnClickListener(this);
 
         // retrieve level and lesson data from previous activity
-        //level = Library.Levels.ELEMENTARY_PROGRAMMING; // dummy data assigned for testing, TODO: change to data passed from previous activity
-        //lesson = 0; // dummy data assigned for testing, TODO: change to data passed from previous activity
-
         level = (Library.Levels) getIntent().getSerializableExtra("LEVEL");
         lesson = getIntent().getIntExtra("LESSON", 0);
 
@@ -103,9 +99,6 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
 
         // Set the question
         question.setText(questionSet[questionNumber]);
-
-        // Set the first answer choice as the correct answer
-        correctAnswer = answerChoiceSet[questionNumber][0];
 
         // create ArrayList with answerChoiceSet
         List<String> answers = new ArrayList<String>(Arrays.asList(answerChoiceSet[questionNumber]));
