@@ -35,6 +35,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
     private AnswerChoice[][] answerChoiceSet;
     private int score;
     private int questionNumber;
+    private List<String> correctAnswersList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,6 +101,14 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         // Set the question
         question.setText(questionSet[questionNumber]);
 
+        // add the correct answer choices to the correct answer list
+        correctAnswersList = new ArrayList<>();
+        for(AnswerChoice answer : answerChoiceSet[questionNumber]) {
+            if(answer.isCorrect()) {
+                correctAnswersList.add(answer.getContent());
+            }
+        }
+
         // create ArrayList with answerChoiceSet
         List<AnswerChoice> answers = new ArrayList<>(Arrays.asList(answerChoiceSet[questionNumber]));
 
@@ -122,14 +131,15 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         int indexOfCheckedButton = answerChoicesGroup.indexOfChild(checkedButton);
         CharSequence selectedAnswer = ((RadioButton)answerChoicesGroup.getChildAt(indexOfCheckedButton)).getText();
 
-        if(TextUtils.equals(selectedAnswer, correctAnswer)) {
-            return true;
+        if(!correctAnswersList.contains(selectedAnswer)) {
+            return false;
         }
 
-        return false;
+        return true;
     }
 
     private void showResults() {
+
         answerChoicesGroup.setVisibility(View.GONE);
         question.setText("You scored " + score + "/" + questionSet.length);
     }
