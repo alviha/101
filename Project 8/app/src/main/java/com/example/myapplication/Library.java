@@ -198,49 +198,49 @@ public final class Library {
     };
 
     // Answer choices for Elementary Programming Level
-    private static String[][][] elementaryProgrammingAnswerChoices = {
+    private static AnswerChoice[][][] elementaryProgrammingAnswerChoices = {
 
             // Lesson 1
             {
 
                     // Question 1 choices
                     {
-                            "Program",
-                            "Computer",
-                            "Java",
-                            "Bits"
+                            new AnswerChoice("Program", true),
+                            new AnswerChoice("Computer", false),
+                            new AnswerChoice("Java", false),
+                            new AnswerChoice("Bits", false)
                     },
 
                     // Question 2 choices
                     {
-                            "Specific",
-                            "Measurable",
-                            "Achievable",
-                            "Relevant"
+                            new AnswerChoice("Specific", true),
+                            new AnswerChoice("Measurable", false),
+                            new AnswerChoice("Achievable", false),
+                            new AnswerChoice("Relevant", false)
                     },
 
                     // Question 3 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 4 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 5 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     }
             },
 
@@ -249,42 +249,42 @@ public final class Library {
 
                     // Question 1 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 2 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 3 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 4 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 5 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     }
             },
 
@@ -293,90 +293,90 @@ public final class Library {
 
                     // Question 1 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 2 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 3 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 4 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 5 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     }
             }
     };
 
     // Answer choices for Selections Level
-    private static String[][][] selectionsAnswerChoices = {
+    private static AnswerChoice[][][] selectionsAnswerChoices = {
 
             // Lesson 1
             {
 
                     // Question 1 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 2 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 3 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 4 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 5 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     }
             },
 
@@ -385,42 +385,42 @@ public final class Library {
 
                     // Question 1 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 2 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 3 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 4 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 5 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     }
             },
 
@@ -429,90 +429,90 @@ public final class Library {
 
                     // Question 1 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 2 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 3 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 4 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 5 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     }
             }
     };
 
     // Answer choices for Functions Characters Strings Level
-    private static String[][][] functionsCharactersStringsAnswerChoices = {
+    private static AnswerChoice[][][] functionsCharactersStringsAnswerChoices = {
 
             // Lesson 1
             {
 
                     // Question 1 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 2 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 3 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 4 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 5 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     }
             },
 
@@ -521,42 +521,42 @@ public final class Library {
 
                     // Question 1 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 2 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 3 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 4 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 5 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     }
             },
 
@@ -565,90 +565,90 @@ public final class Library {
 
                     // Question 1 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 2 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 3 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 4 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 5 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     }
             }
     };
 
     // Answer choices for Loops Level
-    private static String[][][] loopsAnswerChoices = {
+    private static AnswerChoice[][][] loopsAnswerChoices = {
 
             // Lesson 1
             {
 
                     // Question 1 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 2 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 3 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 4 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 5 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     }
             },
 
@@ -657,42 +657,42 @@ public final class Library {
 
                     // Question 1 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 2 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 3 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 4 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 5 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     }
             },
 
@@ -701,90 +701,90 @@ public final class Library {
 
                     // Question 1 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 2 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 3 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 4 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 5 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     }
             }
     };
 
     // Answer choices for Methods Level
-    private static String[][][] methodsAnswerChoices = {
+    private static AnswerChoice[][][] methodsAnswerChoices = {
 
             // Lesson 1
             {
 
                     // Question 1 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 2 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 3 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 4 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 5 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     }
             },
 
@@ -793,42 +793,42 @@ public final class Library {
 
                     // Question 1 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 2 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 3 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 4 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 5 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     }
             },
 
@@ -837,90 +837,90 @@ public final class Library {
 
                     // Question 1 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 2 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 3 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 4 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 5 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     }
             }
     };
 
     // Answer choices for Single Dimensional Arrays Level
-    private static String[][][] singleDimensionalArraysAnswerChoices = {
+    private static AnswerChoice[][][] singleDimensionalArraysAnswerChoices = {
 
             // Lesson 1
             {
 
                     // Question 1 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 2 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 3 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 4 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 5 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     }
             },
 
@@ -929,42 +929,42 @@ public final class Library {
 
                     // Question 1 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 2 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 3 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 4 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 5 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     }
             },
 
@@ -973,42 +973,42 @@ public final class Library {
 
                     // Question 1 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 2 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 3 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 4 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     },
 
                     // Question 5 choices
                     {
-                            "Choice 1",
-                            "Choice 2",
-                            "Choice 3",
-                            "Choice 4"
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
                     }
             }
     };
@@ -1048,7 +1048,7 @@ public final class Library {
      * @param lesson the lesson number (first lesson is 0)
      * @return the set of answer choices from questions from the specified level and lesson number
      */
-    public static String[][] getAnswerChoices(Levels level, int lesson) {
+    public static AnswerChoice[][] getAnswerChoices(Levels level, int lesson) {
 
         if (level == Levels.ELEMENTARY_PROGRAMMING) {
             return elementaryProgrammingAnswerChoices[lesson];
