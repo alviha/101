@@ -1,3 +1,13 @@
+/**
+ *  Library that holds all the questions and answer choices to the challenges
+ *
+ * @author Bufford Brian Sta Maria
+ *
+ * CMSC 355, Spring 2019
+ * Project A8
+ * 3/26/2019
+ *
+ */
 package com.example.myapplication;
 
 public final class Library {
@@ -1014,7 +1024,7 @@ public final class Library {
     };
 
     /**
-     * Retrieve questions from a level's lesson
+     * Return questions from a level's lesson
      *
      * @param level  the level (ELEMENTARY_PROGRAMMING, SELECTIONS, ETC.)
      * @param lesson the lesson number (first lesson is 0)
@@ -1043,7 +1053,7 @@ public final class Library {
     }
 
     /**
-     * Retrieve answer choices for the questions from a level's lesson
+     * Return answer choices for the questions from a level's lesson
      * @param level the level (ELEMENTARY_PROGRAMMING, SELECTIONS, ETC.)
      * @param lesson the lesson number (first lesson is 0)
      * @return the set of answer choices from questions from the specified level and lesson number

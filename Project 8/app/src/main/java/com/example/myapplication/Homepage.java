@@ -26,9 +26,11 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
 
         if ( v == sample){
 
+            // store level and lesson data in the intent
             Intent intent = new Intent(Homepage.this, LessonActivity.class);
             intent.putExtra("LEVEL", Library.Levels.ELEMENTARY_PROGRAMMING);
             intent.putExtra("LESSON", 0);
+
             startActivity(intent);
         }
 

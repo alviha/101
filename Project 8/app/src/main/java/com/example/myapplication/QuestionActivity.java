@@ -50,7 +50,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         // set listener for submit button
         submitAnswer.setOnClickListener(this);
 
-        // retrieve level and lesson data from previous activity
+        // retrieve level and lesson data from previous activity's intent
         level = (Library.Levels) getIntent().getSerializableExtra("LEVEL");
         lesson = getIntent().getIntExtra("LESSON", 0);
 
@@ -69,16 +69,20 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
 
+        // submit answer button is clicked
         if(v == submitAnswer) {
 
+            // no answer choice was selected
             if(answerChoicesGroup.getCheckedRadioButtonId() == -1) {
                 Toast.makeText(QuestionActivity.this, "No answer choice was selected", Toast.LENGTH_SHORT).show();
                 return;
             }
 
+            // selected answer is correct
             if(answerIsCorrect()) {
                 Toast.makeText(QuestionActivity.this, "Correct", Toast.LENGTH_SHORT).show();
             }
+            // selected answer is incorrect, decrement the score
             else {
                 Toast.makeText(QuestionActivity.this, "Incorrect", Toast.LENGTH_SHORT).show();
                 score--;
@@ -86,10 +90,13 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
 
             questionNumber++;
 
+            // all questions have been answered
             if(questionNumber > questionSet.length - 1) {
                 showResults();
             }
             else {
+
+                // clear radio button selection, and show next question
                 answerChoicesGroup.clearCheck();
                 showNextQuestion();
             }
@@ -124,13 +131,19 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
 
     }
 
+    /**
+     * Checks if the selected answer is correct
+     * @return true if selected answer is correct, otherwise false
+     */
     private boolean answerIsCorrect() {
 
+        // retrieve the text of the selected answer
         int idOfCheckedButton = answerChoicesGroup.getCheckedRadioButtonId();
         View checkedButton = answerChoicesGroup.findViewById(idOfCheckedButton);
         int indexOfCheckedButton = answerChoicesGroup.indexOfChild(checkedButton);
         CharSequence selectedAnswer = ((RadioButton)answerChoicesGroup.getChildAt(indexOfCheckedButton)).getText();
 
+        // selected answer is not correct
         if(!correctAnswersList.contains(selectedAnswer)) {
             return false;
         }
@@ -138,6 +151,9 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         return true;
     }
 
+    /**
+     *  shows the score result
+     */
     private void showResults() {
 
         answerChoicesGroup.setVisibility(View.GONE);
