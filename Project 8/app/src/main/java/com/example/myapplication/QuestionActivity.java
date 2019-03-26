@@ -32,7 +32,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
 
     // Variables related to the challenge
     private String[] questionSet;
-    private String[][] answerChoiceSet;
+    private AnswerChoice[][] answerChoiceSet;
     private int score;
     private int questionNumber;
     private String correctAnswer;
