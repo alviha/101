@@ -39,13 +39,18 @@ public class AnswerChoiceTest {
         assertTrue(testAnswer.isCorrect());
     }
 
+    // test setter for the content
     @Test
     public void testSetContent() {
-        fail("not yet implemented");
+        String expected = "Java";
+        testAnswerChoice.setContent("Java");
+        assertEquals(expected, testAnswerChoice.getContent());
     }
 
+    // test setter for the isCorrect value
     @Test
     public void testSetCorrect() {
-        fail("not yet implemented");
+        testAnswerChoice.setCorrect(false);
+        assertFalse(testAnswerChoice.isCorrect());
     }
 }
