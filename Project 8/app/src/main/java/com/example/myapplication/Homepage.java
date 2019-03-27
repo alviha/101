@@ -25,9 +25,6 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
         initializeButtons();
         setOnClickListenerForButtons();
 
-        
-
-
     }
 
     @Override
@@ -35,15 +32,130 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
 
         if(v == elementaryProgrammingLesson1) {
 
-            // store level and lesson data in the intent
             Intent intent = new Intent(Homepage.this, LessonActivity.class);
-            intent.putExtra("LEVEL", Library.Levels.ELEMENTARY_PROGRAMMING);
-            intent.putExtra("LESSON", 0);
+            storeLessonAndLessonData(intent, Library.Levels.ELEMENTARY_PROGRAMMING, 0);
 
             startActivity(intent);
         }
-        else if(v == elementaryProgrammingLesson2)
+        else if(v == elementaryProgrammingLesson2) {
 
+            Intent intent = new Intent(Homepage.this, LessonActivity.class);
+            storeLessonAndLessonData(intent, Library.Levels.ELEMENTARY_PROGRAMMING, 1);
+
+            startActivity(intent);
+        }
+        else if(v == elementaryProgrammingLesson3) {
+
+            Intent intent = new Intent(Homepage.this, LessonActivity.class);
+            storeLessonAndLessonData(intent, Library.Levels.ELEMENTARY_PROGRAMMING, 2);
+
+            startActivity(intent);
+        }
+        else if(v == selectionsLesson1) {
+
+            Intent intent = new Intent(Homepage.this, LessonActivity.class);
+            storeLessonAndLessonData(intent, Library.Levels.SELECTIONS, 0);
+
+            startActivity(intent);
+        }
+        else if(v == selectionsLesson2) {
+
+            Intent intent = new Intent(Homepage.this, LessonActivity.class);
+            storeLessonAndLessonData(intent, Library.Levels.SELECTIONS, 1);
+
+            startActivity(intent);
+        }
+        else if(v == selectionsLesson3) {
+
+            Intent intent = new Intent(Homepage.this, LessonActivity.class);
+            storeLessonAndLessonData(intent, Library.Levels.SELECTIONS, 2);
+
+            startActivity(intent);
+        }
+        else if(v == functionsCharactersStringsLesson1) {
+
+            Intent intent = new Intent(Homepage.this, LessonActivity.class);
+            storeLessonAndLessonData(intent, Library.Levels.FUNCTIONS_CHARACTERS_STRINGS, 0);
+
+            startActivity(intent);
+        }
+        else if(v == functionsCharactersStringsLesson2) {
+
+            Intent intent = new Intent(Homepage.this, LessonActivity.class);
+            storeLessonAndLessonData(intent, Library.Levels.FUNCTIONS_CHARACTERS_STRINGS, 1);
+
+            startActivity(intent);
+        }
+        else if(v == functionsCharactersStringsLesson3) {
+
+            Intent intent = new Intent(Homepage.this, LessonActivity.class);
+            storeLessonAndLessonData(intent, Library.Levels.FUNCTIONS_CHARACTERS_STRINGS, 2);
+
+            startActivity(intent);
+        }
+        else if(v == functionsCharactersStringsLesson4) {
+
+            Intent intent = new Intent(Homepage.this, LessonActivity.class);
+            storeLessonAndLessonData(intent, Library.Levels.FUNCTIONS_CHARACTERS_STRINGS, 3);
+
+            startActivity(intent);
+        }
+        else if(v == loopsLesson1) {
+
+            Intent intent = new Intent(Homepage.this, LessonActivity.class);
+            storeLessonAndLessonData(intent, Library.Levels.LOOPS, 0);
+
+            startActivity(intent);
+        }
+        else if(v == loopsLesson2) {
+
+            Intent intent = new Intent(Homepage.this, LessonActivity.class);
+            storeLessonAndLessonData(intent, Library.Levels.LOOPS, 1);
+
+            startActivity(intent);
+        }
+        else if(v == loopsLesson3) {
+
+            Intent intent = new Intent(Homepage.this, LessonActivity.class);
+            storeLessonAndLessonData(intent, Library.Levels.LOOPS, 2);
+
+            startActivity(intent);
+        }
+        else if(v == methodsLesson1) {
+
+            Intent intent = new Intent(Homepage.this, LessonActivity.class);
+            storeLessonAndLessonData(intent, Library.Levels.METHODS, 0);
+
+            startActivity(intent);
+        }
+        else if(v == methodsLesson2) {
+
+            Intent intent = new Intent(Homepage.this, LessonActivity.class);
+            storeLessonAndLessonData(intent, Library.Levels.METHODS, 1);
+
+            startActivity(intent);
+        }
+        else if(v == singleDimensionalArraysLesson1) {
+
+            Intent intent = new Intent(Homepage.this, LessonActivity.class);
+            storeLessonAndLessonData(intent, Library.Levels.SINGLE_DIMENSIONAL_ARRAYS, 0);
+
+            startActivity(intent);
+        }
+        else if(v == singleDimensionalArraysLesson2) {
+
+            Intent intent = new Intent(Homepage.this, LessonActivity.class);
+            storeLessonAndLessonData(intent, Library.Levels.SINGLE_DIMENSIONAL_ARRAYS, 1);
+
+            startActivity(intent);
+        }
+
+    }
+
+    private void storeLessonAndLessonData(Intent i, Library.Levels level, int lesson) {
+
+        i.putExtra("LEVEL", level);
+        i.putExtra("LESSON", lesson);
     }
 
     private void initializeButtons() {
