@@ -33,119 +33,119 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
         if(v == elementaryProgrammingLesson1) {
 
             Intent intent = new Intent(Homepage.this, LessonActivity.class);
-            storeLessonAndLessonData(intent, Library.Levels.ELEMENTARY_PROGRAMMING, 0);
+            storeLevelAndLessonData(intent, Library.Levels.ELEMENTARY_PROGRAMMING, 0);
 
             startActivity(intent);
         }
         else if(v == elementaryProgrammingLesson2) {
 
             Intent intent = new Intent(Homepage.this, LessonActivity.class);
-            storeLessonAndLessonData(intent, Library.Levels.ELEMENTARY_PROGRAMMING, 1);
+            storeLevelAndLessonData(intent, Library.Levels.ELEMENTARY_PROGRAMMING, 1);
 
             startActivity(intent);
         }
         else if(v == elementaryProgrammingLesson3) {
 
             Intent intent = new Intent(Homepage.this, LessonActivity.class);
-            storeLessonAndLessonData(intent, Library.Levels.ELEMENTARY_PROGRAMMING, 2);
+            storeLevelAndLessonData(intent, Library.Levels.ELEMENTARY_PROGRAMMING, 2);
 
             startActivity(intent);
         }
         else if(v == selectionsLesson1) {
 
             Intent intent = new Intent(Homepage.this, LessonActivity.class);
-            storeLessonAndLessonData(intent, Library.Levels.SELECTIONS, 0);
+            storeLevelAndLessonData(intent, Library.Levels.SELECTIONS, 0);
 
             startActivity(intent);
         }
         else if(v == selectionsLesson2) {
 
             Intent intent = new Intent(Homepage.this, LessonActivity.class);
-            storeLessonAndLessonData(intent, Library.Levels.SELECTIONS, 1);
+            storeLevelAndLessonData(intent, Library.Levels.SELECTIONS, 1);
 
             startActivity(intent);
         }
         else if(v == selectionsLesson3) {
 
             Intent intent = new Intent(Homepage.this, LessonActivity.class);
-            storeLessonAndLessonData(intent, Library.Levels.SELECTIONS, 2);
+            storeLevelAndLessonData(intent, Library.Levels.SELECTIONS, 2);
 
             startActivity(intent);
         }
         else if(v == functionsCharactersStringsLesson1) {
 
             Intent intent = new Intent(Homepage.this, LessonActivity.class);
-            storeLessonAndLessonData(intent, Library.Levels.FUNCTIONS_CHARACTERS_STRINGS, 0);
+            storeLevelAndLessonData(intent, Library.Levels.FUNCTIONS_CHARACTERS_STRINGS, 0);
 
             startActivity(intent);
         }
         else if(v == functionsCharactersStringsLesson2) {
 
             Intent intent = new Intent(Homepage.this, LessonActivity.class);
-            storeLessonAndLessonData(intent, Library.Levels.FUNCTIONS_CHARACTERS_STRINGS, 1);
+            storeLevelAndLessonData(intent, Library.Levels.FUNCTIONS_CHARACTERS_STRINGS, 1);
 
             startActivity(intent);
         }
         else if(v == functionsCharactersStringsLesson3) {
 
             Intent intent = new Intent(Homepage.this, LessonActivity.class);
-            storeLessonAndLessonData(intent, Library.Levels.FUNCTIONS_CHARACTERS_STRINGS, 2);
+            storeLevelAndLessonData(intent, Library.Levels.FUNCTIONS_CHARACTERS_STRINGS, 2);
 
             startActivity(intent);
         }
         else if(v == functionsCharactersStringsLesson4) {
 
             Intent intent = new Intent(Homepage.this, LessonActivity.class);
-            storeLessonAndLessonData(intent, Library.Levels.FUNCTIONS_CHARACTERS_STRINGS, 3);
+            storeLevelAndLessonData(intent, Library.Levels.FUNCTIONS_CHARACTERS_STRINGS, 3);
 
             startActivity(intent);
         }
         else if(v == loopsLesson1) {
 
             Intent intent = new Intent(Homepage.this, LessonActivity.class);
-            storeLessonAndLessonData(intent, Library.Levels.LOOPS, 0);
+            storeLevelAndLessonData(intent, Library.Levels.LOOPS, 0);
 
             startActivity(intent);
         }
         else if(v == loopsLesson2) {
 
             Intent intent = new Intent(Homepage.this, LessonActivity.class);
-            storeLessonAndLessonData(intent, Library.Levels.LOOPS, 1);
+            storeLevelAndLessonData(intent, Library.Levels.LOOPS, 1);
 
             startActivity(intent);
         }
         else if(v == loopsLesson3) {
 
             Intent intent = new Intent(Homepage.this, LessonActivity.class);
-            storeLessonAndLessonData(intent, Library.Levels.LOOPS, 2);
+            storeLevelAndLessonData(intent, Library.Levels.LOOPS, 2);
 
             startActivity(intent);
         }
         else if(v == methodsLesson1) {
 
             Intent intent = new Intent(Homepage.this, LessonActivity.class);
-            storeLessonAndLessonData(intent, Library.Levels.METHODS, 0);
+            storeLevelAndLessonData(intent, Library.Levels.METHODS, 0);
 
             startActivity(intent);
         }
         else if(v == methodsLesson2) {
 
             Intent intent = new Intent(Homepage.this, LessonActivity.class);
-            storeLessonAndLessonData(intent, Library.Levels.METHODS, 1);
+            storeLevelAndLessonData(intent, Library.Levels.METHODS, 1);
 
             startActivity(intent);
         }
         else if(v == singleDimensionalArraysLesson1) {
 
             Intent intent = new Intent(Homepage.this, LessonActivity.class);
-            storeLessonAndLessonData(intent, Library.Levels.SINGLE_DIMENSIONAL_ARRAYS, 0);
+            storeLevelAndLessonData(intent, Library.Levels.SINGLE_DIMENSIONAL_ARRAYS, 0);
 
             startActivity(intent);
         }
         else if(v == singleDimensionalArraysLesson2) {
 
             Intent intent = new Intent(Homepage.this, LessonActivity.class);
-            storeLessonAndLessonData(intent, Library.Levels.SINGLE_DIMENSIONAL_ARRAYS, 1);
+            storeLevelAndLessonData(intent, Library.Levels.SINGLE_DIMENSIONAL_ARRAYS, 1);
 
             startActivity(intent);
         }
@@ -158,7 +158,7 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
      * @param level the Level to be launched
      * @param lesson the lesson number to be launched (lesson 1 is 0)
      */
-    private void storeLessonAndLessonData(Intent i, Library.Levels level, int lesson) {
+    private void storeLevelAndLessonData(Intent i, Library.Levels level, int lesson) {
 
         i.putExtra("LEVEL", level);
         i.putExtra("LESSON", lesson);
