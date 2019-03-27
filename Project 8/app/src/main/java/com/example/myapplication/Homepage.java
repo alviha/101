@@ -22,8 +22,8 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
-        initializeButtons();
-        setOnClickListenerForButtons();
+        initializeLessonButtons();
+        setOnClickListenerForLessonButtons();
 
     }
 
@@ -152,13 +152,22 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
 
     }
 
+    /**
+     * Stores the level and lesson data through an intent
+     * @param i Intent message object used between Homepage and LessonActivity
+     * @param level the Level to be launched
+     * @param lesson the lesson number to be launched (lesson 1 is 0)
+     */
     private void storeLessonAndLessonData(Intent i, Library.Levels level, int lesson) {
 
         i.putExtra("LEVEL", level);
         i.putExtra("LESSON", lesson);
     }
 
-    private void initializeButtons() {
+    /**
+     *  Initializes the lesson buttons in Homepage
+     */
+    private void initializeLessonButtons() {
 
         elementaryProgrammingLesson1 = findViewById(R.id.button_ePLesson1);
         elementaryProgrammingLesson2 = findViewById(R.id.button_ePLesson2);
@@ -179,7 +188,10 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
         singleDimensionalArraysLesson2 = findViewById(R.id.button_aLesson2);
     }
 
-    private void setOnClickListenerForButtons() {
+    /**
+     *  Sets the on click listener for the lesson buttons
+     */
+    private void setOnClickListenerForLessonButtons() {
 
         elementaryProgrammingLesson1.setOnClickListener(this);
         elementaryProgrammingLesson2.setOnClickListener(this);
