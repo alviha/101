@@ -16,7 +16,6 @@
 
         <activity android:name=".QuestionActivity"></activity>
         <activity android:name=".LessonActivity" />
-        <activity android:name=".SampleActivity"></activity>
         <activity android:name=".ForgotPasswordActivity" />
         <activity
             android:name=".StartupActivity"
