@@ -74,22 +74,32 @@ public final class Library {
     // Questions for Selections Level
     private static String[][] selectionsQuestions = {
 
-            // Questions for Lesson 1
+            // Questions for Lesson 1 - 3.3-3.9
             {
-                    "This is the first question for lesson 1 in Selections",
-                    "This is the second question for lesson 1 in Selections",
-                    "This is the third question for lesson 1 in Selections",
-                    "This is the fourth question for lesson 1 in Selections",
-                    "This is the fifth question for lesson 1 in Selections"
+                    "The equal comparison operator in Java is __________.",
+                    "In Java, the word true is ________.",
+                    "Which of the following code displays the area of a circle if the radius is positive.",
+                    "Suppose x = 1, y = -1, and z = 1. What is the printout of the following statement? \n \n (Please indent the statement correctly first.) \n if (x > 0) \n if (y > 0) \n System.out.println(\"x > 0 and y > 0\"); \n else if (z > 0) \n System.out.println(\"x < 0 and z > 0\");",
+                    "Analyze the following code: \n \n boolean even = false; \n if (even = true) { \n System.out.println(\"It is even!\"); \n }",
+                    "Suppose isPrime is a boolean variable, which of the following is the correct and best statement for testing if isPrime is true.",
+                    "Analyze the following code. \n \n boolean even = false; \n if (even) { \n System.out.println(\"It is even!\"); \n }",
+                    "The following code displays ___________. \n \n double temperature = 50; \n if (temperature >= 100) \n System.out.println(\"too hot\"); \n else if (temperature <= 40) \n System.out.println(\"too cold\"); \n else \n System.out.println(\"just right\");",
+                    "Suppose income is 4001, what is the output of the following code: \n \n if (income > 3000) { \n System.out.println(\"Income is greater than 3000\"); \n } \n else if (income > 4000) { \n System.out.println(\"Income is greater than 4000\");",
+                    "Analyze the following code: \n \n Code 1: \n int number = 45; \n boolean even; \n if (number % 2 == 0) \n even = true; \n else \n even = false; \n Code 2: \n boolean even = (number % 2 == 0);"
             },
 
             // Questions for Lesson 2
             {
-                    "This is the first question for lesson 2 in Selections",
-                    "This is the second question for lesson 2 in Selections",
-                    "This is the third question for lesson 2 in Selections",
-                    "This is the fourth question for lesson 2 in Selections",
-                    "This is the fifth question for lesson 2 in Selections"
+                    "Which of the following is the correct expression that evaluates to true if the number x is between 1 and 100 or the number is negative?",
+                    "Assume x = 4 and y = 5, Which of the following is true?",
+                    "Assume x = 4, Which of the following is true?",
+                    "Given |x - 2| <= 4, Which of the following is true?",
+                    "Given |x - 2| >= 4, Which of the following is true?",
+                    "Analyze the following program fragment: \n \n int x; \n double d = 1.5; \n switch (d) { \n case 1.0: x = 1; \n case 1.5: x = 2; \n case 2.0: x = 3; \n }",
+                    "What is y after the following switch statement? \n \n int x = 0; \n int y = 0; \n switch (x + 1)  { \n case 0: y = 0; \n case 1: y = 1; \n default: y = -1 \n }",
+                    "What is y after the following switch statement is executed? \n \n int x = 3; int y = 4; \n switch (x + 3) { \n case 6:  y = 0; \n case 7:  y = 1; \n default: y += 1; \n }",
+                    "Analyze the following code fragments that assign a boolean value to the variable even. \n \n Code 1: \n if (number % 2 == 0) \n even = true; \n else \n even = false; \n Code 2: \n even = (number % 2 == 0) ? true: false; \n Code 3: \n even = number % 2 == 0;",
+                    "What is the output of the following code? \n \n boolean even = false; \n System.out.println((even ? \"true\" : \"false\"));"
             },
 
             // Questions for Lesson 3
@@ -186,22 +196,32 @@ public final class Library {
     // Questions for Methods Level
     private static String[][] methodsQuestions = {
 
-            // Questions for Lesson 1
+            // Questions for Lesson 1 - 6.2-6.7
             {
-                    "This is the first question for lesson 1 in Methods",
-                    "This is the second question for lesson 1 in Methods",
-                    "This is the third question for lesson 1 in Methods",
-                    "This is the fourth question for lesson 1 in Methods",
-                    "This is the fifth question for lesson 1 in Methods"
+                    "Suppose your method does not return any value, which of the following keywords can be used as a return type?",
+                    "The signature of a method consists of ____________.",
+                    "All Java applications must have a method __________.",
+                    "Arguments to methods always appear within __________.",
+                    "Each time a method is invoked, the system stores parameters and local variables in an area of memory, known as _______, which stores elements in last-in first-out fashion.",
+                    "Which of the following should be defined as a void method?",
+                    "You should fill in the blank in the following code with ______________. \n \n public class Test { \n public static void main(String[] args) { \n System.out.print(\"The grade is \"); \n printGrade(78.5); \n System.out.print(\"The grade is \"); \n printGrade(59.5); \n } \n \n public static __________ printGrade(double score) { \n if (score >= 90.0) { \n System.out.println('A'); \n } \n else if (score >= 80.0) { \n System.out.println('B'); \n } \n else if (score >= 70.0) { \n System.out.println('C'); \n } \n else if (score >= 60.0) { \n System.out.println('D'); \n } \n else { \n System.out.println('F'); \n } \n } \n }",
+                    "When you invoke a method with a parameter, the value of the argument is passed to the parameter. This is referred to as _________.",
+                    "Given the following method: \n \n static void nPrint(String message, int n) { \n while (n > 0) { \n System.out.print(message); \n n--; \n } \n } \n \n What is the printout of the call nPrint('a', 4)?",
+                    "Given the following method: \n \n static void nPrint(String message, int n) { \n while (n > 0) { \n System.out.print(message); \n n--; \n } \n } \n \n What is k after invoking nPrint(\"A message\", k)? \n int k = 2; \n nPrint(\"A message\", k);"
             },
 
-            // Questions for Lesson 2
+            // Questions for Lesson 2 - 6.8-6.11
             {
-                    "This is the first question for lesson 2 in Methods",
-                    "This is the second question for lesson 2 in Methods",
-                    "This is the third question for lesson 2 in Methods",
-                    "This is the fourth question for lesson 2 in Methods",
-                    "This is the fifth question for lesson 2 in Methods"
+                    "Analyze the following code: \n \n public class Test { \n public static void main(String[] args) { \n System.out.println(xMethod(5, 500L)); \n } \n public static int xMethod(int n, long l) { \n System.out.println(\"int, long\"); \n return n; \n } \n public static long xMethod(long n, long l) { \n System.out.println(\"long, long\"); \n return n; \n } \n }",
+                    "Analyze the following code: \n \n class Test { \n public static void main(String[] args) { \n System.out.println(xmethod(5)); \n } \n public static int xmethod(int n, long t) { \n System.out.println(\"int\"); \n return n; \n } \n public static long xmethod(long n) { \n System.out.println(\"long\"); \n return n; \n } \n }",
+                    "Analyze the following code. \n \n public class Test { \n public static void main(String[] args)  { \n System.out.println(max(1, 2)); \n } \n public static double max(int num1, double num2) { \n System.out.println(\"max(int, double) is invoked\"); \n if (num1 > num2) \n return num1; \n else \n return num2; \n } \n \n public static double max(double num1, int num2) { \n System.out.println(\"max(double, int) is invoked\"); \n if (num1 > num2) \n return num1; \n else \n return num 2; \n } \n }",
+                    "Analyze the following code. \n \n public class Test { \n public static void main(String[] args)  { \n System.out.println(m(2)); \n } \n public static int m(int num) { \n return num; \n } \n public static void m(int num) { \n System.out.println(num); \n } \n }",
+                    "A variable defined inside a method is referred to as __________.",
+                    "What is k after the following block executes? \n \n { \n int k = 2; \n nPrint(\"A message\", k); \n } \n System.out.println(k);",
+                    "(int)(Math.random() * (65535 + 1)) returns a random number __________.",
+                    "(int)('a' + Math.random() * ('z' - 'a' + 1)) returns a random number __________.",
+                    "(char)('a' + Math.random() * ('z' - 'a' + 1)) returns a random character __________.",
+                    "__________ is to implement one method in the structure chart at a time from the top to the bottom."
             },
 
             // Questions for Lesson 3
@@ -217,22 +237,22 @@ public final class Library {
     // Questions for Single Dimensional Arrays Level
     private static String[][] singleDimensionalArraysQuestions = {
 
-            // Questions for Lesson 1
+            // Questions for Lesson 1 - Array basics
             {
-                    "This is the first question for lesson 1 in Single Dimensional Arrays",
-                    "This is the second question for lesson 1 in Single Dimensional Arrays",
-                    "This is the third question for lesson 1 in Single Dimensional Arrays",
-                    "This is the fourth question for lesson 1 in Single Dimensional Arrays",
-                    "This is the fifth question for lesson 1 in Single Dimensional Arrays"
+                    "What is the representation of the third element in an array called a?",
+                    "If you declare an array double[] list = {3.4, 2.0, 3.5, 5.5}, list[1] is ________.",
+                    "If you declare an array double[] list = {3.4, 2.0, 3.5, 5.5}, the highest index in array list is __________.",
+                    "How many elements are in array double[] list = new double[5]?",
+                    "What is the correct term for numbers[99]?"
             },
 
-            // Questions for Lesson 2
+            // Questions for Lesson 2 - Copying arrays
             {
-                    "This is the first question for lesson 2 in Single Dimensional Arrays",
-                    "This is the second question for lesson 2 in Single Dimensional Arrays",
-                    "This is the third question for lesson 2 in Single Dimensional Arrays",
-                    "This is the fourth question for lesson 2 in Single Dimensional Arrays",
-                    "This is the fifth question for lesson 2 in Single Dimensional Arrays"
+                    "In the following code, what is the printout for list2? \n \n class Test { \n public static void main(String[] args) { \n int[] list1 = {1, 2, 3}; \n int[] list2 = {1, 2, 3}; \n list2 = list1; \n list1[0] = 0; list1[1] = 1; list2[2] = 2; \n for (int i = 0; i < list2.length; i++) \n System.out.print(list2[i] + \" \"); \n } \n }",
+                    "In the following code, what is the printout for list1? \n \n class Test { \n public static void main(String[] args) { \n int[] list1 = {1, 2, 3}; \n int[] list2 = {1, 2, 3}; \n list2 = list1; \n list1[0] = 0; list1[1] = 1; list2[2] = 2; \n for (int i = 0; i < list1.length; i++) \n System.out.print(list1[i] + \" \"); \n } \n }",
+                    "Analyze the following code: \n \n public class Test { \n public static void main(String[] args) { \n int[] x = {1, 2, 3, 4}; \n int[] y = x; \n x = new int[2]; \n for (int i = 0; i < y.length; i++) \n System.out.print(y[i] + \" \"); \n } \n }",
+                    "Analyze the following code: \n \n public class Test { \n public static void main(String[] args) { \n int[] x = {1, 2, 3, 4}; \n int[] y = x; \n x = new int[2]; \n for (int i = 0; i < x.length; i++) \n System.out.print(x[i] + \" \"); \n } \n }",
+                    "Analyze the following code: \n \n public class Test { \n public static void main(String[] args) { \n final int[] x = {1, 2, 3, 4}; \n int[] y = x; \n x = new int[2]; \n for (int i = 0; i < y.length; i++) \n System.out.print(y[i] + \" \"); \n } \n }"
             },
 
             // Questions for Lesson 3
@@ -491,42 +511,82 @@ public final class Library {
 
                     // Question 1 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("==", true),
+                            new AnswerChoice("!=", false),
+                            new AnswerChoice("<>", false),
+                            new AnswerChoice("^=", false)
                     },
 
                     // Question 2 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("a Boolean literal", true),
+                            new AnswerChoice("a Java keyword", false),
+                            new AnswerChoice("same as value 1", false),
+                            new AnswerChoice("same as value 0", false)
                     },
 
                     // Question 3 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("if (radius > 0) System.out.println(radius * radius * 3.14159);", true),
+                            new AnswerChoice("if (radius != 0) System.out.println(radius * radius * 3.14159);", false),
+                            new AnswerChoice("if (radius >= 0) System.out.println(radius * radius * 3.14159);", false),
+                            new AnswerChoice("if (radius <= 0) System.out.println(radius * radius * 3.14159);", false)
                     },
 
                     // Question 4 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("x < 0 and z > 0;", true),
+                            new AnswerChoice("x > 0 and y > 0;", false),
+                            new AnswerChoice("x < 0 and z < 0;", false),
+                            new AnswerChoice("no printout.", false)
                     },
 
                     // Question 5 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("The program runs fine and displays It is even!.", true),
+                            new AnswerChoice("The program runs fine, but displays nothing.", false),
+                            new AnswerChoice("The program has a runtime error.", false),
+                            new AnswerChoice("The program has a compile error.", false)
+                    },
+
+                    // Question 6 choices
+                    {
+                            new AnswerChoice("if (isPrime)", true),
+                            new AnswerChoice("if (!isPrime = false)", false),
+                            new AnswerChoice("if (isPrime == true)", false),
+                            new AnswerChoice("if (isPrime = true)", false)
+                    },
+
+                    // Question 7 choices
+                    {
+                            new AnswerChoice("The code displays nothing.", true),
+                            new AnswerChoice("The code displays It is even!", false),
+                            new AnswerChoice("The code is wrong. You should replace if (even) with if (even == true)", false),
+                            new AnswerChoice("The code is wrong. You should replace if (even) with if (even = true)", false)
+                    },
+
+                    // Question 8 choices
+                    {
+                            new AnswerChoice("just right", true),
+                            new AnswerChoice("too hot", false),
+                            new AnswerChoice("too cold", false),
+                            new AnswerChoice("too hot too cold just right", false)
+                    },
+
+                    // Question 9 choices
+                    {
+                            new AnswerChoice("Income is greater than 3000", true),
+                            new AnswerChoice("Income is greater than 3000 followed by Income is greater than 4000", false),
+                            new AnswerChoice("Income is greater than 4000", false),
+                            new AnswerChoice("Income is greater than 4000 followed by Income is greater than 3000", false)
+                    },
+
+                    // Question 10 choices
+                    {
+                            new AnswerChoice("Both Code 1 and Code 2 are correct, but Code 2 is better.", true),
+                            new AnswerChoice("Both Code 1 and Code 2 have compile errors.", false),
+                            new AnswerChoice("Code 2 has compile errors.", false),
+                            new AnswerChoice("Code 1 has compile errors.", false)
                     }
             },
 
@@ -535,42 +595,82 @@ public final class Library {
 
                     // Question 1 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("((x < 100) && (x > 1)) || (x < 0)", true),
+                            new AnswerChoice("1 < x < 100 && x < 0", false),
+                            new AnswerChoice("((x < 100) && (x > 1)) && (x < 0)", false),
+                            new AnswerChoice("(1 > x >  100) || (x < 0)", false)
                     },
 
                     // Question 2 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("x < 5 || y < 5", true),
+                            new AnswerChoice("x < 5 && y < 5", false),
+                            new AnswerChoice("x > 5 && y > 5", false),
+                            new AnswerChoice("x > 5 || y > 5", false)
                     },
 
                     // Question 3 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("x != 5", true),
+                            new AnswerChoice("x == 5", false),
+                            new AnswerChoice("x != 4", false),
+                            new AnswerChoice("!(x == 4)", false)
                     },
 
                     // Question 4 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("x - 2 <= 4 && x - 2 >= -4", true),
+                            new AnswerChoice("x - 2 <= 4 && x - 2 >= 4", false),
+                            new AnswerChoice("x - 2 <= 4 && x - 2 > -4", false),
+                            new AnswerChoice("x - 2 <= 4 || x - 2 >= -4", false)
                     },
 
                     // Question 5 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("x - 2 >= 4 || x - 2 <= -4", true),
+                            new AnswerChoice("x - 2 >= 4 && x - 2 <= -4", false),
+                            new AnswerChoice("x - 2 >= 4 && x - 2 < -4", false),
+                            new AnswerChoice("x - 2 >= 4 || x - 2 < -4", false)
+                    },
+
+                    // Question 6 choices
+                    {
+                            new AnswerChoice("The switch control variable cannot be double.", true),
+                            new AnswerChoice("The program has a compile error because the required break statement is missing in the switch statement.", false),
+                            new AnswerChoice("The program has a compile error because the required default case is missing in the switch statement.", false),
+                            new AnswerChoice("No errors.", false)
+                    },
+
+                    // Question 7 choices
+                    {
+                            new AnswerChoice("-1", true),
+                            new AnswerChoice("2", false),
+                            new AnswerChoice("0", false),
+                            new AnswerChoice("1", false)
+                    },
+
+                    // Question 8 choices
+                    {
+                            new AnswerChoice("2", true),
+                            new AnswerChoice("1", false),
+                            new AnswerChoice("3", false),
+                            new AnswerChoice("4", false)
+                    },
+
+                    // Question 9 choices
+                    {
+                            new AnswerChoice("All three are correct, but Code 3 is preferred.", true),
+                            new AnswerChoice("All three are correct, but Code 2 is preferred.", false),
+                            new AnswerChoice("All three are correct, but Code 1 is preferred.", false),
+                            new AnswerChoice("Code 2 has a compile error, because you cannot have true and false literals in the conditional expression.", false)
+                    },
+
+                    // Question 10 choices
+                    {
+                            new AnswerChoice("false", true),
+                            new AnswerChoice("true", false),
+                            new AnswerChoice("nothing", false),
+                            new AnswerChoice("true false", false)
                     }
             },
 
@@ -1051,42 +1151,82 @@ public final class Library {
 
                     // Question 1 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("void", true),
+                            new AnswerChoice("int", false),
+                            new AnswerChoice("double", false),
+                            new AnswerChoice("public", false)
                     },
 
                     // Question 2 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("method name and parameter list", true),
+                            new AnswerChoice("method name", false),
+                            new AnswerChoice("return type, method name, and parameter list", false),
+                            new AnswerChoice("parameter list", false)
                     },
 
                     // Question 3 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("public static void main(String[] args)", true),
+                            new AnswerChoice("public static Main(String[] args)", false),
+                            new AnswerChoice("public static Main(String args[])", false),
+                            new AnswerChoice("public void main(String[] args)", false)
                     },
 
                     // Question 4 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("parentheses", true),
+                            new AnswerChoice("brackets", false),
+                            new AnswerChoice("curly braces", false),
+                            new AnswerChoice("quotation marks", false)
                     },
 
                     // Question 5 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("a stack", true),
+                            new AnswerChoice("a heap", false),
+                            new AnswerChoice("an array", false),
+                            new AnswerChoice("storage area", false)
+                    },
+
+                    // Question 6 choices
+                    {
+                            new AnswerChoice("Write a method that prints integers from 1 to 100.", true),
+                            new AnswerChoice("Write a method that returns a random integer from 1 to 100.", false),
+                            new AnswerChoice("Write a method that checks whether current second is an integer from 1 to 100.", false),
+                            new AnswerChoice("Write a method that converts an uppercase letter to lowercase.", false)
+                    },
+
+                    // Question 7 choices
+                    {
+                            new AnswerChoice("void", true),
+                            new AnswerChoice("int", false),
+                            new AnswerChoice("double", false),
+                            new AnswerChoice("boolean", false)
+                    },
+
+                    // Question 8 choices
+                    {
+                            new AnswerChoice("pass by value", true),
+                            new AnswerChoice("method invocation", false),
+                            new AnswerChoice("pass by reference", false),
+                            new AnswerChoice("pass by name", false)
+                    },
+
+                    // Question 9 choices
+                    {
+                            new AnswerChoice("invalid call", true),
+                            new AnswerChoice("aaa", false),
+                            new AnswerChoice("aaaa", false),
+                            new AnswerChoice("aaaaa", false)
+                    },
+
+                    // Question 10 choices
+                    {
+                            new AnswerChoice("2", true),
+                            new AnswerChoice("1", false),
+                            new AnswerChoice("3", false),
+                            new AnswerChoice("0", false)
                     }
             },
 
@@ -1095,42 +1235,82 @@ public final class Library {
 
                     // Question 1 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("The program displays int, long followed by 5.", true),
+                            new AnswerChoice("The program displays long, long followed by 5.", false),
+                            new AnswerChoice("The program runs fine but displays things other than 5.", false),
+                            new AnswerChoice("The program does not compile because the compiler cannot distinguish which xmethod to invoke.", false)
                     },
 
                     // Question 2 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("The program displays long followed by 5.", true),
+                            new AnswerChoice("The program displays int followed by 5.", false),
+                            new AnswerChoice("The program runs fine but displays things other than 5.", false),
+                            new AnswerChoice("The program does not compile because the compiler cannot distinguish which xmethod to invoke.", false)
                     },
 
                     // Question 3 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("The program cannot compile because the compiler cannot determine which max method should be invoked.", true),
+                            new AnswerChoice("The program cannot compile because you cannot have the print statement in a non-void method.", false),
+                            new AnswerChoice("The program runs and prints 2 followed by \"max(int, double)\" is invoked.", false),
+                            new AnswerChoice("The program runs and prints 2 followed by \"max(double, int)\" is invoked.", false)
                     },
 
                     // Question 4 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("The program has a compile error because the two methods m have the same signature.", true),
+                            new AnswerChoice("The program has a compile error because the second m method is defined, but not invoked in the main method.", false),
+                            new AnswerChoice("The program runs and prints 2 once.", false),
+                            new AnswerChoice("The program runs and prints 2 twice.", false)
                     },
 
                     // Question 5 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("a local variable", true),
+                            new AnswerChoice("a block variable", false),
+                            new AnswerChoice("a method variable", false),
+                            new AnswerChoice("a global variable", false)
+                    },
+
+                    // Question 6 choices
+                    {
+                            new AnswerChoice("k is not defined outside the block. So, the program has a compile error", true),
+                            new AnswerChoice("2", false),
+                            new AnswerChoice("0", false),
+                            new AnswerChoice("1", false)
+                    },
+
+                    // Question 7 choices
+                    {
+                            new AnswerChoice("between 0 and 65535", true),
+                            new AnswerChoice("between 0 and 65536", false),
+                            new AnswerChoice("between 1 and 65535", false),
+                            new AnswerChoice("between 1 and 65536", false)
+                    },
+
+                    // Question 8 choices
+                    {
+                            new AnswerChoice("between (int)'a' and (int)'z'", true),
+                            new AnswerChoice("between 0 and (int)'z'", false),
+                            new AnswerChoice("between 'a' and 'z'", false),
+                            new AnswerChoice("between 'a' and 'y'", false)
+                    },
+
+                    // Question 9 choices
+                    {
+                            new AnswerChoice("between 'a' and 'z'", true),
+                            new AnswerChoice("between 'a' and 'y'", false),
+                            new AnswerChoice("between 'b' and 'z'", false),
+                            new AnswerChoice("between 'b' and 'y'", false)
+                    },
+
+                    // Question 10 choices
+                    {
+                            new AnswerChoice("Top-down approach", true),
+                            new AnswerChoice("Bottom-up approach", false),
+                            new AnswerChoice("Bottom-up and top-down approach", false),
+                            new AnswerChoice("Stepwise refinement", false)
                     }
             },
 
@@ -1187,42 +1367,42 @@ public final class Library {
 
                     // Question 1 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("a[2]", true),
+                            new AnswerChoice("a(2)", false),
+                            new AnswerChoice("a[3]", false),
+                            new AnswerChoice("a(3)", false)
                     },
 
                     // Question 2 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("2.0", true),
+                            new AnswerChoice("3.5", false),
+                            new AnswerChoice("5.5", false),
+                            new AnswerChoice("3.4", false)
                     },
 
                     // Question 3 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("3", true),
+                            new AnswerChoice("2", false),
+                            new AnswerChoice("1", false),
+                            new AnswerChoice("0", false)
                     },
 
                     // Question 4 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("5", true),
+                            new AnswerChoice("6", false),
+                            new AnswerChoice("0", false),
+                            new AnswerChoice("4", false)
                     },
 
                     // Question 5 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("indexed variable", true),
+                            new AnswerChoice("index", false),
+                            new AnswerChoice("index variable", false),
+                            new AnswerChoice("array variable", false)
                     }
             },
 
@@ -1231,42 +1411,42 @@ public final class Library {
 
                     // Question 1 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("0 1 2", true),
+                            new AnswerChoice("1 2 3", false),
+                            new AnswerChoice("1 1 1", false),
+                            new AnswerChoice("0 1 3", false)
                     },
 
                     // Question 2 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("0 1 2", true),
+                            new AnswerChoice("1 2 3", false),
+                            new AnswerChoice("1 1 1", false),
+                            new AnswerChoice("0 1 3", false)
                     },
 
                     // Question 3 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("The program displays 1 2 3 4", true),
+                            new AnswerChoice("The program displays 0 0", false),
+                            new AnswerChoice("The program displays 0 0 3 4", false),
+                            new AnswerChoice("The program displays 0 0 0 0", false)
                     },
 
                     // Question 4 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("The program displays 0 0", true),
+                            new AnswerChoice("The program displays 1 2 3 4", false),
+                            new AnswerChoice("The program displays 0 0 3 4", false),
+                            new AnswerChoice("The program displays 0 0 0 0", false)
                     },
 
                     // Question 5 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("The program has a compile error on the statement x = new int[2], because x is final and cannot be changed.", true),
+                            new AnswerChoice("The program displays 1 2 3 4", false),
+                            new AnswerChoice("The program displays 0 0", false),
+                            new AnswerChoice("The elements in the array x cannot be changed, because x is final.", false)
                     }
             },
 
