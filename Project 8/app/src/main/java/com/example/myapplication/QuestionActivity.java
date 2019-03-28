@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -25,6 +26,9 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
     RadioButton choice2;
     RadioButton choice3;
     RadioButton choice4;
+    Button next;
+    Button hint;
+    TextView hintText;
 
     // Variables passed from previous activity
     private Library.Levels level;
@@ -35,6 +39,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
     private AnswerChoice[][] answerChoiceSet;
     private int score;
     private int questionNumber;
+    private int mistakeCounter;
     private List<String> correctAnswersList;
 
     @Override
@@ -46,9 +51,14 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         question = findViewById(R.id.text_question);
         submitAnswer = findViewById(R.id.button_submit);
         answerChoicesGroup = findViewById(R.id.radioGroup_answerChoices);
+        next = findViewById(R.id.button_next);
+        hint = findViewById(R.id.button_showHint);
+        hintText = findViewById(R.id.text_hint);
 
-        // set listener for submit button
+        // set listener for the buttons
         submitAnswer.setOnClickListener(this);
+        next.setOnClickListener(this);
+        hint.setOnClickListener(this);
 
         // retrieve level and lesson data from previous activity's intent
         level = (Library.Levels) getIntent().getSerializableExtra("LEVEL");
@@ -61,6 +71,8 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         // set score to max number of questions, and set question number to the first question
         score = questionSet.length;
         questionNumber = 0;
+
+        mistakeCounter = 0;
 
         // show first question
         showNextQuestion();
@@ -81,14 +93,26 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
             // selected answer is correct
             if(answerIsCorrect()) {
                 Toast.makeText(QuestionActivity.this, "Correct", Toast.LENGTH_SHORT).show();
+                submitAnswer.setVisibility(View.INVISIBLE);
             }
             // selected answer is incorrect, decrement the score
             else {
+
                 Toast.makeText(QuestionActivity.this, "Incorrect", Toast.LENGTH_SHORT).show();
+
+                mistakeCounter++;
+
+                if(mistakeCounter == 3) {
+                    moveOn();
+                }
                 score--;
             }
 
             questionNumber++;
+
+        }
+
+        if(v == next) {
 
             // all questions have been answered
             if(questionNumber > questionSet.length - 1) {
@@ -100,10 +124,24 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
                 answerChoicesGroup.clearCheck();
                 showNextQuestion();
             }
+
+            // clear highlights for radio buttons
+            for(int i = 0; i < answerChoicesGroup.getChildCount(); i ++) {
+                answerChoicesGroup.getChildAt(i).setBackgroundColor(Color.TRANSPARENT);
+            }
+        }
+
+        if (v == hint){
+
         }
     }
 
     private void showNextQuestion() {
+
+        submitAnswer.setVisibility(View.VISIBLE);
+        next.setVisibility(View.INVISIBLE);
+
+        mistakeCounter = 0;
 
         // Set the question
         question.setText(questionSet[questionNumber]);
@@ -145,10 +183,20 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
 
         // selected answer is not correct
         if(!correctAnswersList.contains(selectedAnswer)) {
+            checkedButton.setBackgroundColor(Color.RED);
             return false;
         }
 
+        checkedButton.setBackgroundColor(Color.GREEN);
+        next.setVisibility(View.VISIBLE);
         return true;
+    }
+
+    private void moveOn(){
+
+        submitAnswer.setVisibility(View.INVISIBLE);
+        next.setVisibility(View.VISIBLE);
+
     }
 
     /**
