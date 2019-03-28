@@ -73,7 +73,7 @@
                 android:layout_width="125dp"
                 android:layout_height="53dp"
                 android:background="@color/main"
-                android:text="@string/lesson1"
+                android:text="@string/elementarylesson1"
                 tools:layout_editor_absoluteX="8dp"
                 tools:layout_editor_absoluteY="266dp" />
 
@@ -82,7 +82,7 @@
                 android:layout_width="125dp"
                 android:layout_height="53dp"
                 android:background="@color/main"
-                android:text="@string/lesson2"
+                android:text="@string/elementarylesson2"
                 tools:layout_editor_absoluteX="132dp"
                 tools:layout_editor_absoluteY="266dp" />
 
@@ -91,7 +91,7 @@
                 android:layout_width="125dp"
                 android:layout_height="53dp"
                 android:background="@color/main"
-                android:text="@string/lesson3"
+                android:text="@string/selectionslesson3"
                 tools:layout_editor_absoluteX="254dp"
                 tools:layout_editor_absoluteY="266dp" />
 
@@ -110,16 +110,16 @@
                 android:layout_width="125dp"
                 android:layout_height="52dp"
                 android:background="@color/main"
-                android:text="@string/lesson1"
+                android:text="@string/selectionslesson1"
                 tools:layout_editor_absoluteX="4dp"
                 tools:layout_editor_absoluteY="404dp" />
 
             <Button
                 android:id="@+id/button_sLesson2"
                 android:layout_width="125dp"
-                android:layout_height="53dp"
+                android:layout_height="wrap_content"
                 android:background="@color/main"
-                android:text="@string/lesson2"
+                android:text="@string/selectionslesson2"
                 tools:layout_editor_absoluteX="128dp"
                 tools:layout_editor_absoluteY="404dp" />
 
@@ -128,7 +128,7 @@
                 android:layout_width="125dp"
                 android:layout_height="53dp"
                 android:background="@color/main"
-                android:text="@string/lesson3"
+                android:text="@string/selectionslesson3"
                 tools:layout_editor_absoluteX="251dp"
                 tools:layout_editor_absoluteY="404dp" />
 
@@ -146,7 +146,7 @@
                 android:layout_width="125dp"
                 android:layout_height="53dp"
                 android:background="@color/main"
-                android:text="@string/lesson1"
+                android:text="@string/functionslesson1"
                 tools:layout_editor_absoluteX="8dp"
                 tools:layout_editor_absoluteY="266dp" />
 
@@ -155,7 +155,7 @@
                 android:layout_width="125dp"
                 android:layout_height="53dp"
                 android:background="@color/main"
-                android:text="@string/lesson2"
+                android:text="@string/functionslesson2"
                 tools:layout_editor_absoluteX="8dp"
                 tools:layout_editor_absoluteY="266dp" />
 
@@ -165,7 +165,7 @@
                 android:layout_width="125dp"
                 android:layout_height="53dp"
                 android:background="@color/main"
-                android:text="@string/lesson3"
+                android:text="@string/functionslesson3"
                 tools:layout_editor_absoluteX="8dp"
                 tools:layout_editor_absoluteY="266dp" />
 
@@ -174,7 +174,7 @@
                 android:layout_width="125dp"
                 android:layout_height="53dp"
                 android:background="@color/main"
-                android:text="@string/lesson4"
+                android:text="@string/functionslesson4"
                 tools:layout_editor_absoluteX="8dp"
                 tools:layout_editor_absoluteY="266dp" />
 
@@ -191,21 +191,21 @@
                 android:layout_width="125dp"
                 android:layout_height="53dp"
                 android:background="@color/main"
-                android:text="@string/loops1" />
+                android:text="@string/loopslesson1" />
 
             <Button
                 android:id="@+id/button_for"
                 android:layout_width="125dp"
                 android:layout_height="53dp"
                 android:background="@color/main"
-                android:text="@string/loops2" />
+                android:text="@string/loopslesson2" />
 
             <Button
                 android:id="@+id/button_do"
                 android:layout_width="125dp"
                 android:layout_height="53dp"
                 android:background="@color/main"
-                android:text="@string/loops3" />
+                android:text="@string/loopslesson3" />
 
             <TextView
                 android:id="@+id/text_methods"
@@ -219,16 +219,16 @@
             <Button
                 android:id="@+id/button_mlesson1"
                 android:layout_width="125dp"
-                android:layout_height="53dp"
+                android:layout_height="wrap_content"
                 android:background="@color/main"
-                android:text="@string/lesson1" />
+                android:text="@string/methodslesson1" />
 
             <Button
                 android:id="@+id/button_mLesson2"
                 android:layout_width="125dp"
                 android:layout_height="53dp"
                 android:background="@color/main"
-                android:text="@string/lesson2" />
+                android:text="@string/methodslesson2" />
 
             <TextView
                 android:id="@+id/text_arrays"
@@ -244,14 +244,14 @@
                 android:layout_width="125dp"
                 android:layout_height="53dp"
                 android:background="@color/main"
-                android:text="@string/lesson1" />
+                android:text="@string/arrayslesson1" />
 
             <Button
                 android:id="@+id/button_aLesson2"
                 android:layout_width="125dp"
                 android:layout_height="53dp"
                 android:background="@color/main"
-                android:text="@string/lesson2" />
+                android:text="@string/arrayslesson2" />
 
         </LinearLayout>
     </ScrollView>
