@@ -36,9 +36,6 @@
         <activity
             android:name=".Homepage"
             android:label="@string/homepageTitle" />
-        <activity
-            android:name=".ForgotEmailActivity"
-            android:label="ForgotEmail" />
     </application>
 
 </manifest>

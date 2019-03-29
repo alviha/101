@@ -76,4 +76,7 @@
     <string name="Sample">Sample Question</string>
     <string name="Submit">Submit Answer</string>
     <string name="ShowHint">Show Hint</string>
+    <string name="passLength">At least 8 characters</string>
+    <string name="passwordLength">Password - 8+ characters</string>
+    <string name="userLength">Username - 6+ characters</string>
 </resources>

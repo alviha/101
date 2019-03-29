@@ -48,7 +48,6 @@ import static android.Manifest.permission.READ_CONTACTS;
 public class LoginActivity extends AppCompatActivity implements OnClickListener {
 
     private Button button_forgotPassword;
-    private Button button_forgotEmail;
     private Button button_signIn;
     private Button button_createAccount;
 
@@ -68,7 +67,6 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
 
         //Buttons
         button_forgotPassword = findViewById(R.id.button_forgotPassword);
-        button_forgotEmail = findViewById(R.id.button_forgotEmail);
         button_signIn = findViewById(R.id.button_signIn);
         button_createAccount = findViewById(R.id.button_createNewAccount);
 
@@ -78,7 +76,6 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
 
         //Set onClick for buttons
         button_forgotPassword.setOnClickListener(this);
-        button_forgotEmail.setOnClickListener(this);
         button_signIn.setOnClickListener(this);
         button_createAccount.setOnClickListener(this);
 
@@ -89,10 +86,6 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
 
     @Override
     public void onClick(View v) {
-            //if forgot email was pressed then redirect to forgot email page
-        if(v == button_forgotEmail){
-            startActivity(new Intent(LoginActivity.this, ForgotEmailActivity.class));
-        }
             //if forgot password was pressed then redirect to forgot password page
         if (v == button_forgotPassword){
             startActivity(new Intent(LoginActivity.this, ForgotPasswordActivity.class));
@@ -129,7 +122,7 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
                         startActivity(new Intent(LoginActivity.this, Homepage.class));
                         finish();
                     }else{
-                        Toast.makeText(LoginActivity.this,"Account not yet created.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginActivity.this,"Email does not match an account or password is incorrect.", Toast.LENGTH_SHORT).show();
 
                         attemptCounter++;
 
