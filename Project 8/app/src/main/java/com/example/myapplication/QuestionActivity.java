@@ -37,6 +37,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
     // Variables related to the challenge
     private String[] questionSet;
     private AnswerChoice[][] answerChoiceSet;
+    private String[] hintSet;
     private int score;
     private int questionNumber;
     private int mistakeCounter;
@@ -67,6 +68,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         // retrieve question and answer set from Library class
         questionSet = Library.getQuestions(level, lesson);
         answerChoiceSet = Library.getAnswerChoices(level, lesson);
+        hintSet = Library.getHints(level, lesson);
 
         // set score to max number of questions, and set question number to the first question
         score = questionSet.length;
@@ -114,6 +116,8 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
 
         if(v == next) {
 
+            hintText.setText("");
+
             // all questions have been answered
             if(questionNumber > questionSet.length - 1) {
                 showResults();
@@ -132,7 +136,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         }
 
         if (v == hint){
-
+            hintText.setText(hintSet[questionNumber]);
         }
     }
 

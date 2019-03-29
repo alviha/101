@@ -27,7 +27,7 @@ public final class Library {
             // Questions for Lesson 1 - Intro
             {
                     "Suppose a Scanner object is created as follows: \n \n Scanner input = new Scanner(System.in); \n \n What method do you use to read an int value?\n",
-                    "import java.util.Scanner; \n \n public class Test1 { \n public static void main(String[] args) { \n Scanner input = new Scanner(System.in); \n System.out.print(\"Enter three numbers: \"); \n double number1 = input.nextDouble(); \n double number2 = input.nextDouble(); \n double number3 = input.nextDouble(); \n \n double average = (number1 + number2 + number3) / 3; \n \n  System.out.println(average); \n } \n }",
+                    "If you enter 1 2 3, when you run this program, what will be the output? \n \n import java.util.Scanner; \n \n public class Test1 { \n public static void main(String[] args) { \n Scanner input = new Scanner(System.in); \n System.out.print(\"Enter three numbers: \"); \n double number1 = input.nextDouble(); \n double number2 = input.nextDouble(); \n double number3 = input.nextDouble(); \n \n double average = (number1 + number2 + number3) / 3; \n \n  System.out.println(average); \n } \n }",
                     "What is the exact output of the following code? \n \n double area = 3.5; \n System.out.print(\"area\"); \n System.out.print(area);",
                     "Which of the following are correct names for variables according to Java naming conventions?",
                     "Which of the following are correct ways to declare variables?",
@@ -270,36 +270,188 @@ public final class Library {
 
             // Hints for Lesson 1
             {
-                    "Lesson 1 Question 1 Hint",
-                    "Lesson 1 Question 2 Hint",
-                    "Lesson 1 Question 3 Hint",
-                    "Lesson 1 Question 4 Hint",
-                    "Lesson 1 Question 5 Hint",
-                    "Lesson 1 Question 6 Hint",
-                    "Lesson 1 Question 7 Hint",
-                    "Lesson 1 Question 8 Hint",
-                    "Lesson 1 Question 9 Hint",
-                    "Lesson 1 Question 10 Hint"
+                    "What int comes next?",
+                    "Find the average.",
+                    "Print what's inside.",
+                    "camelCase notation",
+                    "; ends the declaration",
+                    "another word for a fixed value",
+                    "Assignment operator.",
+                    "A variable cannot be assigned to a constant.",
+                    "The assignment operator is equivalent to assigning a variable.",
+                    "Same as any other variable declaration/initialization except contains another keyword."
             },
 
             // Hints for Lesson 2
             {
-                    "Lesson 2 Question 1 Hint",
-                    "Lesson 2 Question 2 Hint",
-                    "Lesson 2 Question 3 Hint",
-                    "Lesson 2 Question 4 Hint",
-                    "Lesson 2 Question 5 Hint",
-                    "Lesson 2 Question 6 Hint",
-                    "Lesson 2 Question 7 Hint",
-                    "Lesson 2 Question 8 Hint",
-                    "Lesson 2 Question 9 Hint",
-                    "Lesson 2 Question 10 Hint",
-                    "Lesson 2 Question 11 Hint",
-                    "Lesson 2 Question 12 Hint",
-                    "Lesson 2 Question 13 Hint",
-                    "Lesson 2 Question 14 Hint"
+                    "Which one implies it will use more memory?",
+                    "Can happen to a river during a hurricane.",
+                    "Can happen to a river during a hurricane.",
+                    "How many times does 4 go into 45 evenly.",
+                    "The remainder after division.",
+                    "The remainder after division.",
+                    "The remainder after division.",
+                    "The remainder after division.",
+                    "The remainder after division.",
+                    "Returns a double value.",
+                    "Note that 1 / 2 is 0.",
+                    "Returns a double value.",
+                    "An abbreviated version.",
+                    "Similar to how the smallest sizes of candy bars are ____ sized."
             }
     };
+
+    // Hints for Selections Level
+    private static String[][] selectionsHints = {
+
+            // Hints for Lesson 1
+            {
+                    "'=' by itself is the assignment operator.",
+                    "The data  type that takes in true/false statements.",
+                    "Think about inequalities.",
+                    "y is less than 1",
+                    "The single '=' sets a variable's value, it does not compare two values",
+                    "isPrime is already a boolean data type.",
+                    "Even is false.",
+                    "Think about inequalities.",
+                    "If an if statement is true then the program has no reason to check the else statement.",
+                    "Both are either correct or incorrect."
+            },
+
+            // Hints for Lesson 2
+            {
+                    "Think of inequalities.",
+                    "'||' means or, '&&' means and.",
+                    "'!' means not.",
+                    "Keep in mind it's the absolute value of x-2.",
+                    "'||' means or, '&&' means and.",
+                    "Pay attention to variable types.",
+                    "y will go to the default case if one of the other cases isn’t invoked.",
+                    "Switch statements are similar to if statements.",
+                    "All three are choices are correct but which one is preferred?",
+                    "What boolean value is even equal to.?"
+            }
+    };
+
+    // Hints for functionsCharactersStringsHints Level
+    private static String[][] functionsCharactersStringsHints = {
+
+            // Hints for Lesson 1
+            {
+                    "round() returns an int value.",
+                    "rint() returns a double value",
+                    "rint() returns the nearest even integer as a double.",
+                    "ceil() returns a double value.",
+                    "floor() returns a double value rounded down.",
+                    "You are converting from degrees to _______.",
+                    "You are converting from degrees to _______.",
+                    "What is the value of y at sin(PI)?",
+                    "What is the arcSine of 0.5?",
+                    "What is the cosine of pi?"
+            },
+
+            // Hints for Lesson 2
+            {
+                    "Quotations.",
+                    "Java characters use Unicode encoding.",
+                    "x increments to the next letter of the alphabet.",
+                    "The character '\\' is an escape character and needs to be escaped when used as part of a String.",
+                    "Since c is two letters after a the same applies to digits.",
+                    "How many letters are in between z and a?",
+                    "Singular.",
+                    "Make sure the value is between all uppercase characters.",
+                    "Missing parameter.",
+                    "‘a’ isn’t a String."
+            }
+    };
+
+    // Hints for loops Level
+    private static String[][] loopsHints = {
+
+            // Hints for Lesson 1
+            {
+                    "Prints after checking that count is less than 10.",
+                    "What's going at each point?",
+                    "Count is incremented before printing.",
+                    "Think about floating point numbers.",
+                    "Two conditions to pay attention to.",
+                    "2 to the \"number of loop executions\" power.",
+                    "Value of cond1.",
+                    "Look for errors.",
+                    "Beginning value of balance is 10."
+            },
+
+            // Hints for Lesson 2
+            {
+                    "Are there any errors?",
+                    "Two correct answers.",
+                    "Two correct answers.",
+                    "Increments twice.",
+                    "y+=i is the same as y = y + i.",
+                    "The scope of i is inside the loop.",
+                    "Pay close attention to the i++ and j++.",
+                    "Final value of i and final value of isPrime.",
+                    "Final value of i and final value of isPrime.",
+                    "How many times does the loop execute if i < n."
+            }
+    };
+
+    // Hints for methods Level
+    private static String[][] methodsHints = {
+
+            // Hints for Lesson 1
+            {
+                    "Context clues.",
+                    "What method is being called and what is being passed?",
+                    "Required in order to run a program.",
+                    "What is towards the end of a method call?",
+                    "Push, pop, peak...",
+                    "Which of the methods above doesn't return a value on method call?",
+                    "What is the return type?",
+                    "Giving the parameter a _____.",
+                    "Pay close attention to the variable type and what is passed.",
+                    "Does the value change?"
+            },
+
+            // Hints for Lesson 2
+            {
+                    "Trace the code.",
+                    "Trace the code.",
+                    "Trace the code.",
+                    "Trace the code.",
+                    "Familiar environment.",
+                    "Is there an error?",
+                    "Between second and first.",
+                    "Between second and first.",
+                    "Between second and first.",
+                    "Answer is in the question."
+            }
+    };
+
+    // Hints for singleDimmensionalArrays Level
+    private static String[][] singleDimensionalArraysHints = {
+
+            // Hints for Lesson 1
+            {
+                    "Arrays use regular brackets.",
+                    "The first value of an array is array[0].",
+                    "The first value of an array is array[0].",
+                    "array[x].. x is the size in the declaration/initialization.",
+                    "Past tense."
+            },
+
+            // Hints for Lesson 2
+            {
+                    "The first value of an array is array[0].",
+                    "Look at the changes made to list1.",
+                    "Print out the contents of y[].",
+                    "Print out the contents of x[].",
+                    "How was x[] declared?"
+            }
+    };
+
+
+
 
     // Answer choices for Elementary Programming Level
     private static AnswerChoice[][][] elementaryProgrammingAnswerChoices = {
@@ -1073,7 +1225,7 @@ public final class Library {
                     {
                             new AnswerChoice("CD", true),
                             new AnswerChoice("ABCD", false),
-                            new AnswerChoice("B", false),
+                            new AnswerChoice("BA", false),
                             new AnswerChoice("C", false)
                     },
 
@@ -1570,21 +1722,39 @@ public final class Library {
 
         if (level == Levels.ELEMENTARY_PROGRAMMING) {
             return elementaryProgrammingAnswerChoices[lesson];
-        }
-        else if (level == Levels.SELECTIONS) {
+        } else if (level == Levels.SELECTIONS) {
             return selectionsAnswerChoices[lesson];
-        }
-        else if (level == Levels.FUNCTIONS_CHARACTERS_STRINGS) {
+        } else if (level == Levels.FUNCTIONS_CHARACTERS_STRINGS) {
             return functionsCharactersStringsAnswerChoices[lesson];
-        }
-        else if (level == Levels.LOOPS) {
+        } else if (level == Levels.LOOPS) {
             return loopsAnswerChoices[lesson];
-        }
-        else if (level == Levels.METHODS) {
+        } else if (level == Levels.METHODS) {
             return methodsAnswerChoices[lesson];
-        }
-        else {
+        } else {
             return singleDimensionalArraysAnswerChoices[lesson];
         }
     }
+
+    public static String[] getHints(Levels level, int lesson) {
+
+        if (level == Levels.ELEMENTARY_PROGRAMMING) {
+            return elementaryProgrammingHints[lesson];
+        }
+        else if (level == Levels.SELECTIONS) {
+            return selectionsHints[lesson];
+        }
+        else if (level == Levels.FUNCTIONS_CHARACTERS_STRINGS) {
+            return functionsCharactersStringsHints[lesson];
+        }
+        else if (level == Levels.LOOPS) {
+            return loopsHints[lesson];
+        }
+        else if (level == Levels.METHODS) {
+            return methodsHints[lesson];
+        }
+        else {
+            return singleDimensionalArraysHints[lesson];
+        }
+    }
 }
+
