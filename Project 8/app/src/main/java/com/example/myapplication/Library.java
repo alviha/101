@@ -265,6 +265,42 @@ public final class Library {
             }
     };
 
+    // Hints for Elementary Programming Level
+    private static String[][] elementaryProgrammingHints = {
+
+            // Hints for Lesson 1
+            {
+                    "Lesson 1 Question 1 Hint",
+                    "Lesson 1 Question 2 Hint",
+                    "Lesson 1 Question 3 Hint",
+                    "Lesson 1 Question 4 Hint",
+                    "Lesson 1 Question 5 Hint",
+                    "Lesson 1 Question 6 Hint",
+                    "Lesson 1 Question 7 Hint",
+                    "Lesson 1 Question 8 Hint",
+                    "Lesson 1 Question 9 Hint",
+                    "Lesson 1 Question 10 Hint"
+            },
+
+            // Hints for Lesson 2
+            {
+                    "Lesson 2 Question 1 Hint",
+                    "Lesson 2 Question 2 Hint",
+                    "Lesson 2 Question 3 Hint",
+                    "Lesson 2 Question 4 Hint",
+                    "Lesson 2 Question 5 Hint",
+                    "Lesson 2 Question 6 Hint",
+                    "Lesson 2 Question 7 Hint",
+                    "Lesson 2 Question 8 Hint",
+                    "Lesson 2 Question 9 Hint",
+                    "Lesson 2 Question 10 Hint",
+                    "Lesson 2 Question 11 Hint",
+                    "Lesson 2 Question 12 Hint",
+                    "Lesson 2 Question 13 Hint",
+                    "Lesson 2 Question 14 Hint"
+            }
+    };
+
     // Answer choices for Elementary Programming Level
     private static AnswerChoice[][][] elementaryProgrammingAnswerChoices = {
 
