@@ -275,7 +275,7 @@ public final class Library {
                     "Print what's inside.",
                     "camelCase notation",
                     "; ends the declaration",
-                    "another word for a fixed value",
+                    "Another word for a fixed value",
                     "Assignment operator.",
                     "A variable cannot be assigned to a constant.",
                     "The assignment operator is equivalent to assigning a variable.",
