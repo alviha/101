@@ -45,7 +45,6 @@
                 android:id="@+id/radioButton_choice1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:text="Choice 1 goes here"
                 android:textSize="16sp"
                 android:fontFamily="sans-serif"
@@ -55,7 +54,6 @@
                 android:id="@+id/radioButton_choice2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:text="Choice 2 goes here"
                 android:textSize="16sp"
                 android:fontFamily="sans-serif"
@@ -65,7 +63,6 @@
                 android:id="@+id/radioButton_choice3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:text="Choice 3 goes here"
                 android:textSize="16sp"
                 android:fontFamily="sans-serif"
@@ -75,12 +72,32 @@
                 android:id="@+id/radioButton_choice4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:text="Choice 4 goes here"
                 android:textSize="16sp"
                 android:fontFamily="sans-serif"
                 android:letterSpacing="0.5" />
         </RadioGroup>
+
+        <Button
+            android:id="@+id/button_showHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/activity_vertical_margin"
+            android:text="@string/showHint"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="14sp"
+            android:letterSpacing="1.25"/>
+
+        <TextView
+            android:id="@+id/text_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/activity_vertical_margin"
+            android:text="Hint goes here"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif"
+            android:letterSpacing="0.25"
+            android:textSize="14sp" />
 
 
     </LinearLayout>
@@ -100,24 +117,4 @@
     <!--android:layout_marginEnd="8dp"-->
     <!--android:text="Next"-->
     <!--android:visibility="invisible" />-->
-
-    <!--<Button-->
-    <!--android:id="@+id/button_showHint"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginStart="8dp"-->
-    <!--android:layout_marginEnd="8dp"-->
-    <!--android:text="Show Hint" />-->
-
-    <!--<TextView-->
-    <!--android:id="@+id/text_hint"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginStart="8dp"-->
-    <!--android:layout_marginTop="8dp"-->
-    <!--android:layout_marginEnd="8dp"-->
-    <!--android:layout_marginBottom="8dp"-->
-    <!--android:textAlignment="center"-->
-    <!--android:textSize="20sp"-->
-    <!--android:textColor="@color/Black" />-->
 </RelativeLayout>

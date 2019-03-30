@@ -26,6 +26,9 @@
     <string name="forgotUsername">Forgot Username</string>
     <string name="needanaccount">Need to Create An Account</string>
     <string name="username">Username</string>
+    <string name="passLength">At least 8 characters</string>
+    <string name="passwordLength">Password - 8+ characters</string>
+    <string name="userLength">Username - 6+ characters</string>
     <!--Strings related to homepage-->
     <string name="lesson1">Lesson 1</string>
     <string name="lesson2">Lesson 2</string>
@@ -73,10 +76,9 @@
 
     <!-- Strings for toast messages -->
     <string name="toast_emailSent">Email sent</string>
-    <string name="Sample">Sample Question</string>
-    <string name="Submit">Submit Answer</string>
-    <string name="ShowHint">Show Hint</string>
-    <string name="passLength">At least 8 characters</string>
-    <string name="passwordLength">Password - 8+ characters</string>
-    <string name="userLength">Username - 6+ characters</string>
+
+    <!-- Strings related to question activity -->
+    <string name="submitAnswer">Submit Answer</string>
+    <string name="showHint">Show Hint</string>
+
 </resources>
