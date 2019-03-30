@@ -250,7 +250,7 @@ public class LibraryTest {
 
     }
 
-    // test: retrieve Hints questions; assert hints for lesson 1
+    // test: retrieve Elementary Programming Hints; assert hints for lesson 1
     @Test
     public void testGetHintsElementaryProgramming() {
 
@@ -268,6 +268,125 @@ public class LibraryTest {
         };
 
         Library.Levels level = Library.Levels.ELEMENTARY_PROGRAMMING;
+        int lessonNumber = 0;
+        String[] hints = Library.getHints(level, lessonNumber);
+
+        assertArrayEquals(expected, hints);
+
+    }
+
+    // test: retrieve Selections Hints; assert hints for lesson 1
+    @Test
+    public void testGetHintsSelections() {
+
+        String[] expected = {
+                "'=' by itself is the assignment operator.",
+                "The data  type that takes in true/false statements.",
+                "Think about inequalities.",
+                "y is less than 1",
+                "The single '=' sets a variable's value, it does not compare two values",
+                "isPrime is already a boolean data type.",
+                "Even is false.",
+                "Think about inequalities.",
+                "If an if statement is true then the program has no reason to check the else statement.",
+                "Both are either correct or incorrect."
+        };
+
+        Library.Levels level = Library.Levels.SELECTIONS;
+        int lessonNumber = 0;
+        String[] hints = Library.getHints(level, lessonNumber);
+
+        assertArrayEquals(expected, hints);
+
+    }
+
+    // test: retrieve Functions Characters and Strings Hints; assert hints for lesson 1
+    @Test
+    public void testGetHintsFunctionsCharactersStrings() {
+
+        String[] expected = {
+                "round() returns an int value.",
+                "rint() returns a double value",
+                "rint() returns the nearest even integer as a double.",
+                "ceil() returns a double value.",
+                "floor() returns a double value rounded down.",
+                "You are converting from degrees to _______.",
+                "You are converting from degrees to _______.",
+                "What is the value of y at sin(PI)?",
+                "What is the arcSine of 0.5?",
+                "What is the cosine of pi?"
+        };
+
+        Library.Levels level = Library.Levels.FUNCTIONS_CHARACTERS_STRINGS;
+        int lessonNumber = 0;
+        String[] hints = Library.getHints(level, lessonNumber);
+
+        assertArrayEquals(expected, hints);
+
+    }
+
+    // test: retrieve Loops Hints; assert hints for lesson 1
+    @Test
+    public void testGetHintsLoops() {
+
+        String[] expected = {
+                "Prints after checking that count is less than 10.",
+                "What's going at each point?",
+                "Count is incremented before printing.",
+                "Think about floating point numbers.",
+                "Two conditions to pay attention to.",
+                "2 to the \"number of loop executions\" power.",
+                "Value of cond1.",
+                "Look for errors.",
+                "Beginning value of balance is 10."
+        };
+
+        Library.Levels level = Library.Levels.LOOPS;
+        int lessonNumber = 0;
+        String[] hints = Library.getHints(level, lessonNumber);
+
+        assertArrayEquals(expected, hints);
+
+    }
+
+    // test: retrieve Methods Hints; assert hints for lesson 1
+    @Test
+    public void testGetHintsMethods() {
+
+        String[] expected = {
+                "Context clues.",
+                "What method is being called and what is being passed?",
+                "Required in order to run a program.",
+                "What is towards the end of a method call?",
+                "Push, pop, peak...",
+                "Which of the methods above doesn't return a value on method call?",
+                "What is the return type?",
+                "Giving the parameter a _____.",
+                "Pay close attention to the variable type and what is passed.",
+                "Does the value change?"
+        };
+
+        Library.Levels level = Library.Levels.METHODS;
+        int lessonNumber = 0;
+        String[] hints = Library.getHints(level, lessonNumber);
+
+        assertArrayEquals(expected, hints);
+
+    }
+
+    // test: retrieve Single Dimensional Arrays Hints; assert hints for lesson 1
+    @Test
+    public void testGetHintsSingleDimensionalArrays() {
+
+        String[] expected = {
+                "Arrays use regular brackets.",
+                "The first value of an array is array[0].",
+                "The first value of an array is array[0].",
+                "array[x].. x is the size in the declaration/initialization.",
+                "Past tense."
+        };
+
+        Library.Levels level = Library.Levels.SINGLE_DIMENSIONAL_ARRAYS;
         int lessonNumber = 0;
         String[] hints = Library.getHints(level, lessonNumber);
 
