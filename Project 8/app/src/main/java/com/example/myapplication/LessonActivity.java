@@ -41,6 +41,7 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
             intent.putExtra("LESSON", lesson);
 
             startActivity(intent);
+            finish();
         }
     }
 }

@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.graphics.Color;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -11,6 +13,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -18,19 +21,17 @@ import java.util.List;
 
 public class QuestionActivity extends AppCompatActivity implements View.OnClickListener{
 
-    // UI elements
-    TextView question;
-    Button submitAnswer;
+    // Challenge UI elements
+    TextView questionHeading, question, hintText;
     RadioGroup answerChoicesGroup;
-    RadioButton choice1;
-    RadioButton choice2;
-    RadioButton choice3;
-    RadioButton choice4;
-    Button next;
-    Button hint;
-    TextView hintText;
+    RadioButton choice1, choice2, choice3, choice4;
+    Button hint, submitAnswer, next;
 
-    // Variables passed from previous activity
+    // Results screen UI elements
+    TextView scoreResult, resultFeedback;
+    Button repeatChallenge, backToHomepage;
+
+    // Level and lesson data to be retrieved from intent
     private Library.Levels level;
     private int lesson;
 
@@ -49,19 +50,20 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_question);
 
         // initialize UI Elements
+        questionHeading = findViewById(R.id.text_questionNumber);
         question = findViewById(R.id.text_question);
-        submitAnswer = findViewById(R.id.button_submit);
         answerChoicesGroup = findViewById(R.id.radioGroup_answerChoices);
-        next = findViewById(R.id.button_next);
-        hint = findViewById(R.id.button_showHint);
         hintText = findViewById(R.id.text_hint);
+        hint = findViewById(R.id.button_showHint);
+        submitAnswer = findViewById(R.id.button_submitAnswer);
+        next = findViewById(R.id.button_nextQuestion);
 
         // set listener for the buttons
+        hint.setOnClickListener(this);
         submitAnswer.setOnClickListener(this);
         next.setOnClickListener(this);
-        hint.setOnClickListener(this);
 
-        // retrieve level and lesson data from previous activity's intent
+        // retrieve level and lesson data from intent
         level = (Library.Levels) getIntent().getSerializableExtra("LEVEL");
         lesson = getIntent().getIntExtra("LESSON", 0);
 
@@ -73,8 +75,6 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         // set score to max number of questions, and set question number to the first question
         score = questionSet.length;
         questionNumber = 0;
-
-        mistakeCounter = 0;
 
         // show first question
         showNextQuestion();
@@ -95,28 +95,40 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
             // selected answer is correct
             if(answerIsCorrect()) {
                 Toast.makeText(QuestionActivity.this, "Correct", Toast.LENGTH_SHORT).show();
-                submitAnswer.setVisibility(View.INVISIBLE);
+                showAnswer();
             }
-            // selected answer is incorrect, decrement the score
+
+            // selected answer is incorrect
             else {
 
                 Toast.makeText(QuestionActivity.this, "Incorrect", Toast.LENGTH_SHORT).show();
 
+                // make selected answer not clickable
+                findViewById(answerChoicesGroup.getCheckedRadioButtonId()).setClickable(false);
+                answerChoicesGroup.clearCheck();
+
                 mistakeCounter++;
 
-                if(mistakeCounter == 3) {
-                    moveOn();
+                // decrement score only when the first mistake is made
+                if(mistakeCounter == 1) {
+                    score--;
                 }
-                score--;
-            }
 
-            questionNumber++;
+                if(mistakeCounter == 3) {
+                    showAnswer();
+                }
+
+            }
 
         }
 
+        // next question button
         if(v == next) {
 
-            hintText.setText("");
+            hintText.setVisibility(View.INVISIBLE);
+            hint.setVisibility(View.VISIBLE);
+            submitAnswer.setVisibility(View.VISIBLE);
+            next.setVisibility(View.INVISIBLE);
 
             // all questions have been answered
             if(questionNumber > questionSet.length - 1) {
@@ -130,25 +142,68 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
             }
 
             // clear highlights for radio buttons
-            for(int i = 0; i < answerChoicesGroup.getChildCount(); i ++) {
-                answerChoicesGroup.getChildAt(i).setBackgroundColor(Color.TRANSPARENT);
+            for(int i = 0; i < answerChoicesGroup.getChildCount(); i++) {
+                answerChoicesGroup.getChildAt(i).setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.common_google_signin_btn_text_light_default));
             }
         }
 
+        // show hint button
         if (v == hint){
+
             hintText.setText(hintSet[questionNumber]);
+            hintText.setVisibility(View.VISIBLE);
+            hint.setVisibility(View.INVISIBLE);
         }
+
+        if(v == repeatChallenge) {
+
+            questionNumber = 0;
+            score = questionSet.length;
+
+            // hide question related elements
+            questionHeading.setVisibility(View.VISIBLE);
+            question.setVisibility(View.VISIBLE);
+            answerChoicesGroup.setVisibility(View.VISIBLE);
+            hint.setVisibility(View.VISIBLE);
+            hintText.setVisibility(View.INVISIBLE);
+            submitAnswer.setVisibility(View.VISIBLE);
+            next.setVisibility(View.INVISIBLE);
+
+            // hide result screen elements
+            findViewById(R.id.text_challengeCompleted).setVisibility(View.GONE);
+            scoreResult.setVisibility(View.GONE);
+            resultFeedback.setVisibility(View.GONE);
+            repeatChallenge.setVisibility(View.GONE);
+            backToHomepage.setVisibility(View.GONE);
+
+            showNextQuestion();
+        }
+
+        if(v == backToHomepage) {
+
+            Intent intent = new Intent(QuestionActivity.this, Homepage.class);
+            startActivity(intent);
+            finish();
+        }
+
+
     }
 
     private void showNextQuestion() {
 
-        submitAnswer.setVisibility(View.VISIBLE);
-        next.setVisibility(View.INVISIBLE);
-
         mistakeCounter = 0;
 
-        // Set the question
+        answerChoicesGroup.clearCheck();
+
+        // reset radio buttons to be clickable
+        for(int i = 0; i < answerChoicesGroup.getChildCount(); i++) {
+            answerChoicesGroup.getChildAt(i).setClickable(true);
+        }
+
+        // Set the question and heading
         question.setText(questionSet[questionNumber]);
+        int questionHeadingNumber = questionNumber+1;
+        questionHeading.setText("Question " + questionHeadingNumber + ":");
 
         // add the correct answer choices to the correct answer list
         correctAnswersList = new ArrayList<>();
@@ -192,23 +247,67 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         }
 
         checkedButton.setBackgroundColor(Color.GREEN);
+
         next.setVisibility(View.VISIBLE);
         return true;
     }
 
-    private void moveOn(){
+    private void showAnswer(){
 
         submitAnswer.setVisibility(View.INVISIBLE);
+        hint.setVisibility(View.INVISIBLE);
+        hintText.setVisibility(View.INVISIBLE);
         next.setVisibility(View.VISIBLE);
 
+        for(int i = 0; i < answerChoicesGroup.getChildCount(); i++) {
+            answerChoicesGroup.getChildAt(i).setClickable(false);
+        }
+
+        questionNumber++;
     }
 
     /**
-     *  shows the score result
+     *  shows the result screen
      */
     private void showResults() {
 
+        // hide question related elements
+        questionHeading.setVisibility(View.GONE);
+        question.setVisibility(View.GONE);
         answerChoicesGroup.setVisibility(View.GONE);
-        question.setText("You scored " + score + "/" + questionSet.length);
+        hint.setVisibility(View.GONE);
+        hintText.setVisibility(View.GONE);
+        submitAnswer.setVisibility(View.GONE);
+        next.setVisibility(View.GONE);
+
+        // initialize buttons and set on click listener
+        repeatChallenge = findViewById(R.id.button_repeatChallenge);
+        backToHomepage = findViewById(R.id.button_backToHomepage);
+        repeatChallenge.setOnClickListener(this);
+        backToHomepage.setOnClickListener(this);
+
+        // show result screen elements
+        findViewById(R.id.text_challengeCompleted).setVisibility(View.VISIBLE);
+        scoreResult = findViewById(R.id.text_scoreResult);
+        scoreResult.setVisibility(View.VISIBLE);
+        resultFeedback = findViewById(R.id.text_resultFeedback);
+        resultFeedback.setVisibility(View.VISIBLE);
+        repeatChallenge.setVisibility(View.VISIBLE);
+        backToHomepage.setVisibility(View.VISIBLE);
+
+        // show score
+        DecimalFormat scoreFormat = new DecimalFormat("##.##%");
+        double scorePercentage = (score / 1.0) / questionSet.length;
+        scoreResult.setText("Results\n\n" + score + "/" + questionSet.length + "\n\n" + scoreFormat.format(scorePercentage));
+
+        if(scorePercentage >= 1.0) {
+            resultFeedback.setText("Excellent Job!");
+        }
+        else if(scorePercentage >= 0.8) {
+            resultFeedback.setText("Nice job!");
+        }
+        else {
+            resultFeedback.setText("An 80% or better is required to unlock the next lesson");
+        }
     }
 }
