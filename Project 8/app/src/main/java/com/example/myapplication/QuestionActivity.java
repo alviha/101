@@ -69,8 +69,6 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         score = questionSet.length;
         questionNumber = 0;
 
-        mistakeCounter = 0;
-
         // show first question
         showNextQuestion();
     }
@@ -90,8 +88,9 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
             // selected answer is correct
             if(answerIsCorrect()) {
                 Toast.makeText(QuestionActivity.this, "Correct", Toast.LENGTH_SHORT).show();
-                submitAnswer.setVisibility(View.INVISIBLE);
+                moveOn();
             }
+
             // selected answer is incorrect
             else {
 
@@ -102,6 +101,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
                 if(mistakeCounter == 3) {
                     moveOn();
                 }
+
                 /** TODO: once a mistake is made, do not decrement score any further */
                 score--;
             }
@@ -112,7 +112,10 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
 
         if(v == next) {
 
-            hintText.setText("");
+            hintText.setVisibility(View.INVISIBLE);
+            hint.setVisibility(View.VISIBLE);
+            submitAnswer.setVisibility(View.VISIBLE);
+            next.setVisibility(View.INVISIBLE);
 
             // all questions have been answered
             if(questionNumber > questionSet.length - 1) {
@@ -131,15 +134,16 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
             }
         }
 
+        // show hint button
         if (v == hint){
+
             hintText.setText(hintSet[questionNumber]);
+            hintText.setVisibility(View.VISIBLE);
+            hint.setVisibility(View.INVISIBLE);
         }
     }
 
     private void showNextQuestion() {
-
-        submitAnswer.setVisibility(View.VISIBLE);
-        next.setVisibility(View.INVISIBLE);
 
         mistakeCounter = 0;
 
