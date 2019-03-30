@@ -428,7 +428,7 @@ public final class Library {
             }
     };
 
-    // Hints for singleDimmensionalArrays Level
+    // Hints for singleDimensionalArrays Level
     private static String[][] singleDimensionalArraysHints = {
 
             // Hints for Lesson 1
