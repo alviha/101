@@ -136,16 +136,6 @@ public class LoginActivityTest {
         intended(hasComponent(Homepage.class.getName())); // assert if homepage activity is launched
     }
 
-    // test: redirect to forgot email activity when forgot email is clicked
-    @Test
-    public void testRedirectToForgotEmail() throws InterruptedException {
-
-        Espresso.onView(withId(R.id.button_forgotEmail)).perform(click()); // click forgot email button
-
-        Thread.sleep(2000); // idle test to wait for activity to launch before assertion
-        intended(hasComponent(ForgotEmailActivity.class.getName())); // assert if forgot email activity is launched
-    }
-
     // test: redirect to forgot password activity when forgot password is clicked
     @Test
     public void testRedirectToForgotPassword() throws InterruptedException {
