@@ -18,7 +18,7 @@ public class LibraryTest {
 
     // test: retrieve Elementary Programming questions; assert question set for lesson 1
     @Test
-    public void getQuestionsElementaryProgramming() {
+    public void testGetQuestionsElementaryProgramming() {
 
         String[] expected = {
                 "Suppose a Scanner object is created as follows: \n \n Scanner input = new Scanner(System.in); \n \n What method do you use to read an int value?\n",
@@ -43,7 +43,7 @@ public class LibraryTest {
 
     // test: retrieve Selections questions; assert question set for lesson 1
     @Test
-    public void getQuestionsSelections() {
+    public void testGetQuestionsSelections() {
 
         String[] expected = {
                 "The equal comparison operator in Java is __________.",
@@ -68,7 +68,7 @@ public class LibraryTest {
 
     // test: retrieve Functions Characters and Strings questions; assert question set for lesson 1
     @Test
-    public void getQuestionsFunctionsCharactersStrings() {
+    public void testGetQuestionsFunctionsCharactersStrings() {
 
         String[] expected = {
                 "What is Math.round(3.6)?",
@@ -93,7 +93,7 @@ public class LibraryTest {
 
     // test: retrieve Loops questions; assert question set for lesson 1
     @Test
-    public void getQuestionsLoops() {
+    public void testGetQuestionsLoops() {
 
         String[] expected = {
                 "How many times will the following code print \"Welcome to Java\"? \n \n int count = 0; \n while (count < 10) { \n System.out.println(\"Welcome to Java\"); \n count++; \n }",
@@ -117,7 +117,7 @@ public class LibraryTest {
 
     // test: retrieve Methods questions; assert question set for lesson 1
     @Test
-    public void getQuestionsMethods() {
+    public void testGetQuestionsMethods() {
 
         String[] expected = {
                 "Suppose your method does not return any value, which of the following keywords can be used as a return type?",
@@ -142,7 +142,7 @@ public class LibraryTest {
 
     // test: retrieve Single Dimensional Arrays questions; assert question set for lesson 1
     @Test
-    public void getQuestionsSingleDimensionalArrays() {
+    public void testGetQuestionsSingleDimensionalArrays() {
 
         String[] expected = {
                 "What is the representation of the third element in an array called a?",
@@ -160,13 +160,118 @@ public class LibraryTest {
 
     }
 
+    // test: retrieve Elementary Programming answer choices; assert answer choices for lesson 1, question 1
     @Test
-    public void getAnswerChoices() {
-        fail();
+    public void testGetAnswerChoicesElementaryProgramming() {
+
+        String[] expected = {"input.nextInt();", "input.nextInteger();", "input.int();", "input.integer();"};
+
+        Library.Levels level = Library.Levels.ELEMENTARY_PROGRAMMING;
+        int lessonNumber = 0;
+        AnswerChoice[] answerChoices = Library.getAnswerChoices(level, lessonNumber)[0];
+        String[] actual = {answerChoices[0].getContent(), answerChoices[1].getContent(), answerChoices[2].getContent(), answerChoices[3].getContent()};
+
+        assertArrayEquals(expected, actual);
+
     }
 
+    // test: retrieve Selections answer choices; assert answer choices for lesson 1, question 1
     @Test
-    public void getHints() {
-        fail();
+    public void testGetAnswerChoicesSelections() {
+
+        String[] expected = {"==", "!=", "<>", "^="};
+
+        Library.Levels level = Library.Levels.SELECTIONS;
+        int lessonNumber = 0;
+        AnswerChoice[] answerChoices = Library.getAnswerChoices(level, lessonNumber)[0];
+        String[] actual = {answerChoices[0].getContent(), answerChoices[1].getContent(), answerChoices[2].getContent(), answerChoices[3].getContent()};
+
+        assertArrayEquals(expected, actual);
+
+    }
+
+    // test: retrieve Functions Characters and Strings answer choices; assert answer choices for lesson 1, question 1
+    @Test
+    public void testGetAnswerChoicesFunctionsCharactersStrings() {
+
+        String[] expected = {"4", "3", "3.0", "4.0"};
+
+        Library.Levels level = Library.Levels.FUNCTIONS_CHARACTERS_STRINGS;
+        int lessonNumber = 0;
+        AnswerChoice[] answerChoices = Library.getAnswerChoices(level, lessonNumber)[0];
+        String[] actual = {answerChoices[0].getContent(), answerChoices[1].getContent(), answerChoices[2].getContent(), answerChoices[3].getContent()};
+
+        assertArrayEquals(expected, actual);
+
+    }
+
+    // test: retrieve Loops answer choices; assert answer choices for lesson 1, question 1
+    @Test
+    public void testGetAnswerChoicesLoops() {
+
+        String[] expected = {"10", "9", "8", "11"};
+
+        Library.Levels level = Library.Levels.LOOPS;
+        int lessonNumber = 0;
+        AnswerChoice[] answerChoices = Library.getAnswerChoices(level, lessonNumber)[0];
+        String[] actual = {answerChoices[0].getContent(), answerChoices[1].getContent(), answerChoices[2].getContent(), answerChoices[3].getContent()};
+
+        assertArrayEquals(expected, actual);
+
+    }
+    
+    // test: retrieve Methods answer choices; assert answer choices for lesson 1, question 1
+    @Test
+    public void testGetAnswerChoicesMethods() {
+
+        String[] expected = {"void", "int", "double", "public"};
+
+        Library.Levels level = Library.Levels.METHODS;
+        int lessonNumber = 0;
+        AnswerChoice[] answerChoices = Library.getAnswerChoices(level, lessonNumber)[0];
+        String[] actual = {answerChoices[0].getContent(), answerChoices[1].getContent(), answerChoices[2].getContent(), answerChoices[3].getContent()};
+
+        assertArrayEquals(expected, actual);
+
+    }
+
+    // test: retrieve Single Dimensional Arrays answer choices; assert answer choices for lesson 1, question 1
+    @Test
+    public void testGetAnswerChoicesSingleDimensionalArrays() {
+
+        String[] expected = {"a[2]", "a(2)", "a[3]", "a(3)"};
+
+        Library.Levels level = Library.Levels.SINGLE_DIMENSIONAL_ARRAYS;
+        int lessonNumber = 0;
+        AnswerChoice[] answerChoices = Library.getAnswerChoices(level, lessonNumber)[0];
+        String[] actual = {answerChoices[0].getContent(), answerChoices[1].getContent(), answerChoices[2].getContent(), answerChoices[3].getContent()};
+
+        assertArrayEquals(expected, actual);
+
+    }
+
+    // test: retrieve Hints questions; assert hints for lesson 1
+    @Test
+    public void testGetHintsElementaryProgramming() {
+
+        String[] expected = {
+                "What int comes next?",
+                "Find the average.",
+                "Print what's inside.",
+                "camelCase notation",
+                "; ends the declaration",
+                "Another word for a fixed value",
+                "Assignment operator.",
+                "A variable cannot be assigned to a constant.",
+                "The assignment operator is equivalent to assigning a variable.",
+                "Same as any other variable declaration/initialization except contains another keyword."
+        };
+
+        Library.Levels level = Library.Levels.ELEMENTARY_PROGRAMMING;
+        int lessonNumber = 0;
+        String[] hints = Library.getHints(level, lessonNumber);
+
+        assertArrayEquals(expected, hints);
+
     }
 }
