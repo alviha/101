@@ -13,8 +13,8 @@
         android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
         android:layout_marginVertical="@dimen/activity_vertical_margin"
         android:fontFamily="sans-serif-medium"
-        android:letterSpacing="0.5"
-        android:text="Question #"
+        android:text="Question #: "
+        android:letterSpacing="0.1"
         android:textSize="20sp" />
 
     <ScrollView
@@ -54,7 +54,7 @@
                     android:text="Choice 1 goes here"
                     android:textSize="16sp"
                     android:fontFamily="sans-serif"
-                    android:letterSpacing="0.5" />
+                    android:letterSpacing="0.15" />
 
                 <RadioButton
                     android:id="@+id/radioButton_choice2"
@@ -63,7 +63,7 @@
                     android:text="Choice 2 goes here"
                     android:textSize="16sp"
                     android:fontFamily="sans-serif"
-                    android:letterSpacing="0.5" />
+                    android:letterSpacing="0.15" />
 
                 <RadioButton
                     android:id="@+id/radioButton_choice3"
@@ -72,7 +72,7 @@
                     android:text="Choice 3 goes here"
                     android:textSize="16sp"
                     android:fontFamily="sans-serif"
-                    android:letterSpacing="0.5" />
+                    android:letterSpacing="0.15" />
 
                 <RadioButton
                     android:id="@+id/radioButton_choice4"
@@ -81,7 +81,7 @@
                     android:text="Choice 4 goes here"
                     android:textSize="16sp"
                     android:fontFamily="sans-serif"
-                    android:letterSpacing="0.5" />
+                    android:letterSpacing="0.15" />
             </RadioGroup>
 
             <Button
@@ -91,8 +91,8 @@
                 android:layout_marginVertical="@dimen/activity_vertical_margin"
                 android:text="@string/showHint"
                 android:fontFamily="sans-serif-medium"
-                android:textSize="14sp"
-                android:letterSpacing="1.25"/>
+                android:letterSpacing="0.15"
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/text_hint"
@@ -102,7 +102,6 @@
                 android:text="Hint goes here"
                 android:textAlignment="center"
                 android:fontFamily="sans-serif"
-                android:letterSpacing="0.25"
                 android:textSize="14sp" />
 
 
@@ -119,8 +118,8 @@
         android:layout_alignParentBottom="true"
         android:text="@string/submitAnswer"
         android:fontFamily="sans-serif-medium"
-        android:textSize="14sp"
-        android:letterSpacing="1.25" />
+        android:letterSpacing="0.15"
+        android:textSize="14sp" />
 
     <Button
         android:id="@+id/button_nextQuestion"
@@ -132,7 +131,7 @@
         android:text="@string/nextQuestion"
         android:fontFamily="sans-serif-medium"
         android:textSize="14sp"
-        android:letterSpacing="1.25"
+        android:letterSpacing="0.15"
         android:visibility="invisible" />
 
 </RelativeLayout>
