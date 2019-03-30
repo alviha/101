@@ -81,5 +81,9 @@
     <string name="submitAnswer">Submit Answer</string>
     <string name="showHint">Show Hint</string>
     <string name="nextQuestion">Next Question</string>
+    <string name="challengeCompleted">Challenge Completed!</string>
+    <string name="repeatChallenge">Repeat the Challenge</string>
+    <string name="backToHomepage">Back to Homepage</string>
+    <string name="passingScoreNotice">A score of 80% or better is required to unlock the next level</string>
 
 </resources>
