@@ -19,18 +19,12 @@ import java.util.List;
 public class QuestionActivity extends AppCompatActivity implements View.OnClickListener{
 
     // UI elements
-    TextView question;
-    Button submitAnswer;
+    TextView questionHeading, question, hintText;
     RadioGroup answerChoicesGroup;
-    RadioButton choice1;
-    RadioButton choice2;
-    RadioButton choice3;
-    RadioButton choice4;
-    Button next;
-    Button hint;
-    TextView hintText;
+    RadioButton choice1, choice2, choice3, choice4;
+    Button hint, submitAnswer, next;
 
-    // Variables passed from previous activity
+    // Level and lesson data to be retrieved from intent
     private Library.Levels level;
     private int lesson;
 
@@ -49,19 +43,20 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_question);
 
         // initialize UI Elements
+        questionHeading = findViewById(R.id.text_questionNumber);
         question = findViewById(R.id.text_question);
-        submitAnswer = findViewById(R.id.button_submit);
         answerChoicesGroup = findViewById(R.id.radioGroup_answerChoices);
-        next = findViewById(R.id.button_next);
-        hint = findViewById(R.id.button_showHint);
         hintText = findViewById(R.id.text_hint);
+        hint = findViewById(R.id.button_showHint);
+        submitAnswer = findViewById(R.id.button_submitAnswer);
+        next = findViewById(R.id.button_nextQuestion);
 
         // set listener for the buttons
+        hint.setOnClickListener(this);
         submitAnswer.setOnClickListener(this);
         next.setOnClickListener(this);
-        hint.setOnClickListener(this);
 
-        // retrieve level and lesson data from previous activity's intent
+        // retrieve level and lesson data from intent
         level = (Library.Levels) getIntent().getSerializableExtra("LEVEL");
         lesson = getIntent().getIntExtra("LESSON", 0);
 
@@ -97,7 +92,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
                 Toast.makeText(QuestionActivity.this, "Correct", Toast.LENGTH_SHORT).show();
                 submitAnswer.setVisibility(View.INVISIBLE);
             }
-            // selected answer is incorrect, decrement the score
+            // selected answer is incorrect
             else {
 
                 Toast.makeText(QuestionActivity.this, "Incorrect", Toast.LENGTH_SHORT).show();
@@ -107,6 +102,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
                 if(mistakeCounter == 3) {
                     moveOn();
                 }
+                /** TODO: once a mistake is made, do not decrement score any further */
                 score--;
             }
 
