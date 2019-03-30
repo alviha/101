@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
 import android.support.test.espresso.Espresso;
+import android.support.test.espresso.action.ViewActions;
+import android.support.test.espresso.assertion.ViewAssertions;
 import android.support.test.espresso.intent.Intents;
 import android.support.test.rule.ActivityTestRule;
 
@@ -12,6 +14,7 @@ import org.junit.Test;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.intent.Intents.intended;
 import static android.support.test.espresso.intent.matcher.IntentMatchers.hasComponent;
+import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static org.junit.Assert.*;
 
@@ -25,14 +28,15 @@ public class QuestionActivityTest {
         Intents.init();
     }
 
-    // test: clicking next takes you to the QuestionActivity
+    // test: clicking the hint button shows the hint for the question
     @Test
-    public void testGoToQuestions() throws InterruptedException {
+    public void testShowHint() {
 
-        Espresso.onView(withId(R.id.button_next)).perform(click()); // click the next button
 
-        Thread.sleep(2000); // idle test to wait for activity to launch before assertion
-        intended(hasComponent(QuestionActivity.class.getName())); // assert if question activity is launched
+        Espresso.onView(withId(R.id.button_showHint)).perform(ViewActions.scrollTo());
+        Espresso.onView(withId(R.id.button_showHint)).perform(click()); // click the show hint button
+
+        Espresso.onView(withId(R.id.text_hint)).check(ViewAssertions.matches(isDisplayed())); // check if hint text is displayed
     }
 
     @After
