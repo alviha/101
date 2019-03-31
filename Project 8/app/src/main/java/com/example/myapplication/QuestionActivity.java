@@ -78,7 +78,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         // set score to max number of questions, and set question number to the first question
         score = questionSet.length;
         questionNumber = 0;
-
+        //sets percent to current progress
         percent = Homepage.progressStatus;
 
         // show first question
@@ -299,6 +299,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         resultFeedback.setVisibility(View.VISIBLE);
         repeatChallenge.setVisibility(View.VISIBLE);
         backToHomepage.setVisibility(View.VISIBLE);
+        //calculates percentage complete then converts to int
         percent = (score/140.0)*100.0;
         progressStatus = (int)percent;
         Homepage.progressStatus = (int)percent;
