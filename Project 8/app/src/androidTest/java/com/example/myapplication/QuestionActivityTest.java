@@ -144,6 +144,25 @@ public class QuestionActivityTest {
 
     }
 
+    // test: completing the challenge should show the score results
+    @Test
+    public void testShowScore() throws InterruptedException {
+
+        int questionCounter = 0;
+        while (questionCounter < questionSet.length) {
+
+            findCorrectAnswerAndIncorrectAnswers(questionCounter);
+            findIdOfCorrectAndIncorrectRadioButtons();
+
+            pickCorrectAnswer(questionCounter);
+
+            questionCounter++;
+        }
+
+        Thread.sleep(500); // idle before assertion
+        Espresso.onView(withId(R.id.text_scoreResult)).check(ViewAssertions.matches(isDisplayed()));
+    }
+
     @After
     public void tearDown() throws Exception {
         Intents.release();
@@ -152,11 +171,10 @@ public class QuestionActivityTest {
     private void findCorrectAnswerAndIncorrectAnswers(int questionNumber) {
 
         int counter = 0;
-        for(AnswerChoice a : answerChoiceSet[questionNumber]) {
-            if(a.isCorrect()){
+        for (AnswerChoice a : answerChoiceSet[questionNumber]) {
+            if (a.isCorrect()) {
                 correctAnswer = a.getContent();
-            }
-            else{
+            } else {
                 incorrectAnswers[counter] = a.getContent();
                 counter++;
             }
@@ -166,21 +184,30 @@ public class QuestionActivityTest {
     private void findIdOfCorrectAndIncorrectRadioButtons() {
 
         int counter = 0;
-        for(int i = 0; i < answerChoicesGroup.getChildCount(); i++) {
-            RadioButton rb = (RadioButton)answerChoicesGroup.getChildAt(i);
-            if(rb.getText().equals(correctAnswer)){
+        for (int i = 0; i < answerChoicesGroup.getChildCount(); i++) {
+            RadioButton rb = (RadioButton) answerChoicesGroup.getChildAt(i);
+            if (rb.getText().equals(correctAnswer)) {
                 idOfCorrectChoice = rb.getId();
-            }
-            else{
+            } else {
                 idOfIncorrectChoices[counter] = rb.getId();
                 counter++;
             }
         }
     }
 
+    private void pickCorrectAnswer(int questionNumber) {
+
+
+        Espresso.onView(withId(idOfCorrectChoice)).perform(ViewActions.scrollTo());
+        Espresso.onView(withId(idOfCorrectChoice)).perform(click()); // click the correct answer choice
+        Espresso.onView(withId(R.id.button_submitAnswer)).perform(click()); // click the submit answer button
+        Espresso.onView(withId(R.id.button_nextQuestion)).perform(click()); // click the next question button
+
+    }
+
     private void pickIncorrectAnswers(int questionNumber) {
 
-        for(int i = 0; i < incorrectAnswers.length; i++) {
+        for (int i = 0; i < incorrectAnswers.length; i++) {
 
             Espresso.onView(withId(idOfIncorrectChoices[i])).perform(ViewActions.scrollTo());
             Espresso.onView(withId(idOfIncorrectChoices[i])).perform(click()); // click the incorrect answer choice
