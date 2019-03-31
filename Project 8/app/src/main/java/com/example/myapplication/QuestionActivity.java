@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -43,6 +44,8 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
     private int questionNumber;
     private int mistakeCounter;
     private List<String> correctAnswersList;
+    public static int progressStatus;
+    private double percent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +78,8 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         // set score to max number of questions, and set question number to the first question
         score = questionSet.length;
         questionNumber = 0;
+
+        percent = Homepage.progressStatus;
 
         // show first question
         showNextQuestion();
@@ -294,6 +299,9 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         resultFeedback.setVisibility(View.VISIBLE);
         repeatChallenge.setVisibility(View.VISIBLE);
         backToHomepage.setVisibility(View.VISIBLE);
+        percent = (score/140.0)*100.0;
+        progressStatus = (int)percent;
+        Homepage.progressStatus = (int)percent;
 
         // show score
         DecimalFormat scoreFormat = new DecimalFormat("##.##%");

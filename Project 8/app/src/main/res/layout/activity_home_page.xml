@@ -55,6 +55,9 @@
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="203dp"
                 android:layout_height="32dp"
+                android:importantForAutofill="auto"
+                android:indeterminate="false"
+                android:max="@integer/progressMax"
                 android:progressTint="@color/ProgressBar"
                 tools:layout_editor_absoluteX="91dp"
                 tools:layout_editor_absoluteY="128dp" />

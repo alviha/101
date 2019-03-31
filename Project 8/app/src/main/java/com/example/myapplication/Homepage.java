@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 
 public class Homepage extends AppCompatActivity implements View.OnClickListener {
 
@@ -16,6 +17,8 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
     private Button loopsLesson1, loopsLesson2, loopsLesson3;
     private Button methodsLesson1, methodsLesson2;
     private Button singleDimensionalArraysLesson1, singleDimensionalArraysLesson2;
+    private ProgressBar progressBar;
+    public static int progressStatus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -24,6 +27,12 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
 
         initializeLessonButtons();
         setOnClickListenerForLessonButtons();
+        progressBar = findViewById(R.id.widget_progressBar);
+        //progressBar.setProgress(progressStatus);
+        progressStatus = QuestionActivity.progressStatus;
+        progressBar.setProgress(progressStatus);
+        progressBar.incrementProgressBy(progressStatus);
+        //Progress(ProgressBar progressBar);
 
     }
 
