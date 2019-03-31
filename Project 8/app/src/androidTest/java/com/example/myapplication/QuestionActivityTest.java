@@ -184,6 +184,26 @@ public class QuestionActivityTest {
         intended(hasComponent(Homepage.class.getName())); // assert if homepage activity is launched
     }
 
+    // test: completing the challenge and getting a perfect score
+    @Test
+    public void testPerfectScore() throws InterruptedException {
+
+        int questionCounter = 0;
+        while (questionCounter < questionSet.length) {
+
+            findCorrectAnswerAndIncorrectAnswers(questionCounter);
+            findIdOfCorrectAndIncorrectRadioButtons();
+
+            pickCorrectAnswer(questionCounter);
+
+            questionCounter++;
+        }
+
+        Thread.sleep(500); // idle before assertion
+        Espresso.onView(withId(R.id.text_resultFeedback)).check(ViewAssertions.matches(withText("Excellent Job!")));
+
+    }
+
     @After
     public void tearDown() throws Exception {
         Intents.release();
