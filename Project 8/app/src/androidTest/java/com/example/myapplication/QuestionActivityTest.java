@@ -163,6 +163,27 @@ public class QuestionActivityTest {
         Espresso.onView(withId(R.id.text_scoreResult)).check(ViewAssertions.matches(isDisplayed()));
     }
 
+    // test: completing the challenge and clicking back to homepage redirects to the homepage
+    @Test
+    public void testBackToHomepage() throws InterruptedException {
+
+        int questionCounter = 0;
+        while (questionCounter < questionSet.length) {
+
+            findCorrectAnswerAndIncorrectAnswers(questionCounter);
+            findIdOfCorrectAndIncorrectRadioButtons();
+
+            pickCorrectAnswer(questionCounter);
+
+            questionCounter++;
+        }
+
+        Espresso.onView(withId(R.id.button_backToHomepage)).perform(click()); // click the back to homepage button
+
+        Thread.sleep(500); // idle before assertion
+        intended(hasComponent(Homepage.class.getName())); // assert if homepage activity is launched
+    }
+
     @After
     public void tearDown() throws Exception {
         Intents.release();
