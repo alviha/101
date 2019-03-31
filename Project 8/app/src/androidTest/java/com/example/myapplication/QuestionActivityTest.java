@@ -204,6 +204,34 @@ public class QuestionActivityTest {
 
     }
 
+    // test: completing the challenge and getting a passing but not a perfect score
+    @Test
+    public void testPassingScore() throws InterruptedException {
+
+        int questionCounter = 0;
+
+        // pick incorrect an answer choice once at the beginning
+        findCorrectAnswerAndIncorrectAnswers(questionCounter);
+        findIdOfCorrectAndIncorrectRadioButtons();
+        Espresso.onView(withId(idOfIncorrectChoices[0])).perform(ViewActions.scrollTo());
+        Espresso.onView(withId(idOfIncorrectChoices[0])).perform(click()); // click the incorrect answer choice
+        Espresso.onView(withId(R.id.button_submitAnswer)).perform(click()); // click the submit answer button
+
+        while (questionCounter < questionSet.length) {
+
+            findCorrectAnswerAndIncorrectAnswers(questionCounter);
+            findIdOfCorrectAndIncorrectRadioButtons();
+
+            pickCorrectAnswer(questionCounter);
+
+            questionCounter++;
+        }
+
+        Thread.sleep(500); // idle before assertion
+        Espresso.onView(withId(R.id.text_resultFeedback)).check(ViewAssertions.matches(withText("Nice job!")));
+
+    }
+
     @After
     public void tearDown() throws Exception {
         Intents.release();
