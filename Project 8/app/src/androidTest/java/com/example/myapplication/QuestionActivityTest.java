@@ -260,6 +260,27 @@ public class QuestionActivityTest {
 
     }
 
+    // test: completing the challenge and clicking repeat challenge restarts the challenge
+    @Test
+    public void testRepeatChallenge() throws InterruptedException {
+
+        int questionCounter = 0;
+        while (questionCounter < questionSet.length) {
+
+            findCorrectAnswerAndIncorrectAnswers(questionCounter);
+            findIdOfCorrectAndIncorrectRadioButtons();
+
+            pickCorrectAnswer(questionCounter);
+
+            questionCounter++;
+        }
+
+        Espresso.onView(withId(R.id.button_repeatChallenge)).perform(click()); // click the repeat challenge button
+
+        // question text view matches the lesson's first question
+        Espresso.onView(withId(R.id.text_question)).check(ViewAssertions.matches(withText(questionSet[0])));
+    }
+
     @After
     public void tearDown() throws Exception {
         Intents.release();
