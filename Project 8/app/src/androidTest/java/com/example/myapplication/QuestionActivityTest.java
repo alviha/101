@@ -22,6 +22,7 @@ import static android.support.test.espresso.matcher.RootMatchers.withDecorView;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
+import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.not;
 import static org.junit.Assert.*;
 
@@ -33,6 +34,7 @@ public class QuestionActivityTest {
     private CharSequence correctAnswer;
     private CharSequence[] incorrectAnswers;
     private AnswerChoice[][] answerChoiceSet;
+    private String[] questionSet;
     RadioGroup answerChoicesGroup;
     int idOfCorrectChoice;
     int[] idOfIncorrectChoices;
@@ -49,6 +51,7 @@ public class QuestionActivityTest {
         // QuestionActivity is defaulted to launch Lesson 1 of Single Dimensional Arrays
         answerChoiceSet = Library.getAnswerChoices(Library.Levels.SINGLE_DIMENSIONAL_ARRAYS, 0);
         answerChoicesGroup = mActivityTestRule.getActivity().findViewById(R.id.radioGroup_answerChoices);
+        questionSet = Library.getQuestions(Library.Levels.SINGLE_DIMENSIONAL_ARRAYS, 0);
 
         Intents.init();
     }
@@ -93,6 +96,23 @@ public class QuestionActivityTest {
         Espresso.onView(withText("Incorrect"))
                 .inRoot(withDecorView(not(mActivityTestRule.getActivity().getWindow().getDecorView())))
                 .check(matches(isDisplayed()));
+    }
+
+    // test: clicking the next question button shows the next question
+    @Test
+    public void testNextQuestion() {
+
+        findCorrectAnswerAndIncorrectAnswers(0);
+        findIdOfCorrectAndIncorrectRadioButtons();
+
+        Espresso.onView(withId(idOfCorrectChoice)).perform(ViewActions.scrollTo());
+        Espresso.onView(withId(idOfCorrectChoice)).perform(click()); // click the correct answer choice
+        Espresso.onView(withId(R.id.button_submitAnswer)).perform(click()); // click the submit answer button
+        Espresso.onView(withId(R.id.button_nextQuestion)).perform(click()); // click the next question button
+
+        // question text view matches the lesson's next question
+        Espresso.onView(withId(R.id.text_question)).check(ViewAssertions.matches(withText(questionSet[1])));
+
     }
 
     @After
