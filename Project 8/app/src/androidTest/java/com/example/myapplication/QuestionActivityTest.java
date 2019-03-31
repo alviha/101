@@ -127,6 +127,23 @@ public class QuestionActivityTest {
         Espresso.onView(withId(R.id.button_nextQuestion)).check(ViewAssertions.matches(isDisplayed()));
     }
 
+    // test: clicking the submit button without picking an answer choice displays a toast message
+    @Test
+    public void testNoAnswerChoiceSelected() throws InterruptedException {
+
+        findCorrectAnswerAndIncorrectAnswers(0);
+        findIdOfCorrectAndIncorrectRadioButtons();
+
+        Espresso.onView(withId(R.id.button_submitAnswer)).perform(click()); // click the submit answer button
+
+        // check if toast message is displayed
+        Thread.sleep(500); // idle before assertion
+        Espresso.onView(withText("No answer choice was selected"))
+                .inRoot(withDecorView(not(mActivityTestRule.getActivity().getWindow().getDecorView())))
+                .check(matches(isDisplayed()));
+
+    }
+
     @After
     public void tearDown() throws Exception {
         Intents.release();
