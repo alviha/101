@@ -1,3 +1,13 @@
+/**
+ *  Test class of the LessonActivity using JUnit 4 and Espresso
+ *
+ * @author Bufford Brian Sta Maria
+ *
+ * CMSC 355, Spring 2019
+ * Project A8
+ * 3/30/2019
+ *
+ */
 package com.example.myapplication;
 
 import android.support.test.espresso.Espresso;
