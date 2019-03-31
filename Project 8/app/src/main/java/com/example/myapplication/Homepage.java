@@ -191,7 +191,7 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
         loopsLesson1 = findViewById(R.id.button_while);
         loopsLesson2 = findViewById(R.id.button_for);
         loopsLesson3 = findViewById(R.id.button_do);
-        methodsLesson1 = findViewById(R.id.button_mlesson1);
+        methodsLesson1 = findViewById(R.id.button_mLesson1);
         methodsLesson2 = findViewById(R.id.button_mLesson2);
         singleDimensionalArraysLesson1 = findViewById(R.id.button_aLesson1);
         singleDimensionalArraysLesson2 = findViewById(R.id.button_aLesson2);
