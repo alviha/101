@@ -232,6 +232,34 @@ public class QuestionActivityTest {
 
     }
 
+    // test: completing the challenge but getting a failing score
+    @Test
+    public void testFailingScore() throws InterruptedException {
+
+        int questionCounter = 0;
+        int mistakeCounter = 0;
+        while (questionCounter < questionSet.length) {
+
+            findCorrectAnswerAndIncorrectAnswers(questionCounter);
+            findIdOfCorrectAndIncorrectRadioButtons();
+
+            if(mistakeCounter < 3) {
+                Espresso.onView(withId(idOfIncorrectChoices[0])).perform(ViewActions.scrollTo());
+                Espresso.onView(withId(idOfIncorrectChoices[0])).perform(click()); // click the incorrect answer choice
+                Espresso.onView(withId(R.id.button_submitAnswer)).perform(click()); // click the submit answer button
+                mistakeCounter++;
+            }
+
+            pickCorrectAnswer(questionCounter);
+
+            questionCounter++;
+        }
+
+        Thread.sleep(500); // idle before assertion
+        Espresso.onView(withId(R.id.text_resultFeedback)).check(ViewAssertions.matches(withText("An 80% or better is required to unlock the next lesson")));
+
+    }
+
     @After
     public void tearDown() throws Exception {
         Intents.release();
