@@ -88,7 +88,7 @@ public class QuestionActivityTest {
         findIdOfCorrectAndIncorrectRadioButtons();
 
         Espresso.onView(withId(idOfIncorrectChoices[0])).perform(ViewActions.scrollTo());
-        Espresso.onView(withId(idOfIncorrectChoices[0])).perform(click()); // click the correct answer choice
+        Espresso.onView(withId(idOfIncorrectChoices[0])).perform(click()); // click the incorrect answer choice
         Espresso.onView(withId(R.id.button_submitAnswer)).perform(click()); // click the submit answer button
 
         // check if toast message is displayed
@@ -113,6 +113,18 @@ public class QuestionActivityTest {
         // question text view matches the lesson's next question
         Espresso.onView(withId(R.id.text_question)).check(ViewAssertions.matches(withText(questionSet[1])));
 
+    }
+
+    // test: submitting all the incorrect answers displays the next question button
+    @Test
+    public void testSubmitAllIncorrectAnswers() {
+
+        findCorrectAnswerAndIncorrectAnswers(0);
+        findIdOfCorrectAndIncorrectRadioButtons();
+
+        pickIncorrectAnswers(0);
+
+        Espresso.onView(withId(R.id.button_nextQuestion)).check(ViewAssertions.matches(isDisplayed()));
     }
 
     @After
@@ -146,6 +158,16 @@ public class QuestionActivityTest {
                 idOfIncorrectChoices[counter] = rb.getId();
                 counter++;
             }
+        }
+    }
+
+    private void pickIncorrectAnswers(int questionNumber) {
+
+        for(int i = 0; i < incorrectAnswers.length; i++) {
+
+            Espresso.onView(withId(idOfIncorrectChoices[i])).perform(ViewActions.scrollTo());
+            Espresso.onView(withId(idOfIncorrectChoices[i])).perform(click()); // click the incorrect answer choice
+            Espresso.onView(withId(R.id.button_submitAnswer)).perform(click()); // click the submit answer button
         }
     }
 
