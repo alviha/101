@@ -300,7 +300,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         repeatChallenge.setVisibility(View.VISIBLE);
         backToHomepage.setVisibility(View.VISIBLE);
         //calculates percentage complete then converts to int
-        percent = (score/140.0)*100.0;
+        percent = (score/140.0)*100.0 + percent;
         progressStatus = (int)percent;
         Homepage.progressStatus = (int)percent;
 
