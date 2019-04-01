@@ -27,8 +27,10 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
 
         initializeLessonButtons();
         setOnClickListenerForLessonButtons();
+
         //connects progress bar variable to the progress bar on homepage
         progressBar = findViewById(R.id.widget_progressBar);
+        
         //gets the progress value from the questions and passes it on to the progress bar
         progressStatus = QuestionActivity.progressStatus;
         progressBar.setProgress(progressStatus);
