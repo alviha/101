@@ -4,8 +4,11 @@
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#f6e414</color>
     <color name="Black">#000000</color>
+    <color name="alice_blue">#F0F8FF</color>
+    <color name="hintButton">#FFFF66</color>
     <color name="main">#f6e414</color>
     <color name="Homepage">#ffffff</color>
     <color name="ButtonBackground">#9748a3</color>
     <color name="ProgressBar">#23a711</color>
+    <color name="white">#FFFFFF</color>
 </resources>

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".QuestionActivity">
+    tools:context=".QuestionActivity"
+    android:background="@color/alice_blue">
 
     <TextView
         android:id="@+id/text_challengeCompleted"
@@ -19,27 +20,27 @@
         android:textAlignment="center"
         android:textSize="24sp"
         android:visibility="gone" />
-    
+
     <TextView
         android:id="@+id/text_scoreResult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/text_challengeCompleted"
-        android:layout_marginVertical="@dimen/activity_vertical_margin"
         android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
         android:fontFamily="sans-serif"
-        android:textSize="24sp"
         android:letterSpacing="0.1"
-        android:textAlignment="center"
         android:text="Results\n\n10/10\n\n80.00%"
-        android:visibility="gone"/>
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/text_questionNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
         android:layout_alignParentTop="true"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
         android:layout_marginVertical="@dimen/activity_vertical_margin"
         android:fontFamily="sans-serif-medium"
         android:letterSpacing="0.1"
@@ -59,16 +60,23 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/text_question"
+            <HorizontalScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="@dimen/activity_vertical_margin"
-                android:fontFamily="sans-serif"
-                android:letterSpacing="0"
-                android:text="Question goes here."
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/text_question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/activity_vertical_margin"
+                    android:fontFamily="sans-serif"
+                    android:letterSpacing="0"
+                    android:text="Question goes here."
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </HorizontalScrollView>
 
             <RadioGroup
                 android:id="@+id/radioGroup_answerChoices"
@@ -80,11 +88,11 @@
                     android:id="@+id/radioButton_choice1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:background="@color/common_google_signin_btn_text_light_default"
                     android:fontFamily="sans-serif"
                     android:letterSpacing="0"
                     android:text="Choice 1 goes here"
-                    android:layout_marginVertical="8dp"
-                    android:background="@color/common_google_signin_btn_text_light_default"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
 
@@ -92,11 +100,11 @@
                     android:id="@+id/radioButton_choice2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:background="@color/common_google_signin_btn_text_light_default"
                     android:fontFamily="sans-serif"
                     android:letterSpacing="0"
                     android:text="Choice 2 goes here"
-                    android:layout_marginVertical="8dp"
-                    android:background="@color/common_google_signin_btn_text_light_default"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
 
@@ -104,11 +112,11 @@
                     android:id="@+id/radioButton_choice3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:background="@color/common_google_signin_btn_text_light_default"
                     android:fontFamily="sans-serif"
                     android:letterSpacing="0"
                     android:text="Choice 3 goes here"
-                    android:layout_marginVertical="8dp"
-                    android:background="@color/common_google_signin_btn_text_light_default"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
 
@@ -116,11 +124,11 @@
                     android:id="@+id/radioButton_choice4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:background="@color/common_google_signin_btn_text_light_default"
                     android:fontFamily="sans-serif"
                     android:letterSpacing="0"
                     android:text="Choice 4 goes here"
-                    android:layout_marginVertical="8dp"
-                    android:background="@color/common_google_signin_btn_text_light_default"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
             </RadioGroup>
@@ -131,6 +139,7 @@
 
                 <Button
                     android:id="@+id/button_showHint"
+                    android:background="@color/hintButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="@dimen/activity_vertical_margin"
@@ -143,8 +152,8 @@
                     android:id="@+id/text_hint"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="@dimen/activity_vertical_margin"
                     android:layout_gravity="center"
+                    android:layout_marginVertical="@dimen/activity_vertical_margin"
                     android:fontFamily="sans-serif"
                     android:text="Hint goes here"
                     android:textAlignment="center"
@@ -159,6 +168,7 @@
 
     <Button
         android:id="@+id/button_submitAnswer"
+        android:background="@color/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -171,6 +181,7 @@
 
     <Button
         android:id="@+id/button_nextQuestion"
+        android:background="@color/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -208,6 +219,7 @@
 
     <Button
         android:id="@+id/button_backToHomepage"
+        android:background="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
