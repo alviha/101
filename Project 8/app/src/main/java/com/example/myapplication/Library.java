@@ -62,12 +62,6 @@ public final class Library {
             {
                     "This is the first question for lesson 3 in Elementary Programming",
                     "This is the second question for lesson 3 in Elementary Programming",
-            },
-            // Questions for Lesson 4
-            {
-                    "This is the first question for lesson 4 in Elementary Programming",
-                    "This is the second question for lesson 4 in Elementary Programming",
-                    "This is the third question for lesson 4 in Elementary Programming"
             }
     };
 
@@ -150,6 +144,15 @@ public final class Library {
                     "This is the third question for lesson 3 in Functions Characters and Strings",
                     "This is the fourth question for lesson 3 in Functions Characters and Strings",
                     "This is the fifth question for lesson 3 in Functions Characters and Strings"
+            },
+
+            // Questions for Lesson 4
+            {
+                    "This is the first question for lesson 4 in Functions Characters and Strings",
+                    "This is the second question for lesson 4 in Functions Characters and Strings",
+                    "This is the third question for lesson 4 in Functions Characters and Strings",
+                    "This is the fourth question for lesson 4 in Functions Characters and Strings",
+                    "This is the fifth question for lesson 4 in Functions Characters and Strings"
             }
     };
 
@@ -298,6 +301,13 @@ public final class Library {
                     "Returns a double value.",
                     "An abbreviated version.",
                     "Similar to how the smallest sizes of candy bars are ____ sized."
+            },
+
+            // Hints for Lesson 3
+
+            {
+                    "Lesson 3 Hint 1",
+                    "Lesson 3 Hint 2"
             }
     };
 
@@ -330,6 +340,15 @@ public final class Library {
                     "Switch statements are similar to if statements.",
                     "All three are choices are correct but which one is preferred?",
                     "What boolean value is even equal to.?"
+            },
+
+            // Hints for Lesson 3
+            {
+                    "Lesson 3 Hint 1",
+                    "Lesson 3 Hint 2",
+                    "Lesson 3 Hint 3",
+                    "Lesson 3 Hint 4",
+                    "Lesson 3 Hint 5"
             }
     };
 
@@ -362,6 +381,24 @@ public final class Library {
                     "Make sure the value is between all uppercase characters.",
                     "Missing parameter.",
                     "‘a’ isn’t a String."
+            },
+
+            // Hints for Lesson 3
+            {
+                    "Lesson 3 Hint 1",
+                    "Lesson 3 Hint 2",
+                    "Lesson 3 Hint 3",
+                    "Lesson 3 Hint 4",
+                    "Lesson 3 Hint 5"
+            },
+
+            // Hints for Lesson 4
+            {
+                    "Lesson 4 Hint 1",
+                    "Lesson 4 Hint 2",
+                    "Lesson 4 Hint 3",
+                    "Lesson 4 Hint 4",
+                    "Lesson 4 Hint 5"
             }
     };
 
@@ -393,6 +430,15 @@ public final class Library {
                     "Final value of i and final value of isPrime.",
                     "Final value of i and final value of isPrime.",
                     "How many times does the loop execute if i < n."
+            },
+
+            // Hints for Lesson 3
+            {
+                    "Lesson 3 Hint 1",
+                    "Lesson 3 Hint 2",
+                    "Lesson 3 Hint 3",
+                    "Lesson 3 Hint 4",
+                    "Lesson 3 Hint 5"
             }
     };
 
@@ -425,6 +471,15 @@ public final class Library {
                     "Between second and first.",
                     "Between second and first.",
                     "Answer is in the question."
+            },
+
+            // Hints for Lesson 3
+            {
+                    "Lesson 3 Hint 1",
+                    "Lesson 3 Hint 2",
+                    "Lesson 3 Hint 3",
+                    "Lesson 3 Hint 4",
+                    "Lesson 3 Hint 5"
             }
     };
 
@@ -447,6 +502,15 @@ public final class Library {
                     "Print out the contents of y[].",
                     "Print out the contents of x[].",
                     "How was x[] declared?"
+            },
+
+            // Hints for Lesson 3
+            {
+                    "Lesson 3 Hint 1",
+                    "Lesson 3 Hint 2",
+                    "Lesson 3 Hint 3",
+                    "Lesson 3 Hint 4",
+                    "Lesson 3 Hint 5"
             }
     };
 
@@ -674,19 +738,7 @@ public final class Library {
                             new AnswerChoice("Choice 2", false),
                             new AnswerChoice("Choice 3", false),
                             new AnswerChoice("Choice 4", false)
-                    },
-
-                    // Question 3 choices
-                    {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
                     }
-            },
-
-            //Lesson 4
-            {
 
             }
     };
@@ -1079,6 +1131,50 @@ public final class Library {
             },
 
             // Lesson 3
+            {
+
+                    // Question 1 choices
+                    {
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
+                    },
+
+                    // Question 2 choices
+                    {
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
+                    },
+
+                    // Question 3 choices
+                    {
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
+                    },
+
+                    // Question 4 choices
+                    {
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
+                    },
+
+                    // Question 5 choices
+                    {
+                            new AnswerChoice("Choice 1", true),
+                            new AnswerChoice("Choice 2", false),
+                            new AnswerChoice("Choice 3", false),
+                            new AnswerChoice("Choice 4", false)
+                    }
+            },
+
+            // Lesson 4
             {
 
                     // Question 1 choices
