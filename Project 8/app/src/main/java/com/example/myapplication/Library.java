@@ -1,12 +1,11 @@
 /**
- *  Library that holds all the questions and answer choices to the challenges
+ * Library that holds all the questions and answer choices to the challenges
  *
  * @author Bufford Brian Sta Maria
- *
+ * <p>
  * CMSC 355, Spring 2019
  * Project A8
  * 3/26/2019
- *
  */
 package com.example.myapplication;
 
@@ -513,8 +512,6 @@ public final class Library {
                     "Lesson 3 Hint 5"
             }
     };
-
-
 
 
     // Answer choices for Elementary Programming Level
@@ -1779,6 +1776,23 @@ public final class Library {
             }
     };
 
+    private static String[] preTestQuestions = {
+
+            //
+    };
+
+    private static AnswerChoice[][] preTestAnswerChoices = {
+
+            // Question 1 choices
+            {
+                    new AnswerChoice("void", true),
+                    new AnswerChoice("int", false),
+                    new AnswerChoice("double", false),
+                    new AnswerChoice("public", false)
+            },
+
+    };
+
     /**
      * Return questions from a level's lesson
      *
@@ -1790,20 +1804,15 @@ public final class Library {
 
         if (level == Levels.ELEMENTARY_PROGRAMMING) {
             return elementaryProgrammingQuestions[lesson];
-        }
-        else if (level == Levels.SELECTIONS) {
+        } else if (level == Levels.SELECTIONS) {
             return selectionsQuestions[lesson];
-        }
-        else if (level == Levels.FUNCTIONS_CHARACTERS_STRINGS) {
+        } else if (level == Levels.FUNCTIONS_CHARACTERS_STRINGS) {
             return functionsCharactersStringsQuestions[lesson];
-        }
-        else if (level == Levels.LOOPS) {
+        } else if (level == Levels.LOOPS) {
             return loopsQuestions[lesson];
-        }
-        else if (level == Levels.METHODS) {
+        } else if (level == Levels.METHODS) {
             return methodsQuestions[lesson];
-        }
-        else {
+        } else {
             return singleDimensionalArraysQuestions[lesson];
         }
     }
@@ -1835,22 +1844,25 @@ public final class Library {
 
         if (level == Levels.ELEMENTARY_PROGRAMMING) {
             return elementaryProgrammingHints[lesson];
-        }
-        else if (level == Levels.SELECTIONS) {
+        } else if (level == Levels.SELECTIONS) {
             return selectionsHints[lesson];
-        }
-        else if (level == Levels.FUNCTIONS_CHARACTERS_STRINGS) {
+        } else if (level == Levels.FUNCTIONS_CHARACTERS_STRINGS) {
             return functionsCharactersStringsHints[lesson];
-        }
-        else if (level == Levels.LOOPS) {
+        } else if (level == Levels.LOOPS) {
             return loopsHints[lesson];
-        }
-        else if (level == Levels.METHODS) {
+        } else if (level == Levels.METHODS) {
             return methodsHints[lesson];
-        }
-        else {
+        } else {
             return singleDimensionalArraysHints[lesson];
         }
+    }
+
+    public static String[] getPreTestQuestions() {
+        return preTestQuestions;
+    }
+
+    public static AnswerChoice[][] getPreTestAnswerChoices() {
+        return preTestAnswerChoices;
     }
 }
 
