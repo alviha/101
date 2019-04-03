@@ -257,19 +257,22 @@
         android:background="@color/white">
 
         <android.support.design.widget.TabItem
+            android:id="@+id/tab_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Home" />
+            android:text="@string/homeTab" />
 
         <android.support.design.widget.TabItem
+            android:id="@+id/tab_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Profile" />
+            android:text="@string/profileTab" />
 
         <android.support.design.widget.TabItem
+            android:id="@+id/tab_options"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Settings" />
+            android:text="@string/optionsTab" />
     </android.support.design.widget.TabLayout>
 
 

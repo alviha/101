@@ -70,6 +70,9 @@
     <string name="methodslesson2">Overloading Methods</string>
     <string name="arrayslesson1">Array basics</string>
     <string name="arrayslesson2">Copying arrays</string>
+    <string name="homeTab">Home</string>
+    <string name="profileTab">Profile</string>
+    <string name="optionsTab">Options</string>
 
     <!-- Strings for error messages -->
     <string name="error_email">Email required</string>

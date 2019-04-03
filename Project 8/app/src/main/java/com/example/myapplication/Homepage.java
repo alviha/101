@@ -3,10 +3,12 @@ package com.example.myapplication;
 import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 public class Homepage extends AppCompatActivity implements View.OnClickListener {
 
@@ -18,6 +20,7 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
     private Button methodsLesson1, methodsLesson2;
     private Button singleDimensionalArraysLesson1, singleDimensionalArraysLesson2;
     private ProgressBar progressBar;
+    private TabLayout tabLayout;
     public static int progressStatus;
 
     @Override
@@ -27,6 +30,32 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
 
         initializeLessonButtons();
         setOnClickListenerForLessonButtons();
+
+        tabLayout = findViewById(R.id.tabLayout_homepage);
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+
+                if(tab.getText().toString().equals("Profile")) {
+                    // TODO: start profile activity
+
+                }
+                else if(tab.getText().toString().equals("Options")) {
+                    // TODO: start options activity
+
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                // do nothing
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+                // do nothing
+            }
+        });
 
         //connects progress bar variable to the progress bar on homepage
         progressBar = findViewById(R.id.widget_progressBar);
