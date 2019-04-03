@@ -41,7 +41,7 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
 
                 }
                 else if(tab.getText().toString().equals("Options")) {
-                    // TODO: start options activity
+                    startActivity(new Intent(Homepage.this, OptionsActivity.class));
 
                 }
             }
@@ -53,7 +53,15 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-                // do nothing
+
+                if(tab.getText().toString().equals("Profile")) {
+                    // TODO: start profile activity
+
+                }
+                else if(tab.getText().toString().equals("Options")) {
+                    startActivity(new Intent(Homepage.this, OptionsActivity.class));
+
+                }
             }
         });
 
