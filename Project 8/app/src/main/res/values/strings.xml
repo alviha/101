@@ -70,6 +70,9 @@
     <string name="methodslesson2">Overloading Methods</string>
     <string name="arrayslesson1">Array basics</string>
     <string name="arrayslesson2">Copying arrays</string>
+    <string name="homeTab">Home</string>
+    <string name="profileTab">Profile</string>
+    <string name="optionsTab">Options</string>
 
     <!-- Strings for error messages -->
     <string name="error_email">Email required</string>
@@ -85,5 +88,10 @@
     <string name="repeatChallenge">Repeat the Challenge</string>
     <string name="backToHomepage">Back to Homepage</string>
     <string name="passingScoreNotice">A score of 80% or better is required to unlock the next level</string>
+
+    <!-- Strings related to the options activity -->
+    <string name="feedback">Feedback</string>
+    <string name="bugReporting">Bug Reporting</string>
+    <string name="frequentlyAskedQuestions">Frequently Asked Questions (FAQs)</string>
 
 </resources>

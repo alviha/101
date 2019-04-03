@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OptionsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button_faqs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/frequentlyAskedQuestions" />
+
+        <Button
+            android:id="@+id/button_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/feedback" />
+
+        <Button
+            android:id="@+id/button_bugReporting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bugReporting" />
+
+    </LinearLayout>
+
+</RelativeLayout>
