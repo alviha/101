@@ -94,4 +94,8 @@
     <string name="bugReporting">Bug Reporting</string>
     <string name="frequentlyAskedQuestions">Frequently Asked Questions (FAQs)</string>
 
+    <!-- Strings related to the pretest activity -->
+    <string name="preTestCompleted">Pre-Test Completed!</string>
+    <string name="exitTest">Exit Test</string>
+
 </resources>

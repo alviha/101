@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -8,8 +9,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -25,14 +29,19 @@ public class PreTestActivity extends AppCompatActivity implements View.OnClickLi
     RadioButton choice1, choice2, choice3, choice4;
     Button submitAnswer, next;
 
+    // Results UI elements
+    TextView sectionsUnlocked;
+    Button exitTest;
+
     // Variables
     private String[] questionSet;
     private AnswerChoice[][] answerChoiceSet;
-    private int score;
+    private int[] scores;
+    private int sectionNumber;
     private int questionNumber;
     private int mistakeCounter;
     private List<String> correctAnswersList;
-
+    private static final double MAX_SECTION_SCORE = 10.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +65,10 @@ public class PreTestActivity extends AppCompatActivity implements View.OnClickLi
 
         // set question number to the first question
         questionNumber = 0;
+
+        // set the section number to the first section, initialize scores array
+        sectionNumber = 0;
+        scores = new int[6];
 
         // show first question
         showNextQuestion();
@@ -92,7 +105,7 @@ public class PreTestActivity extends AppCompatActivity implements View.OnClickLi
 
                 // decrement score only when the first mistake is made
                 if(mistakeCounter == 1) {
-                    score--;
+                    scores[sectionNumber]--;
                 }
 
                 if(mistakeCounter == 3) {
@@ -124,6 +137,15 @@ public class PreTestActivity extends AppCompatActivity implements View.OnClickLi
             for(int i = 0; i < answerChoicesGroup.getChildCount(); i++) {
                 answerChoicesGroup.getChildAt(i).setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.common_google_signin_btn_text_light_default));
             }
+        }
+
+        // exit test button
+        if(v == exitTest) {
+
+            Intent intent = new Intent(PreTestActivity.this, Homepage.class);
+            startActivity(intent);
+            //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            finish();
         }
 
     }
@@ -201,6 +223,11 @@ public class PreTestActivity extends AppCompatActivity implements View.OnClickLi
         }
 
         questionNumber++;
+
+        // questions for one section is complete
+        if(questionNumber % 10 == 0) {
+            sectionNumber++;
+        }
     }
 
     /**
@@ -215,7 +242,23 @@ public class PreTestActivity extends AppCompatActivity implements View.OnClickLi
         submitAnswer.setVisibility(View.GONE);
         next.setVisibility(View.GONE);
 
-        Toast.makeText(PreTestActivity.this, "Result screen in progress", Toast.LENGTH_SHORT).show();
+        // show results related elements
+        findViewById(R.id.text_preTestCompleted).setVisibility(View.VISIBLE);
+        findViewById(R.id.tableLayout_sectionsAndScores).setVisibility(View.VISIBLE);
+        sectionsUnlocked = findViewById(R.id.text_sectionsUnlocked);
+        sectionsUnlocked.setVisibility(View.VISIBLE);
+        exitTest = findViewById(R.id.button_exitTest);
+        exitTest.setVisibility(View.VISIBLE);
+        exitTest.setOnClickListener(this);
+
+        // show score
+        DecimalFormat scoreFormat = new DecimalFormat("##.##%");
+        ((TextView) findViewById(R.id.text_section1Score)).setText(scoreFormat.format(scores[0] / MAX_SECTION_SCORE));
+        ((TextView) findViewById(R.id.text_section2Score)).setText(scoreFormat.format(scores[1] / MAX_SECTION_SCORE));
+        ((TextView) findViewById(R.id.text_section3Score)).setText(scoreFormat.format(scores[2] / MAX_SECTION_SCORE));
+        ((TextView) findViewById(R.id.text_section4Score)).setText(scoreFormat.format(scores[3] / MAX_SECTION_SCORE));
+        ((TextView) findViewById(R.id.text_section5Score)).setText(scoreFormat.format(scores[4] / MAX_SECTION_SCORE));
+        ((TextView) findViewById(R.id.text_section6Score)).setText(scoreFormat.format(scores[5] / MAX_SECTION_SCORE));
 
     }
 }
