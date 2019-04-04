@@ -144,7 +144,7 @@ public class PreTestActivity extends AppCompatActivity implements View.OnClickLi
 
             Intent intent = new Intent(PreTestActivity.this, Homepage.class);
             startActivity(intent);
-            //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             finish();
         }
 
