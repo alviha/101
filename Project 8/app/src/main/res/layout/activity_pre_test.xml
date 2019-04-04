@@ -19,14 +19,15 @@
         android:text="@string/preTestCompleted"
         android:textAlignment="center"
         android:textSize="24sp"
-        android:visibility="visible" />
+        android:visibility="invisible" />
 
     <TableLayout
         android:id="@+id/tableLayout_sectionsAndScores"
         android:layout_below="@id/text_preTestCompleted"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:visibility="invisible" >
 
         <TableRow
             android:weightSum="2"
@@ -169,6 +170,7 @@
     </TableLayout>
 
     <TextView
+        android:id="@+id/text_sectionsUnlocked"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/button_exitTest"
@@ -177,7 +179,8 @@
         android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
         android:gravity="center"
         android:text="33% of the sections have been unlocked for you!"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:visibility="invisible" />
 
     <Button
         android:id="@+id/button_exitTest"
@@ -190,8 +193,9 @@
         android:text="@string/exitTest"
         android:fontFamily="sans-serif-medium"
         android:letterSpacing="0.15"
-        android:textSize="14sp"/>
-    
+        android:textSize="14sp"
+        android:visibility="invisible" />
+
     <TextView
         android:id="@+id/pretest_text_questionNumber"
         android:layout_width="match_parent"

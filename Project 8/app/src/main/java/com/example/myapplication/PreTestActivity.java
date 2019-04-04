@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -24,6 +25,10 @@ public class PreTestActivity extends AppCompatActivity implements View.OnClickLi
     RadioGroup answerChoicesGroup;
     RadioButton choice1, choice2, choice3, choice4;
     Button submitAnswer, next;
+
+    // Results UI elements
+    TextView sectionsUnlocked;
+    Button exitTest;
 
     // Variables
     private String[] questionSet;
@@ -126,6 +131,15 @@ public class PreTestActivity extends AppCompatActivity implements View.OnClickLi
             }
         }
 
+        // exit test button
+        if(v == exitTest) {
+
+            Intent intent = new Intent(PreTestActivity.this, Homepage.class);
+            startActivity(intent);
+            //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            finish();
+        }
+
     }
 
     private void showNextQuestion() {
@@ -215,7 +229,13 @@ public class PreTestActivity extends AppCompatActivity implements View.OnClickLi
         submitAnswer.setVisibility(View.GONE);
         next.setVisibility(View.GONE);
 
-        Toast.makeText(PreTestActivity.this, "Result screen in progress", Toast.LENGTH_SHORT).show();
-
+        // show results related elements
+        findViewById(R.id.text_preTestCompleted).setVisibility(View.VISIBLE);
+        findViewById(R.id.tableLayout_sectionsAndScores).setVisibility(View.VISIBLE);
+        sectionsUnlocked = findViewById(R.id.text_sectionsUnlocked);
+        sectionsUnlocked.setVisibility(View.VISIBLE);
+        exitTest = findViewById(R.id.button_exitTest);
+        exitTest.setVisibility(View.VISIBLE);
+        exitTest.setOnClickListener(this);
     }
 }
