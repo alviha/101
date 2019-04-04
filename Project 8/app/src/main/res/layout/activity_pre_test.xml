@@ -1,9 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PreTestActivity">
+    tools:context=".PreTestActivity"
+    android:background="@color/alice_blue">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/pretest_text_questionNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.1"
+        android:text="Question #: "
+        android:textSize="20sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/pretest_button_submitAnswer"
+        android:layout_below="@id/pretest_text_questionNumber">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/pretest_text_question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/activity_vertical_margin"
+                    android:fontFamily="sans-serif"
+                    android:letterSpacing="0"
+                    android:text="Question goes here."
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </HorizontalScrollView>
+
+            <RadioGroup
+                android:id="@+id/pretest_radioGroup_answerChoices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin">
+
+                <RadioButton
+                    android:id="@+id/pretest_radioButton_choice1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:background="@color/common_google_signin_btn_text_light_default"
+                    android:fontFamily="sans-serif"
+                    android:letterSpacing="0"
+                    android:text="Choice 1 goes here"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/pretest_radioButton_choice2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:background="@color/common_google_signin_btn_text_light_default"
+                    android:fontFamily="sans-serif"
+                    android:letterSpacing="0"
+                    android:text="Choice 2 goes here"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/pretest_radioButton_choice3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:background="@color/common_google_signin_btn_text_light_default"
+                    android:fontFamily="sans-serif"
+                    android:letterSpacing="0"
+                    android:text="Choice 3 goes here"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/pretest_radioButton_choice4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:background="@color/common_google_signin_btn_text_light_default"
+                    android:fontFamily="sans-serif"
+                    android:letterSpacing="0"
+                    android:text="Choice 4 goes here"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+            </RadioGroup>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/pretest_button_showHint"
+                    android:background="@color/hintButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/activity_vertical_margin"
+                    android:fontFamily="sans-serif-medium"
+                    android:letterSpacing="0.15"
+                    android:text="@string/showHint"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/pretest_text_hint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="@dimen/activity_vertical_margin"
+                    android:fontFamily="sans-serif"
+                    android:text="Hint goes here"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:visibility="invisible" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/pretest_button_submitAnswer"
+        android:background="@color/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.15"
+        android:text="@string/submitAnswer"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/pretest_button_nextQuestion"
+        android:background="@color/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.15"
+        android:text="@string/nextQuestion"
+        android:textSize="14sp"
+        android:visibility="invisible" />
+
+
+</RelativeLayout>

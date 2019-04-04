@@ -31,6 +31,7 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
         initializeLessonButtons();
         setOnClickListenerForLessonButtons();
 
+        // code for the buttons at the bottom of the homepage
         tabLayout = findViewById(R.id.tabLayout_homepage);
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
