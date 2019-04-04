@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.HorizontalScrollView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TableLayout;
@@ -28,6 +29,7 @@ public class PreTestActivity extends AppCompatActivity implements View.OnClickLi
     RadioGroup answerChoicesGroup;
     RadioButton choice1, choice2, choice3, choice4;
     Button submitAnswer, next;
+    HorizontalScrollView questionScroll;
 
     // Results UI elements
     TextView sectionsUnlocked;
@@ -54,6 +56,7 @@ public class PreTestActivity extends AppCompatActivity implements View.OnClickLi
         answerChoicesGroup = findViewById(R.id.pretest_radioGroup_answerChoices);
         submitAnswer = findViewById(R.id.pretest_button_submitAnswer);
         next = findViewById(R.id.pretest_button_nextQuestion);
+        questionScroll = findViewById(R.id.pretest_scrollView_question);
 
         // set listener for the buttons
         submitAnswer.setOnClickListener(this);
@@ -155,6 +158,8 @@ public class PreTestActivity extends AppCompatActivity implements View.OnClickLi
         mistakeCounter = 0;
 
         answerChoicesGroup.clearCheck();
+
+        questionScroll.scrollTo(0, 0);
 
         // reset radio buttons to be clickable
         for(int i = 0; i < answerChoicesGroup.getChildCount(); i++) {
