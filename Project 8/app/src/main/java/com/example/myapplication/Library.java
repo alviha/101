@@ -1778,12 +1778,49 @@ public final class Library {
 
     private static String[] preTestQuestions = {
 
-            //
+            "Question 1",
+            "Question 2",
+            "Question 3",
+            "Question 4",
+            "Question 5"
+
     };
 
     private static AnswerChoice[][] preTestAnswerChoices = {
 
             // Question 1 choices
+            {
+                    new AnswerChoice("void", true),
+                    new AnswerChoice("int", false),
+                    new AnswerChoice("double", false),
+                    new AnswerChoice("public", false)
+            },
+
+            // Question 2 choices
+            {
+                    new AnswerChoice("void", true),
+                    new AnswerChoice("int", false),
+                    new AnswerChoice("double", false),
+                    new AnswerChoice("public", false)
+            },
+
+            // Question 3 choices
+            {
+                    new AnswerChoice("void", true),
+                    new AnswerChoice("int", false),
+                    new AnswerChoice("double", false),
+                    new AnswerChoice("public", false)
+            },
+
+            // Question 4 choices
+            {
+                    new AnswerChoice("void", true),
+                    new AnswerChoice("int", false),
+                    new AnswerChoice("double", false),
+                    new AnswerChoice("public", false)
+            },
+
+            // Question 5 choices
             {
                     new AnswerChoice("void", true),
                     new AnswerChoice("int", false),
@@ -1858,10 +1895,12 @@ public final class Library {
     }
 
     public static String[] getPreTestQuestions() {
+
         return preTestQuestions;
     }
 
     public static AnswerChoice[][] getPreTestAnswerChoices() {
+
         return preTestAnswerChoices;
     }
 }

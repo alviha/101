@@ -31,6 +31,10 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
         initializeLessonButtons();
         setOnClickListenerForLessonButtons();
 
+        /* TODO: This is for debugging purposes; Remove before final product */
+        findViewById(R.id.text_homepage).setOnClickListener(this);
+
+        // code for the buttons at the bottom of the homepage
         tabLayout = findViewById(R.id.tabLayout_homepage);
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -42,7 +46,6 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
                 }
                 else if(tab.getText().toString().equals("Options")) {
                     startActivity(new Intent(Homepage.this, OptionsActivity.class));
-
                 }
             }
 
@@ -60,14 +63,13 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
                 }
                 else if(tab.getText().toString().equals("Options")) {
                     startActivity(new Intent(Homepage.this, OptionsActivity.class));
-
                 }
             }
         });
 
         //connects progress bar variable to the progress bar on homepage
         progressBar = findViewById(R.id.widget_progressBar);
-        
+
         //gets the progress value from the questions and passes it on to the progress bar
         progressStatus = QuestionActivity.progressStatus;
         progressBar.setProgress(progressStatus);
@@ -196,6 +198,11 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
             storeLevelAndLessonData(intent, Library.Levels.SINGLE_DIMENSIONAL_ARRAYS, 1);
 
             startActivity(intent);
+        }
+
+        /* TODO: This is for debugging purposes; Remove before final product */
+        else if(v == findViewById(R.id.text_homepage)) {
+            startActivity(new Intent(Homepage.this, PreTestActivity.class));
         }
 
     }
