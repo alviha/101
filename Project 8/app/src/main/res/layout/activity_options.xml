@@ -6,29 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".OptionsActivity">
 
-    <LinearLayout
+    <Button
+        android:id="@+id/button_faqs"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:layout_above="@id/button_feedback"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="@string/frequentlyAskedQuestions" />
 
-        <Button
-            android:id="@+id/button_faqs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/frequentlyAskedQuestions" />
-
-        <Button
-            android:id="@+id/button_feedback"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/feedback" />
-
-        <Button
-            android:id="@+id/button_bugReporting"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/bugReporting" />
-
-    </LinearLayout>
+    <Button
+        android:id="@+id/button_feedback"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="@string/feedback" />
+ 
+    <Button
+        android:id="@+id/button_bugReporting"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:layout_below="@id/button_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="@string/bugReporting" />
 
 </RelativeLayout>
