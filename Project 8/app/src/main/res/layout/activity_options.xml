@@ -172,7 +172,7 @@
 
     <!-- END of Frequently Asked Questions -->
 
-    <!-- Feedback -->
+    <!-- Feedback and Bug Reporting -->
 
     <TextView
         android:id="@+id/text_heading_feedback"
@@ -182,7 +182,7 @@
         android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
         android:layout_marginVertical="@dimen/activity_vertical_margin"
         android:fontFamily="sans-serif"
-        android:text="@string/feedback"
+        android:text=""
         android:textAlignment="center"
         android:textSize="30sp"
         android:visibility="gone"/>
@@ -196,14 +196,6 @@
         android:layout_marginVertical="@dimen/activity_vertical_margin"
         android:orientation="vertical"
         android:visibility="invisible">
-
-        <EditText
-            android:id="@+id/input_feedbackEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="@dimen/activity_vertical_margin"
-            android:inputType="textEmailAddress"
-            android:hint="@string/feedbackEmailPrompt"/>
 
         <EditText
             android:id="@+id/input_feedbackSubject"
@@ -224,18 +216,18 @@
             android:textSize="16sp"/>
 
         <Button
-            android:id="@+id/button_sendFeedback"
+            android:id="@+id/button_sendMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginVertical="@dimen/activity_vertical_margin"
             android:background="@color/main"
-            android:text="@string/sendFeedback" />
+            android:text="" />
 
     </LinearLayout>
 
 
-    <!-- END of Feedback -->
+    <!-- END of Feedback and Bug Reporting -->
 
 </RelativeLayout>
 
