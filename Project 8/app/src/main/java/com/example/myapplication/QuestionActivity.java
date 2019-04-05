@@ -8,9 +8,11 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.HorizontalScrollView;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +29,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
     RadioGroup answerChoicesGroup;
     RadioButton choice1, choice2, choice3, choice4;
     Button hint, submitAnswer, next;
+    HorizontalScrollView questionScroll;
 
     // Results screen UI elements
     TextView scoreResult, resultFeedback;
@@ -60,6 +63,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         hint = findViewById(R.id.button_showHint);
         submitAnswer = findViewById(R.id.button_submitAnswer);
         next = findViewById(R.id.button_nextQuestion);
+        questionScroll = findViewById(R.id.scrollView_question);
 
         // set listener for the buttons
         hint.setOnClickListener(this);
@@ -199,6 +203,8 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         mistakeCounter = 0;
 
         answerChoicesGroup.clearCheck();
+
+        questionScroll.scrollTo(0, 0);
 
         // reset radio buttons to be clickable
         for(int i = 0; i < answerChoicesGroup.getChildCount(); i++) {
