@@ -85,5 +85,10 @@
     <string name="repeatChallenge">Repeat the Challenge</string>
     <string name="backToHomepage">Back to Homepage</string>
     <string name="passingScoreNotice">A score of 80% or better is required to unlock the next level</string>
+    <string name="next">Next</string>
+    <string name="elLesson1">Programming is the process of breaking down a large, complex task into smaller and smaller subtasks. The process continues until the subtasks are simple enough to be performed with the basic instructions provided by the computer.</string>
+    <string name="what_is_programming">What is programming?</string>
+    <string name="sample_lesson">Sample Lesson</string>
+    <string name="logout">Log Out</string>
 
 </resources>

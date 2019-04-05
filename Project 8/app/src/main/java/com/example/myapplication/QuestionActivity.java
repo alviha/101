@@ -5,10 +5,8 @@ import android.graphics.Color;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -33,8 +31,8 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
     Button repeatChallenge, backToHomepage;
 
     // Level and lesson data to be retrieved from intent
-    private Library.Levels level;
-    private int lesson;
+    private static Library.Levels level;
+    private static int lesson;
 
     // Variables related to the challenge
     private String[] questionSet;
@@ -46,6 +44,8 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
     private List<String> correctAnswersList;
     public static int progressStatus;
     private double percent;
+    private static double scorePercent;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -299,10 +299,13 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         resultFeedback.setVisibility(View.VISIBLE);
         repeatChallenge.setVisibility(View.VISIBLE);
         backToHomepage.setVisibility(View.VISIBLE);
+
         //calculates percentage complete then converts to int
         percent = (score/140.0)*100.0 + percent;
         progressStatus = (int)percent;
+        Progress.ProgressStatus(progressStatus);
         Homepage.progressStatus = (int)percent;
+        scorePercent = (score/questionSet.length)*100.0;
 
         // show score
         DecimalFormat scoreFormat = new DecimalFormat("##.##%");
@@ -319,4 +322,8 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
             resultFeedback.setText("An 80% or better is required to unlock the next lesson");
         }
     }
+    public static void setUnlock(){
+        Unlock.Unlock((int)scorePercent,lesson,level);
+    }
+
 }

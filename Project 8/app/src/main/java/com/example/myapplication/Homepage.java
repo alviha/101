@@ -8,6 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class Homepage extends AppCompatActivity implements View.OnClickListener {
 
     private Button elementaryProgrammingLesson1, elementaryProgrammingLesson2, elementaryProgrammingLesson3;
@@ -19,6 +25,9 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
     private Button singleDimensionalArraysLesson1, singleDimensionalArraysLesson2;
     private ProgressBar progressBar;
     public static int progressStatus;
+    //private ArrayList<Integer> overallProgress;
+    private static boolean unlock;
+    private int unlockCounter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -30,9 +39,16 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
         //connects progress bar variable to the progress bar on homepage
         progressBar = findViewById(R.id.widget_progressBar);
         //gets the progress value from the questions and passes it on to the progress bar
-        progressStatus = QuestionActivity.progressStatus;
+        progressStatus = Progress.ProgressValue();
+        //progressStatus = QuestionActivity.progressStatus;
         progressBar.setProgress(progressStatus);
         progressBar.incrementProgressBy(progressStatus);
+        QuestionActivity.setUnlock();
+        //unlock = QuestionActivity.isUnlock();
+//        FirebaseDatabase database = FirebaseDatabase.getInstance();
+//        DatabaseReference ref = database.getReference();
+//        ref.setValue(progressStatus);
+
 
     }
 
@@ -219,5 +235,8 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
         methodsLesson2.setOnClickListener(this);
         singleDimensionalArraysLesson1.setOnClickListener(this);
         singleDimensionalArraysLesson2.setOnClickListener(this);
+    }
+    public static boolean isUnlock() {
+        return unlock;
     }
 }

@@ -59,6 +59,7 @@
                 android:indeterminate="false"
                 android:max="@integer/progressMax"
                 android:progressTint="@color/ProgressBar"
+                android:saveEnabled="true"
                 tools:layout_editor_absoluteX="91dp"
                 tools:layout_editor_absoluteY="128dp" />
 
@@ -118,6 +119,7 @@
                 android:layout_marginBottom="5dp"
                 android:background="@color/main"
                 android:text="@string/selectionslesson1"
+                android:saveEnabled="true"
                 tools:layout_editor_absoluteX="4dp"
                 tools:layout_editor_absoluteY="404dp" />
 
@@ -128,6 +130,7 @@
                 android:layout_marginBottom="5dp"
                 android:background="@color/main"
                 android:text="@string/selectionslesson2"
+                android:saveEnabled="true"
                 tools:layout_editor_absoluteX="128dp"
                 tools:layout_editor_absoluteY="404dp" />
 
@@ -137,13 +140,14 @@
                 android:layout_height="53dp"
                 android:background="@color/main"
                 android:text="@string/selectionslesson3"
+                android:saveEnabled="true"
                 tools:layout_editor_absoluteX="251dp"
                 tools:layout_editor_absoluteY="404dp" />
 
             <TextView
                 android:id="@+id/text_functions_char_string"
                 android:layout_width="wrap_content"
-                android:layout_height="100sp"
+                android:layout_height="120sp"
                 android:text="@string/functions"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@color/Black"
@@ -156,6 +160,7 @@
                 android:layout_marginBottom="5dp"
                 android:background="@color/main"
                 android:text="@string/functionslesson1"
+                android:saveEnabled="true"
                 tools:layout_editor_absoluteX="8dp"
                 tools:layout_editor_absoluteY="266dp" />
 
@@ -166,6 +171,7 @@
                 android:layout_marginBottom="5dp"
                 android:background="@color/main"
                 android:text="@string/functionslesson2"
+                android:saveEnabled="true"
                 tools:layout_editor_absoluteX="8dp"
                 tools:layout_editor_absoluteY="266dp" />
 
@@ -177,6 +183,7 @@
                 android:layout_marginBottom="5dp"
                 android:background="@color/main"
                 android:text="@string/functionslesson3"
+                android:saveEnabled="true"
                 tools:layout_editor_absoluteX="8dp"
                 tools:layout_editor_absoluteY="266dp" />
 
@@ -186,6 +193,7 @@
                 android:layout_height="53dp"
                 android:background="@color/main"
                 android:text="@string/functionslesson4"
+                android:saveEnabled="true"
                 tools:layout_editor_absoluteX="8dp"
                 tools:layout_editor_absoluteY="266dp" />
 
@@ -203,7 +211,8 @@
                 android:layout_height="53dp"
                 android:layout_marginBottom="5dp"
                 android:background="@color/main"
-                android:text="@string/loopslesson1" />
+                android:text="@string/loopslesson1"
+                android:saveEnabled="true"/>
 
             <Button
                 android:id="@+id/button_for"
@@ -211,14 +220,16 @@
                 android:layout_height="53dp"
                 android:layout_marginBottom="5dp"
                 android:background="@color/main"
-                android:text="@string/loopslesson2" />
+                android:text="@string/loopslesson2"
+                android:saveEnabled="true"/>
 
             <Button
                 android:id="@+id/button_do"
                 android:layout_width="125dp"
                 android:layout_height="53dp"
                 android:background="@color/main"
-                android:text="@string/loopslesson3" />
+                android:text="@string/loopslesson3"
+                android:saveEnabled="true"/>
 
             <TextView
                 android:id="@+id/text_methods"
@@ -235,7 +246,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:background="@color/main"
-                android:text="@string/methodslesson1" />
+                android:text="@string/methodslesson1"
+                android:saveEnabled="true"/>
 
             <Button
                 android:id="@+id/button_mLesson2"
@@ -243,7 +255,8 @@
                 android:layout_height="53dp"
                 android:layout_marginBottom="5dp"
                 android:background="@color/main"
-                android:text="@string/methodslesson2" />
+                android:text="@string/methodslesson2"
+                android:saveEnabled="true"/>
 
             <TextView
                 android:id="@+id/text_arrays"
@@ -260,14 +273,16 @@
                 android:layout_height="53dp"
                 android:layout_marginBottom="5dp"
                 android:background="@color/main"
-                android:text="@string/arrayslesson1" />
+                android:text="@string/arrayslesson1"
+                android:saveEnabled="true"/>
 
             <Button
                 android:id="@+id/button_aLesson2"
                 android:layout_width="125dp"
                 android:layout_height="53dp"
                 android:background="@color/main"
-                android:text="@string/arrayslesson2" />
+                android:text="@string/arrayslesson2"
+                android:saveEnabled="true"/>
 
         </LinearLayout>
     </ScrollView>

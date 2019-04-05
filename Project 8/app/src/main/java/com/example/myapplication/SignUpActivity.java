@@ -16,6 +16,8 @@ import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
@@ -129,6 +131,11 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                             }
                         }
                     });
+            FirebaseDatabase database = FirebaseDatabase.getInstance();
+            DatabaseReference data_username = database.getReference();
+            DatabaseReference data_name = database.getReference();
+            data_username.setValue(username);
+            data_name.setValue(name);
         }
 
         /* already have an account clicked */

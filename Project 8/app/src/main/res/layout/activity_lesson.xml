@@ -12,37 +12,59 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="24dp"
-        android:text="Sample Lesson"
+        android:text="@string/sample_lesson"
         android:textAlignment="center"
         android:textSize="32sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/text_introduction"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="24dp"
-        android:paddingLeft="24dp"
-        android:text="What is programming?"
-        android:textSize="24dp"
-        android:textStyle="bold" />
+        android:layout_height="342dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="3"
-        android:paddingLeft="24dp"
-        android:paddingRight="24dp"
-        android:text="Programming is the process of breaking down a large, complex task into smaller and smaller subtasks. The process continues until the subtasks are simple enough to be performed with the basic instructions provided by the computer."
-        android:textSize="24dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_introduction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="24dp"
+                android:paddingBottom="24dp"
+                android:text="@string/what_is_programming"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="331dp"
+                android:layout_weight="3"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:text="@string/elLesson1"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/button_next"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="false"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:clickable="false"
+                android:enabled="false"
+                android:text="@string/next" />
+        </LinearLayout>
+    </ScrollView>
 
     <Button
-            android:id="@+id/button_next"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerInParent="false"
-            android:layout_centerHorizontal="true"
-            android:text="Next" />
+        android:id="@+id/button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:enabled="true"
+        android:text="@string/backToHomepage" />
+
 </LinearLayout>
