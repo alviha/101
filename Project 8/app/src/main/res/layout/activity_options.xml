@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/alice_blue"
     tools:context=".OptionsActivity">
 
     <TextView
@@ -170,6 +171,53 @@
     </ScrollView>
 
     <!-- END of Frequently Asked Questions -->
+
+    <!-- Feedback -->
+
+    <TextView
+        android:id="@+id/text_heading_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:fontFamily="sans-serif"
+        android:text="@string/feedback"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/layout_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/text_heading_feedback"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/activity_vertical_margin"
+            android:lines="12"
+            android:hint="@string/feedbackHint"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/button_sendFeedack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="@dimen/activity_vertical_margin"
+            android:background="@color/main"
+            android:text="@string/sendFeedback" />
+
+    </LinearLayout>
+
+
+    <!-- END of Feedback -->
 
 </RelativeLayout>
 
