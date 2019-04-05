@@ -195,18 +195,36 @@
         android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
         android:layout_marginVertical="@dimen/activity_vertical_margin"
         android:orientation="vertical"
-        android:visibility="gone">
+        android:visibility="invisible">
 
         <EditText
+            android:id="@+id/input_feedbackEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="@dimen/activity_vertical_margin"
-            android:lines="12"
+            android:inputType="textEmailAddress"
+            android:hint="@string/feedbackEmailPrompt"/>
+
+        <EditText
+            android:id="@+id/input_feedbackSubject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/activity_vertical_margin"
+            android:inputType="textEmailSubject"
+            android:hint="@string/feedbackSubjectPrompt"/>
+
+        <EditText
+            android:id="@+id/input_feedbackMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/activity_vertical_margin"
+            android:lines="10"
             android:hint="@string/feedbackHint"
+            android:inputType="textMultiLine"
             android:textSize="16sp"/>
 
         <Button
-            android:id="@+id/button_sendFeedack"
+            android:id="@+id/button_sendFeedback"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

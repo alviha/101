@@ -95,6 +95,8 @@
     <string name="frequentlyAskedQuestions">Frequently Asked Questions (FAQs)</string>
     <string name="sendFeedback">Send Feedback</string>
     <string name="feedbackHint">Write your message here</string>
+    <string name="feedbackEmailPrompt">Enter your email here</string>
+    <string name="feedbackSubjectPrompt">Enter the subject line here (optional)</string>
 
     <!-- Strings related to the pretest activity -->
     <string name="preTestCompleted">Pre-Test Completed!</string>

@@ -1,14 +1,18 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.SoundEffectConstants;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.EmptyStackException;
 
@@ -16,6 +20,10 @@ public class OptionsActivity extends AppCompatActivity implements View.OnClickLi
 
     // main options UI elements
     Button faqs, feedback, bugReporting;
+
+    // feedback UI elements
+    EditText input_email, input_subject, input_message;
+    Button button_sendFeedback;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,10 +42,40 @@ public class OptionsActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onClick(View v) {
 
+        // Buttons for Options Page
         if (v == faqs) {
-
             hideMainOptions();
             showFAQScreen();
+        }
+        else if(v == feedback) {
+            hideMainOptions();
+            showFeedbackScreen();
+        }
+        else if(v == bugReporting) {
+            hideMainOptions();
+            showFeedbackScreen();
+        }
+
+        // Button for Feedback Page
+        else if(v == button_sendFeedback) {
+
+            String email = input_email.getText().toString().trim();
+            String subject = input_subject.getText().toString().trim();
+            String bodyMessage = input_message.getText().toString().trim();
+
+            // check for empty fields (subject is optional)
+            if(TextUtils.isEmpty(email)) {
+                input_email.setError("Email is required");
+                input_email.requestFocus();
+                return;
+            }
+            if(TextUtils.isEmpty(bodyMessage)) {
+                input_message.setError("This field is required");
+                input_message.requestFocus();
+                return;
+            }
+
+            sendMessage(email, subject, bodyMessage);
         }
 
     }
@@ -45,23 +83,28 @@ public class OptionsActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onBackPressed() {
 
+        // back to homepage
         if(findViewById(R.id.text_heading_options).getVisibility() == View.VISIBLE) {
             finish();
         }
-        else if(findViewById(R.id.text_heading_faq).getVisibility() == View.VISIBLE) {
+
+        // back to options screen
+        else if(findViewById(R.id.text_heading_options).getVisibility() == View.GONE) {
             this.recreate();
         }
 
     }
 
-    private void showMainOptionsScreen() {
+    // Hide the elements on Options screen
+    private void hideMainOptions() {
 
-        // show main options UI
-        faqs.setVisibility(View.VISIBLE);
-        feedback.setVisibility(View.VISIBLE);
-        bugReporting.setVisibility(View.VISIBLE);
+        findViewById(R.id.text_heading_options).setVisibility(View.GONE);
+        faqs.setVisibility(View.GONE);
+        feedback.setVisibility(View.GONE);
+        bugReporting.setVisibility(View.GONE);
     }
 
+    // Frequently Asked Questions Page
     private void showFAQScreen() {
 
         // show FAQ screen UI
@@ -84,6 +127,7 @@ public class OptionsActivity extends AppCompatActivity implements View.OnClickLi
                 "There are feedback and bug reporting buttons on the options page. Use them to message us."
         };
 
+        // set the questions and answers
         ((TextView)findViewById(R.id.text_faq_question1)).setText(questions[0]);
         ((TextView)findViewById(R.id.text_faq_answer1)).setText(answers[0]);
         ((TextView)findViewById(R.id.text_faq_question2)).setText(questions[1]);
@@ -97,24 +141,41 @@ public class OptionsActivity extends AppCompatActivity implements View.OnClickLi
 
     }
 
+    // Feedback Page
     private void showFeedbackScreen() {
 
+        findViewById(R.id.layout_feedback).setVisibility(View.VISIBLE);
+
+        input_email = findViewById(R.id.input_feedbackEmail);
+        input_subject = findViewById(R.id.input_feedbackSubject);
+        input_message = findViewById(R.id.input_feedbackMessage);
+
+        button_sendFeedback = findViewById(R.id.button_sendFeedback);
+        button_sendFeedback.setOnClickListener(this);
+
     }
 
+    // Bug Reporting Page
     private void showBugReportingScreen() {
 
+        Toast.makeText(OptionsActivity.this, "Screen in development", Toast.LENGTH_SHORT);
+        // TODO: implement bug reporting
     }
 
-    private void hideMainOptions() {
+    private void sendMessage(String email, String subject, String message) {
 
-        findViewById(R.id.text_heading_options).setVisibility(View.GONE);
-        faqs.setVisibility(View.GONE);
-        feedback.setVisibility(View.GONE);
-        bugReporting.setVisibility(View.GONE);
-    }
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/html");
 
-    private void hideFAQScreen() {
+        String[] developers = {
+                "stamariabbv@vcu.edu"
+        };
 
+        intent.putExtra(Intent.EXTRA_EMAIL, email);
+        intent.putExtra(Intent.EXTRA_EMAIL, developers);
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Feedback: " + subject);
+        intent.putExtra(Intent.EXTRA_TEXT, message);
 
+        startActivity(Intent.createChooser(intent, "Choose email app to use"));
     }
 }
