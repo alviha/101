@@ -323,7 +323,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         }
     }
     public static void setUnlock(){
-        Unlock.Unlock((int)scorePercent,lesson,level);
+        Unlock.UnlockLevel((int)scorePercent,lesson,level);
     }
 
 }

@@ -131,11 +131,11 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                             }
                         }
                     });
-            FirebaseDatabase database = FirebaseDatabase.getInstance();
-            DatabaseReference data_username = database.getReference();
-            DatabaseReference data_name = database.getReference();
-            data_username.setValue(username);
-            data_name.setValue(name);
+//            FirebaseDatabase database = FirebaseDatabase.getInstance();
+//            DatabaseReference data_username = database.getReference();
+//            DatabaseReference data_name = database.getReference();
+//            data_username.setValue(username);
+//            data_name.setValue(name);
         }
 
         /* already have an account clicked */

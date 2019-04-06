@@ -17,12 +17,13 @@ public class Progress {
     private static DatabaseReference data_progress = database.getReference();
 
 
-
+//saves progress in firebase
     public static void ProgressStatus(final int progress){
         data_progress.setValue(progress);
         data_progress.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                //keeps up with the variable when it changes
                 progressStatus = dataSnapshot.getValue(int.class);
                 Log.d(TAG, "Progress is: " + progress);
             }
