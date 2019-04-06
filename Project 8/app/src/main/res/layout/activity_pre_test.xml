@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PreTestActivity"
+    android:background="@color/alice_blue">
+
+    <TextView
+        android:id="@+id/text_preTestCompleted"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:fontFamily="sans-serif"
+        android:letterSpacing="0"
+        android:text="@string/preTestCompleted"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:visibility="invisible" />
+
+    <TableLayout
+        android:id="@+id/tableLayout_sectionsAndScores"
+        android:layout_below="@id/text_preTestCompleted"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:visibility="invisible" >
+
+        <TableRow
+            android:weightSum="2"
+            android:layout_marginVertical="@dimen/activity_vertical_margin">
+
+            <TextView
+                android:text="Section 1"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.15"
+                android:layout_column="1"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/text_section1Score"
+                android:text="80%"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_column="2"
+                android:layout_weight="1"/>
+        </TableRow>
+
+        <TableRow
+            android:weightSum="2"
+            android:layout_marginVertical="@dimen/activity_vertical_margin">
+
+            <TextView
+                android:text="Section 2"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.15"
+                android:layout_column="1"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/text_section2Score"
+                android:text="80%"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_column="2"
+                android:layout_weight="1"/>
+        </TableRow>
+
+        <TableRow
+            android:weightSum="2"
+            android:layout_marginVertical="@dimen/activity_vertical_margin">
+
+            <TextView
+                android:text="Section 3"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.15"
+                android:layout_column="1"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/text_section3Score"
+                android:text="80%"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_column="2"
+                android:layout_weight="1"/>
+        </TableRow>
+
+        <TableRow
+            android:weightSum="2"
+            android:layout_marginVertical="@dimen/activity_vertical_margin">
+
+            <TextView
+                android:text="Section 4"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.15"
+                android:layout_column="1"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/text_section4Score"
+                android:text="80%"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_column="2"
+                android:layout_weight="1"/>
+        </TableRow>
+
+        <TableRow
+            android:weightSum="2"
+            android:layout_marginVertical="@dimen/activity_vertical_margin">
+
+            <TextView
+                android:text="Section 5"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.15"
+                android:layout_column="1"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/text_section5Score"
+                android:text="80%"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_column="2"
+                android:layout_weight="1"/>
+        </TableRow>
+
+        <TableRow
+            android:weightSum="2"
+            android:layout_marginVertical="@dimen/activity_vertical_margin">
+
+            <TextView
+                android:text="Section 6"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.15"
+                android:layout_column="1"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/text_section6Score"
+                android:text="80%"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_column="2"
+                android:layout_weight="1"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/text_sectionsUnlocked"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/button_exitTest"
+        android:layout_below="@id/tableLayout_sectionsAndScores"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:text="33% of the sections have been unlocked for you!"
+        android:textSize="20dp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/button_exitTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:background="@color/main"
+        android:text="@string/exitTest"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.15"
+        android:textSize="14sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/pretest_text_questionNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.1"
+        android:text="Question #: "
+        android:textSize="20sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/pretest_button_submitAnswer"
+        android:layout_below="@id/pretest_text_questionNumber">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <HorizontalScrollView
+                android:id="@+id/pretest_scrollView_question"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/pretest_text_question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/activity_vertical_margin"
+                    android:fontFamily="sans-serif"
+                    android:letterSpacing="0"
+                    android:text="Question goes here."
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </HorizontalScrollView>
+
+            <RadioGroup
+                android:id="@+id/pretest_radioGroup_answerChoices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin">
+
+                <RadioButton
+                    android:id="@+id/pretest_radioButton_choice1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:background="@color/common_google_signin_btn_text_light_default"
+                    android:fontFamily="sans-serif"
+                    android:letterSpacing="0"
+                    android:text="Choice 1 goes here"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/pretest_radioButton_choice2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:background="@color/common_google_signin_btn_text_light_default"
+                    android:fontFamily="sans-serif"
+                    android:letterSpacing="0"
+                    android:text="Choice 2 goes here"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/pretest_radioButton_choice3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:background="@color/common_google_signin_btn_text_light_default"
+                    android:fontFamily="sans-serif"
+                    android:letterSpacing="0"
+                    android:text="Choice 3 goes here"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/pretest_radioButton_choice4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:background="@color/common_google_signin_btn_text_light_default"
+                    android:fontFamily="sans-serif"
+                    android:letterSpacing="0"
+                    android:text="Choice 4 goes here"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/pretest_button_submitAnswer"
+        android:background="@color/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.15"
+        android:text="@string/submitAnswer"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/pretest_button_nextQuestion"
+        android:background="@color/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.15"
+        android:text="@string/nextQuestion"
+        android:textSize="14sp"
+        android:visibility="invisible" />
+
+</RelativeLayout>

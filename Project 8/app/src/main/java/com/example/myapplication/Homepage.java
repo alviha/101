@@ -3,10 +3,12 @@ package com.example.myapplication;
 import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 
 
@@ -20,6 +22,7 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
     private Button methodsLesson1, methodsLesson2;
     private Button singleDimensionalArraysLesson1, singleDimensionalArraysLesson2;
     private ProgressBar progressBar;
+    private TabLayout tabLayout;
     public static int progressStatus;
 
 
@@ -30,8 +33,46 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
 
         initializeLessonButtons();
         setOnClickListenerForLessonButtons();
+
+        /* TODO: This is for debugging purposes; Remove before final product */
+        findViewById(R.id.text_homepage).setOnClickListener(this);
+
+        // code for the buttons at the bottom of the homepage
+        tabLayout = findViewById(R.id.tabLayout_homepage);
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+
+                if(tab.getText().toString().equals("Profile")) {
+                    // TODO: start profile activity
+
+                }
+                else if(tab.getText().toString().equals("Options")) {
+                    startActivity(new Intent(Homepage.this, OptionsActivity.class));
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                // do nothing
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+                if(tab.getText().toString().equals("Profile")) {
+                    // TODO: start profile activity
+
+                }
+                else if(tab.getText().toString().equals("Options")) {
+                    startActivity(new Intent(Homepage.this, OptionsActivity.class));
+                }
+            }
+        });
+
         //connects progress bar variable to the progress bar on homepage
         progressBar = findViewById(R.id.widget_progressBar);
+
         //gets the progress value from the questions and passes it on to the progress bar
         progressStatus = Progress.ProgressValue();
         //progressStatus = QuestionActivity.progressStatus;
@@ -148,6 +189,11 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
             storeLevelAndLessonData(intent, Library.Levels.SINGLE_DIMENSIONAL_ARRAYS, 1);
 
             startActivity(intent);
+        }
+
+        /* TODO: This is for debugging purposes; Remove before final product */
+        else if(v == findViewById(R.id.text_homepage)) {
+            startActivity(new Intent(Homepage.this, PreTestActivity.class));
         }
 
     }

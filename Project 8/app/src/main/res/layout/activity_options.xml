@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/alice_blue"
+    tools:context=".OptionsActivity">
+
+    <TextView
+        android:id="@+id/text_heading_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:text="@string/optionsTab"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/button_faqs"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:layout_above="@id/button_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="@string/frequentlyAskedQuestions" />
+
+    <Button
+        android:id="@+id/button_feedback"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="@string/feedback" />
+
+    <Button
+        android:id="@+id/button_bugReporting"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:layout_below="@id/button_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="@string/bugReporting" />
+
+    <!-- Frequently Asked Questions -->
+
+    <TextView
+        android:id="@+id/text_heading_faq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:text="@string/frequentlyAskedQuestions"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:visibility="gone"/>
+
+    <ScrollView
+        android:id="@+id/scrollView_faq"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:layout_below="@id/text_heading_faq"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:id="@+id/text_faq_question1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"/>
+
+            <TextView
+                android:id="@+id/text_faq_answer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:text=""
+                android:textSize="20sp"
+                android:fontFamily="sans-serif"/>
+
+            <TextView
+                android:id="@+id/text_faq_question2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"/>
+
+            <TextView
+                android:id="@+id/text_faq_answer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:text=""
+                android:textSize="20sp"
+                android:fontFamily="sans-serif"/>
+
+            <TextView
+                android:id="@+id/text_faq_question3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"/>
+
+            <TextView
+                android:id="@+id/text_faq_answer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:text=""
+                android:textSize="20sp"
+                android:fontFamily="sans-serif"/>
+
+            <TextView
+                android:id="@+id/text_faq_question4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"/>
+
+            <TextView
+                android:id="@+id/text_faq_answer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:text=""
+                android:textSize="20sp"
+                android:fontFamily="sans-serif"/>
+
+            <TextView
+                android:id="@+id/text_faq_question5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"/>
+
+            <TextView
+                android:id="@+id/text_faq_answer5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:text=""
+                android:textSize="20sp"
+                android:fontFamily="sans-serif"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- END of Frequently Asked Questions -->
+
+    <!-- Feedback and Bug Reporting -->
+
+    <TextView
+        android:id="@+id/text_heading_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:fontFamily="sans-serif"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/layout_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/text_heading_feedback"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <EditText
+            android:id="@+id/input_feedbackSubject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/activity_vertical_margin"
+            android:inputType="textEmailSubject"
+            android:hint="@string/feedbackSubjectPrompt"/>
+
+        <EditText
+            android:id="@+id/input_feedbackMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/activity_vertical_margin"
+            android:lines="10"
+            android:hint="@string/feedbackHint"
+            android:inputType="textMultiLine"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/button_sendMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="@dimen/activity_vertical_margin"
+            android:background="@color/main"
+            android:text="" />
+
+    </LinearLayout>
+
+
+    <!-- END of Feedback and Bug Reporting -->
+
+</RelativeLayout>
+

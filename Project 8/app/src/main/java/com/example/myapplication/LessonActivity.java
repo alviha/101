@@ -51,7 +51,4 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
             finish();
         }
     }
-    public static int getUnlockCounter(){
-        return unlockCounter;
-    }
 }

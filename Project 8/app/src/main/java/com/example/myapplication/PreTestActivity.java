@@ -10,81 +10,68 @@ import android.widget.Button;
 import android.widget.HorizontalScrollView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.ScrollView;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
+
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class QuestionActivity extends AppCompatActivity implements View.OnClickListener{
+public class PreTestActivity extends AppCompatActivity implements View.OnClickListener {
 
-    // Challenge UI elements
-    TextView questionHeading, question, hintText;
+    // Test UI elements
+    TextView questionHeading, question;
     RadioGroup answerChoicesGroup;
     RadioButton choice1, choice2, choice3, choice4;
-    Button hint, submitAnswer, next;
+    Button submitAnswer, next;
     HorizontalScrollView questionScroll;
 
-    // Results screen UI elements
-    TextView scoreResult, resultFeedback;
-    Button repeatChallenge, backToHomepage;
+    // Results UI elements
+    TextView sectionsUnlocked;
+    Button exitTest;
 
-    // Level and lesson data to be retrieved from intent
-    private static Library.Levels level;
-    private static int lesson;
-
-    // Variables related to the challenge
+    // Variables
     private String[] questionSet;
     private AnswerChoice[][] answerChoiceSet;
-    private String[] hintSet;
-    private int score;
+    private int[] scores;
+    private int sectionNumber;
     private int questionNumber;
     private int mistakeCounter;
     private List<String> correctAnswersList;
-
-    ////Variables used for progress
-    public static int progressStatus;
-    private double percent;
-    private static double scorePercent;
-
+    private static final double MAX_SECTION_SCORE = 10.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_question);
+        setContentView(R.layout.activity_pre_test);
 
         // initialize UI Elements
-        questionHeading = findViewById(R.id.text_questionNumber);
-        question = findViewById(R.id.text_question);
-        answerChoicesGroup = findViewById(R.id.radioGroup_answerChoices);
-        hintText = findViewById(R.id.text_hint);
-        hint = findViewById(R.id.button_showHint);
-        submitAnswer = findViewById(R.id.button_submitAnswer);
-        next = findViewById(R.id.button_nextQuestion);
-        questionScroll = findViewById(R.id.scrollView_question);
+        questionHeading = findViewById(R.id.pretest_text_questionNumber);
+        question = findViewById(R.id.pretest_text_question);
+        answerChoicesGroup = findViewById(R.id.pretest_radioGroup_answerChoices);
+        submitAnswer = findViewById(R.id.pretest_button_submitAnswer);
+        next = findViewById(R.id.pretest_button_nextQuestion);
+        questionScroll = findViewById(R.id.pretest_scrollView_question);
 
         // set listener for the buttons
-        hint.setOnClickListener(this);
         submitAnswer.setOnClickListener(this);
         next.setOnClickListener(this);
 
-        // retrieve level and lesson data from intent
-        level = (Library.Levels) getIntent().getSerializableExtra("LEVEL");
-        lesson = getIntent().getIntExtra("LESSON", 0);
-
         // retrieve question and answer set from Library class
-        questionSet = Library.getQuestions(level, lesson);
-        answerChoiceSet = Library.getAnswerChoices(level, lesson);
-        hintSet = Library.getHints(level, lesson);
+        questionSet = Library.getPreTestQuestions();
+        answerChoiceSet = Library.getPreTestAnswerChoices();
 
-        // set score to max number of questions, and set question number to the first question
-        score = questionSet.length;
+        // set question number to the first question
         questionNumber = 0;
-        //sets percent to current progress
-        percent = Homepage.progressStatus;
+
+        // set the section number to the first section, initialize scores array
+        sectionNumber = 0;
+        scores = new int[6];
 
         // show first question
         showNextQuestion();
@@ -98,20 +85,20 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
 
             // no answer choice was selected
             if(answerChoicesGroup.getCheckedRadioButtonId() == -1) {
-                Toast.makeText(QuestionActivity.this, "No answer choice was selected", Toast.LENGTH_SHORT).show();
+                Toast.makeText(PreTestActivity.this, "No answer choice was selected", Toast.LENGTH_SHORT).show();
                 return;
             }
 
             // selected answer is correct
             if(answerIsCorrect()) {
-                Toast.makeText(QuestionActivity.this, "Correct", Toast.LENGTH_SHORT).show();
+                Toast.makeText(PreTestActivity.this, "Correct", Toast.LENGTH_SHORT).show();
                 showAnswer();
             }
 
             // selected answer is incorrect
             else {
 
-                Toast.makeText(QuestionActivity.this, "Incorrect", Toast.LENGTH_SHORT).show();
+                Toast.makeText(PreTestActivity.this, "Incorrect", Toast.LENGTH_SHORT).show();
 
                 // make selected answer not clickable
                 findViewById(answerChoicesGroup.getCheckedRadioButtonId()).setClickable(false);
@@ -121,7 +108,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
 
                 // decrement score only when the first mistake is made
                 if(mistakeCounter == 1) {
-                    score--;
+                    scores[sectionNumber]--;
                 }
 
                 if(mistakeCounter == 3) {
@@ -135,8 +122,6 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         // next question button
         if(v == next) {
 
-            hintText.setVisibility(View.INVISIBLE);
-            hint.setVisibility(View.VISIBLE);
             submitAnswer.setVisibility(View.VISIBLE);
             next.setVisibility(View.INVISIBLE);
 
@@ -157,45 +142,14 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
             }
         }
 
-        // show hint button
-        if (v == hint){
+        // exit test button
+        if(v == exitTest) {
 
-            hintText.setText(hintSet[questionNumber]);
-            hintText.setVisibility(View.VISIBLE);
-            hint.setVisibility(View.INVISIBLE);
-        }
-
-        if(v == repeatChallenge) {
-
-            questionNumber = 0;
-            score = questionSet.length;
-
-            // hide question related elements
-            questionHeading.setVisibility(View.VISIBLE);
-            question.setVisibility(View.VISIBLE);
-            answerChoicesGroup.setVisibility(View.VISIBLE);
-            hint.setVisibility(View.VISIBLE);
-            hintText.setVisibility(View.INVISIBLE);
-            submitAnswer.setVisibility(View.VISIBLE);
-            next.setVisibility(View.INVISIBLE);
-
-            // hide result screen elements
-            findViewById(R.id.text_challengeCompleted).setVisibility(View.GONE);
-            scoreResult.setVisibility(View.GONE);
-            resultFeedback.setVisibility(View.GONE);
-            repeatChallenge.setVisibility(View.GONE);
-            backToHomepage.setVisibility(View.GONE);
-
-            showNextQuestion();
-        }
-
-        if(v == backToHomepage) {
-
-            Intent intent = new Intent(QuestionActivity.this, Homepage.class);
+            Intent intent = new Intent(PreTestActivity.this, Homepage.class);
             startActivity(intent);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             finish();
         }
-
 
     }
 
@@ -267,8 +221,6 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
     private void showAnswer(){
 
         submitAnswer.setVisibility(View.INVISIBLE);
-        hint.setVisibility(View.INVISIBLE);
-        hintText.setVisibility(View.INVISIBLE);
         next.setVisibility(View.VISIBLE);
 
         for(int i = 0; i < answerChoicesGroup.getChildCount(); i++) {
@@ -276,6 +228,11 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         }
 
         questionNumber++;
+
+        // questions for one section is complete
+        if(questionNumber % 10 == 0) {
+            sectionNumber++;
+        }
     }
 
     /**
@@ -287,51 +244,26 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         questionHeading.setVisibility(View.GONE);
         question.setVisibility(View.GONE);
         answerChoicesGroup.setVisibility(View.GONE);
-        hint.setVisibility(View.GONE);
-        hintText.setVisibility(View.GONE);
         submitAnswer.setVisibility(View.GONE);
         next.setVisibility(View.GONE);
 
-        // initialize buttons and set on click listener
-        repeatChallenge = findViewById(R.id.button_repeatChallenge);
-        backToHomepage = findViewById(R.id.button_backToHomepage);
-        repeatChallenge.setOnClickListener(this);
-        backToHomepage.setOnClickListener(this);
-
-        // show result screen elements
-        findViewById(R.id.text_challengeCompleted).setVisibility(View.VISIBLE);
-        scoreResult = findViewById(R.id.text_scoreResult);
-        scoreResult.setVisibility(View.VISIBLE);
-        resultFeedback = findViewById(R.id.text_resultFeedback);
-        resultFeedback.setVisibility(View.VISIBLE);
-        repeatChallenge.setVisibility(View.VISIBLE);
-        backToHomepage.setVisibility(View.VISIBLE);
-
-        //calculates percentage complete then converts to int
-        percent = (score/140.0)*100.0 + percent;
-        progressStatus = (int)percent;
-        Homepage.progressStatus = (int)percent;
-        scorePercent = (score/questionSet.length)*100.0;
-        //sends progress to firebase
-        Progress.ProgressStatus(progressStatus);
+        // show results related elements
+        findViewById(R.id.text_preTestCompleted).setVisibility(View.VISIBLE);
+        findViewById(R.id.tableLayout_sectionsAndScores).setVisibility(View.VISIBLE);
+        sectionsUnlocked = findViewById(R.id.text_sectionsUnlocked);
+        sectionsUnlocked.setVisibility(View.VISIBLE);
+        exitTest = findViewById(R.id.button_exitTest);
+        exitTest.setVisibility(View.VISIBLE);
+        exitTest.setOnClickListener(this);
 
         // show score
         DecimalFormat scoreFormat = new DecimalFormat("##.##%");
-        double scorePercentage = (score / 1.0) / questionSet.length;
-        scoreResult.setText("Results\n\n" + score + "/" + questionSet.length + "\n\n" + scoreFormat.format(scorePercentage));
+        ((TextView) findViewById(R.id.text_section1Score)).setText(scoreFormat.format(scores[0] / MAX_SECTION_SCORE));
+        ((TextView) findViewById(R.id.text_section2Score)).setText(scoreFormat.format(scores[1] / MAX_SECTION_SCORE));
+        ((TextView) findViewById(R.id.text_section3Score)).setText(scoreFormat.format(scores[2] / MAX_SECTION_SCORE));
+        ((TextView) findViewById(R.id.text_section4Score)).setText(scoreFormat.format(scores[3] / MAX_SECTION_SCORE));
+        ((TextView) findViewById(R.id.text_section5Score)).setText(scoreFormat.format(scores[4] / MAX_SECTION_SCORE));
+        ((TextView) findViewById(R.id.text_section6Score)).setText(scoreFormat.format(scores[5] / MAX_SECTION_SCORE));
 
-        if(scorePercentage >= 1.0) {
-            resultFeedback.setText("Excellent Job!");
-        }
-        else if(scorePercentage >= 0.8) {
-            resultFeedback.setText("Nice job!");
-        }
-        else {
-            resultFeedback.setText("An 80% or better is required to unlock the next lesson");
-        }
     }
-    public static void setUnlock(){
-        Unlock.UnlockLevel((int)scorePercent,lesson,level);
-    }
-
 }

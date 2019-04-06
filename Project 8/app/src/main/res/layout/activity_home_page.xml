@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Homepage"
+    android:background="@color/alice_blue"
     tools:context=".Homepage"
     tools:layout_editor_absoluteY="81dp">
 
     <ScrollView
         android:id="@+id/scroll_homepage"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        android:layout_above="@id/tabLayout_homepage">
 
         <LinearLayout
             android:id="@+id/layout_homepage"
@@ -36,9 +31,7 @@
                 android:text="@string/homepageTitle"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@color/Black"
-                android:textSize="32sp"
-                tools:layout_editor_absoluteX="92dp"
-                tools:layout_editor_absoluteY="22dp" />
+                android:textSize="32sp" />
 
             <TextView
                 android:id="@+id/text_progress"
@@ -46,9 +39,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/progress"
                 android:textColor="@color/Black"
-                android:textSize="20sp"
-                tools:layout_editor_absoluteX="165dp"
-                tools:layout_editor_absoluteY="93dp" />
+                android:textSize="20sp"/>
 
             <ProgressBar
                 android:id="@+id/widget_progressBar"
@@ -65,13 +56,13 @@
 
             <TextView
                 android:id="@+id/text_elementaryProg"
-                android:layout_width="wrap_content"
-                android:layout_height="50sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
                 android:text="@string/elementaryProgramming"
                 android:textColor="@color/Black"
                 android:textSize="32sp"
-                tools:layout_editor_absoluteX="12dp"
-                tools:layout_editor_absoluteY="176dp" />
+                android:textAlignment="center" />
 
             <Button
                 android:id="@+id/button_ePLesson1"
@@ -79,9 +70,7 @@
                 android:layout_height="53dp"
                 android:layout_marginBottom="5dp"
                 android:background="@color/main"
-                android:text="@string/elementarylesson1"
-                tools:layout_editor_absoluteX="8dp"
-                tools:layout_editor_absoluteY="266dp" />
+                android:text="@string/elementarylesson1" />
 
             <Button
                 android:id="@+id/button_ePLesson2"
@@ -89,28 +78,24 @@
                 android:layout_height="53dp"
                 android:layout_marginBottom="5dp"
                 android:background="@color/main"
-                android:text="@string/elementarylesson2"
-                tools:layout_editor_absoluteX="132dp"
-                tools:layout_editor_absoluteY="266dp" />
+                android:text="@string/elementarylesson2" />
 
             <Button
                 android:id="@+id/button_ePLesson3"
                 android:layout_width="125dp"
                 android:layout_height="53dp"
                 android:background="@color/main"
-                android:text="@string/selectionslesson3"
-                tools:layout_editor_absoluteX="254dp"
-                tools:layout_editor_absoluteY="266dp" />
+                android:text="@string/selectionslesson3" />
 
             <TextView
                 android:id="@+id/text_selection"
-                android:layout_width="wrap_content"
-                android:layout_height="50sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
                 android:text="@string/selection"
                 android:textColor="@color/Black"
                 android:textSize="32sp"
-                tools:layout_editor_absoluteX="126dp"
-                tools:layout_editor_absoluteY="332dp" />
+                android:textAlignment="center" />
 
             <Button
                 android:id="@+id/button_sLesson1"
@@ -144,13 +129,16 @@
                 tools:layout_editor_absoluteX="251dp"
                 tools:layout_editor_absoluteY="404dp" />
 
+
             <TextView
                 android:id="@+id/text_functions_char_string"
-                android:layout_width="wrap_content"
-                android:layout_height="120sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
                 android:text="@string/functions"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@color/Black"
+                android:textAlignment="center"
                 android:textSize="32sp" />
 
             <Button
@@ -199,10 +187,12 @@
 
             <TextView
                 android:id="@+id/text_loops"
-                android:layout_width="wrap_content"
-                android:layout_height="50sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
                 android:text="@string/loops"
                 android:textColor="@color/Black"
+                android:textAlignment="center"
                 android:textSize="32sp" />
 
             <Button
@@ -233,11 +223,13 @@
 
             <TextView
                 android:id="@+id/text_methods"
-                android:layout_width="wrap_content"
-                android:layout_height="50sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
                 android:text="@string/method"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@color/Black"
+                android:textAlignment="center"
                 android:textSize="32sp" />
 
             <Button
@@ -260,11 +252,13 @@
 
             <TextView
                 android:id="@+id/text_arrays"
-                android:layout_width="wrap_content"
-                android:layout_height="50sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
                 android:text="@string/arrays"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@color/Black"
+                android:textAlignment="center"
                 android:textSize="32sp" />
 
             <Button
@@ -287,4 +281,31 @@
         </LinearLayout>
     </ScrollView>
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout_homepage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/tab_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/homeTab" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/tab_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profileTab" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/tab_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/optionsTab" />
+    </android.support.design.widget.TabLayout>
+
+
+</RelativeLayout>
