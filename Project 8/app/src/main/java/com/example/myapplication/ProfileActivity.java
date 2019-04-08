@@ -44,6 +44,26 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         }
     }
 
+    @Override
+    public void onBackPressed() {
+
+        // back to homepage
+        if(header.getText().toString().equals("Profile")) {
+            finish();
+        }
+
+        // back to profile screen
+        else {
+            this.recreate();
+
+            // reset faq and feedback/bug reporting screen
+            if(header.getText().toString().equals("Achievements")) {
+                findViewById(R.id.scrollView_achievements).scrollTo(0, 0);
+            }
+        }
+
+    }
+
     private void showAchievementsScreen() {
 
         header.setText("Achievements");
