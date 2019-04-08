@@ -13,23 +13,18 @@
         android:layout_marginVertical="@dimen/activity_vertical_margin"
         android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
         android:layout_alignParentTop="true"
-        android:text="Profile"
+        android:text="@string/Profile"
         android:textAlignment="center"
         android:textColor="@color/Black"
         android:textSize="30sp"
         android:textStyle="bold"
         android:fontFamily="sans-serif" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center">
-
         <Button
             android:id="@+id/button_Progress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_above="@id/button_Achievements"
             android:layout_marginVertical="@dimen/activity_vertical_margin"
             android:background="@color/colorAccent"
             android:text="Progress" />
@@ -38,6 +33,7 @@
             android:id="@+id/button_Achievements"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:layout_marginVertical="@dimen/activity_vertical_margin"
             android:background="@color/colorAccent"
             android:text="Achievements" />
@@ -46,9 +42,95 @@
             android:id="@+id/button_Reset"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/button_Achievements"
             android:layout_marginVertical="@dimen/activity_vertical_margin"
             android:background="@color/Black"
             android:text="Reset"
             android:textColor="@color/colorAccent" />
-    </LinearLayout>
+
+     <!--Achievements -->
+
+    <ScrollView
+        android:id="@+id/scrollView_achievements"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_ProfileHeader"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/imageView_medal1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                app:srcCompat="@drawable/medal1"
+                android:contentDescription="Medal 1"/>
+
+            <ImageView
+                android:id="@+id/imageView_medal2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                app:srcCompat="@drawable/medal2"
+                android:contentDescription="Medal 2"/>
+
+            <ImageView
+                android:id="@+id/imageView_medal3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                app:srcCompat="@drawable/medal3"
+                android:contentDescription="Medal 3"/>
+
+            <ImageView
+                android:id="@+id/imageView_medal4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                app:srcCompat="@drawable/medal4"
+                android:contentDescription="Medal 4"/>
+
+            <ImageView
+                android:id="@+id/imageView_medal5"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                app:srcCompat="@drawable/medal5"
+                android:contentDescription="Medal 5"/>
+
+            <ImageView
+                android:id="@+id/imageView_medal6"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                app:srcCompat="@drawable/medal6"
+                android:contentDescription="Medal 6"/>
+
+            <ImageView
+                android:id="@+id/imageView_perfectionistMedal"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                app:srcCompat="@drawable/perfectionist_medal"
+                android:contentDescription="Perfectionist Medal"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- END of Achievements -->
+
 </RelativeLayout>

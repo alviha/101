@@ -48,6 +48,8 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
         header.setText("Achievements");
         header.setTypeface(Typeface.DEFAULT);
+
+        findViewById(R.id.scrollView_achievements).setVisibility(View.VISIBLE);
     }
 
     private void hideProfileMainOptions() {
