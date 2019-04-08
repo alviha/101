@@ -1,51 +1,277 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProfileActivity">
 
-    <LinearLayout
-        android:layout_width="395dp"
-        android:layout_height="715dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+    <TextView
+        android:id="@+id/text_ProfileHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:fontFamily="sans-serif"
+        android:text="@string/Profile"
+        android:textAlignment="center"
+        android:textColor="@color/Black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/text_ProfileHeader"
+    <Button
+        android:id="@+id/button_Progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/button_Achievements"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:background="@color/colorAccent"
+        android:text="@string/progress" />
+
+    <Button
+        android:id="@+id/button_Achievements"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:background="@color/colorAccent"
+        android:text="@string/achievements" />
+
+    <Button
+        android:id="@+id/button_Reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_Achievements"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:background="@color/Black"
+        android:text="@string/reset"
+        android:textColor="@color/colorAccent" />
+
+    <!--Achievements -->
+
+    <ScrollView
+        android:id="@+id/scrollView_achievements"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/text_ProfileHeader"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:visibility="gone">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:text="Profile"
-            android:textAlignment="center"
-            android:textColor="@color/Black"
-            android:textSize="24sp" />
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/button_Progress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@color/colorAccent"
-            android:text="Progress" />
+            <ImageView
+                android:id="@+id/imageView_medal1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:alpha="0.2"
+                android:contentDescription="Medal 1"
+                app:srcCompat="@drawable/medal1" />
 
-        <Button
-            android:id="@+id/button_Achievements"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@color/colorAccent"
-            android:text="Achievements" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:fontFamily="sans-serif"
+                android:text="@string/novice"
+                android:textAlignment="center"
+                android:textColor="@color/Black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/button_Reset"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@color/Black"
-            android:text="Reset"
-            android:textColor="@color/colorAccent" />
-    </LinearLayout>
-</android.support.constraint.ConstraintLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:fontFamily="sans-serif"
+                android:text="@string/medal1"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imageView_medal2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:alpha="0.2"
+                android:contentDescription="Medal 2"
+                app:srcCompat="@drawable/medal2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:fontFamily="sans-serif"
+                android:text="@string/rookie"
+                android:textAlignment="center"
+                android:textColor="@color/Black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:fontFamily="sans-serif"
+                android:text="@string/medal2"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imageView_medal3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:alpha="0.2"
+                android:contentDescription="Medal 3"
+                app:srcCompat="@drawable/medal3" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:fontFamily="sans-serif"
+                android:text="@string/intermediate"
+                android:textAlignment="center"
+                android:textColor="@color/Black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:fontFamily="sans-serif"
+                android:text="@string/medal3"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imageView_medal4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:alpha="0.2"
+                android:contentDescription="Medal 4"
+                app:srcCompat="@drawable/medal4" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:fontFamily="sans-serif"
+                android:text="@string/proficient"
+                android:textAlignment="center"
+                android:textColor="@color/Black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:fontFamily="sans-serif"
+                android:text="@string/medal4"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imageView_medal5"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:alpha="0.2"
+                android:contentDescription="Medal 5"
+                app:srcCompat="@drawable/medal5" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:fontFamily="sans-serif"
+                android:text="@string/advanced"
+                android:textAlignment="center"
+                android:textColor="@color/Black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:fontFamily="sans-serif"
+                android:text="@string/medal5"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imageView_medal6"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:alpha="0.2"
+                android:contentDescription="Medal 6"
+                app:srcCompat="@drawable/medal6" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:fontFamily="sans-serif"
+                android:text="@string/expert"
+                android:textAlignment="center"
+                android:textColor="@color/Black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:fontFamily="sans-serif"
+                android:text="@string/medal6"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imageView_perfectionistMedal"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:alpha="0.2"
+                android:contentDescription="Perfectionist Medal"
+                app:srcCompat="@drawable/perfectionist_medal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:fontFamily="sans-serif"
+                android:text="@string/perfectionist"
+                android:textAlignment="center"
+                android:textColor="@color/Black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:fontFamily="sans-serif"
+                android:text="@string/perfectionistMedal"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- END of Achievements -->
+
+</RelativeLayout>
