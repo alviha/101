@@ -48,6 +48,21 @@
         android:text="@string/reset"
         android:textColor="@color/colorAccent" />
 
+    <!--Progress-->
+
+    <ImageView
+        android:id="@+id/image_certificateOfCompletion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:contentDescription="Certificate of Completion"
+        android:visibility="gone"
+        app:srcCompat="@drawable/certificate_of_completion" />
+
+    <!--END of Progress-->
+
+
     <!--Achievements -->
 
     <ScrollView

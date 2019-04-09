@@ -33,7 +33,8 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
 
         if(v == progress) {
-            // TODO
+            hideProfileMainOptions();
+            showProgressScreen();
         }
         else if(v == achievements) {
             hideProfileMainOptions();
@@ -64,12 +65,22 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
     }
 
+    private void showProgressScreen() {
+
+        header.setText(getResources().getString(R.string.progress));
+        header.setTypeface(Typeface.DEFAULT);
+
+        findViewById(R.id.image_certificateOfCompletion).setVisibility(View.VISIBLE);
+    }
+
     private void showAchievementsScreen() {
 
-        header.setText("Achievements");
+        header.setText(getResources().getString(R.string.achievements));
         header.setTypeface(Typeface.DEFAULT);
 
         findViewById(R.id.scrollView_achievements).setVisibility(View.VISIBLE);
+
+        // TODO: set alpha of ImageViews based on progress
     }
 
     private void hideProfileMainOptions() {
