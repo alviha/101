@@ -1,9 +1,13 @@
 package com.example.myapplication;
 
+import android.Manifest;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
 import android.os.Environment;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -52,26 +56,6 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         else if(v == reset) {
             // TODO
         }
-        else if(v == findViewById(R.id.image_certificateOfCompletion)) {
-            Bitmap image = BitmapFactory.decodeResource(getResources(), R.drawable.certificate_of_completion);
-
-            // path to downloads directory
-            File path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
-            File file = new File(path, "certificate_of_completion.png");
-
-            // save image to downloads directory
-            OutputStream outputStream = null;
-            try {
-                outputStream = new FileOutputStream(file);
-                image.compress(Bitmap.CompressFormat.PNG, 100, outputStream);
-                outputStream.flush();
-                outputStream.close();
-                Toast.makeText(ProfileActivity.this, "Saved successfully", Toast.LENGTH_SHORT);
-            } catch (java.io.IOException e) {
-                Toast.makeText(ProfileActivity.this, "Saved failed. Please try again.", Toast.LENGTH_SHORT);
-                return;
-            }
-        }
     }
 
     @Override
@@ -100,10 +84,54 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         header.setTypeface(Typeface.DEFAULT);
 
         findViewById(R.id.image_certificateOfCompletion).setVisibility(View.VISIBLE);
-        findViewById(R.id.image_certificateOfCompletion).setOnClickListener(this);
         findViewById(R.id.text_saveImagePrompt).setVisibility(View.VISIBLE);
 
-        // save image code in OnClick()
+        // certificate image is clicked
+        findViewById(R.id.image_certificateOfCompletion).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // request permission to save files
+                ActivityCompat.requestPermissions(ProfileActivity.this, new String[] {Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+
+                // setup builder
+                AlertDialog.Builder builder = new AlertDialog.Builder(ProfileActivity.this);
+                builder.setTitle("Save Certificate?");
+                builder.setMessage("Would you like to save your certificate of completion?");
+
+                // save image
+                builder.setPositiveButton("Save", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Bitmap image = BitmapFactory.decodeResource(getResources(), R.drawable.certificate_of_completion);
+
+                        // path to downloads directory
+                        File path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
+                        File file = new File(path, "certificate_of_completion.png");
+
+                        // save image to downloads directory
+                        OutputStream outputStream = null;
+                        try {
+                            outputStream = new FileOutputStream(file);
+                            image.compress(Bitmap.CompressFormat.PNG, 100, outputStream);
+                            outputStream.flush();
+                            outputStream.close();
+                            Toast.makeText(ProfileActivity.this, "Saved successfully", Toast.LENGTH_SHORT).show();
+                        } catch (java.io.IOException e) {
+                            Toast.makeText(ProfileActivity.this, "Saved failed. Please try again.", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
+                    }
+                });
+
+                // do nothing
+                builder.setNegativeButton("Don't Save", null);
+
+                // show dialog
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
     }
 
     private void showAchievementsScreen() {
