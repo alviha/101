@@ -8,6 +8,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
 import android.media.MediaScannerConnection;
 import android.os.Environment;
+import android.provider.ContactsContract;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -55,7 +56,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             showAchievementsScreen();
         }
         else if(v == reset) {
-            // TODO
+            resetProgress();
         }
     }
 
@@ -95,7 +96,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
                 // request permission to save files
                 ActivityCompat.requestPermissions(ProfileActivity.this, new String[] {Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
 
-                // setup builder
+                // setup dialog
                 AlertDialog.Builder builder = new AlertDialog.Builder(ProfileActivity.this);
                 builder.setTitle("Save Certificate?");
                 builder.setMessage("Would you like to save your certificate of completion?");
@@ -151,5 +152,30 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         progress.setVisibility(View.GONE);
         achievements.setVisibility(View.GONE);
         reset.setVisibility(View.GONE);
+    }
+
+    private void resetProgress() {
+
+        // setup dialog
+        AlertDialog.Builder builder = new AlertDialog.Builder(ProfileActivity.this);
+        builder.setTitle("Reset Progress?");
+        builder.setMessage("Are you sure you want to reset your progress?");
+
+        // save image
+        builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // TODO: reset progress data
+                Toast.makeText(ProfileActivity.this, "Progress has been reset", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        });
+
+        // do nothing
+        builder.setNegativeButton("Cancel", null);
+
+        // show dialog
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }
