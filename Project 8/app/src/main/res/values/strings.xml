@@ -108,6 +108,8 @@
     <string name="exitTest">Exit Test</string>
 
     <!-- Strings related to the profile activity -->
+    <string name="saveCertificate">Click the image to save to your phone.</string>
+
     <string name="achievements">Achievements</string>
     <string name="reset">Reset</string>
     <string name="medal1">Mastered the Elementary Programming Level</string>

@@ -56,9 +56,23 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
         android:contentDescription="Certificate of Completion"
         android:visibility="gone"
         app:srcCompat="@drawable/certificate_of_completion" />
+
+    <TextView
+        android:id="@+id/text_saveImagePrompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_certificateOfCompletion"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:fontFamily="sans-serif"
+        android:text="@string/saveCertificate"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:visibility="gone" />
 
     <!--END of Progress-->
 
