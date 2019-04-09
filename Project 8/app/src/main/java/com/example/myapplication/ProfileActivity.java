@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
+import android.media.MediaScannerConnection;
 import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -108,6 +109,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
                         // path to downloads directory
                         File path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
                         File file = new File(path, "certificate_of_completion.png");
+                        MediaScannerConnection.scanFile(ProfileActivity.this, new String[] { file.getPath() }, new String[] { "image/png" }, null);
 
                         // save image to downloads directory
                         OutputStream outputStream = null;
