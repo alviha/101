@@ -73,11 +73,9 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
         myPref = getSharedPreferences("PREFERENCE", MODE_PRIVATE);
         //connects progress bar variable to the progress bar on homepage
         progressBar = findViewById(R.id.widget_progressBar);
-
         //gets the progress value from the questions and passes it on to the progress bar
-        progressStatus = myPref.getInt("total",0);//QuestionActivity.getProgressStatus();
+        progressStatus = myPref.getInt("total",0);
         progressBar.setProgress(progressStatus);
-        //progressBar.incrementProgressBy(progressStatus);
 
 
     }

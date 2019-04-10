@@ -6,11 +6,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class LessonActivity extends AppCompatActivity implements View.OnClickListener {
 
     // UI elements
-    Button button_next;
+    Button toNextQuestion, toHomepage;
+
+    TextView nameOfLesson, intro, body;
+
+    private String[] lessonSet;
+
 
     // level and lesson data
     private Library.Levels level;
@@ -23,12 +29,21 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lesson);
 
-        button_next = findViewById(R.id.button_next);
-        button_next.setOnClickListener(this);
+        //Initialize UI elements
+        nameOfLesson = findViewById(R.id.text_lessonName);
+        body = findViewById(R.id.text_lessonBody);
+        intro = findViewById(R.id.text_introduction);
+        toNextQuestion = findViewById(R.id.button_toNextQuestion);
+        toHomepage = findViewById(R.id.button_toHomepage);
+
+        //Set listener for buttons
+        toNextQuestion.setOnClickListener(this);
+        toHomepage.setOnClickListener(this);
 
         // retrieve lesson and level data from previous activity
         level = (Library.Levels) getIntent().getSerializableExtra("LEVEL");
         lesson = getIntent().getIntExtra("LESSON", 0);
+<<<<<<< HEAD
         //retrieve preferences
         myPref = getSharedPreferences("PREFERENCE", MODE_PRIVATE);
         //finds out if current level is unlocked
@@ -38,6 +53,19 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
         //unlocks first level
         if(lesson==0&&level==Library.Levels.ELEMENTARY_PROGRAMMING){
             button_next.setEnabled(true);
+=======
+
+        lessonSet = Library.getSampleLessons(level,lesson);
+
+        setLessonText();
+
+        //finds out if current level is unlocked
+        if(Unlock.isUnlocked(lesson,level)){
+            toNextQuestion.setEnabled(true);
+        }
+        else if(lesson==0&&level==Library.Levels.ELEMENTARY_PROGRAMMING){//(Library.Levels.ELEMENTARY_PROGRAMMING.equals(0)){
+            toNextQuestion.setEnabled(true);
+>>>>>>> b688c5c06e6895f7dd362a9016b06622af8fe0bc
         }
     }
 
@@ -45,7 +73,7 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v) {
 
         // next button is clicked
-        if(v == button_next){
+        if(v == toNextQuestion){
 
             // store level and lesson data in the intent
             Intent intent = new Intent(LessonActivity.this, QuestionActivity.class);
@@ -55,5 +83,16 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
             startActivity(intent);
             finish();
         }
+        if (v == toHomepage){
+
+            startActivity(new Intent(LessonActivity.this, Homepage.class));
+        }
+    }
+
+    private void setLessonText(){
+
+        nameOfLesson.setText(lessonSet[0]);
+        intro.setText(lessonSet[1]);
+        body.setText(lessonSet[2]);
     }
 }

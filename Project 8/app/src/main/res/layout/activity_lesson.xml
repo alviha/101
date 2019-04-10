@@ -37,6 +37,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/text_lessonBody"
                 android:layout_width="match_parent"
                 android:layout_height="331dp"
                 android:layout_weight="3"
@@ -46,7 +47,7 @@
                 android:textSize="24sp" />
 
             <Button
-                android:id="@+id/button_next"
+                android:id="@+id/button_toNextQuestion"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -60,7 +61,7 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_toHomepage"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"

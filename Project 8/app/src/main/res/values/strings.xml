@@ -107,4 +107,24 @@
     <string name="preTestCompleted">Pre-Test Completed!</string>
     <string name="exitTest">Exit Test</string>
 
+    <!-- Strings related to the profile activity -->
+    <string name="saveCertificate">Click the image to save to your phone.</string>
+
+    <string name="achievements">Achievements</string>
+    <string name="reset">Reset</string>
+    <string name="medal1">Mastered the Elementary Programming Level</string>
+    <string name="medal2">Mastered the Selections Level</string>
+    <string name="medal3">Mastered the Mathematical Functions, Characters and Strings Level</string>
+    <string name="medal4">Mastered the Loops Level</string>
+    <string name="medal5">Mastered the Methods Level</string>
+    <string name="medal6">Mastered the Single-Dimensional Arrays Level</string>
+    <string name="perfectionistMedal">Completed all challenges with a perfect score</string>
+    <string name="novice">Novice</string>
+    <string name="rookie">Rookie</string>
+    <string name="intermediate">Intermediate</string>
+    <string name="proficient">Proficient</string>
+    <string name="advanced">Advanced</string>
+    <string name="expert">Expert</string>
+    <string name="perfectionist">Perfectionist</string>
+
 </resources>
