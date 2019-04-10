@@ -47,7 +47,6 @@
                 android:layout_width="203dp"
                 android:layout_height="32dp"
                 android:importantForAutofill="auto"
-                android:indeterminate="false"
                 android:max="@integer/progressMax"
                 android:progressTint="@color/ProgressBar"
                 android:saveEnabled="true"

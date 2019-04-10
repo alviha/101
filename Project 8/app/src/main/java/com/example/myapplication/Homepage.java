@@ -1,15 +1,13 @@
 package com.example.myapplication;
 
-import android.app.ActionBar;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
-import android.widget.Toast;
-
 
 
 public class Homepage extends AppCompatActivity implements View.OnClickListener {
@@ -24,6 +22,7 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
     private ProgressBar progressBar;
     private TabLayout tabLayout;
     public static int progressStatus;
+    private SharedPreferences myPref;
 
 
     @Override
@@ -70,16 +69,15 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
             }
         });
 
+        //retrieves preferences
+        myPref = getSharedPreferences("PREFERENCE", MODE_PRIVATE);
         //connects progress bar variable to the progress bar on homepage
         progressBar = findViewById(R.id.widget_progressBar);
 
         //gets the progress value from the questions and passes it on to the progress bar
-        progressStatus = Progress.ProgressValue();
-        //progressStatus = QuestionActivity.progressStatus;
+        progressStatus = myPref.getInt("total",0);//QuestionActivity.getProgressStatus();
         progressBar.setProgress(progressStatus);
-        progressBar.incrementProgressBy(progressStatus);
-        //takes information from question activity and unlocks the next level
-        QuestionActivity.setUnlock();
+        //progressBar.incrementProgressBy(progressStatus);
 
 
     }
