@@ -2209,6 +2209,118 @@ public final class Library {
 
     };
 
+    private static String[][] elementaryProgrammingSampleLessons = {
+
+            // Lesson for Intro
+            {
+                    "Introductory Lesson",
+                    "What is programming?",
+                    "Programming is the process of breaking down a large, complex task into smaller and smaller subtasks. The process continues until the subtasks are simple enough to be performed with the basic instructions provided by the computer.",
+
+            },
+
+            // Lesson for Numeric Data types and operations
+            {
+                    "Numeric Data Types and Operations",
+                    "What are numeric data types and operations?",
+                    "What is the representation of the third element in an array called a?",
+
+            }
+    };
+
+    private static String[][] selectionsSampleLessons = {
+
+            // Lesson for Boolean data types and If statements
+            {
+                    "Boolean Data Types and If Statements",
+                    "What are boolean data types and ff statements?",
+                    "A boolean data type is a data type that has a value of either true or false. An if statement is a boolean conditional expression that if proved true, executes a statement or series of statements inside its corresponding braces.",
+
+            },
+
+            // Lesson for Switch statements and Conditional expressions
+            {
+                    "Switch statements and Conditional Expressions",
+                    "What are switch statements and conditional expressions?",
+                    "A conditional expression is an expression that gets executed only if the boolean conditional statement listed before it is true.",
+
+            }
+    };
+
+    private static String[][] functionsCharactersStringsSampleLessons = {
+
+            // Lesson for Common mathematical functions
+            {
+                    "Common Mathematical Functions",
+                    "What are common mathematical functions?",
+                    "Common mathematical functions in java are functions more advanced than addition, subtraction, multiplication and division. These methods come from the java.lang.Math class and can be used for functions such as square root, sine, absolute value, etc.",
+
+            },
+
+            // Character data type and operations
+            {
+                    "Character Data Type and Operations",
+                    "What are character data type and operations?",
+                    "A character is a primitive type that stores an individual character ('x','a',etc.) rather than strings of them. The operations are simply the various functions that can be performed on them.",
+
+            }
+    };
+
+    private static String[][] loopsSampleLessons = {
+
+            // Lessons for While loops
+            {
+                    "While Loops",
+                    "What are while loops?",
+                    "A while loop is a flow that repeatedly executes a statement or series of statements until the boolean condition stated before it is no longer true.",
+            },
+
+            // Lesson for For loops
+            {
+                    "For Loops",
+                    "What are for loops?",
+                    "A for loop is a loop that executes for a specified number of iterations. A typical for loop has three components - the initializer, the condition and the update. These three components are stated before the body of the loop.",
+
+            }
+    };
+
+    private static String[][] methodsSampleLessons = {
+
+            // Lesson for defining and calling methods/void methods
+            {
+                    "Defining and Calling Methods/Void Methods",
+                    "What does it mean to define and/or call a method?",
+                    "Defining a method is when a method is created by specifying its access type, return type, name, parameters and body. A method call is when a method name is stated and the appropriate parameters are supplied to it. This takes the previously created method and tells it to execute its body and return the resulting value if appropriate.",
+
+            },
+
+            // Lesson for Overloading methods
+            {
+                    "Overloading Methods",
+                    "What does it mean to overload a method?",
+                    "Overloading is when more than one method is created with the same name.",
+
+            }
+    };
+
+    private static String[][] singleDimensionalArraysSampleLessons = {
+
+            // Lesson for array basics
+            {
+                    "Array Basics",
+                    "What are Array Basics?",
+                    "This lesson will present the basics of arrays such as their declaration, initialization and the basic functions performed on them.",
+            },
+
+            // Lesson for copying arrays
+            {
+                    "Copying Arrays",
+                    "What does it mean to copy an array?",
+                    "Copying an array is when the values from one array are copied and a new array is created with these previously copied values.",
+
+            }
+    };
+
     /**
      * Return questions from a level's lesson
      *
@@ -2281,6 +2393,23 @@ public final class Library {
     public static AnswerChoice[][] getPreTestAnswerChoices() {
 
         return preTestAnswerChoices;
+    }
+
+    public static String[] getSampleLessons(Levels level, int lesson) {
+
+        if (level == Levels.ELEMENTARY_PROGRAMMING) {
+            return elementaryProgrammingSampleLessons[lesson];
+        } else if (level == Levels.SELECTIONS) {
+            return selectionsSampleLessons[lesson];
+        } else if (level == Levels.FUNCTIONS_CHARACTERS_STRINGS) {
+            return functionsCharactersStringsSampleLessons[lesson];
+        } else if (level == Levels.LOOPS) {
+            return loopsSampleLessons[lesson];
+        } else if (level == Levels.METHODS) {
+            return methodsSampleLessons[lesson];
+        } else {
+            return singleDimensionalArraysSampleLessons[lesson];
+        }
     }
 }
 
