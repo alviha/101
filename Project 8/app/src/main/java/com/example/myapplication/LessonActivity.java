@@ -43,56 +43,48 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
         // retrieve lesson and level data from previous activity
         level = (Library.Levels) getIntent().getSerializableExtra("LEVEL");
         lesson = getIntent().getIntExtra("LESSON", 0);
-<<<<<<< HEAD
         //retrieve preferences
         myPref = getSharedPreferences("PREFERENCE", MODE_PRIVATE);
         //finds out if current level is unlocked
-        if(myPref.getBoolean(Progress.unlockName(lesson,level),false)){//QuestionActivity.getUnlock(context,lesson,level)){
-            button_next.setEnabled(true);
+        if (myPref.getBoolean(Progress.unlockName(lesson, level), false)) {
+            toNextQuestion.setEnabled(true);
         }
         //unlocks first level
-        if(lesson==0&&level==Library.Levels.ELEMENTARY_PROGRAMMING){
-            button_next.setEnabled(true);
-=======
-
-        lessonSet = Library.getSampleLessons(level,lesson);
-
-        setLessonText();
-
-        //finds out if current level is unlocked
-        if(Unlock.isUnlocked(lesson,level)){
+        if (lesson == 0 && level == Library.Levels.ELEMENTARY_PROGRAMMING) {
             toNextQuestion.setEnabled(true);
-        }
-        else if(lesson==0&&level==Library.Levels.ELEMENTARY_PROGRAMMING){//(Library.Levels.ELEMENTARY_PROGRAMMING.equals(0)){
-            toNextQuestion.setEnabled(true);
->>>>>>> b688c5c06e6895f7dd362a9016b06622af8fe0bc
-        }
-    }
 
-    @Override
-    public void onClick(View v) {
+            lessonSet = Library.getSampleLessons(level, lesson);
 
-        // next button is clicked
-        if(v == toNextQuestion){
+            setLessonText();
 
-            // store level and lesson data in the intent
-            Intent intent = new Intent(LessonActivity.this, QuestionActivity.class);
-            intent.putExtra("LEVEL", level);
-            intent.putExtra("LESSON", lesson);
-
-            startActivity(intent);
-            finish();
-        }
-        if (v == toHomepage){
-
-            startActivity(new Intent(LessonActivity.this, Homepage.class));
         }
     }
 
-    private void setLessonText(){
 
-        nameOfLesson.setText(lessonSet[0]);
-        intro.setText(lessonSet[1]);
-        body.setText(lessonSet[2]);
+        @Override
+        public void onClick(View v){
+
+            // next button is clicked
+            if (v == toNextQuestion) {
+
+                // store level and lesson data in the intent
+                Intent intent = new Intent(LessonActivity.this, QuestionActivity.class);
+                intent.putExtra("LEVEL", level);
+                intent.putExtra("LESSON", lesson);
+
+                startActivity(intent);
+                finish();
+            }
+            if (v == toHomepage) {
+
+                startActivity(new Intent(LessonActivity.this, Homepage.class));
+            }
+        }
+
+        private void setLessonText(){
+
+            nameOfLesson.setText(lessonSet[0]);
+            intro.setText(lessonSet[1]);
+            body.setText(lessonSet[2]);
+        }
     }
-}
