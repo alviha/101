@@ -45,6 +45,11 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
         lesson = getIntent().getIntExtra("LESSON", 0);
         //retrieve preferences
         myPref = getSharedPreferences("PREFERENCE", MODE_PRIVATE);
+        
+        lessonSet = Library.getSampleLessons(level, lesson);
+
+        setLessonText();
+
         //finds out if current level is unlocked
         if (myPref.getBoolean(Progress.unlockName(lesson, level), false)) {
             toNextQuestion.setEnabled(true);
@@ -52,11 +57,6 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
         //unlocks first level
         if (lesson == 0 && level == Library.Levels.ELEMENTARY_PROGRAMMING) {
             toNextQuestion.setEnabled(true);
-
-            lessonSet = Library.getSampleLessons(level, lesson);
-
-            setLessonText();
-
         }
     }
 
