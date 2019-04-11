@@ -21,6 +21,15 @@
         android:textAlignment="center" />
 
     <Button
+        android:id="@+id/button_appTutorial"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:layout_above="@id/button_faqs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="@string/appTutorial" />
+
+    <Button
         android:id="@+id/button_faqs"
         android:layout_marginVertical="@dimen/activity_vertical_margin"
         android:layout_above="@id/button_feedback"
