@@ -76,8 +76,7 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
                 finish();
             }
             if (v == toHomepage) {
-
-                startActivity(new Intent(LessonActivity.this, Homepage.class));
+                finish();
             }
         }
 
