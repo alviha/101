@@ -194,6 +194,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         if (v == backToHomepage) {
 
             Intent intent = new Intent(QuestionActivity.this, Homepage.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
             finish();
         }
