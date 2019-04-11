@@ -97,6 +97,7 @@
     <!-- Strings related to the options activity -->
     <string name="feedback">Feedback</string>
     <string name="bugReporting">Bug Reporting</string>
+    <string name="appTutorial">App Tutorial</string>
     <string name="frequentlyAskedQuestions">Frequently Asked Questions (FAQs)</string>
     <string name="sendFeedback">Send Feedback</string>
     <string name="sendBugReport">Send Bug Report</string>

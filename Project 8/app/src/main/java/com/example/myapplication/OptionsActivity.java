@@ -15,6 +15,7 @@ package com.example.myapplication;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -31,7 +32,7 @@ import java.util.EmptyStackException;
 public class OptionsActivity extends AppCompatActivity implements View.OnClickListener {
 
     // main options UI elements
-    Button faqs, feedback, bugReporting;
+    Button appTutorial, faqs, feedback, bugReporting;
 
     // feedback and bug reporting UI elements
     EditText input_subject, input_message;
@@ -45,10 +46,12 @@ public class OptionsActivity extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_options);
 
+        appTutorial = findViewById(R.id.button_appTutorial);
         faqs = findViewById(R.id.button_faqs);
         feedback = findViewById(R.id.button_feedback);
         bugReporting = findViewById(R.id.button_bugReporting);
 
+        appTutorial.setOnClickListener(this);
         faqs.setOnClickListener(this);
         feedback.setOnClickListener(this);
         bugReporting.setOnClickListener(this);
@@ -58,7 +61,11 @@ public class OptionsActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
 
         // Buttons for Options Page
-        if (v == faqs) {
+        if(v == appTutorial) {
+            hideMainOptions();
+            showTutorialScreen();
+        }
+        else if (v == faqs) {
             hideMainOptions();
             showFAQScreen();
         }
@@ -104,10 +111,14 @@ public class OptionsActivity extends AppCompatActivity implements View.OnClickLi
 
             this.recreate();
 
-            // reset faq and feedback/bug reporting screen
+            // reset scrollviews
             if(findViewById(R.id.text_heading_faq).getVisibility() == View.VISIBLE) {
                 findViewById(R.id.scrollView_faq).scrollTo(0, 0);
             }
+            else if(findViewById(R.id.text_heading_appTutorial).getVisibility() == View.VISIBLE) {
+                findViewById(R.id.scrollView_appTutorial).scrollTo(0, 0);
+            }
+            // reset faq and feedback/bug reporting screen
             else {
                 input_subject.setText("");
                 input_message.setText("");
@@ -120,9 +131,18 @@ public class OptionsActivity extends AppCompatActivity implements View.OnClickLi
     private void hideMainOptions() {
 
         findViewById(R.id.text_heading_options).setVisibility(View.GONE);
+        appTutorial.setVisibility(View.GONE);
         faqs.setVisibility(View.GONE);
         feedback.setVisibility(View.GONE);
         bugReporting.setVisibility(View.GONE);
+    }
+
+    // App Tutorial Page
+    private void showTutorialScreen() {
+
+        // show tutorial screen UI
+        findViewById(R.id.text_heading_appTutorial).setVisibility(View.VISIBLE);
+        findViewById(R.id.scrollView_appTutorial).setVisibility(View.VISIBLE);
     }
 
     // Frequently Asked Questions Page
