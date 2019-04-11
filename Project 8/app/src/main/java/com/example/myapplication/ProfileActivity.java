@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
@@ -166,7 +167,9 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                // TODO: reset progress data
+                //clears all shared preferences
+                SharedPreferences myPref = getSharedPreferences("PREFERENCE", MODE_PRIVATE);
+                myPref.edit().clear().apply();
                 Toast.makeText(ProfileActivity.this, "Progress has been reset", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(ProfileActivity.this, Homepage.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
