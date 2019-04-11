@@ -3,6 +3,7 @@ package com.example.myapplication;
 import android.Manifest;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
@@ -167,6 +168,9 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             public void onClick(DialogInterface dialog, int which) {
                 // TODO: reset progress data
                 Toast.makeText(ProfileActivity.this, "Progress has been reset", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(ProfileActivity.this, Homepage.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
                 finish();
             }
         });
