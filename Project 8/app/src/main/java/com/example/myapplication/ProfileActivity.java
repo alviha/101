@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
@@ -15,6 +16,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,6 +31,9 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
     TextView header;
     Button progress, achievements, reset;
+    ImageView elementaryMedal,selectionsMedal,functionsMedal,loopsMedal,methodsMedal,arrayMedal,perfectMedal;
+    SharedPreferences myPref;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +48,14 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         achievements.setOnClickListener(this);
         reset = findViewById(R.id.button_Reset);
         reset.setOnClickListener(this);
+        elementaryMedal = findViewById(R.id.imageView_medal1);
+        selectionsMedal = findViewById(R.id.imageView_medal2);
+        functionsMedal = findViewById(R.id.imageView_medal3);
+        loopsMedal = findViewById(R.id.imageView_medal4);
+        methodsMedal = findViewById(R.id.imageView_medal5);
+        arrayMedal = findViewById(R.id.imageView_medal6);
+        perfectMedal = findViewById(R.id.imageView_perfectionistMedal);
+        myPref = getSharedPreferences("PREFERENCE", MODE_PRIVATE);
     }
 
     @Override
@@ -144,8 +157,8 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         header.setTypeface(Typeface.DEFAULT);
 
         findViewById(R.id.scrollView_achievements).setVisibility(View.VISIBLE);
-
-        // TODO: set alpha of ImageViews based on progress
+        //checks to see if prerequisites for the medals are met and unlocks them if they are
+        medalProgress();
     }
 
     private void hideProfileMainOptions() {
@@ -166,7 +179,8 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                // TODO: reset progress data
+                //clears all shared preferences
+                myPref.edit().clear().apply();
                 Toast.makeText(ProfileActivity.this, "Progress has been reset", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(ProfileActivity.this, Homepage.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -181,5 +195,41 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         // show dialog
         AlertDialog dialog = builder.create();
         dialog.show();
+    }
+    private void medalProgress(){
+        //checks to see if each section has above %80
+        if(myPref.getInt("elementaryProgramming1",0)>=80&&
+                myPref.getInt("elementaryProgramming2",0)>=80&&
+        myPref.getInt("elementaryProgramming3",0)>=80){
+            elementaryMedal.setAlpha(1.0f);
+        }
+        if(myPref.getInt("selections1",0)>=80&&
+                myPref.getInt("selections2",0)>=80&&
+                myPref.getInt("selections3",0)>=80){
+            selectionsMedal.setAlpha(1.0f);
+        }
+        if(myPref.getInt("functionsCharactersStrings1",0)>=80&&
+                myPref.getInt("functionsCharactersStrings2",0)>=80&&
+                myPref.getInt("functionsCharactersStrings3",0)>=80&&
+        myPref.getInt("functionsCharactersStrings4",0)>=80){
+            functionsMedal.setAlpha(1.0f);
+        }
+        if(myPref.getInt("loops1",0)>=80&&
+                myPref.getInt("loops2",0)>=80&&
+                myPref.getInt("loops3",0)>=80){
+            loopsMedal.setAlpha(1.0f);
+        }
+        if(myPref.getInt("methods1",0)>=80&&
+                myPref.getInt("methods2",0)>=80){
+            methodsMedal.setAlpha(1.0f);
+        }
+        if(myPref.getInt("singleDimensionalArrays1",0)>=80&&
+                myPref.getInt("singleDimensionalArrays2",0)>=80){
+            arrayMedal.setAlpha(1.0f);
+        }
+        //checks to see if user has %100 in every section
+        if(myPref.getInt("total",0)>=100){
+            perfectMedal.setAlpha(1.0f);
+        }
     }
 }
