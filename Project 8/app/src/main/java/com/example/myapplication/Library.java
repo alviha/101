@@ -57,10 +57,16 @@ public final class Library {
 
             },
 
-            // Questions for Lesson 3
+            // Questions for Lesson 3 - Expressions, Operators, Numeric Type Conversions
             {
-                    "This is the first question for lesson 3 in Elementary Programming",
-                    "This is the second question for lesson 3 in Elementary Programming",
+                    "Analyze the following code. \n\n public class Test{ \n public static void main(String args[]) { \n int month = 09; \n System.out.println(\"month is \" + month); \n } \n } ",
+                    "The expression 4 + 20 / (3 - 1) * 2 is evaluated to:",
+                    "Suppose x is 1. What is x after x += 2?",
+                    "What is x after the following statements? \n \n int x = 1; \n x *= x + 1;",
+                    "Are the following four statements equivalent? \n \n number += 1; \n number = number + 1; \n number++; \n ++number;",
+                    "What is y displayed in the following code? \n\n public class Test { \n public static void main(String[] args) { \n int x = 1; \n int y = x++ + x; \n System.out.println(\"y is \" + y); \n } \n }",
+                    "The expression (int)(76.0252175 * 100) / 100 evaluates to _________.",
+                    "To assign a double variable d to an int variable x, you write"
             }
     };
 
@@ -97,11 +103,16 @@ public final class Library {
 
             // Questions for Lesson 3
             {
-                    "This is the first question for lesson 3 in Selections",
-                    "This is the second question for lesson 3 in Selections",
-                    "This is the third question for lesson 3 in Selections",
-                    "This is the fourth question for lesson 3 in Selections",
-                    "This is the fifth question for lesson 3 in Selections"
+                    "What is y displayed in the following code? \n\n public class Test1 { \n public static void main(String[] args) { \n int x = 1; \n int y = x = x + 1; \n System.out.println(\"y is \" + y); \n } \n }",
+                    "Analyze the following code: \n\n // Enter an integer \n Scanner input = new Scanner(System.in); \n int number = input.nextInt(); \n if (number <= 0) \n System.out.println(number);",
+                    "What is the output of the following code: (Please indent the statement correctly first.) \n \n int x = 9; \n int y = 8; \n int z = 7; \n if (x > 9) \n if (y > 8) \n System.out.println(\"x > 9 and y > 8\"); \n else if (z >= 7) \n System.out.println(\"x <= 9 and z >= 7\"); \n else \n System.out.println(\"x <= 9 and z < 7\");",
+                    "Which of the following expressions is equivalent to (x > 1)?",
+                    "Analyze the following code: \n \n boolean even = ((231 % 2) == 0); \n if (even = true) \n System.out.println(\"It is even!\"); \n else \n System.out.println(\"It is odd!\");",
+                    "Suppose cond1 and cond2 are two Boolean expressions. When will this if condition be true? \n if (cond1 && cond2) ...",
+                    "Assume x is 0. What is the output of the following statement? \n\n if (x > 0) \n System.out.print(\"x is greater than 0\"); \n else if (x < 0) \n System.out.print(\"x is less than 0\"); \n else \n System.out.print(\"x equals 0\");",
+                    "The not equal comparison operator in Java is __________.",
+                    "The ________ operator can be used to compare two values.",
+                    "Which of the following expressions evaluates to true?"
             }
     };
 
@@ -187,11 +198,12 @@ public final class Library {
 
             // Questions for Lesson 3
             {
-                    "This is the first question for lesson 3 in Loops",
-                    "This is the second question for lesson 3 in Loops",
-                    "This is the third question for lesson 3 in Loops",
-                    "This is the fourth question for lesson 3 in Loops",
-                    "This is the fifth question for lesson 3 in Loops"
+                    "How many times will the following code print \"Welcome to Java\"? \n\n int count = 0; \n do { \n System.out.println(\"Welcome to Java\"); \n count++; \n } while (count < 10);",
+                    "How many times will the following code print \"Welcome to Java\"? \n \n int count = 0; \n do { \n System.out.println(\"Welcome to Java\"); \n } while (count++ < 10);",
+                    "How many times will the following code print \"Welcome to Java\"? \n\n int count = 0; \n do { \n System.out.println(\"Welcome to Java\"); \n } while (++count < 10);",
+                    "What is the value in count after the following loop is executed? \n\n int count = 0; \n do { \n System.out.println(\"Welcome to Java\"); \n } while (count++ < 9); \n System.out.println(count);",
+                    "What is sum after the following loop terminates? \n\n int sum = 0; \n int item = 0; \n do { \n  item++; \n sum += item; \n if (sum &gt; 4) break; \n } \n while (item &lt; 5);",
+                    "What is sum after the following loop terminates? \n\n int sum = 0; \n int item = 0; \n do { \n item++; \n sum += item; \n if (sum &gt;= 4) continue; \n } \n while (item &lt; 5);"
             }
     };
 
@@ -228,10 +240,6 @@ public final class Library {
 
             // Questions for Lesson 3
             {
-                    "This is the first question for lesson 3 in Methods",
-                    "This is the second question for lesson 3 in Methods",
-                    "This is the third question for lesson 3 in Methods",
-                    "This is the fourth question for lesson 3 in Methods",
                     "This is the fifth question for lesson 3 in Methods"
             }
     };
@@ -305,8 +313,15 @@ public final class Library {
             // Hints for Lesson 3
 
             {
-                    "Lesson 3 Hint 1",
-                    "Lesson 3 Hint 2"
+                    "Any numeric literal with the prefix 0 is an octal value. But 9 is not an octal digit. An octal digit is 0, 1, 2, 3, 4, 5, 6, or 7.",
+                    "Evaluated left to right.",
+                    "+= adds a value then stores it.",
+                    "*= multiplies a value then stores it.",
+                    "++ increments the variable by 1.",
+                    "x++ is post increment.",
+                    "Dividing by Integer.",
+                    "x must hold an int."
+
             }
     };
 
@@ -343,11 +358,16 @@ public final class Library {
 
             // Hints for Lesson 3
             {
-                    "Lesson 3 Hint 1",
-                    "Lesson 3 Hint 2",
-                    "Lesson 3 Hint 3",
-                    "Lesson 3 Hint 4",
-                    "Lesson 3 Hint 5"
+                    "The = operator is right-associative.",
+                    "If number is 0 or less than it will print.",
+                    "Think about inequalities.",
+                    "! means not.",
+                    "= sets the value, == checks for equivalency.",
+                    "Remember && both must be true while || only one must be true.",
+                    "x is 0.",
+                    "Combine the 'not' symbol and the equals symbol.",
+                    "To compare one object in relation to another.",
+                    "2 > '2' is same as 2 > (int)'2'."
             }
     };
 
@@ -433,11 +453,12 @@ public final class Library {
 
             // Hints for Lesson 3
             {
-                    "Lesson 3 Hint 1",
-                    "Lesson 3 Hint 2",
-                    "Lesson 3 Hint 3",
-                    "Lesson 3 Hint 4",
-                    "Lesson 3 Hint 5"
+                    "Execute body of method before checking condition.",
+                    "Execute body of method before checking condition.",
+                    "Execute body of method before checking condition.",
+                    "Execute body of method before checking condition.",
+                    "Execute body of method before checking condition.",
+                    "Execute body of method before checking condition."
             }
     };
 
@@ -723,18 +744,66 @@ public final class Library {
 
                     // Question 1 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("The program has a syntax error, because 09 is an incorrect literal value.", true),
+                            new AnswerChoice("The program displays month is 09.", false),
+                            new AnswerChoice("The program displays month is 9.", false),
+                            new AnswerChoice("The program displays month is 9.0.", false)
                     },
 
                     // Question 2 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("24", true),
+                            new AnswerChoice("20", false),
+                            new AnswerChoice("9", false),
+                            new AnswerChoice("4", false)
+                    },
+
+                    // Question 3 choices
+                    {
+                            new AnswerChoice("3", true),
+                            new AnswerChoice("2", false),
+                            new AnswerChoice("1", false),
+                            new AnswerChoice("0", false)
+                    },
+
+                    // Question 4 choices
+                    {
+                            new AnswerChoice("x is 2", true),
+                            new AnswerChoice("x is 1", false),
+                            new AnswerChoice("x is 3", false),
+                            new AnswerChoice("x is 4", false)
+                    },
+
+                    // Question 5 choices
+                    {
+                            new AnswerChoice("Yes", true),
+                            new AnswerChoice("No", false),
+                            new AnswerChoice("Cannot answer question with given information", false),
+                            new AnswerChoice("Sometimes", false)
+                    },
+
+                    // Question 6 choices
+                    {
+                            new AnswerChoice("y is 3", true),
+                            new AnswerChoice("y is 1", false),
+                            new AnswerChoice("y is 2", false),
+                            new AnswerChoice("y is 4", false)
+                    },
+
+                    // Question 7 choices
+                    {
+                            new AnswerChoice("76", true),
+                            new AnswerChoice("76.02", false),
+                            new AnswerChoice("76.0252175", false),
+                            new AnswerChoice("76.03", false)
+                    },
+
+                    // Question 8 choices
+                    {
+                            new AnswerChoice("x = (int)d;", true),
+                            new AnswerChoice("x = (long)d", false),
+                            new AnswerChoice("x = d;", false),
+                            new AnswerChoice("x = (float)d;", false)
                     }
 
             }
@@ -916,42 +985,82 @@ public final class Library {
 
                     // Question 1 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("y is 2 because x + 1 is assigned to x and then x is assigned to y.", true),
+                            new AnswerChoice("y is 0.", false),
+                            new AnswerChoice("y is 1 because x is assigned to y first.", false),
+                            new AnswerChoice("The program has a compile error since x is redeclared in the statement int y = x = x + 1.", false)
                     },
 
                     // Question 2 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("If number is zero, number is displayed;", true),
+                            new AnswerChoice("The if statement is wrong, because it does not have the else clause;", false),
+                            new AnswerChoice("System.out.println(number); must be placed inside braces;", false),
+                            new AnswerChoice("If number is positive, number is displayed.", false)
                     },
 
                     // Question 3 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("none", true),
+                            new AnswerChoice("x > 9 and y > 8;", false),
+                            new AnswerChoice("x <= 9 and z >= 7;", false),
+                            new AnswerChoice("x <= 9 and z < 7;", false)
                     },
 
                     // Question 4 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("!(x <= 1)", true),
+                            new AnswerChoice("x >= 1", false),
+                            new AnswerChoice("!(x = 1)", false),
+                            new AnswerChoice("!(x < 1)", false)
                     },
 
                     // Question 5 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("The program displays \"It is even!\"", true),
+                            new AnswerChoice("The program displays \"It is odd!\"", false),
+                            new AnswerChoice("The program has a runtime error", false),
+                            new AnswerChoice("The program has a syntax error", false)
+                    },
+
+                    // Question 6 choices
+                    {
+                            new AnswerChoice("in case cond1 is true and cond2 is true", true),
+                            new AnswerChoice("in case cond1 is true and cond2 is false", false),
+                            new AnswerChoice("in case cond1 is false and cond2 is false", false),
+                            new AnswerChoice("in case cond1 is false and cond2 is true", false)
+                    },
+
+                    // Question 7 choices
+                    {
+                            new AnswerChoice("x equals 0", true),
+                            new AnswerChoice("x is greater than 0", false),
+                            new AnswerChoice("x is less than 0", false),
+                            new AnswerChoice("None", false)
+                    },
+
+                    // Question 8 choices
+                    {
+                            new AnswerChoice("!=", true),
+                            new AnswerChoice("<>", false),
+                            new AnswerChoice("!= =", false),
+                            new AnswerChoice("^=", false)
+                    },
+
+                    // Question 9 choices
+                    {
+                            new AnswerChoice("relational", true),
+                            new AnswerChoice("boolean", false),
+                            new AnswerChoice("numerical", false),
+                            new AnswerChoice("casting", false)
+                    },
+
+                    // Question 10 choices
+                    {
+                            new AnswerChoice("'a' > 'A'", true),
+                            new AnswerChoice("34 > 34", false),
+                            new AnswerChoice("'A' > 'z'", false),
+                            new AnswerChoice("2 > '2'", false)
                     }
             }
     };
@@ -1384,42 +1493,50 @@ public final class Library {
 
                     // Question 1 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("10", true),
+                            new AnswerChoice("9", false),
+                            new AnswerChoice("11", false),
+                            new AnswerChoice("8", false)
                     },
 
                     // Question 2 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("11", true),
+                            new AnswerChoice("10", false),
+                            new AnswerChoice("9", false),
+                            new AnswerChoice("8", false)
                     },
 
                     // Question 3 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("10", true),
+                            new AnswerChoice("11", false),
+                            new AnswerChoice("9", false),
+                            new AnswerChoice("8", false)
                     },
 
                     // Question 4 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("10", true),
+                            new AnswerChoice("9", false),
+                            new AnswerChoice("11", false),
+                            new AnswerChoice("8", false)
                     },
 
                     // Question 5 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("6", true),
+                            new AnswerChoice("5", false),
+                            new AnswerChoice("7", false),
+                            new AnswerChoice("8", false)
+                    },
+
+                    // Question 6 choices
+                    {
+                            new AnswerChoice("15", true),
+                            new AnswerChoice("16", false),
+                            new AnswerChoice("17", false),
+                            new AnswerChoice("18", false)
                     }
             }
     };
@@ -2225,6 +2342,14 @@ public final class Library {
                     "What are numeric data types and operations?",
                     "What is the representation of the third element in an array called a?",
 
+            },
+
+            // Lesson 3 - Expressions, Operators, Numeric Type Conversions
+
+            {
+                "Expressions, Operators, Numeric Type Conversions",
+                "What are expressions, Operators and Numeric Type Conversions",
+                "Expressions, Operators, Numeric Type Conversions"
             }
     };
 
@@ -2244,6 +2369,13 @@ public final class Library {
                     "What are switch statements and conditional expressions?",
                     "A conditional expression is an expression that gets executed only if the boolean conditional statement listed before it is true.",
 
+                    //Lesson 3
+            },
+
+            {
+                "Operator Precedence and Associativity",
+                "What is operator precedence and associativity",
+                " "
             }
     };
 
@@ -2281,6 +2413,13 @@ public final class Library {
                     "What are for loops?",
                     "A for loop is a loop that executes for a specified number of iterations. A typical for loop has three components - the initializer, the condition and the update. These three components are stated before the body of the loop.",
 
+            },
+
+            //Do while loop
+            {
+                "Do While Loop",
+                "What is a Do While loop?",
+                "A do while loop is a while loop in which the body of the method is executed before the condition is checked."
             }
     };
 
