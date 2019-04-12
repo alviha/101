@@ -269,16 +269,8 @@ public final class Library {
                     "Analyze the following code: \n \n public class Test { \n public static void main(String[] args) { \n int[] x = {1, 2, 3, 4}; \n int[] y = x; \n x = new int[2]; \n for (int i = 0; i < y.length; i++) \n System.out.print(y[i] + \" \"); \n } \n }",
                     "Analyze the following code: \n \n public class Test { \n public static void main(String[] args) { \n int[] x = {1, 2, 3, 4}; \n int[] y = x; \n x = new int[2]; \n for (int i = 0; i < x.length; i++) \n System.out.print(x[i] + \" \"); \n } \n }",
                     "Analyze the following code: \n \n public class Test { \n public static void main(String[] args) { \n final int[] x = {1, 2, 3, 4}; \n int[] y = x; \n x = new int[2]; \n for (int i = 0; i < y.length; i++) \n System.out.print(y[i] + \" \"); \n } \n }"
-            },
-
-            // Questions for Lesson 3
-            {
-                    "This is the first question for lesson 3 in Single Dimensional Arrays",
-                    "This is the second question for lesson 3 in Single Dimensional Arrays",
-                    "This is the third question for lesson 3 in Single Dimensional Arrays",
-                    "This is the fourth question for lesson 3 in Single Dimensional Arrays",
-                    "This is the fifth question for lesson 3 in Single Dimensional Arrays"
             }
+
     };
 
     // Hints for Elementary Programming Level
@@ -530,16 +522,8 @@ public final class Library {
                     "Print out the contents of y[].",
                     "Print out the contents of x[].",
                     "How was x[] declared?"
-            },
-
-            // Hints for Lesson 3
-            {
-                    "Lesson 3 Hint 1",
-                    "Lesson 3 Hint 2",
-                    "Lesson 3 Hint 3",
-                    "Lesson 3 Hint 4",
-                    "Lesson 3 Hint 5"
             }
+
     };
 
 
@@ -1889,50 +1873,6 @@ public final class Library {
                             new AnswerChoice("The program displays 1 2 3 4", false),
                             new AnswerChoice("The program displays 0 0", false),
                             new AnswerChoice("The elements in the array x cannot be changed, because x is final.", false)
-                    }
-            },
-
-            // Lesson 3
-            {
-
-                    // Question 1 choices
-                    {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
-                    },
-
-                    // Question 2 choices
-                    {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
-                    },
-
-                    // Question 3 choices
-                    {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
-                    },
-
-                    // Question 4 choices
-                    {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
-                    },
-
-                    // Question 5 choices
-                    {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
                     }
             }
     };

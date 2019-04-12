@@ -110,44 +110,44 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
         String[][] videoLinks = {
 
                 // Elementary Programming Links
-                {
-                        "https://www.youtube.com/watch?v=JpoI_rdMgLM",
-                        "https://www.youtube.com/watch?v=MSiCt6nO2G4",
-                        "https://www.youtube.com/watch?v=sepAXU0V9jk"
+                {//Complete
+                        "https://www.youtube.com/watch?v=gtQJXzi3Yns&list=PLFE2CE09D83EE3E28&index=5",
+                        "https://www.youtube.com/watch?v=8ZaTSedtf9M&list=PLFE2CE09D83EE3E28&index=8",
+                        "https://www.youtube.com/watch?v=z4XOnAxDPdU"
                 },
 
                 // Selections Links
-                {
-                        "https://www.youtube.com/watch?v=JpoI_rdMgLM",
-                        "https://www.youtube.com/watch?v=MSiCt6nO2G4",
-                        "https://www.youtube.com/watch?v=sepAXU0V9jk"
+                {//Complete
+                        "https://www.youtube.com/watch?v=t6vo0cv_V64",
+                        "https://www.youtube.com/watch?v=RVRPmeccFT0",
+                        "https://www.youtube.com/watch?v=F8RI8DjeJwA"
                 },
 
                 // Mathematical Functions Characters and Strings Links
-                {
-                        "https://www.youtube.com/watch?v=JpoI_rdMgLM",
-                        "https://www.youtube.com/watch?v=MSiCt6nO2G4",
-                        "https://www.youtube.com/watch?v=sepAXU0V9jk",
-                        "https://www.youtube.com/watch?v=W1GEMdHnCQE"
+                {//Complete
+                        "https://www.youtube.com/watch?v=JzMdepMLW44&list=PLFE2CE09D83EE3E28&index=25",
+                        "https://www.youtube.com/watch?v=7WunmdVs5m4",
+                        "https://www.youtube.com/watch?v=N63JCXwdd14",
+                        "https://www.youtube.com/watch?v=moQ3Kr8ouiU"
                 },
 
                 // Loops Links
-                {
-                        "https://www.youtube.com/watch?v=JpoI_rdMgLM",
-                        "https://www.youtube.com/watch?v=MSiCt6nO2G4",
-                        "https://www.youtube.com/watch?v=sepAXU0V9jk"
+                {//complete
+                        "https://www.youtube.com/watch?v=8ZuWD2CBjgs",
+                        "https://www.youtube.com/watch?v=rjkYAs6gAkk&list=PLFE2CE09D83EE3E28&index=22",
+                        "https://www.youtube.com/watch?v=nfr52iR0Pyg&list=PLFE2CE09D83EE3E28&index=24"
                 },
 
                 // Methods Links
-                {
-                        "https://www.youtube.com/watch?v=JpoI_rdMgLM",
-                        "https://www.youtube.com/watch?v=MSiCt6nO2G4"
+                {//Complete
+                        "https://www.youtube.com/watch?v=eBodvWUy2NQ",
+                        "https://www.youtube.com/watch?v=pBe4hLdrMHA"
                 },
 
                 // Single-Dimensional Arrays Links
-                {
-                        "https://www.youtube.com/watch?v=JpoI_rdMgLM",
-                        "https://www.youtube.com/watch?v=MSiCt6nO2G4"
+                {//Complete
+                        "https://www.youtube.com/watch?v=L06uGnF4IpY",
+                        "https://www.youtube.com/watch?v=GS8x_QFFzSo"
                 }
         };
 
