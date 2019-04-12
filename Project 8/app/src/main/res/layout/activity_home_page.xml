@@ -169,8 +169,8 @@
                 android:layout_height="53dp"
                 android:layout_marginBottom="5dp"
                 android:background="@color/main"
-                android:text="@string/functionslesson3"
                 android:saveEnabled="true"
+                android:text="String Type"
                 tools:layout_editor_absoluteX="8dp"
                 tools:layout_editor_absoluteY="266dp" />
 
@@ -179,8 +179,8 @@
                 android:layout_width="125dp"
                 android:layout_height="53dp"
                 android:background="@color/main"
-                android:text="@string/functionslesson4"
                 android:saveEnabled="true"
+                android:text="Formatting Console Output"
                 tools:layout_editor_absoluteX="8dp"
                 tools:layout_editor_absoluteY="266dp" />
 

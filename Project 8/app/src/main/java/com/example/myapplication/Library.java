@@ -147,22 +147,32 @@ public final class Library {
                     "Suppose Character x = new Character('a'), __________________ returns true."
             },
 
-            // Questions for Lesson 3
+            // Questions for Lesson 3 - The String Type
             {
-                    "This is the first question for lesson 3 in Functions Characters and Strings",
-                    "This is the second question for lesson 3 in Functions Characters and Strings",
-                    "This is the third question for lesson 3 in Functions Characters and Strings",
-                    "This is the fourth question for lesson 3 in Functions Characters and Strings",
-                    "This is the fifth question for lesson 3 in Functions Characters and Strings"
+                    "\"abc\".compareTo(\"aba\") returns ___________.",
+                    "\"AbA\".compareToIgnoreCase(\"abC\") returns ___________.",
+                    "What is the return value of \"SELECT\".substring(4, 4)?",
+                    "What is the return value of \"SELECT\".substring(0, 5)?",
+                    "Which of the following is the correct statement to return JAVA?",
+                    "The expression \"Java \" + 1 + 2 + 3 evaluates to ________.",
+                    "Note that the Unicode for character A is 65. The expression \"A\" + 1 evaluates to ________.",
+                    "Note that the Unicode for character A is 65. The expression 'A' + 1 evaluates to ________.",
+                    "The __________ method parses a string s to an int value.",
+                    "The __________ method parses a string s to a double value."
             },
 
-            // Questions for Lesson 4
+            // Questions for Lesson 4 - Formatting Console Output
             {
-                    "This is the first question for lesson 4 in Functions Characters and Strings",
-                    "This is the second question for lesson 4 in Functions Characters and Strings",
-                    "This is the third question for lesson 4 in Functions Characters and Strings",
-                    "This is the fourth question for lesson 4 in Functions Characters and Strings",
-                    "This is the fifth question for lesson 4 in Functions Characters and Strings"
+                    "The statement System.out.printf(\"%3.1f\", 1234.56) outputs ___________.",
+                    "The statement System.out.printf(\"%3.1e\", 1234.56) outputs ___________.",
+                    "The statement System.out.printf(\"%5d\", 123456) outputs ___________.",
+                    "The statement System.out.printf(\"%10s\", 123456) outputs ___________.",
+                    "Which of the following is the correct expression of character a?",
+                    "Which of the following assignment statements is correct to assign character 5 to c?",
+                    "What is \"Welcome\" + 1 + 1*2?",
+                    "parseInt is a method in the _______ class.",
+                    "parseDouble is a method in the _______ class.",
+                    "You compare two strings s1 and s2 using ________."
             }
     };
 
@@ -236,12 +246,8 @@ public final class Library {
                     "(int)('a' + Math.random() * ('z' - 'a' + 1)) returns a random number __________.",
                     "(char)('a' + Math.random() * ('z' - 'a' + 1)) returns a random character __________.",
                     "__________ is to implement one method in the structure chart at a time from the top to the bottom."
-            },
-
-            // Questions for Lesson 3
-            {
-                    "This is the fifth question for lesson 3 in Methods"
             }
+
     };
 
     // Questions for Single Dimensional Arrays Level
@@ -404,20 +410,30 @@ public final class Library {
 
             // Hints for Lesson 3
             {
-                    "Lesson 3 Hint 1",
-                    "Lesson 3 Hint 2",
-                    "Lesson 3 Hint 3",
-                    "Lesson 3 Hint 4",
-                    "Lesson 3 Hint 5"
+                    "How far off are the third characters from each in the alphabet?",
+                    "Answer is negative.",
+                    "Starting at an index but also ending at the same index.",
+                    "End at the fifth character.",
+                    "Call the method after the String.",
+                    "There is a space after the String Java.",
+                    "A is in double quotation marks.",
+                    "A is in single quotes.",
+                    "Integer is a class while int is a primitive data type.",
+                    "Double is a class while double is a data type."
             },
 
-            // Hints for Lesson 4
+            // Hints for Lesson 4 - Formatting Console Output
             {
-                    "Lesson 4 Hint 1",
-                    "Lesson 4 Hint 2",
-                    "Lesson 4 Hint 3",
-                    "Lesson 4 Hint 4",
-                    "Lesson 4 Hint 5"
+                    "Formatting a floating point.",
+                    "e is an exponential floating point number",
+                    "Formatting a double.",
+                    "* represents a space",
+                    "Characters use single quotes.",
+                    "Characters use single quotes.",
+                    "For strings when using the + sign objects are placed together.",
+                    "What is it parsing?",
+                    "What is it parsing?",
+                    "String one -call method- String two."
             }
     };
 
@@ -491,16 +507,8 @@ public final class Library {
                     "Between second and first.",
                     "Between second and first.",
                     "Answer is in the question."
-            },
-
-            // Hints for Lesson 3
-            {
-                    "Lesson 3 Hint 1",
-                    "Lesson 3 Hint 2",
-                    "Lesson 3 Hint 3",
-                    "Lesson 3 Hint 4",
-                    "Lesson 3 Hint 5"
             }
+
     };
 
     // Hints for singleDimensionalArrays Level
@@ -1241,86 +1249,166 @@ public final class Library {
 
                     // Question 1 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("2", true),
+                            new AnswerChoice("-2", false),
+                            new AnswerChoice("-1", false),
+                            new AnswerChoice("1", false)
                     },
 
                     // Question 2 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("-2", true),
+                            new AnswerChoice("2", false),
+                            new AnswerChoice("1", false),
+                            new AnswerChoice("-1", false)
                     },
 
                     // Question 3 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("an empty string", true),
+                            new AnswerChoice("C", false),
+                            new AnswerChoice("T", false),
+                            new AnswerChoice("E", false)
                     },
 
                     // Question 4 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("\"SELEC\"", true),
+                            new AnswerChoice("\"SELECT\"", false),
+                            new AnswerChoice("\"SELE\"", false),
+                            new AnswerChoice("\"ELECT\"", false)
                     },
 
                     // Question 5 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("\"Java\".toUpperCase()", true),
+                            new AnswerChoice("String.toUpperCase(\"Java\")", false),
+                            new AnswerChoice("\"Java\".toUpperCase(\"Java\")", false),
+                            new AnswerChoice("toUpperCase(\"Java\")", false)
+                    },
+
+                    // Question 6 choices
+                    {
+                            new AnswerChoice("Java 123", true),
+                            new AnswerChoice("java 123", false),
+                            new AnswerChoice("Java6", false),
+                            new AnswerChoice("Java123", false)
+                    },
+
+                    // Question 7 choices
+                    {
+                            new AnswerChoice("A1", true),
+                            new AnswerChoice("B", false),
+                            new AnswerChoice("66", false),
+                            new AnswerChoice("Illegal expression", false)
+                    },
+
+                    // Question 8 choices
+                    {
+                            new AnswerChoice("66", true),
+                            new AnswerChoice("B", false),
+                            new AnswerChoice("A1", false),
+                            new AnswerChoice("Illegal expression", false)
+                    },
+
+                    // Question 9 choices
+                    {
+                            new AnswerChoice("Integer.parseInt(s);", true),
+                            new AnswerChoice("integer.parseInt(s);", false),
+                            new AnswerChoice("integer.parseInteger(s);", false),
+                            new AnswerChoice("Integer.parseInteger(s);", false)
+                    },
+
+                    // Question 10 choices
+                    {
+                            new AnswerChoice("Double.parseDouble(s);", true),
+                            new AnswerChoice("double.parse(s);", false),
+                            new AnswerChoice("Double.parsedouble(s);", false),
+                            new AnswerChoice("double.parseDouble(s);", false)
                     }
             },
 
-            // Lesson 4
+            // Lesson 4 - Formatting Console Output
             {
 
                     // Question 1 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("1234.6", true),
+                            new AnswerChoice("1234.5", false),
+                            new AnswerChoice("123.5", false),
+                            new AnswerChoice("123.4", false)
                     },
 
                     // Question 2 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("1.2e+03", true),
+                            new AnswerChoice("0.123e+04", false),
+                            new AnswerChoice("0.123456e+04", false),
+                            new AnswerChoice("0.1e+04", false)
                     },
 
                     // Question 3 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("123456", true),
+                            new AnswerChoice("12345.6", false),
+                            new AnswerChoice("23456", false),
+                            new AnswerChoice("12345", false)
                     },
 
                     // Question 4 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("****123456", true),
+                            new AnswerChoice("12345*****", false),
+                            new AnswerChoice("23456*****", false),
+                            new AnswerChoice("123456****", false)
                     },
 
                     // Question 5 choices
                     {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
+                            new AnswerChoice("'a'", true),
+                            new AnswerChoice("\"a\"", false),
+                            new AnswerChoice("'\\000a'", false),
+                            new AnswerChoice("'\\a'", false)
+                    },
+
+                    // Question 6 choices
+                    {
+                            new AnswerChoice("char c = '5';", true),
+                            new AnswerChoice("char c = 5;", false),
+                            new AnswerChoice("char c =  \"5\";", false),
+                            new AnswerChoice("char c = \"344\";", false)
+                    },
+
+                    // Question 7 choices
+                    {
+                            new AnswerChoice("Welcome12", true),
+                            new AnswerChoice("Welcome3", false),
+                            new AnswerChoice("Welcome4", false),
+                            new AnswerChoice("Welcome11*2", false)
+                    },
+
+                    // Question 8 choices
+                    {
+                            new AnswerChoice("Integer", true),
+                            new AnswerChoice("Double", false),
+                            new AnswerChoice("Math", false),
+                            new AnswerChoice("System", false)
+                    },
+
+                    // Question 9 choices
+                    {
+                            new AnswerChoice("Double", true),
+                            new AnswerChoice("Integer", false),
+                            new AnswerChoice("Math", false),
+                            new AnswerChoice("System", false)
+                    },
+
+                    // Question 10 choices
+                    {
+                            new AnswerChoice("s1.compareTo(s2)", true),
+                            new AnswerChoice("compareTo(s1, s2)", false),
+                            new AnswerChoice("s1.compare(s2)", false),
+                            new AnswerChoice("compare(s1, s2)", false)
                     }
             }
     };
@@ -1710,50 +1798,6 @@ public final class Library {
                             new AnswerChoice("Bottom-up and top-down approach", false),
                             new AnswerChoice("Stepwise refinement", false)
                     }
-            },
-
-            // Lesson 3
-            {
-
-                    // Question 1 choices
-                    {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
-                    },
-
-                    // Question 2 choices
-                    {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
-                    },
-
-                    // Question 3 choices
-                    {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
-                    },
-
-                    // Question 4 choices
-                    {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
-                    },
-
-                    // Question 5 choices
-                    {
-                            new AnswerChoice("Choice 1", true),
-                            new AnswerChoice("Choice 2", false),
-                            new AnswerChoice("Choice 3", false),
-                            new AnswerChoice("Choice 4", false)
-                    }
             }
     };
 
@@ -1931,15 +1975,19 @@ public final class Library {
             "Which of the following method results in 8.0?",
             "Given two Strings s1 = \"Welcome to Java\" and s2 = \"Programming is fun\", which of the following is true?",
 
-//Loops 6 questions
+//Loops 10 questions
             "What is the number of iterations in the following loop: \n \n for (int i = 1; i < n; i++) { \n //body \n }",
             "You can always convert a for loop to a while loop.",
             "The while loop and the do loop are equivalent in their expressive power; in other words, you can rewrite a while loop using a do loop, and vice versa.",
             "The elements inside the for loop control are separated using semicolons instead of commas.",
             "Which of the loop statements always have their body executed at least once.",
             "A variable declared in the for loop control can be used after the loop exits.",
+            "The following loop displays _______________. \n\n for (int i = 1; i <= 10; i++) { \n System.out.print(i + \" \"); \n i++; \n }",
+            "Do the following two statements in (I) and (II) result in the same value in sum? \n\n (I): \n for (int i = 0; i&lt;10; ++i) { \n sum += i; \n } \n\n (II): \n for (int i = 0; i&lt;10; i++) { \n sum += i; \n }",
+            "Is the following loop correct? \n\n for (;  ; );",
+            "Analyze the following code: \n\n import java.util.Scanner; \n\n public class Test { \n public static void main(String[] args) { \n int sum = 0; \n for (int i = 0; i < 100000; i++) { \n Scanner input = new Scanner(System.in); \n sum += input.nextInt(); \n } \n } \n }",
 
-//Methods 7 questions
+//Methods 10 questions
             "Each time a method is invoked, the system stores parameters and local variables in an area of memory, known as _______, which stores elements in last-in first-out fashion.",
             "The client can use a method without knowing how it is implemented. The details of the implementation are encapsulated in the method and hidden from the client who invokes the method. This is known as __________.",
             "__________ is a simple but incomplete version of a method.",
@@ -1947,11 +1995,21 @@ public final class Library {
             "The actual parameters of a method must match the formal parameters in type, order, and number.",
             "You may have a return statement in a void method.",
             "Java allows you to declare methods with the same name in a class. This is called ________.",
+            "(int)(Math.random() * (65535 + 1)) returns a random number __________.",
+            "__________ is to implement one method in the structure chart at a time from the top to the bottom.",
+            "A variable or a value listed in a call to a method is called.",
 
-//Single dimension arrays 3 questions
+//Single dimension arrays 10 questions
             "Assume double[][] x = new double[4][5], what are x.length and x[2].length?",
             "When you create an array using the following statement, the element values are automatically initialized to 0. \n \n int[][] matrix = new int[5][5];",
-            "Assume int[][] x = {{1, 2}, {3, 4}, {5, 6}}, what are x.length are x[0].length?"
+            "Assume int[][] x = {{1, 2}, {3, 4}, {5, 6}}, what are x.length are x[0].length?",
+            "When you return an array from a method, the method returns __________.",
+            "The __________ method copies the sourceArray to the targetArray.",
+            "Analyze the following code: \n\n public class Test { \n public static void main(String[] args) { \n int[] x = {1, 2, 3, 4}; \n int[] y = x; \n x = new int[2]; \n for (int i = 0; i < x.length; i++) \n System.out.print(x[i] + \" \"); \n } \n }",
+            "Assume int[] t = {1, 2, 3, 4}. What is t.length?",
+            "The reverse method is defined in this section. What is list1 after executing the following statements? \n\n int[] list1 = {1, 2, 3, 4, 5, 6}; \n int[] list2 = reverse(list1);",
+            "The __________ method sorts the array scores of the double[] type.",
+            "Suppose array a is int[] a = {1, 2, 3}, what is a[0] - a[2]?"
 
     };
 
@@ -1989,20 +2047,24 @@ public final class Library {
             {
                     new AnswerChoice("A runtime error", true),
                     new AnswerChoice("A compilation error", false),
-                    new AnswerChoice("A logic error", false)
+                    new AnswerChoice("A logic error", false),
+                    new AnswerChoice("Nothing", false)
             },
 
             // Question 5 choices
             {
                     new AnswerChoice("A compilation error", true),
                     new AnswerChoice("A runtime error", false),
-                    new AnswerChoice("A logic error", false)
+                    new AnswerChoice("A logic error", false),
+                    new AnswerChoice("Nothing", false)
             },
 
             // Question 6 choices
             {
                     new AnswerChoice("true", true),
-                    new AnswerChoice("false", false)
+                    new AnswerChoice("false", false),
+                    new AnswerChoice("Neither", false),
+                    new AnswerChoice("Cannot answer based on the given information", false)
             },
 
             // Question 7 choices
@@ -2045,7 +2107,8 @@ public final class Library {
             {
                     new AnswerChoice("There is no guarantee that 1 - 1.0 - 1.0 - 1.0 - 1.0 - 1.0 == 5.0 is true.", true),
                     new AnswerChoice("true", false),
-                    new AnswerChoice("false", false)
+                    new AnswerChoice("false", false),
+                    new AnswerChoice("None of the choices are correct.", false)
             },
 
             // Question 2 choices
@@ -2083,13 +2146,17 @@ public final class Library {
             // Question 6 choices
             {
                     new AnswerChoice("true", true),
-                    new AnswerChoice("false", false)
+                    new AnswerChoice("false", false),
+                    new AnswerChoice("Nothing", false),
+                    new AnswerChoice("Neither", false)
             },
 
             // Question 7 choices
             {
                     new AnswerChoice("true", true),
-                    new AnswerChoice("false", false)
+                    new AnswerChoice("false", false),
+                    new AnswerChoice("Nothing", false),
+                    new AnswerChoice("Neither", false)
             },
 
             // Question 8 choices
@@ -2215,32 +2282,73 @@ public final class Library {
             // Question 2 choices
             {
                     new AnswerChoice("true", true),
-                    new AnswerChoice("false", false)
+                    new AnswerChoice("false", false),
+                    new AnswerChoice("Nothing", false),
+                    new AnswerChoice("Neither", false)
             },
 
             // Question 3 choices
             {
                     new AnswerChoice("true", true),
-                    new AnswerChoice("false", false)
+                    new AnswerChoice("false", false),
+                    new AnswerChoice("Nothing", false),
+                    new AnswerChoice("Neither", false)
             },
 
             // Question 4 choices
             {
                     new AnswerChoice("true", true),
-                    new AnswerChoice("false", false)
+                    new AnswerChoice("false", false),
+                    new AnswerChoice("Nothing", false),
+                    new AnswerChoice("Neither", false)
             },
 
             // Question 5 choices
             {
                     new AnswerChoice("The do-while loop", true),
                     new AnswerChoice("The while loop", false),
-                    new AnswerChoice("The for loop", false)
+                    new AnswerChoice("The for loop", false),
+                    new AnswerChoice("None of the choices are correct", false)
             },
 
             // Question 6 choices
             {
                     new AnswerChoice("false", true),
-                    new AnswerChoice("true", false)
+                    new AnswerChoice("true", false),
+                    new AnswerChoice("Nothing", false),
+                    new AnswerChoice("Neither", false)
+            },
+
+            // Question 7 choices
+            {
+                    new AnswerChoice("1 3 5 7 9", true),
+                    new AnswerChoice("1 2 3 4 5", false),
+                    new AnswerChoice("1 2 3 4 5 6 7 8 9 10", false),
+                    new AnswerChoice("1 2 3 4 5 6 7 8 9", false)
+            },
+
+            // Question 8 choices
+            {
+                    new AnswerChoice("Yes", true),
+                    new AnswerChoice("No", false),
+                    new AnswerChoice("Not enough information provided.", false),
+                    new AnswerChoice("Neither", false)
+            },
+
+            // Question 9 choices
+            {
+                    new AnswerChoice("Yes", true),
+                    new AnswerChoice("No", false),
+                    new AnswerChoice("Not enough information provided.", false),
+                    new AnswerChoice("Neither", false)
+            },
+
+            // Question 10 choices
+            {
+                    new AnswerChoice("The program compiles and runs, but it is not efficient and unnecessary to execute the Scanner input = new Scanner(System.in); statement inside the loop. You should move the statement before the loop.", true),
+                    new AnswerChoice("The program compiles, but does not run because there is not prompting message for entering the input.", false),
+                    new AnswerChoice("The program compiles, but does not run because the Scanner input = new Scanner(System.in); statement is inside the loop.", false),
+                    new AnswerChoice("The program does not compile because the Scanner input = new Scanner(System.in); statement is inside the loop.", false)
             },
 
 
@@ -2275,19 +2383,25 @@ public final class Library {
             // Question 4 choices
             {
                     new AnswerChoice("true", true),
-                    new AnswerChoice("false", false)
+                    new AnswerChoice("false", false),
+                    new AnswerChoice("Nothing", false),
+                    new AnswerChoice("Neither", false)
             },
 
             // Question 5 choices
             {
                     new AnswerChoice("true", true),
-                    new AnswerChoice("false", false)
+                    new AnswerChoice("false", false),
+                    new AnswerChoice("Nothing", false),
+                    new AnswerChoice("Neither", false)
             },
 
             // Question 6 choices
             {
                     new AnswerChoice("true", true),
-                    new AnswerChoice("false", false)
+                    new AnswerChoice("false", false),
+                    new AnswerChoice("Nothing", false),
+                    new AnswerChoice("Neither", false)
             },
 
             // Question 7 choices
@@ -2297,6 +2411,31 @@ public final class Library {
                     new AnswerChoice("Method overriding", false),
                     new AnswerChoice("Method redeclaration", false)
             },
+
+            // Question 8 choices
+            {
+                    new AnswerChoice("between 0 and 65535", true),
+                    new AnswerChoice("between 1 and 65535", false),
+                    new AnswerChoice("between 1 and 65536", false),
+                    new AnswerChoice("between 0 and 65536", false)
+            },
+
+            // Question 9 choices
+            {
+                    new AnswerChoice("Top-down approach", true),
+                    new AnswerChoice("Bottom-up approach", false),
+                    new AnswerChoice("Bottom-up and top-down approach", false),
+                    new AnswerChoice("Stepwise refinement", false)
+            },
+
+            // Question 10 choices
+            {
+                    new AnswerChoice("an argument", true),
+                    new AnswerChoice("a parameter", false),
+                    new AnswerChoice("a local variable", false),
+                    new AnswerChoice("a global variable", false)
+            },
+
 
             /**
              * Single dimension arrays pretest choices
@@ -2313,7 +2452,9 @@ public final class Library {
             // Question 2 choices
             {
                     new AnswerChoice("true", true),
-                    new AnswerChoice("false", false)
+                    new AnswerChoice("false", false),
+                    new AnswerChoice("Nothing", false),
+                    new AnswerChoice("Neither", false)
             },
 
             // Question 3 choices
@@ -2322,6 +2463,62 @@ public final class Library {
                     new AnswerChoice("2 and 1", false),
                     new AnswerChoice("2 and 2", false),
                     new AnswerChoice("3 and 3", false)
+            },
+
+            // Question 4 choices
+            {
+                    new AnswerChoice("The reference of the array", true),
+                    new AnswerChoice("The length of the array", false),
+                    new AnswerChoice("A copy of the first element", false),
+                    new AnswerChoice("A copy of the array", false)
+            },
+
+            // Question 5 choices
+            {
+                    new AnswerChoice("System.arraycopy(sourceArray, 0, targetArray, 0, sourceArray.length);", true),
+                    new AnswerChoice("System.arrayCopy(sourceArray, 0, targetArray, 0, sourceArray.length);", false),
+                    new AnswerChoice("System.copyarrays(sourceArray, 0, targetArray, 0, sourceArray.length);", false),
+                    new AnswerChoice("System.copyArrays(sourceArray, 0, targetArray, 0, sourceArray.length);", false)
+            },
+
+            // Question 6 choices
+            {
+                    new AnswerChoice("The program displays 0 0", true),
+                    new AnswerChoice("The program displays 1 2 3 4", false),
+                    new AnswerChoice("The program displays 0 0 3 4", false),
+                    new AnswerChoice("The program displays 0 0 0 0", false)
+            },
+
+            // Question 7 choices
+            {
+                    new AnswerChoice("4", true),
+                    new AnswerChoice("5", false),
+                    new AnswerChoice("3", false),
+                    new AnswerChoice("0", false)
+            },
+
+            // Question 8 choices
+            {
+                    new AnswerChoice("list1 is 1 2 3 4 5 6", true),
+                    new AnswerChoice("list1 is 6 5 4 3 2 1", false),
+                    new AnswerChoice("list1 is 0 0 0 0 0 0", false),
+                    new AnswerChoice("list1 is 6 6 6 6 6 6", false)
+            },
+
+            // Question 9 choices
+            {
+                    new AnswerChoice("java.util.Arrays.sort(scores)", true),
+                    new AnswerChoice("java.util.Arrays(scores)", false),
+                    new AnswerChoice("java.util.Arrays.sorts(scores)", false),
+                    new AnswerChoice("java.util.Arrays.sortArray(scores)", false)
+            },
+
+            // Question 10 choices
+            {
+                    new AnswerChoice("-2", true),
+                    new AnswerChoice("1", false),
+                    new AnswerChoice("2", false),
+                    new AnswerChoice("3", false)
             }
 
     };
@@ -2340,7 +2537,7 @@ public final class Library {
             {
                     "Numeric Data Types and Operations",
                     "What are numeric data types and operations?",
-                    "What is the representation of the third element in an array called a?",
+                    "Numeric data types in java are the various data types used to store different kinds of numbers (integers, decimals, etc.). Operations are simply the functions that can be performed on these data types.",
 
             },
 
@@ -2349,7 +2546,7 @@ public final class Library {
             {
                 "Expressions, Operators, Numeric Type Conversions",
                 "What are expressions, Operators and Numeric Type Conversions",
-                "Expressions, Operators, Numeric Type Conversions"
+                "Expressions are mathematical phrases and operators are the symbols (+, - , etc) that are used to form these phrases. Numeric type conversions are when values are converted from one data type to another."
             }
     };
 
@@ -2367,7 +2564,7 @@ public final class Library {
             {
                     "Switch statements and Conditional Expressions",
                     "What are switch statements and conditional expressions?",
-                    "A conditional expression is an expression that gets executed only if the boolean conditional statement listed before it is true.",
+                    "A conditional expression is an expression that gets executed only if the boolean conditional statement listed before it is true. Switch statement are similar to if statements but rather than having if and else clauses, they have cases.",
 
                     //Lesson 3
             },
@@ -2375,7 +2572,7 @@ public final class Library {
             {
                 "Operator Precedence and Associativity",
                 "What is operator precedence and associativity",
-                " "
+                "Operator precedence determines which operation needs to be performed first in an expression. Associativity is the order in which operations are performed in a mathematical expression based on their precedence. (Left to right or right to left)"
             }
     };
 
@@ -2395,6 +2592,20 @@ public final class Library {
                     "What are character data type and operations?",
                     "A character is a primitive type that stores an individual character ('x','a',etc.) rather than strings of them. The operations are simply the various functions that can be performed on them.",
 
+            },
+
+            //The String type
+            {
+                    "The String Type",
+                    "What is the String type?",
+                    "The String data type is a data type that stores sequences of characters."
+            },
+
+            //Formatting Console Output
+            {
+                    "Formatting Console Output",
+                    "What does it mean to format console output?",
+                    "Formatting console output allows programmers to change the way their final output will appear to the console. (Ex. number of decimal places shown)"
             }
     };
 
@@ -2456,7 +2667,6 @@ public final class Library {
                     "Copying Arrays",
                     "What does it mean to copy an array?",
                     "Copying an array is when the values from one array are copied and a new array is created with these previously copied values.",
-
             }
     };
 
