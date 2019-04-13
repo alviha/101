@@ -15,6 +15,7 @@
         android:layout_marginVertical="@dimen/activity_vertical_margin"
         android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
         android:text="@string/optionsTab"
+        android:textColor="@color/Black"
         android:textSize="30sp"
         android:textStyle="bold"
         android:fontFamily="sans-serif"
@@ -26,7 +27,7 @@
         android:layout_above="@id/button_faqs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?android:attr/selectableItemBackground"
+        android:background="@color/colorAccent"
         android:text="@string/appTutorial" />
 
     <Button
@@ -35,7 +36,7 @@
         android:layout_above="@id/button_feedback"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?android:attr/selectableItemBackground"
+        android:background="@color/colorAccent"
         android:text="@string/frequentlyAskedQuestions" />
 
     <Button
@@ -44,7 +45,7 @@
         android:layout_centerVertical="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?android:attr/selectableItemBackground"
+        android:background="@color/colorAccent"
         android:text="@string/feedback" />
 
     <Button
@@ -53,7 +54,7 @@
         android:layout_below="@id/button_feedback"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?android:attr/selectableItemBackground"
+        android:background="@color/colorAccent"
         android:text="@string/bugReporting" />
 
     <!--App Tutorial-->
@@ -285,8 +286,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="@dimen/activity_vertical_margin"
-            android:inputType="textEmailSubject"
-            android:hint="@string/feedbackSubjectPrompt"/>
+            android:hint="@string/feedbackSubjectPrompt"
+            android:inputType="textEmailSubject" />
 
         <EditText
             android:id="@+id/input_feedbackMessage"
