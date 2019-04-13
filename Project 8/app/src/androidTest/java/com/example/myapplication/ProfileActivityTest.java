@@ -89,10 +89,10 @@ public class ProfileActivityTest {
                 .check(matches(isDisplayed())); // check if toast message is displayed
     }
 
-    // test: click the back button from profile goes back to homepage
+    // test: click the back button from profile ends the options activity and goes back to homepage
     @Test
     public void onBackPressedFromProfile() throws InterruptedException {
-        Espresso.onView(isRoot()).perform(pressBackUnconditionally()); // assert header name
+        Espresso.onView(isRoot()).perform(pressBackUnconditionally()); // press back button
         assertTrue(mActivityTestRule.getActivity().isFinishing()); // assert finish activity
     }
 
