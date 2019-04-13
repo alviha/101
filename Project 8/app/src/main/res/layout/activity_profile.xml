@@ -114,26 +114,17 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="6"
+                    android:layout_weight="8"
                     android:text="@string/elementarylesson1"
                     android:textSize="20sp"
                     android:textStyle="italic"
                     android:fontFamily="sans-serif-black" />
 
                 <TextView
-                    android:id="@+id/text_ePLesson1Score"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="@string/defaultScore"
-                    android:textAlignment="center"
-                    android:textSize="20sp" />
-
-                <TextView
                     android:id="@+id/text_ePLesson1Percentage"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:text="@string/defaultPercentage"
                     android:textAlignment="textEnd"
                     android:textSize="20sp" />
@@ -151,26 +142,17 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="6"
+                    android:layout_weight="8"
                     android:text="@string/elementarylesson2"
                     android:textSize="20sp"
                     android:textStyle="italic"
                     android:fontFamily="sans-serif-black" />
 
                 <TextView
-                    android:id="@+id/text_ePLesson2Score"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="@string/defaultScore"
-                    android:textAlignment="center"
-                    android:textSize="20sp" />
-
-                <TextView
                     android:id="@+id/text_ePLesson2Percentage"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:text="@string/defaultPercentage"
                     android:textAlignment="textEnd"
                     android:textSize="20sp" />
@@ -188,26 +170,17 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="6"
+                    android:layout_weight="8"
                     android:text="@string/elementarylesson3"
                     android:textSize="20sp"
                     android:textStyle="italic"
                     android:fontFamily="sans-serif-black" />
 
                 <TextView
-                    android:id="@+id/text_ePLesson3Score"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="@string/defaultScore"
-                    android:textAlignment="center"
-                    android:textSize="20sp" />
-
-                <TextView
                     android:id="@+id/text_ePLesson3Percentage"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:text="@string/defaultPercentage"
                     android:textAlignment="textEnd"
                     android:textSize="20sp" />
@@ -239,26 +212,17 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="6"
+                    android:layout_weight="8"
                     android:text="@string/selectionslesson1"
                     android:textSize="20sp"
                     android:textStyle="italic"
                     android:fontFamily="sans-serif-black" />
 
                 <TextView
-                    android:id="@+id/text_sLesson1Score"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="@string/defaultScore"
-                    android:textAlignment="center"
-                    android:textSize="20sp" />
-
-                <TextView
                     android:id="@+id/text_sLesson1Percentage"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:text="@string/defaultPercentage"
                     android:textAlignment="textEnd"
                     android:textSize="20sp" />
@@ -276,26 +240,17 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="6"
+                    android:layout_weight="8"
                     android:text="@string/selectionslesson2"
                     android:textSize="20sp"
                     android:textStyle="italic"
                     android:fontFamily="sans-serif-black" />
 
                 <TextView
-                    android:id="@+id/text_sLesson2Score"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="@string/defaultScore"
-                    android:textAlignment="center"
-                    android:textSize="20sp" />
-
-                <TextView
                     android:id="@+id/text_sLesson2Percentage"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:text="@string/defaultPercentage"
                     android:textAlignment="textEnd"
                     android:textSize="20sp" />
@@ -313,26 +268,17 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="6"
+                    android:layout_weight="8"
                     android:text="@string/selectionslesson3"
                     android:textSize="20sp"
                     android:textStyle="italic"
                     android:fontFamily="sans-serif-black" />
 
                 <TextView
-                    android:id="@+id/text_sLesson3Score"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="@string/defaultScore"
-                    android:textAlignment="center"
-                    android:textSize="20sp" />
-
-                <TextView
                     android:id="@+id/text_sLesson3Percentage"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:text="@string/defaultPercentage"
                     android:textAlignment="textEnd"
                     android:textSize="20sp" />
@@ -364,26 +310,17 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="6"
+                    android:layout_weight="8"
                     android:text="@string/functionslesson1"
                     android:textSize="20sp"
                     android:textStyle="italic"
                     android:fontFamily="sans-serif-black" />
 
                 <TextView
-                    android:id="@+id/text_functionsLesson1Score"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="@string/defaultScore"
-                    android:textAlignment="center"
-                    android:textSize="20sp" />
-
-                <TextView
                     android:id="@+id/text_functionsLesson1Percentage"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:text="@string/defaultPercentage"
                     android:textAlignment="textEnd"
                     android:textSize="20sp" />
@@ -401,26 +338,17 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="6"
+                    android:layout_weight="8"
                     android:text="@string/functionslesson2"
                     android:textSize="20sp"
                     android:textStyle="italic"
                     android:fontFamily="sans-serif-black" />
 
                 <TextView
-                    android:id="@+id/text_functionsLesson2Score"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="@string/defaultScore"
-                    android:textAlignment="center"
-                    android:textSize="20sp" />
-
-                <TextView
                     android:id="@+id/text_functionsLesson2Percentage"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:text="@string/defaultPercentage"
                     android:textAlignment="textEnd"
                     android:textSize="20sp" />
@@ -438,26 +366,17 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="6"
+                    android:layout_weight="8"
                     android:text="@string/functionslesson3"
                     android:textSize="20sp"
                     android:textStyle="italic"
                     android:fontFamily="sans-serif-black" />
 
                 <TextView
-                    android:id="@+id/text_functionsLesson3Score"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="@string/defaultScore"
-                    android:textAlignment="center"
-                    android:textSize="20sp" />
-
-                <TextView
                     android:id="@+id/text_functionsLesson3Percentage"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:text="@string/defaultPercentage"
                     android:textAlignment="textEnd"
                     android:textSize="20sp" />
@@ -475,26 +394,17 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="6"
+                    android:layout_weight="8"
                     android:text="@string/functionslesson4"
                     android:textSize="20sp"
                     android:textStyle="italic"
                     android:fontFamily="sans-serif-black" />
 
                 <TextView
-                    android:id="@+id/text_functionsLesson4Score"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="@string/defaultScore"
-                    android:textAlignment="center"
-                    android:textSize="20sp" />
-
-                <TextView
                     android:id="@+id/text_functionsLesson4Percentage"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:text="@string/defaultPercentage"
                     android:textAlignment="textEnd"
                     android:textSize="20sp" />
@@ -526,26 +436,17 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="6"
+                    android:layout_weight="8"
                     android:text="@string/loopslesson1"
                     android:textSize="20sp"
                     android:textStyle="italic"
                     android:fontFamily="sans-serif-black" />
 
                 <TextView
-                    android:id="@+id/text_loopsLesson1Score"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="@string/defaultScore"
-                    android:textAlignment="center"
-                    android:textSize="20sp" />
-
-                <TextView
                     android:id="@+id/text_loopsLesson1Percentage"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:text="@string/defaultPercentage"
                     android:textAlignment="textEnd"
                     android:textSize="20sp" />
@@ -563,26 +464,17 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="6"
+                    android:layout_weight="8"
                     android:text="@string/loopslesson2"
                     android:textSize="20sp"
                     android:textStyle="italic"
                     android:fontFamily="sans-serif-black" />
 
                 <TextView
-                    android:id="@+id/text_loopsLesson2Score"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="@string/defaultScore"
-                    android:textAlignment="center"
-                    android:textSize="20sp" />
-
-                <TextView
                     android:id="@+id/text_loopsLesson2Percentage"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:text="@string/defaultPercentage"
                     android:textAlignment="textEnd"
                     android:textSize="20sp" />
@@ -600,26 +492,17 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="6"
+                    android:layout_weight="8"
                     android:text="@string/loopslesson3"
                     android:textSize="20sp"
                     android:textStyle="italic"
                     android:fontFamily="sans-serif-black" />
 
                 <TextView
-                    android:id="@+id/text_loopsLesson3Score"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="@string/defaultScore"
-                    android:textAlignment="center"
-                    android:textSize="20sp" />
-
-                <TextView
                     android:id="@+id/text_loopsLesson3Percentage"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:text="@string/defaultPercentage"
                     android:textAlignment="textEnd"
                     android:textSize="20sp" />
@@ -651,26 +534,17 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="6"
+                    android:layout_weight="8"
                     android:text="@string/methodslesson1"
                     android:textSize="20sp"
                     android:textStyle="italic"
                     android:fontFamily="sans-serif-black" />
 
                 <TextView
-                    android:id="@+id/text_methodsLesson1Score"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="@string/defaultScore"
-                    android:textAlignment="center"
-                    android:textSize="20sp" />
-
-                <TextView
                     android:id="@+id/text_methodsLesson1Percentage"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:text="@string/defaultPercentage"
                     android:textAlignment="textEnd"
                     android:textSize="20sp" />
@@ -688,26 +562,17 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="6"
+                    android:layout_weight="8"
                     android:text="@string/methodslesson2"
                     android:textSize="20sp"
                     android:textStyle="italic"
                     android:fontFamily="sans-serif-black" />
 
                 <TextView
-                    android:id="@+id/text_methodsLesson2Score"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="@string/defaultScore"
-                    android:textAlignment="center"
-                    android:textSize="20sp" />
-
-                <TextView
                     android:id="@+id/text_methodsLesson2Percentage"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:text="@string/defaultPercentage"
                     android:textAlignment="textEnd"
                     android:textSize="20sp" />
@@ -739,26 +604,17 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="6"
+                    android:layout_weight="8"
                     android:text="@string/arrayslesson1"
                     android:textSize="20sp"
                     android:textStyle="italic"
                     android:fontFamily="sans-serif-black" />
 
                 <TextView
-                    android:id="@+id/text_arraysLesson1Score"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="@string/defaultScore"
-                    android:textAlignment="center"
-                    android:textSize="20sp" />
-
-                <TextView
                     android:id="@+id/text_arraysLesson1Percentage"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:text="@string/defaultPercentage"
                     android:textAlignment="textEnd"
                     android:textSize="20sp" />
@@ -776,26 +632,17 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="6"
+                    android:layout_weight="8"
                     android:text="@string/arrayslesson2"
                     android:textSize="20sp"
                     android:textStyle="italic"
                     android:fontFamily="sans-serif-black" />
 
                 <TextView
-                    android:id="@+id/text_arraysLesson2Score"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="@string/defaultScore"
-                    android:textAlignment="center"
-                    android:textSize="20sp" />
-
-                <TextView
                     android:id="@+id/text_arraysLesson2Percentage"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:text="@string/defaultPercentage"
                     android:textAlignment="textEnd"
                     android:textSize="20sp" />
