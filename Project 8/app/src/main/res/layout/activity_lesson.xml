@@ -70,10 +70,12 @@
                 android:layout_alignParentBottom="true"
                 android:layout_centerInParent="false"
                 android:layout_centerHorizontal="true"
+                android:background="@color/colorAccent"
                 android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
                 android:layout_marginVertical="@dimen/activity_vertical_margin"
                 android:clickable="false"
                 android:enabled="false"
+                android:textStyle="bold"
                 android:text="@string/next" />
         </LinearLayout>
     </ScrollView>
@@ -82,6 +84,8 @@
         android:id="@+id/button_toHomepage"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:background="@color/Black"
         android:layout_marginVertical="@dimen/activity_vertical_margin"
         android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
         android:layout_alignParentBottom="true"
