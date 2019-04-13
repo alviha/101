@@ -382,7 +382,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
                 context.getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("methods1",0)+
                 context.getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("methods2",0)+
                 context.getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("singleDimensionalArrays1",0)+
-                context.getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("singleDimensionalArrays1",0);
+                context.getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("singleDimensionalArrays2",0);
         //converts to percent
                 totalScore = (int)((totalScore/1700.0)*100.0);
                 //sets total percent in shared preferences
