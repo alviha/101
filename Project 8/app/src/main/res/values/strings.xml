@@ -34,7 +34,7 @@
     <string name="lesson2">Lesson 2</string>
     <string name="lesson3">Lesson 3</string>
     <string name="lesson4">Lesson 4</string>
-    <string name="selection">Selection</string>
+    <string name="selections">Selections</string>
     <string name="progress">Progress</string>
     <string name="elementaryProgramming">Elementary Programming</string>
     <string name="homepageTitle">Homepage</string>
@@ -55,17 +55,17 @@
     <string name="UsernameHint">Username</string>
     <string name="elementarylesson1">Intro</string>
     <string name="elementarylesson2">Numeric Data Types and Operations</string>
-    <string name="elementarylesson3">Incomplete</string>
+    <string name="elementarylesson3">Expressions, Operators, Numeric Type Conversions</string>
     <string name="selectionslesson1">boolean Data Type and if statements</string>
     <string name="selectionslesson2">Switch Statements and Conditional Expressions</string>
-    <string name="selectionslesson3">Incomplete</string>
+    <string name="selectionslesson3">Operator Precedence and Associativity</string>
     <string name="functionslesson1">Common mathematical functions</string>
     <string name="functionslesson2">Character Data Type and Operations</string>
-    <string name="functionslesson3">Incomplete</string>
-    <string name="functionslesson4">Incomplete</string>
+    <string name="functionslesson3">String Type</string>
+    <string name="functionslesson4">Formatting Console Output</string>
     <string name="loopslesson1">While</string>
     <string name="loopslesson2">For</string>
-    <string name="loopslesson3">Incomplete</string>
+    <string name="loopslesson3">Do While</string>
     <string name="methodslesson1">Defining and calling Methods/void methods</string>
     <string name="methodslesson2">Overloading Methods</string>
     <string name="arrayslesson1">Array basics</string>
@@ -94,6 +94,9 @@
     <string name="sample_lesson">Sample Lesson</string>
     <string name="logout">Log Out</string>
 
+    <!--Strings related to the lesson activity-->
+    <string name="helpfulResource">Helpful Resource</string>
+
     <!-- Strings related to the options activity -->
     <string name="feedback">Feedback</string>
     <string name="bugReporting">Bug Reporting</string>
@@ -110,6 +113,12 @@
 
     <!-- Strings related to the profile activity -->
     <string name="saveCertificate">Click the image to save to your phone.</string>
+    <string name="certificateOfCompletion">Certificate of Completion</string>
+    <string name="lesson">Lesson</string>
+    <string name="score">Score</string>
+    <string name="percentage">Percentage</string>
+    <string name="defaultScore">0/10</string>
+    <string name="defaultPercentage">0%</string>
 
     <string name="achievements">Achievements</string>
     <string name="reset">Reset</string>

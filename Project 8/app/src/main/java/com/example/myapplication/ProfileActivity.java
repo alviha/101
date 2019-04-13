@@ -90,6 +90,10 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             if(header.getText().toString().equals(getResources().getString(R.string.achievements))) {
                 findViewById(R.id.scrollView_achievements).scrollTo(0, 0);
             }
+            // reset progress screen
+            else if(header.getText().toString().equals(getResources().getString(R.string.progress))) {
+                findViewById(R.id.scrollView_progress).scrollTo(0, 0);
+            }
         }
 
     }
@@ -99,8 +103,15 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         header.setText(getResources().getString(R.string.progress));
         header.setTypeface(Typeface.DEFAULT);
 
-        findViewById(R.id.image_certificateOfCompletion).setVisibility(View.VISIBLE);
-        findViewById(R.id.text_saveImagePrompt).setVisibility(View.VISIBLE);
+        // show current progress with levels
+        findViewById(R.id.scrollView_progress).setVisibility(View.VISIBLE);
+        progressSnapshot();
+
+        // unlock certificate if all lessons are completed with a passing score for each
+        if(finishedAllLessons()) {
+            findViewById(R.id.image_certificateOfCompletion).setVisibility(View.VISIBLE);
+            findViewById(R.id.text_saveImagePrompt).setVisibility(View.VISIBLE);
+        }
 
         // certificate image is clicked
         findViewById(R.id.image_certificateOfCompletion).setOnClickListener(new View.OnClickListener() {
@@ -238,5 +249,86 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         {
             perfectMedal.setAlpha(1.0f);
         }
+    }
+
+    // sets the progress data
+    private void progressSnapshot() {
+
+        String scorePercentage = myPref.getInt("elementaryProgramming1", 0) + "%";
+        ((TextView)findViewById(R.id.text_ePLesson1Percentage)).setText(scorePercentage);
+
+        scorePercentage = myPref.getInt("elementaryProgramming2", 0) + "%";
+        ((TextView)findViewById(R.id.text_ePLesson2Percentage)).setText(scorePercentage);
+
+        scorePercentage = myPref.getInt("elementaryProgramming3", 0) + "%";
+        ((TextView)findViewById(R.id.text_ePLesson3Percentage)).setText(scorePercentage);
+
+        scorePercentage = myPref.getInt("selections1", 0) + "%";
+        ((TextView)findViewById(R.id.text_sLesson1Percentage)).setText(scorePercentage);
+
+        scorePercentage = myPref.getInt("selections2", 0) + "%";
+        ((TextView)findViewById(R.id.text_sLesson2Percentage)).setText(scorePercentage);
+
+        scorePercentage = myPref.getInt("selections3", 0) + "%";
+        ((TextView)findViewById(R.id.text_sLesson3Percentage)).setText(scorePercentage);
+
+        scorePercentage = myPref.getInt("functionsCharactersStrings1", 0) + "%";
+        ((TextView)findViewById(R.id.text_functionsLesson1Percentage)).setText(scorePercentage);
+
+        scorePercentage = myPref.getInt("functionsCharactersStrings2", 0) + "%";
+        ((TextView)findViewById(R.id.text_functionsLesson2Percentage)).setText(scorePercentage);
+
+        scorePercentage = myPref.getInt("functionsCharactersStrings3", 0) + "%";
+        ((TextView)findViewById(R.id.text_functionsLesson3Percentage)).setText(scorePercentage);
+
+        scorePercentage = myPref.getInt("functionsCharactersStrings4", 0) + "%";
+        ((TextView)findViewById(R.id.text_functionsLesson4Percentage)).setText(scorePercentage);
+
+        scorePercentage = myPref.getInt("loops1", 0) + "%";
+        ((TextView)findViewById(R.id.text_loopsLesson1Percentage)).setText(scorePercentage);
+
+        scorePercentage = myPref.getInt("loops2", 0) + "%";
+        ((TextView)findViewById(R.id.text_loopsLesson2Percentage)).setText(scorePercentage);
+
+        scorePercentage = myPref.getInt("loops3", 0) + "%";
+        ((TextView)findViewById(R.id.text_loopsLesson3Percentage)).setText(scorePercentage);
+
+        scorePercentage = myPref.getInt("methods1", 0) + "%";
+        ((TextView)findViewById(R.id.text_methodsLesson1Percentage)).setText(scorePercentage);
+
+        scorePercentage = myPref.getInt("methods2", 0) + "%";
+        ((TextView)findViewById(R.id.text_methodsLesson2Percentage)).setText(scorePercentage);
+
+        scorePercentage = myPref.getInt("singleDimensionalArrays1", 0) + "%";
+        ((TextView)findViewById(R.id.text_arraysLesson1Percentage)).setText(scorePercentage);
+
+        scorePercentage = myPref.getInt("singleDimensionalArrays2", 0) + "%";
+        ((TextView)findViewById(R.id.text_arraysLesson2Percentage)).setText(scorePercentage);
+    }
+
+    // asserts if all lessons have been completed with a score of 80 or above
+    private boolean finishedAllLessons() {
+
+        if (myPref.getInt("elementaryProgramming1", 0) >= 80 &&
+                myPref.getInt("elementaryProgramming2", 0) >= 80 &&
+                myPref.getInt("elementaryProgramming3", 0) >= 80 &&
+                myPref.getInt("selections1", 0) >= 80 &&
+                myPref.getInt("selections2", 0) >= 80 &&
+                myPref.getInt("selections3", 0) >= 80 &&
+                myPref.getInt("functionsCharactersStrings1", 0) >= 80 &&
+                myPref.getInt("functionsCharactersStrings2", 0) >= 80 &&
+                myPref.getInt("functionsCharactersStrings3", 0) >= 80 &&
+                myPref.getInt("functionsCharactersStrings4", 0) >= 80 &&
+                myPref.getInt("loops1", 0) >= 80 &&
+                myPref.getInt("loops2", 0) >= 80 &&
+                myPref.getInt("loops3", 0) >= 80 &&
+                myPref.getInt("methods1", 0) >= 80 &&
+                myPref.getInt("methods2", 0) >= 80 &&
+                myPref.getInt("singleDimensionalArrays1", 0) >= 80 &&
+                myPref.getInt("singleDimensionalArrays2", 0) >= 80) {
+            return true;
+        }
+
+        return false;
     }
 }
