@@ -90,6 +90,10 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             if(header.getText().toString().equals(getResources().getString(R.string.achievements))) {
                 findViewById(R.id.scrollView_achievements).scrollTo(0, 0);
             }
+            // reset progress screen
+            else if(header.getText().toString().equals(getResources().getString(R.string.progress))) {
+                findViewById(R.id.scrollView_progress).scrollTo(0, 0);
+            }
         }
 
     }
@@ -101,6 +105,8 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
         findViewById(R.id.image_certificateOfCompletion).setVisibility(View.VISIBLE);
         findViewById(R.id.text_saveImagePrompt).setVisibility(View.VISIBLE);
+
+        findViewById(R.id.scrollView_progress).setVisibility(View.VISIBLE);
 
         // certificate image is clicked
         findViewById(R.id.image_certificateOfCompletion).setOnClickListener(new View.OnClickListener() {

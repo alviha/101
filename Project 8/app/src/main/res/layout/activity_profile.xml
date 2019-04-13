@@ -95,9 +95,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/main"
                 android:fontFamily="sans-serif"
                 android:text="@string/elementaryProgramming"
                 android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -105,6 +107,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
                 android:orientation="horizontal"
                 android:weightSum="10">
 
@@ -114,7 +117,8 @@
                     android:layout_weight="6"
                     android:text="@string/elementarylesson1"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
 
                 <TextView
                     android:id="@+id/text_ePLesson1Score"
@@ -140,6 +144,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
                 android:orientation="horizontal"
                 android:weightSum="10">
 
@@ -149,7 +154,8 @@
                     android:layout_weight="6"
                     android:text="@string/elementarylesson2"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
 
                 <TextView
                     android:id="@+id/text_ePLesson2Score"
@@ -175,6 +181,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
                 android:orientation="horizontal"
                 android:weightSum="10">
 
@@ -184,7 +191,8 @@
                     android:layout_weight="6"
                     android:text="@string/elementarylesson3"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
 
                 <TextView
                     android:id="@+id/text_ePLesson3Score"
@@ -212,9 +220,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/main"
                 android:fontFamily="sans-serif"
                 android:text="@string/selections"
                 android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -222,6 +232,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
                 android:orientation="horizontal"
                 android:weightSum="10">
 
@@ -231,7 +242,8 @@
                     android:layout_weight="6"
                     android:text="@string/selectionslesson1"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
 
                 <TextView
                     android:id="@+id/text_sLesson1Score"
@@ -257,6 +269,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
                 android:orientation="horizontal"
                 android:weightSum="10">
 
@@ -266,7 +279,8 @@
                     android:layout_weight="6"
                     android:text="@string/selectionslesson2"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
 
                 <TextView
                     android:id="@+id/text_sLesson2Score"
@@ -292,6 +306,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
                 android:orientation="horizontal"
                 android:weightSum="10">
 
@@ -301,7 +316,8 @@
                     android:layout_weight="6"
                     android:text="@string/selectionslesson3"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
 
                 <TextView
                     android:id="@+id/text_sLesson3Score"
@@ -329,9 +345,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/main"
                 android:fontFamily="sans-serif"
                 android:text="@string/functions"
                 android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -339,6 +357,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
                 android:orientation="horizontal"
                 android:weightSum="10">
 
@@ -348,7 +367,8 @@
                     android:layout_weight="6"
                     android:text="@string/functionslesson1"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
 
                 <TextView
                     android:id="@+id/text_functionsLesson1Score"
@@ -374,6 +394,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
                 android:orientation="horizontal"
                 android:weightSum="10">
 
@@ -383,7 +404,8 @@
                     android:layout_weight="6"
                     android:text="@string/functionslesson2"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
 
                 <TextView
                     android:id="@+id/text_functionsLesson2Score"
@@ -409,6 +431,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
                 android:orientation="horizontal"
                 android:weightSum="10">
 
@@ -418,7 +441,8 @@
                     android:layout_weight="6"
                     android:text="@string/functionslesson3"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
 
                 <TextView
                     android:id="@+id/text_functionsLesson3Score"
@@ -444,6 +468,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
                 android:orientation="horizontal"
                 android:weightSum="10">
 
@@ -453,7 +478,8 @@
                     android:layout_weight="6"
                     android:text="@string/functionslesson4"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
 
                 <TextView
                     android:id="@+id/text_functionsLesson4Score"
@@ -481,9 +507,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/main"
                 android:fontFamily="sans-serif"
                 android:text="@string/loops"
                 android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -491,6 +519,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
                 android:orientation="horizontal"
                 android:weightSum="10">
 
@@ -500,7 +529,8 @@
                     android:layout_weight="6"
                     android:text="@string/loopslesson1"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
 
                 <TextView
                     android:id="@+id/text_loopsLesson1Score"
@@ -526,6 +556,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
                 android:orientation="horizontal"
                 android:weightSum="10">
 
@@ -535,7 +566,8 @@
                     android:layout_weight="6"
                     android:text="@string/loopslesson2"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
 
                 <TextView
                     android:id="@+id/text_loopsLesson2Score"
@@ -561,6 +593,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
                 android:orientation="horizontal"
                 android:weightSum="10">
 
@@ -570,7 +603,8 @@
                     android:layout_weight="6"
                     android:text="@string/loopslesson3"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
 
                 <TextView
                     android:id="@+id/text_loopsLesson3Score"
@@ -598,9 +632,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/main"
                 android:fontFamily="sans-serif"
                 android:text="@string/method"
                 android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -608,6 +644,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
                 android:orientation="horizontal"
                 android:weightSum="10">
 
@@ -617,7 +654,8 @@
                     android:layout_weight="6"
                     android:text="@string/methodslesson1"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
 
                 <TextView
                     android:id="@+id/text_methodsLesson1Score"
@@ -643,6 +681,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
                 android:orientation="horizontal"
                 android:weightSum="10">
 
@@ -652,7 +691,8 @@
                     android:layout_weight="6"
                     android:text="@string/methodslesson2"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
 
                 <TextView
                     android:id="@+id/text_methodsLesson2Score"
@@ -680,9 +720,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/main"
                 android:fontFamily="sans-serif"
                 android:text="@string/arrays"
                 android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -690,6 +732,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
                 android:orientation="horizontal"
                 android:weightSum="10">
 
@@ -699,7 +742,8 @@
                     android:layout_weight="6"
                     android:text="@string/arrayslesson1"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
 
                 <TextView
                     android:id="@+id/text_arraysLesson1Score"
@@ -725,6 +769,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
                 android:orientation="horizontal"
                 android:weightSum="10">
 
@@ -734,7 +779,8 @@
                     android:layout_weight="6"
                     android:text="@string/arrayslesson2"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
 
                 <TextView
                     android:id="@+id/text_arraysLesson2Score"
