@@ -393,4 +393,152 @@ public class LibraryTest {
         assertArrayEquals(expected, hints);
 
     }
+
+    // test: retrieve first 10 questions for pretest
+    @Test
+    public void testGetPreTestQuestions() {
+
+        String[] expected = {
+                "Which of the following lines is not a Java comment?",
+                "Which of the following are not reserved words?",
+                "Every statement in java ends with ___________.",
+                "If a program compiles fine, but it produces incorrect result, then the program suffers  __________.",
+                "If you forget to put a closing quotation mark on a string, what kind error will be raised?",
+                "The keywords in Java are all in lowercase.",
+                "_______ is the code with natural language mixed with Java code.",
+                "Which of the following is a valid identifier?",
+                "To declare an int variable number with initial value 2, you write _________.",
+                "What is the value of (double)5/2?"
+        };
+
+        Library.Levels level = Library.Levels.SINGLE_DIMENSIONAL_ARRAYS;
+        String[] allQuestions = Library.getPreTestQuestions();
+        String[] firstTenQuestions = new String[10];
+        for(int i = 0; i < 10; i++) {
+            firstTenQuestions[i] = allQuestions[i];
+        }
+
+        assertArrayEquals(expected, firstTenQuestions);
+
+    }
+
+    // test: retrieve answer choices for pretest; assert first question choices
+    @Test
+    public void testGetPreTestAnswerChoices() {
+
+        String[] expected = {
+                "-- comments",
+                "/** comments */",
+                "// comments",
+                "/* comments */"
+        };
+
+        AnswerChoice[][] answerChoices = Library.getPreTestAnswerChoices();
+        String[] actual = {answerChoices[0][0].getContent(), answerChoices[0][1].getContent(), answerChoices[0][2].getContent(), answerChoices[0][3].getContent()};
+
+        assertArrayEquals(expected, actual);
+
+    }
+
+    // test: retrieve sample lessons for elementary programming; assert sample lesson for first lesson
+    @Test
+    public void testGetElementaryProgrammingSampleLessons() {
+
+        String[] expected = {
+                "Introductory Lesson",
+                "What is programming?",
+                "Programming is the process of breaking down a large, complex task into smaller and smaller subtasks. The process continues until the subtasks are simple enough to be performed with the basic instructions provided by the computer."
+        };
+
+        Library.Levels level = Library.Levels.ELEMENTARY_PROGRAMMING;
+        int lessonNumber = 0;
+        String[] sampleLessons = Library.getSampleLessons(level, lessonNumber);
+
+        assertArrayEquals(expected, sampleLessons);
+    }
+
+    // test: retrieve sample lessons for selections; assert sample lesson for first lesson
+    @Test
+    public void testGetSelectionsSampleLessons() {
+
+        String[] expected = {
+                "Boolean Data Types and If Statements",
+                "What are boolean data types and ff statements?",
+                "A boolean data type is a data type that has a value of either true or false. An if statement is a boolean conditional expression that if proved true, executes a statement or series of statements inside its corresponding braces."
+        };
+
+        Library.Levels level = Library.Levels.SELECTIONS;
+        int lessonNumber = 0;
+        String[] sampleLessons = Library.getSampleLessons(level, lessonNumber);
+
+        assertArrayEquals(expected, sampleLessons);
+    }
+
+    // test: retrieve sample lessons for mathematical functions characters and strings; assert sample lesson for first lesson
+    @Test
+    public void testGetFunctionsCharactersStringsSampleLessons() {
+
+        String[] expected = {
+                "Common Mathematical Functions",
+                "What are common mathematical functions?",
+                "Common mathematical functions in java are functions more advanced than addition, subtraction, multiplication and division. These methods come from the java.lang.Math class and can be used for functions such as square root, sine, absolute value, etc."
+        };
+
+        Library.Levels level = Library.Levels.FUNCTIONS_CHARACTERS_STRINGS;
+        int lessonNumber = 0;
+        String[] sampleLessons = Library.getSampleLessons(level, lessonNumber);
+
+        assertArrayEquals(expected, sampleLessons);
+    }
+
+    // test: retrieve sample lessons for loops; assert sample lesson for first lesson
+    @Test
+    public void testGetLoopsSampleLessons() {
+
+        String[] expected = {
+                "While Loops",
+                "What are while loops?",
+                "A while loop is a flow that repeatedly executes a statement or series of statements until the boolean condition stated before it is no longer true."
+        };
+
+        Library.Levels level = Library.Levels.LOOPS;
+        int lessonNumber = 0;
+        String[] sampleLessons = Library.getSampleLessons(level, lessonNumber);
+
+        assertArrayEquals(expected, sampleLessons);
+    }
+
+    // test: retrieve sample lessons for methods; assert sample lesson for first lesson
+    @Test
+    public void testGetMethodsSampleLessons() {
+
+        String[] expected = {
+                "Defining and Calling Methods/Void Methods",
+                "What does it mean to define and/or call a method?",
+                "Defining a method is when a method is created by specifying its access type, return type, name, parameters and body. A method call is when a method name is stated and the appropriate parameters are supplied to it. This takes the previously created method and tells it to execute its body and return the resulting value if appropriate."
+        };
+
+        Library.Levels level = Library.Levels.METHODS;
+        int lessonNumber = 0;
+        String[] sampleLessons = Library.getSampleLessons(level, lessonNumber);
+
+        assertArrayEquals(expected, sampleLessons);
+    }
+
+    // test: retrieve sample lessons for single dimensional arrays; assert sample lesson for first lesson
+    @Test
+    public void testGetSingleDimensionalArraysSampleLessons() {
+
+        String[] expected = {
+                "Array Basics",
+                "What are Array Basics?",
+                "This lesson will present the basics of arrays such as their declaration, initialization and the basic functions performed on them."
+        };
+
+        Library.Levels level = Library.Levels.SINGLE_DIMENSIONAL_ARRAYS;
+        int lessonNumber = 0;
+        String[] sampleLessons = Library.getSampleLessons(level, lessonNumber);
+
+        assertArrayEquals(expected, sampleLessons);
+    }
 }
