@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -192,6 +193,8 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         }
 
         if (v == backToHomepage) {
+
+            notifyAchievement();
 
             Intent intent = new Intent(QuestionActivity.this, Homepage.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -385,5 +388,60 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
                 //sets total percent in shared preferences
         context.getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putInt("total",totalScore).apply();
         return totalScore;
+    }
+
+    // notify user if they earned a medal
+    private void notifyAchievement() {
+
+        SharedPreferences myPref = getSharedPreferences("PREFERENCE", MODE_PRIVATE);
+
+        if(!myPref.getBoolean("noviceUnlocked", false)) {
+            if(myPref.getInt("elementaryProgramming3", 0) >= 80){
+                Toast.makeText(QuestionActivity.this, "Achievement Unlocked\nNovice\nView medal in Profile -> Achievements", Toast.LENGTH_SHORT).show();
+                myPref.edit().putBoolean("noviceUnlocked", true).apply();
+            }
+        }
+
+        else if(!myPref.getBoolean("rookieUnlocked", false)) {
+            if(myPref.getInt("selections3", 0) >= 80){
+                Toast.makeText(QuestionActivity.this, "Achievement Unlocked\nRookie\nView medal in Profile -> Achievements", Toast.LENGTH_SHORT).show();
+                myPref.edit().putBoolean("rookieUnlocked", true).apply();
+            }
+        }
+
+        else if(!myPref.getBoolean("intermediateUnlocked", false)) {
+            if(myPref.getInt("functionsCharactersStrings4", 0) >= 80){
+                Toast.makeText(QuestionActivity.this, "Achievement Unlocked\nIntermediate\nView medal in Profile -> Achievements", Toast.LENGTH_SHORT).show();
+                myPref.edit().putBoolean("intermediateUnlocked", true).apply();
+            }
+        }
+
+        else if(!myPref.getBoolean("proficientUnlocked", false)) {
+            if(myPref.getInt("loops3", 0) >= 80){
+                Toast.makeText(QuestionActivity.this, "Achievement Unlocked\nProficient\nView medal in Profile -> Achievements", Toast.LENGTH_SHORT).show();
+                myPref.edit().putBoolean("proficientUnlocked", true).apply();
+            }
+        }
+
+        else if(!myPref.getBoolean("advancedUnlocked", false)) {
+            if(myPref.getInt("methods2", 0) >= 80){
+                Toast.makeText(QuestionActivity.this, "Achievement Unlocked\nAdvanced\nView medal in Profile -> Achievements", Toast.LENGTH_SHORT).show();
+                myPref.edit().putBoolean("advancedUnlocked", true).apply();
+            }
+        }
+
+        else if(!myPref.getBoolean("expertUnlocked", false)) {
+            if(myPref.getInt("singleDimensionalArrays2", 0) >= 80){
+                Toast.makeText(QuestionActivity.this, "Achievement Unlocked\nExpert\nView medal in Profile -> Achievements", Toast.LENGTH_SHORT).show();
+                myPref.edit().putBoolean("expertUnlocked", true).apply();
+            }
+        }
+
+        else if(!myPref.getBoolean("perfectionistUnlocked", false)) {
+            if(myPref.getInt("total", 0) >= 100) {
+                Toast.makeText(QuestionActivity.this, "Achievement Unlocked\nPerfectionist\nView medal in Profile -> Achievements", Toast.LENGTH_SHORT).show();
+                myPref.edit().putBoolean("perfectionistUnlocked", true).apply();
+            }
+        }
     }
 }
