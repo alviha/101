@@ -39,7 +39,7 @@ public class LessonActivityTest {
     @Test
     public void testGoToQuestions() throws InterruptedException {
 
-        Espresso.onView(withId(R.id.button_next)).perform(click()); // click the next button
+        Espresso.onView(withId(R.id.button_toNextQuestion)).perform(click()); // click the next button
 
         Thread.sleep(2000); // idle test to wait for activity to launch before assertion
         intended(hasComponent(QuestionActivity.class.getName())); // assert if question activity is launched
