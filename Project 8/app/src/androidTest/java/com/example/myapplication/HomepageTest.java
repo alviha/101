@@ -24,6 +24,8 @@ import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.intent.Intents.intended;
 import static android.support.test.espresso.intent.matcher.IntentMatchers.hasComponent;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
+import static android.support.test.espresso.matcher.ViewMatchers.withText;
+import static org.hamcrest.Matchers.equalToIgnoringCase;
 import static org.junit.Assert.*;
 
 public class HomepageTest {
@@ -221,6 +223,26 @@ public class HomepageTest {
 
         Thread.sleep(500); // idle test to wait for activity to launch before assertion
         intended(hasComponent(LessonActivity.class.getName())); // assert if lesson activity is launched
+    }
+
+    // test: clicking profile tab takes you to the ProfileActivity
+    @Test
+    public void testProfile() throws InterruptedException {
+
+        Espresso.onView(withText(equalToIgnoringCase("Profile"))).perform(click()); // click the profile tab
+
+        Thread.sleep(500); // idle test to wait for activity to launch before assertion
+        intended(hasComponent(ProfileActivity.class.getName())); // assert if profile activity is launched
+    }
+
+    // test: clicking options tab takes you to the OptionsActivity
+    @Test
+    public void testOptions() throws InterruptedException {
+
+        Espresso.onView(withText(equalToIgnoringCase("Options"))).perform(click()); // click the options tab
+
+        Thread.sleep(500); // idle test to wait for activity to launch before assertion
+        intended(hasComponent(OptionsActivity.class.getName())); // assert if options activity is launched
     }
 
     @After
