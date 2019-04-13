@@ -21,6 +21,9 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
 
     private String[] lessonSet;
 
+    // used for JUnit testing
+    protected static boolean lessonIsUnlocked = false;
+
     // level and lesson data
     private Library.Levels level;
     private int lesson;
@@ -66,10 +69,12 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
         //finds out if current level is unlocked
         if (myPref.getBoolean(Progress.unlockName(lesson, level), false)) {
             toNextQuestion.setEnabled(true);
+            lessonIsUnlocked = true;
         }
         //unlocks first level
         if (lesson == 0 && level == Library.Levels.ELEMENTARY_PROGRAMMING) {
             toNextQuestion.setEnabled(true);
+            lessonIsUnlocked = true;
         }
     }
 
