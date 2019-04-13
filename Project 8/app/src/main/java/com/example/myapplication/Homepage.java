@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -86,6 +87,7 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
         //connects progress bar variable to the progress bar on homepage
         progressBar = findViewById(R.id.widget_progressBar);
         //gets the progress value from the questions and passes it on to the progress bar
+        getTotal();
         progressStatus = myPref.getInt("total",0);
         progressBar.setProgress(progressStatus);
 
@@ -283,5 +285,38 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
         // show dialog
         AlertDialog dialog = builder.create();
         dialog.show();
+    }
+    private void getTotal(){
+        int totalScore;
+        double elementary,selection,function,loop,method,array;
+        //adds all lesson scores
+        elementary = (myPref.getInt("elementaryProgramming1",0)+
+                myPref.getInt("elementaryProgramming2",0)+
+                myPref.getInt("elementaryProgramming3",0))/3.0;
+        selection = myPref.getInt("selections1",0)+
+                myPref.getInt("selections2",0)+
+                myPref.getInt("selections3",0)/3.0;
+        function = myPref.getInt("functionsCharactersStrings1",0)+
+                myPref.getInt("functionsCharactersStrings2",0)+
+                myPref.getInt("functionsCharactersStrings3",0)+
+                myPref.getInt("functionsCharactersStrings4",0)/4.0;
+        loop = myPref.getInt("loops1",0)+
+                myPref.getInt("loops2",0)+
+                myPref.getInt("loops3",0)/3.0;
+        method = myPref.getInt("methods1",0)+
+                myPref.getInt("methods2",0)/2.0;
+        array = myPref.getInt("singleDimensionalArrays1",0)+
+                myPref.getInt("singleDimensionalArrays2",0)/2.0;
+        //compares sectional scores to pretest scores for that section
+        totalScore = Math.max((int)elementary,myPref.getInt("elementaryProgrammingPretest",0))+
+                Math.max((int)selection, myPref.getInt("selectionsPretest",0))+
+                Math.max((int)function,myPref.getInt("functionsCharactersStringsPretest",0))+
+                Math.max((int)loop,myPref.getInt("loopsPretest",0))+
+                Math.max((int)method,myPref.getInt("methodsPretest",0))+
+                Math.max((int)array, myPref.getInt("singleDimensionalArraysPretest",0));
+        //converts to percent
+        totalScore = (int)(totalScore/6.0);
+        //sets total percent in shared preferences
+        myPref.edit().putInt("total",totalScore).apply();
     }
 }

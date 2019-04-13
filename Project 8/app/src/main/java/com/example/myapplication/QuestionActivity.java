@@ -318,8 +318,6 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         scorePercent = ((double)score / questionSet.length) * 100.0;
         //sets progress for each level
         setProgressStatus(context,(int)scorePercent);
-        //gets the total progress and sets to static variable
-        progressStatus = getTotal(context);
         //uses score to determine if if next level is unlocked
         setUnlock(context,(int)scorePercent);
 
@@ -343,9 +341,6 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         if(score>=80)
         context.getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putBoolean
                 (Progress.setUnlockName(lesson,level),true).apply(); //unlocks next level
-//        else
-//            context.getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putBoolean
-//                    (Progress.unlockName(lesson, level), false).apply(); //keeps next level locked
     }
     //sets the progress for each level
     public static void setProgressStatus(Context context,int totalScore){
@@ -355,39 +350,6 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         //sets highest score for level
         context.getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putInt
                 (Progress.lessonName(lesson,level),totalScore).apply();
-    }
-    //returns total progress between all lessons
-    public static int getProgressStatus(){
-        int total = progressStatus;
-        return total;
-    }
-    //adds up scores from each lesson and gets total percentage
-    public static int getTotal(Context context){
-        int totalScore;
-        //adds all lesson scores
-        totalScore = context.getSharedPreferences
-                ("PREFERENCE", MODE_PRIVATE).getInt("elementaryProgramming1",0)+
-                context.getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("elementaryProgramming2",0)+
-                context.getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("elementaryProgramming3",0)+
-                context.getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("selections1",0)+
-                context.getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("selections2",0)+
-                context.getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("selections3",0)+
-                context.getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("functionsCharactersStrings1",0)+
-                context.getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("functionsCharactersStrings2",0)+
-                context.getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("functionsCharactersStrings3",0)+
-                context.getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("functionsCharactersStrings4",0)+
-                context.getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("loops1",0)+
-                context.getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("loops2",0)+
-                context.getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("loops3",0)+
-                context.getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("methods1",0)+
-                context.getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("methods2",0)+
-                context.getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("singleDimensionalArrays1",0)+
-                context.getSharedPreferences("PREFERENCE", MODE_PRIVATE).getInt("singleDimensionalArrays2",0);
-        //converts to percent
-                totalScore = (int)((totalScore/1700.0)*100.0);
-                //sets total percent in shared preferences
-        context.getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putInt("total",totalScore).apply();
-        return totalScore;
     }
 
     // notify user if they earned a medal
