@@ -200,35 +200,42 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         //checks to see if each section has above %80
         if(myPref.getInt("elementaryProgramming1",0)>=80&&
                 myPref.getInt("elementaryProgramming2",0)>=80&&
-        myPref.getInt("elementaryProgramming3",0)>=80){
+        myPref.getInt("elementaryProgramming3",0)>=80||myPref.getInt("elementaryProgrammingPretest",0)>=80)
+        {
             elementaryMedal.setAlpha(1.0f);
         }
         if(myPref.getInt("selections1",0)>=80&&
                 myPref.getInt("selections2",0)>=80&&
-                myPref.getInt("selections3",0)>=80){
+                myPref.getInt("selections3",0)>=80||myPref.getInt("selectionsPretest",0)>=80)
+        {
             selectionsMedal.setAlpha(1.0f);
         }
         if(myPref.getInt("functionsCharactersStrings1",0)>=80&&
                 myPref.getInt("functionsCharactersStrings2",0)>=80&&
                 myPref.getInt("functionsCharactersStrings3",0)>=80&&
-        myPref.getInt("functionsCharactersStrings4",0)>=80){
+        myPref.getInt("functionsCharactersStrings4",0)>=80||
+                myPref.getInt("functionsCharactersStringsPretest",0)>=80)
+        {
             functionsMedal.setAlpha(1.0f);
         }
         if(myPref.getInt("loops1",0)>=80&&
                 myPref.getInt("loops2",0)>=80&&
-                myPref.getInt("loops3",0)>=80){
+                myPref.getInt("loops3",0)>=80||myPref.getInt("loopsPretest",0)>=80){
             loopsMedal.setAlpha(1.0f);
         }
         if(myPref.getInt("methods1",0)>=80&&
-                myPref.getInt("methods2",0)>=80){
+                myPref.getInt("methods2",0)>=80||myPref.getInt("methodsPretest",0)>=80)
+        {
             methodsMedal.setAlpha(1.0f);
         }
         if(myPref.getInt("singleDimensionalArrays1",0)>=80&&
-                myPref.getInt("singleDimensionalArrays2",0)>=80){
+                myPref.getInt("singleDimensionalArrays2",0)>=80||myPref.getInt("singleDimensionalArraysPretest",0)>=80)
+        {
             arrayMedal.setAlpha(1.0f);
         }
         //checks to see if user has %100 in every section
-        if(myPref.getInt("total",0)>=100){
+        if(myPref.getInt("total",0)>=100||myPref.getInt("pretestTotal",0)>=100)
+        {
             perfectMedal.setAlpha(1.0f);
         }
     }

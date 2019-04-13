@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -265,5 +266,56 @@ public class PreTestActivity extends AppCompatActivity implements View.OnClickLi
         ((TextView) findViewById(R.id.text_section5Score)).setText(scoreFormat.format(scores[4] / MAX_SECTION_SCORE));
         ((TextView) findViewById(R.id.text_section6Score)).setText(scoreFormat.format(scores[5] / MAX_SECTION_SCORE));
 
+        //unlocks sections passed with %80 or higher
+        setSectionsUnlocked();
+
+    }
+    private void setSectionsUnlocked(){
+        SharedPreferences myPref = getSharedPreferences("PREFERENCE", MODE_PRIVATE);
+        if((scores[0]/MAX_SECTION_SCORE)*100.0>=80.0){
+            double scoreTotal= 10-scores[0]/MAX_SECTION_SCORE;
+            myPref.edit().putInt("elementaryProgrammingPretest",(int)scoreTotal).apply();
+            myPref.edit().putBoolean("elementaryProgramming02",true).apply();
+            myPref.edit().putBoolean("elementaryProgramming03",true).apply();
+        }
+        if(scores[1]/MAX_SECTION_SCORE>=80){
+            double scoreTotal= 10-scores[1]/MAX_SECTION_SCORE;
+            myPref.edit().putInt("selectionsPretest",(int)scoreTotal).apply();
+            myPref.edit().putBoolean("selections01",true).apply();
+            myPref.edit().putBoolean("selections02",true).apply();
+            myPref.edit().putBoolean("selections03",true).apply();
+        }
+        if(scores[2]/MAX_SECTION_SCORE>=80){
+            double scoreTotal= 10-scores[2]/MAX_SECTION_SCORE;
+            myPref.edit().putInt("functionsCharactersStringsPretest",(int)scoreTotal).apply();
+            myPref.edit().putBoolean("functionsCharactersStrings01",true).apply();
+            myPref.edit().putBoolean("functionsCharactersStrings02",true).apply();
+            myPref.edit().putBoolean("functionsCharactersStrings03",true).apply();
+            myPref.edit().putBoolean("functionsCharactersStrings04",true).apply();
+        }
+        if(scores[3]/MAX_SECTION_SCORE>=80){
+            double scoreTotal= 10-scores[3]/MAX_SECTION_SCORE;
+            myPref.edit().putInt("loopsPretest",(int)scoreTotal).apply();
+            myPref.edit().putBoolean("loops01",true).apply();
+            myPref.edit().putBoolean("loops02",true).apply();
+            myPref.edit().putBoolean("loops03",true).apply();
+        }
+        if(scores[4]/MAX_SECTION_SCORE>=80){
+            double scoreTotal= 10-scores[4]/MAX_SECTION_SCORE;
+            myPref.edit().putInt("methodsPretest",(int)scoreTotal).apply();
+            myPref.edit().putBoolean("methods01",true).apply();
+            myPref.edit().putBoolean("methods02",true).apply();
+        }
+        if(scores[5]/MAX_SECTION_SCORE>=80){
+            double scoreTotal= 10-scores[5]/MAX_SECTION_SCORE;
+            myPref.edit().putInt("singleDimensionalArraysPretest",(int)scoreTotal).apply();
+            myPref.edit().putBoolean("singleDimensionalArrays01",true).apply();
+            myPref.edit().putBoolean("singleDimensionalArrays02",true).apply();
+        }
+        myPref.edit().putInt("pretestTotal",returnTotal()).apply();
+    }
+    private int returnTotal(){
+        double total = ((questionSet.length - (scores[0]+scores[1]+scores[2]+scores[3]+scores[4]+scores[5]))/questionSet.length)*100.0;
+        return  (int)total;
     }
 }
