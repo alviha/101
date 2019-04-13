@@ -1,13 +1,24 @@
 package com.example.myapplication;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.media.MediaScannerConnection;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.Toast;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
 
 
 public class Homepage extends AppCompatActivity implements View.OnClickListener {
@@ -30,11 +41,14 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
+        // ask user if they want to take a pretest after signing up
+        boolean promptPretest = getIntent().getBooleanExtra("promptPretest", false);
+        if(promptPretest) {
+            showPretestDialog();
+        }
+
         initializeLessonButtons();
         setOnClickListenerForLessonButtons();
-
-        /* TODO: This is for debugging purposes; Remove before final product */
-        findViewById(R.id.text_homepage).setOnClickListener(this);
 
         // code for the buttons at the bottom of the homepage
         tabLayout = findViewById(R.id.tabLayout_homepage);
@@ -185,11 +199,6 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
             startActivity(intent);
         }
 
-        /* TODO: This is for debugging purposes; Remove before final product */
-        else if(v == findViewById(R.id.text_homepage)) {
-            startActivity(new Intent(Homepage.this, PreTestActivity.class));
-        }
-
     }
 
     /**
@@ -251,5 +260,28 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
         methodsLesson2.setOnClickListener(this);
         singleDimensionalArraysLesson1.setOnClickListener(this);
         singleDimensionalArraysLesson2.setOnClickListener(this);
+    }
+
+    // offers the user to take a pretest to test out of levels
+    private void showPretestDialog() {
+
+        // setup dialog
+        AlertDialog.Builder builder = new AlertDialog.Builder(Homepage.this);
+        builder.setTitle("Take Pretest?");
+        builder.setMessage("Would you like to take a pretest for a chance to test out of levels?");
+
+        builder.setPositiveButton("Accept", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                startActivity(new Intent(Homepage.this, PreTestActivity.class));
+            }
+        });
+
+        // do nothing
+        builder.setNegativeButton("Decline", null);
+
+        // show dialog
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }
