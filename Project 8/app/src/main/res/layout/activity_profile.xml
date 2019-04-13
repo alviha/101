@@ -27,7 +27,8 @@
         android:layout_above="@id/button_Achievements"
         android:layout_marginVertical="@dimen/activity_vertical_margin"
         android:background="@color/colorAccent"
-        android:text="@string/progress" />
+        android:text="@string/progress"
+        android:visibility="visible" />
 
     <Button
         android:id="@+id/button_Achievements"
@@ -36,7 +37,8 @@
         android:layout_centerVertical="true"
         android:layout_marginVertical="@dimen/activity_vertical_margin"
         android:background="@color/colorAccent"
-        android:text="@string/achievements" />
+        android:text="@string/achievements"
+        android:visibility="visible" />
 
     <Button
         android:id="@+id/button_Reset"
@@ -46,33 +48,610 @@
         android:layout_marginVertical="@dimen/activity_vertical_margin"
         android:background="@color/Black"
         android:text="@string/reset"
-        android:textColor="@color/colorAccent" />
+        android:textColor="@color/colorAccent"
+        android:visibility="visible" />
 
     <!--Progress-->
 
-    <ImageView
-        android:id="@+id/image_certificateOfCompletion"
+    <ScrollView
+        android:id="@+id/scrollView_progress"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:layout_centerInParent="true"
-        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_height="match_parent"
+        android:layout_below="@id/text_ProfileHeader"
         android:layout_marginVertical="@dimen/activity_vertical_margin"
-        android:contentDescription="Certificate of Completion"
-        android:visibility="gone"
-        app:srcCompat="@drawable/certificate_of_completion" />
+        android:visibility="gone">
 
-    <TextView
-        android:id="@+id/text_saveImagePrompt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/image_certificateOfCompletion"
-        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
-        android:layout_marginVertical="@dimen/activity_vertical_margin"
-        android:fontFamily="sans-serif"
-        android:text="@string/saveCertificate"
-        android:textAlignment="center"
-        android:textSize="14sp"
-        android:visibility="gone" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+
+            <!--Certificate of Completion-->
+
+            <TextView
+                android:id="@+id/text_saveImagePrompt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:fontFamily="sans-serif"
+                android:text="@string/saveCertificate"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/image_certificateOfCompletion"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:contentDescription="@string/certificateOfCompletion"
+                android:visibility="gone"
+                app:srcCompat="@drawable/certificate_of_completion" />
+
+            <!--Elementary Programming Progress-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/main"
+                android:fontFamily="sans-serif"
+                android:text="@string/elementaryProgramming"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/elementarylesson1"
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
+
+                <TextView
+                    android:id="@+id/text_ePLesson1Percentage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/defaultPercentage"
+                    android:textAlignment="textEnd"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/elementarylesson2"
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
+
+                <TextView
+                    android:id="@+id/text_ePLesson2Percentage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/defaultPercentage"
+                    android:textAlignment="textEnd"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/elementarylesson3"
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
+
+                <TextView
+                    android:id="@+id/text_ePLesson3Percentage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/defaultPercentage"
+                    android:textAlignment="textEnd"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <!--Selections Progress-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/main"
+                android:fontFamily="sans-serif"
+                android:text="@string/selections"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/selectionslesson1"
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
+
+                <TextView
+                    android:id="@+id/text_sLesson1Percentage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/defaultPercentage"
+                    android:textAlignment="textEnd"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/selectionslesson2"
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
+
+                <TextView
+                    android:id="@+id/text_sLesson2Percentage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/defaultPercentage"
+                    android:textAlignment="textEnd"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/selectionslesson3"
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
+
+                <TextView
+                    android:id="@+id/text_sLesson3Percentage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/defaultPercentage"
+                    android:textAlignment="textEnd"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <!--Mathematical Functions, Characters, and Strings Progress-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/main"
+                android:fontFamily="sans-serif"
+                android:text="@string/functions"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/functionslesson1"
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
+
+                <TextView
+                    android:id="@+id/text_functionsLesson1Percentage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/defaultPercentage"
+                    android:textAlignment="textEnd"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/functionslesson2"
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
+
+                <TextView
+                    android:id="@+id/text_functionsLesson2Percentage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/defaultPercentage"
+                    android:textAlignment="textEnd"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/functionslesson3"
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
+
+                <TextView
+                    android:id="@+id/text_functionsLesson3Percentage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/defaultPercentage"
+                    android:textAlignment="textEnd"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/functionslesson4"
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
+
+                <TextView
+                    android:id="@+id/text_functionsLesson4Percentage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/defaultPercentage"
+                    android:textAlignment="textEnd"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <!--Loops Progress-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/main"
+                android:fontFamily="sans-serif"
+                android:text="@string/loops"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/loopslesson1"
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
+
+                <TextView
+                    android:id="@+id/text_loopsLesson1Percentage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/defaultPercentage"
+                    android:textAlignment="textEnd"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/loopslesson2"
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
+
+                <TextView
+                    android:id="@+id/text_loopsLesson2Percentage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/defaultPercentage"
+                    android:textAlignment="textEnd"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/loopslesson3"
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
+
+                <TextView
+                    android:id="@+id/text_loopsLesson3Percentage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/defaultPercentage"
+                    android:textAlignment="textEnd"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <!--Methods Progress-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/main"
+                android:fontFamily="sans-serif"
+                android:text="@string/method"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/methodslesson1"
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
+
+                <TextView
+                    android:id="@+id/text_methodsLesson1Percentage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/defaultPercentage"
+                    android:textAlignment="textEnd"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/methodslesson2"
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
+
+                <TextView
+                    android:id="@+id/text_methodsLesson2Percentage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/defaultPercentage"
+                    android:textAlignment="textEnd"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <!--Single-Dimensional Arrays-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/main"
+                android:fontFamily="sans-serif"
+                android:text="@string/arrays"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/arrayslesson1"
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
+
+                <TextView
+                    android:id="@+id/text_arraysLesson1Percentage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/defaultPercentage"
+                    android:textAlignment="textEnd"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                android:background="@color/list"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/arrayslesson2"
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    android:fontFamily="sans-serif-black" />
+
+                <TextView
+                    android:id="@+id/text_arraysLesson2Percentage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/defaultPercentage"
+                    android:textAlignment="textEnd"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <!--END of Progress-->
 
