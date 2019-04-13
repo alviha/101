@@ -122,7 +122,12 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
                             if(task.isSuccessful()){
                                 Toast.makeText(SignUpActivity.this, "Registration successful", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(SignUpActivity.this, Homepage.class));
+
+                                Intent intent = new Intent(SignUpActivity.this, Homepage.class);
+
+                                // data to prompt pretest
+                                intent.putExtra("promptPretest", true);
+                                startActivity(intent);
                                 finish();
                             }
                             else{
