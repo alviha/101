@@ -45,9 +45,9 @@ public class QuestionActivityTest {
     private CharSequence[] incorrectAnswers;
     private AnswerChoice[][] answerChoiceSet;
     private String[] questionSet;
-    RadioGroup answerChoicesGroup;
-    int idOfCorrectChoice;
-    int[] idOfIncorrectChoices;
+    private RadioGroup answerChoicesGroup;
+    private int idOfCorrectChoice;
+    private int[] idOfIncorrectChoices;
 
 
     @Before
