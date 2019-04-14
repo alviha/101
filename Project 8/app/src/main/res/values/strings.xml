@@ -110,6 +110,12 @@
     <!-- Strings related to the pretest activity -->
     <string name="preTestCompleted">Pre-Test Completed!</string>
     <string name="exitTest">Exit Test</string>
+    <string name="section1">Section 1</string>
+    <string name="section2">Section 2</string>
+    <string name="section3">Section 3</string>
+    <string name="section4">Section 4</string>
+    <string name="section5">Section 5</string>
+    <string name="section6">Section 6</string>
 
     <!-- Strings related to the profile activity -->
     <string name="saveCertificate">Click the image to save to your phone.</string>
