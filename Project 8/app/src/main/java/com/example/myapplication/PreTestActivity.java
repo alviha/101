@@ -72,7 +72,7 @@ public class PreTestActivity extends AppCompatActivity implements View.OnClickLi
 
         // set the section number to the first section, initialize scores array
         sectionNumber = 0;
-        scores = new int[6];
+        scores = new int[]{10, 10, 10, 10, 10, 10};
 
         // show first question
         showNextQuestion();
