@@ -266,6 +266,9 @@ public class PreTestActivity extends AppCompatActivity implements View.OnClickLi
         ((TextView) findViewById(R.id.text_section5Score)).setText(scoreFormat.format(scores[4] / MAX_SECTION_SCORE));
         ((TextView) findViewById(R.id.text_section6Score)).setText(scoreFormat.format(scores[5] / MAX_SECTION_SCORE));
 
+        // show message that says how many sections the user has unlocked
+        sectionsUnlocked.setText(getSectionsUnlockedMessage());
+
         //unlocks sections passed with %80 or higher
         setSectionsUnlocked();
 
@@ -347,5 +350,32 @@ public class PreTestActivity extends AppCompatActivity implements View.OnClickLi
         //gets total percent of all sections above %80 on pretest
         total /= 6.0;
         return  (int)total;
+    }
+
+    private String getSectionsUnlockedMessage() {
+
+        double percentage = 0.0;
+
+        if(scores[0] >= 8) {
+            percentage += 1/6.0;
+        }
+        if(scores[1] >= 8) {
+            percentage += 1/6.0;
+        }
+        if(scores[2] >= 8) {
+            percentage += 1/6.0;
+        }
+        if(scores[3] >= 8) {
+            percentage += 1/6.0;
+        }
+        if(scores[4] >= 8) {
+            percentage += 1/6.0;
+        }
+        if(scores[5] >= 8) {
+            percentage += 1/6.0;
+        }
+
+        DecimalFormat sectionsFormat = new DecimalFormat("##.##%");
+        return sectionsFormat.format(percentage) + " of the sections unlocked";
     }
 }
