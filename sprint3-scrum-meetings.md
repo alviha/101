@@ -1,25 +1,25 @@
 ## Scrum Meetings
 The team is to meet for 10 days during the two-week sprint - 5 meetings per week. You must decide on a time to record your answers to the questions and then a single commit of the day's responses is to be made into your project repository for that day.
 
-Question | Person | April 3 | April 4 | April 5 | April 6 | day | day | day |day | day | day |
+Question | Person | April 3 | April 4 | April 5 | April 6 | April 7 | day | day |day | day | day |
 ------------|---------------------------------------------------------------------|-----|-----|-----|-----|-----|-----|-----|----|-----|-----|                                                              
-| What did you complete since the last meeting? | Veronica Moritz | work with Joey on locking levels | none | none | none
-|            | Joey Luck | worked on locking levels | level locked, worked on implementing Firebasedatabase, made small changes to progress bar | tried to work with firebase to save data | tried using firebase to save data. Started trying to use SharedPreferences instead to save the data from each level
-|            | Bufford Sta Maria | fixed library so that the number of questions, hints, and answer choices are the relatively the same, fixed the titles on homepage, revamped UI for QuestionActivity, added issues for sprint 3, created home, profile, and options buttons on homepage | Created OptionsActivity and PreTestActivity, finished user story: Frequently Asked Questions | implemented feedback and bug reporting | made png images for medals and certificate of completion
-|            | Hassan Alvi | Created the profile page | Started implementing quetions for pretest | inputted rest of pretest questions | started inputting lessons
-| What will you accomplish before the next meeting? | Veronica Moritz | none (focus on database project) | none (focus on database project) | none (focus on database project) | none (focus on database project)
-|            | Joey Luck | get locked levels working | finish implementing firebasedatabase to save progression, fix bugs within progress bar | learn how to save the progress the user has made | get data from application to save
-|            | Bufford Sta Maria | work on the xml for OptionsActivity, implement feedback feature | finish user stories: feedback, and bug reporting | start on App Tutorial and Short Tutorial | code images into the app
-|            | Hassan Alvi | input questions for pretest | try and get more pretest questions in | start lesson activity | finish inputting lessons
-| Do you have anything that's getting in the way of doing your work? | Veronica Moritz | Database project | Database project | Database project | Database project
-|            | Joey Luck | school, school work | School, school work, school projects | work, school, school work | school work, school project
-|            | Bufford Sta Maria | none | none | work from other classes | burnout
-|            | Hassan Alvi | other classes work | other school work | other school work | other work
-| What insights have you made? | Veronica Moritz | none | none | none | none
-|            | Joey Luck | gained insight on how the pages are interacting and affecting the variables at different stages. Researched into FirebaseDatabase and its operations | gained further insight into firebase and Android Studio | none | none
-|            | Bufford Sta Maria | more understanding on xml, learned about TabLayout | none | how to use email intent | none
-|            | Hassan Alvi | none | none | none | none
-| Do any changes to the project need to be made as a result of your work? | Veronica Moritz | none | none | none | none
-|            | Joey Luck | no | no | no | no
-|            | Bufford Sta Maria | merge changes | none | merge changes | none
-|            | Hassan Alvi | none | no | none | no
+| What did you complete since the last meeting? | Veronica Moritz | work with Joey on locking levels | none | none | none | none
+|            | Joey Luck | worked on locking levels | level locked, worked on implementing Firebasedatabase, made small changes to progress bar | tried to work with firebase to save data | tried using firebase to save data. Started trying to use SharedPreferences instead to save the data from each level | learned how to use SharedPreferences to save things
+|            | Bufford Sta Maria | fixed library so that the number of questions, hints, and answer choices are the relatively the same, fixed the titles on homepage, revamped UI for QuestionActivity, added issues for sprint 3, created home, profile, and options buttons on homepage | Created OptionsActivity and PreTestActivity, finished user story: Frequently Asked Questions | implemented feedback and bug reporting | made png images for medals and certificate of completion | none (had rest day)
+|            | Hassan Alvi | Created the profile page | Started implementing quetions for pretest | inputted rest of pretest questions | started inputting lessons | Finished lessons
+| What will you accomplish before the next meeting? | Veronica Moritz | none (focus on database project) | none (focus on database project) | none (focus on database project) | none (focus on database project) | none (focus on database project)
+|            | Joey Luck | get locked levels working | finish implementing firebasedatabase to save progression, fix bugs within progress bar | learn how to save the progress the user has made | get data from application to save | get progress to save
+|            | Bufford Sta Maria | work on the xml for OptionsActivity, implement feedback feature | finish user stories: feedback, and bug reporting | start on App Tutorial and Short Tutorial | code images into the app | code images into the app
+|            | Hassan Alvi | input questions for pretest | try and get more pretest questions in | start lesson activity | finish inputting lessons | start resource links
+| Do you have anything that's getting in the way of doing your work? | Veronica Moritz | Database project | Database project | Database project | Database project | Database project
+|            | Joey Luck | school, school work | School, school work, school projects | work, school, school work | school work, school project | school work, school
+|            | Bufford Sta Maria | none | none | work from other classes | burnout | sick
+|            | Hassan Alvi | other classes work | other school work | other school work | other work | no
+| What insights have you made? | Veronica Moritz | none | none | none | none | none
+|            | Joey Luck | gained insight on how the pages are interacting and affecting the variables at different stages. Researched into FirebaseDatabase and its operations | gained further insight into firebase and Android Studio | none | none | learned how to use SharedPreferences
+|            | Bufford Sta Maria | more understanding on xml, learned about TabLayout | none | how to use email intent | none | none
+|            | Hassan Alvi | none | none | none | none | none
+| Do any changes to the project need to be made as a result of your work? | Veronica Moritz | none | none | none | none | none
+|            | Joey Luck | no | no | no | no | no
+|            | Bufford Sta Maria | merge changes | none | merge changes | none | none
+|            | Hassan Alvi | none | no | none | no | no
