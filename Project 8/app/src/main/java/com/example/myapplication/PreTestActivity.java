@@ -269,6 +269,9 @@ public class PreTestActivity extends AppCompatActivity implements View.OnClickLi
         // show message that says how many sections the user has unlocked
         sectionsUnlocked.setText(getSectionsUnlockedMessage());
 
+        // sets progress based on pretest performance
+        setProgressScores();
+
         //unlocks sections passed with %80 or higher
         setSectionsUnlocked();
 
@@ -377,5 +380,44 @@ public class PreTestActivity extends AppCompatActivity implements View.OnClickLi
 
         DecimalFormat sectionsFormat = new DecimalFormat("##.##%");
         return sectionsFormat.format(percentage) + " of the sections unlocked";
+    }
+
+    private void setProgressScores() {
+
+        int[] scorePercentages = new int[scores.length];
+        for(int i = 0; i < scorePercentages.length; i++) {
+            scorePercentages[i] = scores[i] * 10;
+        }
+
+        SharedPreferences myPref = getSharedPreferences("PREFERENCE", MODE_PRIVATE);
+
+        // set scores for Elementary Programming
+        myPref.edit().putInt("elementaryProgramming1", scorePercentages[0]).apply();
+        myPref.edit().putInt("elementaryProgramming2", scorePercentages[0]).apply();
+        myPref.edit().putInt("elementaryProgramming3", scorePercentages[0]).apply();
+
+        // set scores for Selections
+        myPref.edit().putInt("selections1", scorePercentages[1]).apply();
+        myPref.edit().putInt("selections2", scorePercentages[1]).apply();
+        myPref.edit().putInt("selections3", scorePercentages[1]).apply();
+
+        // set scores for Functions Characters and Strings
+        myPref.edit().putInt("functionsCharactersStrings1", scorePercentages[2]).apply();
+        myPref.edit().putInt("functionsCharactersStrings2", scorePercentages[2]).apply();
+        myPref.edit().putInt("functionsCharactersStrings3", scorePercentages[2]).apply();
+        myPref.edit().putInt("functionsCharactersStrings4", scorePercentages[2]).apply();
+
+        // set scores for Loops
+        myPref.edit().putInt("loops1", scorePercentages[3]).apply();
+        myPref.edit().putInt("loops2", scorePercentages[3]).apply();
+        myPref.edit().putInt("loops3", scorePercentages[3]).apply();
+
+        // set scores for Methods
+        myPref.edit().putInt("methods1", scorePercentages[4]).apply();
+        myPref.edit().putInt("methods2", scorePercentages[4]).apply();
+
+        // set scores for Single-Dimensional Arrays
+        myPref.edit().putInt("singleDimensionalArrays1", scorePercentages[5]).apply();
+        myPref.edit().putInt("singleDimensionalArrays2", scorePercentages[5]).apply();
     }
 }
